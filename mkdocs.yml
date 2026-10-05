@@ -1,0 +1,104 @@
+site_name: Dorothy Johnson
+site_description: Projeto da disciplina de Qualidade de Software - 2026/2 (FCTE/UnB)
+site_author: Equipe Dorothy Johnson
+site_url: https://fcte-qualidade-de-software-1.github.io/2026-2_T02_DOROTHY_JOHSON/
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON
+repo_name: 2026-2_T02_DOROTHY_JOHSON
+edit_uri: edit/main/docs/
+copyright: Equipe Dorothy Johnson &middot; Qualidade de Software 2026/2 &middot; FCTE/UnB
+
+theme:
+  name: material
+  language: pt-BR
+  icon:
+    logo: material/rocket-launch-outline
+    repo: fontawesome/brands/github
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo escuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - navigation.instant
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON
+      name: Repositório no GitHub
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.mark
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Início: index.md
+  - Artigo:
+      - Introdução: artigo/introducao.md
+      - Referencial Teórico: artigo/referencial-teorico.md
+      - Metodologia: artigo/metodologia.md
+  - Fase 1: fase-1/index.md
+  - Fase 2 (GQM):
+      - fase-2/index.md
+      - Objetivos de Medição: fase-2/objetivos.md
+      - Questões: fase-2/questoes.md
+      - Hipóteses: fase-2/hipoteses.md
+      - Métricas: fase-2/metricas.md
+      - Níveis de Pontuação: fase-2/niveis-pontuacao.md
+      - Gráfico GQM: fase-2/grafico-gqm.md
+  - Uso de IA: uso-de-ia.md
+  - Equipe:
+      - Contribuição: contribuicao.md
+  - Referências: referencias.md
