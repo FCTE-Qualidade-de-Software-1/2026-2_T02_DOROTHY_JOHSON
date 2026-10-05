@@ -14,7 +14,7 @@ theme:
     logo: material/rocket-launch-outline
     repo: fontawesome/brands/github
   font:
-    text: Inter
+    text: Krub
     code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: light)"
