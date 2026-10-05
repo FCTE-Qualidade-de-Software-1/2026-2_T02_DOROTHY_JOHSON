@@ -5,7 +5,7 @@ Projeto da disciplina de **Qualidade de Software - 2026/2**.
 ## Equipe
 
 - Ana Luíza
-- Artur
+- Artur Henrique Holz Bartz - 221007869
 - Cayo
 - Felipe
 - Gabriel 
