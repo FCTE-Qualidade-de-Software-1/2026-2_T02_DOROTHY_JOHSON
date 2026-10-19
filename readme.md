@@ -8,7 +8,7 @@ Projeto da disciplina de **Qualidade de Software - 2026/2**.
 - Artur Henrique Holz Bartz - 221007869
 - Cayo
 - Felipe
-- Gabriel 
+- Gabriel Augusto V. V. Rocha - 221022533
 
 ## Sobre o projeto
 
