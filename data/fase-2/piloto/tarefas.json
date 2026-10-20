@@ -1,0 +1,102 @@
+[
+  {
+    "tarefa": "T1",
+    "objeto": "Chapada dos Veadeiros - GO",
+    "tempo_s": 18.73,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 6.390621185302734,
+    "heap_tarefa_mb": 15.440834045410156,
+    "execucao": 1,
+    "coletado_em": "2026-10-20T17:26:36.971Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "Chapada dos Veadeiros - GO",
+    "tempo_s": 18.944,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.959842681884766,
+    "heap_tarefa_mb": 15.454360961914062,
+    "execucao": 2,
+    "coletado_em": "2026-10-20T17:27:05.674Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "Chapada dos Veadeiros - GO",
+    "tempo_s": 18.828,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 6.331855773925781,
+    "heap_tarefa_mb": 15.305713653564453,
+    "execucao": 3,
+    "coletado_em": "2026-10-20T17:27:34.316Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "Chapada dos Veadeiros - GO",
+    "tempo_s": 18.844,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.839881896972656,
+    "heap_tarefa_mb": 15.370147705078125,
+    "execucao": 4,
+    "coletado_em": "2026-10-20T17:28:03.456Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "Chapada dos Veadeiros - GO",
+    "tempo_s": 18.923,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.796390533447266,
+    "heap_tarefa_mb": 15.360504150390625,
+    "execucao": 5,
+    "coletado_em": "2026-10-20T17:28:32.832Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 7.879,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.673122406005859,
+    "heap_tarefa_mb": 9.521461486816406,
+    "execucao": 1,
+    "coletado_em": "2026-10-20T17:29:09.708Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 7.877,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.680248260498047,
+    "heap_tarefa_mb": 9.494796752929688,
+    "execucao": 2,
+    "coletado_em": "2026-10-20T17:29:59.877Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 6.067,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.668312072753906,
+    "heap_tarefa_mb": 9.481971740722656,
+    "execucao": 3,
+    "coletado_em": "2026-10-20T17:30:41.527Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 7.828,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.6678924560546875,
+    "heap_tarefa_mb": 9.47952651977539,
+    "execucao": 4,
+    "coletado_em": "2026-10-20T17:31:22.109Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 7.688,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.688648223876953,
+    "heap_tarefa_mb": 9.486907958984375,
+    "execucao": 5,
+    "coletado_em": "2026-10-20T17:32:01.579Z"
+  }
+]
