@@ -81,4 +81,4 @@ GOOGLE. **Largest Contentful Paint (LCP)**. [S.l.]: Google, 2025. Disponível em
 
 NIELSEN, J. **Usability engineering**. Boston: Academic Press, 1993.
 
-RAMOS, C. S. **Medição baseada em objetivos**: determinando o que medir. Aula 08 da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a. Material de aula.
+RAMOS, C. S. **Medição baseada em objetivos**: determinando o que medir. Notas de aula da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a.

@@ -127,4 +127,4 @@ O *abstraction sheet* registra o que a equipe sabe e espera sobre o objeto antes
 
 BASILI, V. R.; CALDIERA, G.; ROMBACH, H. D. The goal question metric approach. In: MARCINIAK, J. J. (ed.). **Encyclopedia of software engineering**. New York: Wiley, 1994. p. 528-532.
 
-RAMOS, C. S. **Medição baseada em objetivos**: determinando o que medir. Aula 08 da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a. Material de aula.
+RAMOS, C. S. **Medição baseada em objetivos**: determinando o que medir. Notas de aula da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a.
