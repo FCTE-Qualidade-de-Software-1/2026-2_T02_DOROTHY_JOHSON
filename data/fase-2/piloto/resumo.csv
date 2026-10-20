@@ -1,0 +1,16 @@
+"objeto","metrica","mediana","execucoes"
+"meu-territorio","M3.1.1 FCP (s)",1.56,5
+"meu-territorio","M3.1.2 LCP (s)",8.386,5
+"meu-territorio","M3.3.1 CPU thread principal (s)",2.8526559999999677,5
+"plataforma-geoespacial","M3.1.1 FCP (s)",2.8151851356954243,5
+"plataforma-geoespacial","M3.1.2 LCP (s)",24.400606299999996,5
+"plataforma-geoespacial","M3.3.1 CPU thread principal (s)",7.01383200000012,5
+"downloads","M3.1.1 FCP (s)",1.56,5
+"downloads","M3.1.2 LCP (s)",3.831,5
+"downloads","M3.3.1 CPU thread principal (s)",1.1570599999999986,5
+"T1","M3.2.1 execução da tarefa (s)",18.844,5
+"T1","M3.4.1 JS heap após carregamento (MB)",5.959842681884766,5
+"T1","M3.4.1 JS heap após tarefa (MB)",15.370147705078125,5
+"T2","M3.2.1 execução da tarefa (s)",7.828,5
+"T2","M3.4.1 JS heap após carregamento (MB)",5.673122406005859,5
+"T2","M3.4.1 JS heap após tarefa (MB)",9.486907958984375,5
