@@ -11,7 +11,7 @@ As decisões registradas aqui orientam diretamente a [Fase 2 (GQM)](../fase-2/in
 | Responsável pelo produto | Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA) |
 | Versão avaliada | Versão em produção na data de acesso (o portal não exibe número de versão) |
 | Primeiro acesso para esta avaliação | 19/10/2026 |
-| Modelo de qualidade | ISO/IEC 25010:2011 (modelo de qualidade de produto) |
+| Modelo de qualidade | ISO/IEC 25010:2011, modelo de qualidade de produto (ISO/IEC, 2011) |
 | Tipo de avaliação | Externa (caixa-preta), restrita à área pública do portal |
 
 ---
@@ -37,7 +37,7 @@ avaliação de qualidade tem maior potencial de influenciar a evolução do prod
 |---|---|
 | Requisitante (simulado) | MDA, como órgão gestor da política territorial e responsável pela evolução do SIT |
 | Avaliadores | Equipe Dorothy Johnson (avaliação independente, sem vínculo com o desenvolvimento) |
-| Objetivo da avaliação | **Indicar pontos de melhoria no produto** (categoria do processo de avaliação vista em aula) |
+| Objetivo da avaliação | **Indicar pontos de melhoria no produto** (categoria do processo de avaliação de produto, conforme Ramos, 2026b) |
 | Uso pretendido dos resultados | Apoiar o requisitante na **priorização do backlog de evolução** do portal |
 
 A avaliação deve responder a uma pergunta de gestão: **quais problemas de qualidade mais
@@ -53,7 +53,7 @@ tratados primeiro?** Os resultados apoiarão três decisões concretas do requis
 
 ### 1.3 Ênfase por característica
 
-A ênfase segue a escala do processo de avaliação (1 = nenhum interesse; 5 = grande interesse)
+A ênfase segue a escala do processo de avaliação de produto (RAMOS, 2026b), em que 1 = nenhum interesse e 5 = grande interesse,
 e considera o propósito acima, os stakeholders (Seção 2) e a viabilidade de medição em uma
 avaliação caixa-preta.
 
@@ -97,7 +97,7 @@ desempenho e portabilidade. As demais ficam fora do escopo pelos motivos indicad
 ### 3.1 Descrição geral
 
 O SIT é uma **aplicação web pública** do governo federal. A navegação principal oferece
-**nove seções**, levantadas no menu do portal em 19/10/2026:
+**nove seções**, levantadas no menu do portal (BRASIL, 2026) em 19/10/2026:
 
 | Seção | Função principal | Acesso |
 |---|---|---|
@@ -118,8 +118,8 @@ O SIT é uma **aplicação web pública** do governo federal. A navegação prin
 
 | Taxonomia | Classificação | Justificativa |
 |---|---|---|
-| Pressman | **Aplicação web (WebApp) de sistema de informação** | Organiza e apresenta dados de bases oficiais (IBGE, Datasus, CadÚnico etc.) para consulta e apoio à decisão. Não se encaixa em "software comercial", pois não é comercializado. |
-| IEEE 1062 | **Customizado (*Fully Developed*)** | Desenvolvido especificamente para o MDA e para a política territorial; não é um produto de prateleira (COTS) nem uma adaptação de um produto-padrão (MOTS). Classificação inferida, pois a avaliação é caixa-preta. |
+| Pressman (2002) | **Aplicação web (WebApp) de sistema de informação** | Organiza e apresenta dados de bases oficiais (IBGE, Datasus, CadÚnico etc.) para consulta e apoio à decisão. Não se encaixa em "software comercial", pois não é comercializado. |
+| IEEE 1062 (IEEE, 1998) | **Customizado (*Fully Developed*)** | Desenvolvido especificamente para o MDA e para a política territorial; não é um produto de prateleira (COTS) nem uma adaptação de um produto-padrão (MOTS). Classificação inferida, pois a avaliação é caixa-preta. |
 | Domínio | Governo digital / desenvolvimento rural | Política pública de desenvolvimento territorial sustentável |
 
 ### 3.3 Usuários, ambiente e conhecimento exigido
@@ -183,17 +183,71 @@ descrição oficial da plataforma.*
 
 ## 4. Modelo de qualidade
 
-A avaliação usa o modelo de qualidade de produto da **ISO/IEC 25010:2011**. A nomenclatura
+A avaliação usa o modelo de qualidade de produto da **ISO/IEC 25010:2011** (ISO/IEC, 2011). A nomenclatura
 desta edição é mantida em todo o projeto (no artigo, nesta página e no GQM).
 
-<!-- TODO (responsável pela issue "Especificar o modelo de qualidade"):
-     validar as subcaracterísticas de usabilidade e eficiência abaixo. -->
+Seguindo a orientação de adaptar o modelo de qualidade ao contexto do software e ao objetivo
+do requisitante (RAMOS, 2026b), o modelo foi adaptado ao SIT a partir de dois filtros: a ênfase de cada característica
+(Seção 1.3) e a possibilidade de medir cada subcaracterística de fora do sistema, apenas pela
+área pública do portal (Seção 3.5). Cada subcaracterística mantida foi conferida no portal (BRASIL, 2026) em
+20/10/2026, identificando onde ela pode ser observada.
 
-| Característica | Subcaracterísticas consideradas | Fora do escopo (justificativa) |
-|---|---|---|
-| Usabilidade | Reconhecibilidade de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, estética da interface, acessibilidade | — |
-| Eficiência de desempenho | Comportamento temporal, utilização de recursos | Capacidade (exigiria testes de carga no servidor) |
-| Portabilidade | **Adaptabilidade** | Instalabilidade (aplicação web, sem instalação pelo usuário); substituibilidade (não há produto equivalente que o SIT substitua para o mesmo público) |
+### 4.1 Representação do modelo adaptado
+
+```mermaid
+flowchart LR
+    Q["Qualidade do produto<br/>ISO/IEC 25010:2011"]
+
+    Q --> US[Usabilidade]
+    Q --> EF[Eficiência de desempenho]
+    Q --> PO[Portabilidade]
+    Q -.->|sem especificação pública| AF[Adequação funcional]
+    Q -.->|exige monitoramento contínuo| CF[Confiabilidade]
+    Q -.->|área restrita| SE[Segurança]
+    Q -.->|não observável externamente| CO[Compatibilidade]
+    Q -.->|sem código-fonte| MA[Manutenibilidade]
+
+    US --> US1[Reconhecibilidade de adequação]
+    US --> US2[Apreensibilidade]
+    US --> US3[Operabilidade]
+    US --> US4[Proteção contra erros do usuário]
+    US --> US5[Estética da interface]
+    US --> US6[Acessibilidade]
+
+    EF --> EF1[Comportamento temporal]
+    EF --> EF2[Utilização de recursos]
+    EF -.->|exige teste de carga| EF3[Capacidade]
+
+    PO --> PO1[Adaptabilidade]
+    PO -.->|aplicação web| PO2[Instalabilidade]
+    PO -.->|sem produto equivalente| PO3[Substituibilidade]
+
+    classDef selecionada stroke-width:3px
+    classDef fora stroke-dasharray:5 5,opacity:0.55
+    class US,EF,PO selecionada
+    class AF,CF,SE,CO,MA,EF3,PO2,PO3 fora
+```
+
+*Figura 2: Modelo de qualidade adaptado ao SIT. Linhas contínuas e bordas grossas indicam as
+características e subcaracterísticas avaliadas; linhas e bordas tracejadas indicam o que ficou
+fora do escopo, com o motivo resumido na ligação (detalhado na Seção 5).*
+
+### 4.2 Subcaracterísticas avaliadas
+
+A coluna **Decisão que apoia** remete às três decisões do requisitante (Seção 1.2) e a coluna
+**Stakeholder** remete à Seção 2.
+
+| Característica | Subcaracterística | Onde é observável no SIT | Decisão que apoia | Stakeholder |
+|---|---|---|---|---|
+| Usabilidade | Reconhecibilidade de adequação | Textos de abertura que explicam a finalidade de cada seção (ex.: Meu Território, SITGeo, Biblioteca Territorial) | 1. Interface e fluxos | Agricultores familiares e cidadãos; gestores públicos e organizações sociais |
+| Usabilidade | Apreensibilidade | Fluxo de seleção UF → Território → Selecionar (Meu Território e Biblioteca Territorial); escolha de tema e ativação de camadas no SITGeo | 1. Interface e fluxos | Agricultores familiares e cidadãos; colegiados e agentes territoriais |
+| Usabilidade | Operabilidade | Caixas de seleção, abas de programas (CAF, PRONAF, PAA etc.) e controles do mapa (zoom, camadas) | 1. Interface e fluxos | Colegiados e agentes territoriais |
+| Usabilidade | Proteção contra erros do usuário | Formulário do Fale Conosco (nome, e-mail, telefone, assunto, mensagem) e botões desabilitados até a seleção estar completa (ex.: "Buscar PTDRS" na Biblioteca Territorial) | 1. Interface e fluxos | Agricultores familiares e cidadãos |
+| Usabilidade | Estética da interface | Todas as seções públicas | 1. Interface e fluxos | Agricultores familiares e cidadãos |
+| Usabilidade | Acessibilidade | Todas as seções públicas, com prioridade para Meu Território, SITGeo e Biblioteca Territorial | 1. Interface e fluxos | Agricultores familiares e cidadãos; MDA |
+| Eficiência de desempenho | Comportamento temporal | Carregamento das páginas renderizadas no navegador (Seção 3.4) e das camadas do SITGeo | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
+| Eficiência de desempenho | Utilização de recursos | Volume de dados transferidos e processamento exigido do aparelho (mapas e scripts) | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
+| Portabilidade | Adaptabilidade | Execução das mesmas tarefas em diferentes navegadores, sistemas operacionais e tamanhos de tela | 3. Cobertura de ambientes | Equipe de desenvolvimento e TI; colegiados e agentes territoriais |
 
 ---
 
@@ -203,7 +257,41 @@ desta edição é mantida em todo o projeto (no artigo, nesta página e no GQM).
   ferramentas públicas e de testes com usuários.
 - **Objeto:** a versão em produção no período de coleta; como o portal não exibe versão,
   cada medição registra data e hora.
-- **Limites de validade:** os resultados valem para a área pública e para os ambientes
-  testados. Mudanças no portal durante a coleta serão registradas como ameaça à validade.
+
+### 5.1 O que ficou fora do escopo
+
+| O que ficou fora | Motivo | Efeito na validade dos resultados |
+|---|---|---|
+| Adequação funcional | Não há especificação de requisitos pública que sirva de referência para medir completude e correção | Os resultados não indicam se as funções do SIT estão completas ou corretas |
+| Confiabilidade | Medir disponibilidade e tolerância a falhas exigiria monitoramento contínuo por um período maior que o da disciplina | Nenhuma conclusão sobre disponibilidade ou recuperação de falhas |
+| Segurança | A área restrita exige credenciais que a equipe não possui, e testes de segurança em um sistema de governo em produção dependeriam de autorização do responsável | Nenhuma conclusão sobre confidencialidade, integridade ou autenticação |
+| Compatibilidade | A interoperabilidade com outros sistemas do governo não é observável externamente | Os resultados não cobrem a troca de dados com as bases de origem (IBGE, Datasus, CadÚnico) |
+| Manutenibilidade | Sem acesso ao código-fonte nem à documentação técnica | Nenhuma conclusão sobre a facilidade de evolução do sistema |
+| Capacidade (eficiência de desempenho) | Exigiria testes de carga no servidor de produção, com risco de afetar usuários reais | Os resultados de desempenho valem para acessos individuais, não para picos de uso |
+| Instalabilidade (portabilidade) | Aplicação web, sem instalação pelo usuário | Não se aplica ao produto |
+| Substituibilidade (portabilidade) | Não há produto equivalente que o SIT substitua para o mesmo público | Não se aplica ao produto |
+| Espaço do Colegiado | Área restrita, sem credenciais | Os resultados não valem para o registro de atividades dos colegiados |
+| Servidores, APIs internas e código-fonte | Avaliação caixa-preta | Os resultados descrevem apenas o comportamento observável no navegador |
+| Envio real de mensagens pelo Fale Conosco | A avaliação não deve gerar demandas reais ao MDA | A proteção contra erros é avaliada na validação do formulário antes do envio, sem cobrir o tratamento da mensagem |
+
+### 5.2 Limites de validade
+
+Os resultados valem para a área pública do portal e para os ambientes testados (navegadores,
+sistemas operacionais e tamanhos de tela definidos na Fase 3). Mudanças no portal durante a
+coleta serão registradas como ameaça à validade.
+
+## Referências
+
+BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. *Plataforma Territórios da Cidadania*: Sistema de Informações Territoriais (SIT). Brasília: MDA, 2026. Disponível em: <https://territoriosdacidadania.mda.gov.br>. Acesso em: 20 out. 2026.
+
+IEEE. *IEEE Std 1062-1998*: IEEE recommended practice for software acquisition. New York: IEEE, 1998.
+
+ISO/IEC. *ISO/IEC 25010:2011*: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: ISO, 2011.
+
+PRESSMAN, R. S. *Engenharia de software*. 5. ed. Rio de Janeiro: McGraw-Hill, 2002.
+
+RAMOS, C. S. *Processo de avaliação de produto de software*. Aula A07 da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026b. Material de aula.
+
+---
 
 Próximo passo: [Fase 2 — Modelagem GQM](../fase-2/index.md).
