@@ -20,7 +20,7 @@ enunciado. As medidas cobrem as três categorias pedidas: **Calendário e Progre
 O PSM é uma abordagem de medição **dirigida por necessidades de informação**: mede-se para
 apoiar decisões de gestão, e não por medir. Ele se apoia em dois modelos complementares: o
 **modelo de informação**, que organiza as medidas até a resposta à necessidade de informação, e
-o **modelo de processo**, que descreve as atividades de medição (RAMOS, 2026a; McGARRY et al., 2002).
+o **modelo de processo**, que descreve as atividades de medição (RAMOS, 2026b; McGARRY et al., 2002).
 
 O modelo de informação, também adotado pela norma ISO/IEC/IEEE 15939 (ISO/IEC/IEEE, 2017), encadeia os elementos abaixo:
 
@@ -33,7 +33,7 @@ flowchart BT
     I -->|interpretação| N[Produto de informação para a necessidade de informação]
 ```
 
-*Figura 1: Modelo de informação do PSM. Fonte: adaptado de Ramos (2026a) e McGarry et al. (2002).*
+*Figura 1: Modelo de informação do PSM. Fonte: adaptado de Ramos (2026b) e McGarry et al. (2002).*
 
 O **CID Measurement Framework** é a versão do PSM para desenvolvimento contínuo e iterativo.
 A Parte 1 (PSM, 2021a) traz a **Tabela ICM** (*Information Category – Measurable Concept – Measures*), usada
@@ -62,7 +62,7 @@ como modelo das fichas da Seção 4 (**como medir**).
 | Recursos e Custos | 9 | *Financial Performance* (Estimation Accuracy) | M3: horas por ponto | NI3 |
 | Desempenho dos Processos | 30 e 32 | *Process Efficiency – Speed* | M4: lead time e tempo de revisão de PR | NI4 |
 
-As medidas foram escolhidas pelos critérios de seleção de medidas apresentados por Ramos (2026a): relevância para as necessidades de
+As medidas foram escolhidas pelos critérios de seleção de medidas apresentados por Ramos (2026b): relevância para as necessidades de
 informação, viabilidade e baixo custo de coleta (os dados já existem no GitHub, exceto as horas)
 e baixo grau de intrusão nas tarefas da equipe.
 
@@ -191,12 +191,12 @@ e baixo grau de intrusão nas tarefas da equipe.
 
 ## Referências
 
-ISO/IEC/IEEE. *ISO/IEC/IEEE 15939:2017*: Systems and software engineering — Measurement process. Geneva: ISO, 2017.
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION; INSTITUTE OF ELECTRICAL AND ELECTRONICS ENGINEERS. **ISO/IEC/IEEE 15939:2017**: systems and software engineering — measurement process. Genebra: ISO, 2017.
 
-McGARRY, J. et al. *Practical Software Measurement*: objective information for decision makers. Boston: Addison-Wesley, 2002.
+McGARRY, J. et al. **Practical software measurement**: objective information for decision makers. Boston: Addison-Wesley, 2002.
 
-PSM. *Continuous Iterative Development Measurement Framework*: Part 1: concepts, definitions, principles, and measures. Version 2.1. [S.l.]: Practical Software and Systems Measurement, 15 abr. 2021a. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>.
+PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT. **Continuous Iterative Development Measurement Framework**: part 1: concepts, definitions, principles, and measures. Version 2.1. [S.l.]: PSM, 15 abr. 2021a. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>. Acesso em: 20 out. 2026.
 
-PSM. *Continuous Iterative Development Measurement Framework*: Part 2: measurement specifications and enterprise measures. Version 2.1. [S.l.]: Practical Software and Systems Measurement, 15 abr. 2021b. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>.
+PRACTICAL SOFTWARE AND SYSTEMS MEASUREMENT. **Continuous Iterative Development Measurement Framework**: part 2: measurement specifications and enterprise measures. Version 2.1. [S.l.]: PSM, 15 abr. 2021b. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>. Acesso em: 20 out. 2026.
 
-RAMOS, C. S. *Medição prática de software e sistemas*: PSM. Aula 09 da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a. Material de aula.
+RAMOS, C. S. **Medição prática de software e sistemas**: PSM. Notas de aula da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026b.
