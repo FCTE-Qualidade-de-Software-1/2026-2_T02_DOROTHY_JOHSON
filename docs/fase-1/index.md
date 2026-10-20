@@ -11,7 +11,7 @@ As decisões registradas aqui orientam diretamente a [Fase 2 (GQM)](../fase-2/in
 | Responsável pelo produto | Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA) |
 | Versão avaliada | Versão em produção na data de acesso (o portal não exibe número de versão) |
 | Primeiro acesso para esta avaliação | 19/10/2026 |
-| Modelo de qualidade | ISO/IEC 25010:2011, modelo de qualidade de produto (ISO/IEC, 2011) |
+| Modelo de qualidade | ISO/IEC 25010:2011, modelo de qualidade de produto (ISO/IEC, 2011a) |
 | Tipo de avaliação | Externa (caixa-preta), restrita à área pública do portal |
 
 ---
@@ -37,7 +37,7 @@ avaliação de qualidade tem maior potencial de influenciar a evolução do prod
 |---|---|
 | Requisitante (simulado) | MDA, como órgão gestor da política territorial e responsável pela evolução do SIT |
 | Avaliadores | Equipe Dorothy Johnson (avaliação independente, sem vínculo com o desenvolvimento) |
-| Objetivo da avaliação | **Indicar pontos de melhoria no produto** (categoria do processo de avaliação de produto, conforme Ramos, 2026b) |
+| Objetivo da avaliação | **Indicar pontos de melhoria no produto** (categoria do processo de avaliação de produto, conforme Ramos, 2026c) |
 | Uso pretendido dos resultados | Apoiar o requisitante na **priorização do backlog de evolução** do portal |
 
 A avaliação deve responder a uma pergunta de gestão: **quais problemas de qualidade mais
@@ -53,7 +53,7 @@ tratados primeiro?** Os resultados apoiarão três decisões concretas do requis
 
 ### 1.3 Ênfase por característica
 
-A ênfase segue a escala do processo de avaliação de produto (RAMOS, 2026b), em que 1 = nenhum interesse e 5 = grande interesse,
+A ênfase segue a escala do processo de avaliação de produto (RAMOS, 2026c), em que 1 = nenhum interesse e 5 = grande interesse,
 e considera o propósito acima, os stakeholders (Seção 2) e a viabilidade de medição em uma
 avaliação caixa-preta.
 
@@ -183,11 +183,11 @@ descrição oficial da plataforma.*
 
 ## 4. Modelo de qualidade
 
-A avaliação usa o modelo de qualidade de produto da **ISO/IEC 25010:2011** (ISO/IEC, 2011). A nomenclatura
+A avaliação usa o modelo de qualidade de produto da **ISO/IEC 25010:2011** (ISO/IEC, 2011a). A nomenclatura
 desta edição é mantida em todo o projeto (no artigo, nesta página e no GQM).
 
 Seguindo a orientação de adaptar o modelo de qualidade ao contexto do software e ao objetivo
-do requisitante (RAMOS, 2026b), o modelo foi adaptado ao SIT a partir de dois filtros: a ênfase de cada característica
+do requisitante (RAMOS, 2026c), o modelo foi adaptado ao SIT a partir de dois filtros: a ênfase de cada característica
 (Seção 1.3) e a possibilidade de medir cada subcaracterística de fora do sistema, apenas pela
 área pública do portal (Seção 3.5). Cada subcaracterística mantida foi conferida no portal (BRASIL, 2026) em
 20/10/2026, identificando onde ela pode ser observada.
@@ -282,15 +282,17 @@ coleta serão registradas como ameaça à validade.
 
 ## Referências
 
-BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. *Plataforma Territórios da Cidadania*: Sistema de Informações Territoriais (SIT). Brasília: MDA, 2026. Disponível em: <https://territoriosdacidadania.mda.gov.br>. Acesso em: 20 out. 2026.
+BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. Portaria MDA nº 35, de 15 de setembro de 2025. Institui o Programa Nacional de Desenvolvimento Territorial Sustentável. **Diário Oficial da União**: seção 1, Brasília, DF, ed. 176, p. 29, 16 set. 2025. Disponível em: <https://www.in.gov.br/en/web/dou/-/portaria-mda-n-35-de-15-de-setembro-de-2025-656044670>. Acesso em: 20 out. 2026.
 
-IEEE. *IEEE Std 1062-1998*: IEEE recommended practice for software acquisition. New York: IEEE, 1998.
+BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. **Plataforma Territórios da Cidadania**: Sistema de Informações Territoriais (SIT). Brasília: MDA, 2026. Disponível em: <https://territoriosdacidadania.mda.gov.br>. Acesso em: 20 out. 2026.
 
-ISO/IEC. *ISO/IEC 25010:2011*: Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: ISO, 2011.
+INSTITUTE OF ELECTRICAL AND ELECTRONICS ENGINEERS. **IEEE Std 1062-1998**: IEEE recommended practice for software acquisition. New York: IEEE, 1998.
 
-PRESSMAN, R. S. *Engenharia de software*. 5. ed. Rio de Janeiro: McGraw-Hill, 2002.
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2011**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — system and software quality models. Genebra: ISO, 2011a.
 
-RAMOS, C. S. *Processo de avaliação de produto de software*. Aula A07 da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026b. Material de aula.
+PRESSMAN, R. S. **Engenharia de software**. 5. ed. Rio de Janeiro: McGraw-Hill, 2002.
+
+RAMOS, C. S. **Processo de avaliação de produto de software**. Notas de aula da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026c.
 
 ---
 
