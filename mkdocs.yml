@@ -98,6 +98,8 @@ nav:
       - Métricas: fase-2/metricas.md
       - Níveis de Pontuação: fase-2/niveis-pontuacao.md
       - Gráfico GQM: fase-2/grafico-gqm.md
+  - Gestão:
+      - Plano de Medição (PSM/CID): gestao/plano-medicao.md
   - Uso de IA: uso-de-ia.md
   - Equipe:
       - Contribuição: contribuicao.md
