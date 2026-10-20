@@ -21,7 +21,7 @@ As decisões registradas aqui orientam diretamente a [Fase 2 (GQM)](../fase-2/in
 ### 1.1 Contexto
 
 A Plataforma Territórios da Cidadania foi instituída como instrumento do Programa Nacional
-de Desenvolvimento Territorial Sustentável (Portaria MDA nº 35, de 15/09/2025) e recupera o
+de Desenvolvimento Territorial Sustentável ([BRASIL, 2025](../referencias.md)) e recupera o
 SIT, desativado em 2016. Seu papel é reunir, em um único lugar, dados socioeconômicos e
 ambientais dos territórios rurais (população, estabelecimentos agropecuários, Cadastro da
 Agricultura Familiar, acesso a políticas públicas), além de mapas, atos normativos e o
