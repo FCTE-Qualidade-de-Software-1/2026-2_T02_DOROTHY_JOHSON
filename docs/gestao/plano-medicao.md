@@ -20,9 +20,9 @@ enunciado. As medidas cobrem as três categorias pedidas: **Calendário e Progre
 O PSM é uma abordagem de medição **dirigida por necessidades de informação**: mede-se para
 apoiar decisões de gestão, e não por medir. Ele se apoia em dois modelos complementares: o
 **modelo de informação**, que organiza as medidas até a resposta à necessidade de informação, e
-o **modelo de processo**, que descreve as atividades de medição (Aula 09; McGarry et al., 2002).
+o **modelo de processo**, que descreve as atividades de medição (RAMOS, 2026a; McGARRY et al., 2002).
 
-O modelo de informação, também adotado pela ISO/IEC/IEEE 15939, encadeia os elementos abaixo:
+O modelo de informação, também adotado pela norma ISO/IEC/IEEE 15939 (ISO/IEC/IEEE, 2017), encadeia os elementos abaixo:
 
 ```mermaid
 flowchart BT
@@ -33,11 +33,11 @@ flowchart BT
     I -->|interpretação| N[Produto de informação para a necessidade de informação]
 ```
 
-*Figura 1: Modelo de informação do PSM, adaptado da Aula 09.*
+*Figura 1: Modelo de informação do PSM. Fonte: adaptado de Ramos (2026a) e McGarry et al. (2002).*
 
 O **CID Measurement Framework** é a versão do PSM para desenvolvimento contínuo e iterativo.
-A Parte 1 traz a **Tabela ICM** (*Information Category – Measurable Concept – Measures*), usada
-aqui para escolher **o que medir**, e a Parte 2 traz as **especificações de medidas**, usadas
+A Parte 1 (PSM, 2021a) traz a **Tabela ICM** (*Information Category – Measurable Concept – Measures*), usada
+aqui para escolher **o que medir**, e a Parte 2 (PSM, 2021b) traz as **especificações de medidas**, usadas
 como modelo das fichas da Seção 4 (**como medir**).
 
 ---
@@ -55,14 +55,14 @@ como modelo das fichas da Seção 4 (**como medir**).
 
 ## 3. Seleção das medidas (Tabela ICM)
 
-| Categoria de informação | Linha da Tabela ICM (CID Parte 1, Tabela 5) | Conceito mensurável | Medida adotada | NI |
+| Categoria de informação | Linha da Tabela ICM (PSM, 2021a, Tabela 5) | Conceito mensurável | Medida adotada | NI |
 |---|---|---|---|---|
 | Calendário e Progresso | 1 | *Work Unit Progress / Milestone Completion* | M1: % concluído e burndown de pontos | NI1 |
 | Recursos e Custos | 7 | *Financial Performance* (Cost, Effort) | M2: esforço em horas | NI2 |
 | Recursos e Custos | 9 | *Financial Performance* (Estimation Accuracy) | M3: horas por ponto | NI3 |
 | Desempenho dos Processos | 30 e 32 | *Process Efficiency – Speed* | M4: lead time e tempo de revisão de PR | NI4 |
 
-As medidas foram escolhidas pelos critérios da Aula 09: relevância para as necessidades de
+As medidas foram escolhidas pelos critérios de seleção de medidas apresentados por Ramos (2026a): relevância para as necessidades de
 informação, viabilidade e baixo custo de coleta (os dados já existem no GitHub, exceto as horas)
 e baixo grau de intrusão nas tarefas da equipe.
 
@@ -82,7 +82,7 @@ e baixo grau de intrusão nas tarefas da equipe.
 | Medidas derivadas | MD1: % concluído = MB2 × 100 / MB1. MD2: pontos restantes por dia = MB1 − MB2 |
 | Indicador | Burndown: linha de pontos restantes por dia comparada com a linha ideal (redução linear de MB1 até zero na data da entrega), com o % concluído acumulado |
 | Modelo de análise | O desvio é a diferença percentual entre os pontos restantes reais e os da linha ideal no mesmo dia |
-| Critérios de decisão | Desvio de 5% ou vários dias sem redução de pontos abertos: a equipe revisa os impedimentos. Desvio acima de 10%: a equipe considera replanejar (redistribuir issues ou mudar o compromisso). **Fonte:** CID Parte 2, especificações 8.2 (*Burndown*) e 8.3 (*Committed vs Completed*) |
+| Critérios de decisão | Desvio de 5% ou vários dias sem redução de pontos abertos: a equipe revisa os impedimentos. Desvio acima de 10%: a equipe considera replanejar (redistribuir issues ou mudar o compromisso). **Fonte:** PSM (2021b), especificações 8.2 (*Burndown*) e 8.3 (*Committed vs Completed*) |
 | Procedimento de coleta | Automático e diário pelo script `scripts/psm/coletar.sh` |
 | Procedimento de análise | Semanal, na reunião da equipe; resultado e decisão registrados na issue #20 e em ata |
 
@@ -119,9 +119,9 @@ e baixo grau de intrusão nas tarefas da equipe.
 | Procedimento de análise | Semanal, a partir da segunda semana com dados |
 
 !!! warning "Critério adaptado"
-    O CID lista *Estimation Accuracy* na Tabela ICM (linha 9), mas não especifica critério de
+    O CID lista *Estimation Accuracy* na Tabela ICM, linha 9 (PSM, 2021a), mas não especifica critério de
     decisão para essa medida. O limite de ±10% é uma **adaptação por analogia** à especificação
-    8.10 (*Team Velocity*), que manda analisar variações de ±10% na velocidade. Horas por ponto é
+    8.10 (*Team Velocity*) de PSM (2021b), que manda analisar variações de ±10% na velocidade. Horas por ponto é
     o inverso da produtividade da equipe, por isso o mesmo limite foi adotado.
 
 ### M4: Lead time e tempo de revisão de PR
@@ -136,7 +136,7 @@ e baixo grau de intrusão nas tarefas da equipe.
 | Medidas derivadas | MD6: lead time = fechamento − criação da issue. MD7: tempo de revisão = merge − abertura do PR |
 | Indicador | Gráfico de lead time por issue e de tempo de revisão por PR, com a linha da média |
 | Modelo de análise | Comparação de cada item com a média do período |
-| Critérios de decisão | Cada item mais de 10% acima da média é investigado para identificar a causa (impedimento, revisão parada, issue grande demais). **Fonte:** CID Parte 2, especificação 8.5 (*Cycle Time / Lead Time*) |
+| Critérios de decisão | Cada item mais de 10% acima da média é investigado para identificar a causa (impedimento, revisão parada, issue grande demais). **Fonte:** PSM (2021b), especificação 8.5 (*Cycle Time / Lead Time*) |
 | Procedimento de coleta | Automático e diário pelo script `scripts/psm/coletar.sh` (CSV de itens e CSV de PRs) |
 | Procedimento de análise | Semanal, junto com M1 |
 
@@ -191,8 +191,12 @@ e baixo grau de intrusão nas tarefas da equipe.
 
 ## Referências
 
-- RAMOS, C. S. *Medição Prática de Software e Sistemas: PSM*. Aula 09, Qualidade de Software 1, FCTE/UnB, 2026.
-- PSM. *Continuous Iterative Development Measurement Framework*, Part 1: Concepts, Definitions, Principles, and Measures, v2.1, 15 abr. 2021. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>.
-- PSM. *Continuous Iterative Development Measurement Framework*, Part 2: Measurement Specifications and Enterprise Measures, v2.1, 15 abr. 2021. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>.
-- McGARRY, J. et al. *Practical Software Measurement: Objective Information for Decision Makers*. Boston: Addison-Wesley, 2002.
-- ISO/IEC/IEEE. *ISO/IEC/IEEE 15939: Systems and software engineering — Measurement process*.
+ISO/IEC/IEEE. *ISO/IEC/IEEE 15939:2017*: Systems and software engineering — Measurement process. Geneva: ISO, 2017.
+
+McGARRY, J. et al. *Practical Software Measurement*: objective information for decision makers. Boston: Addison-Wesley, 2002.
+
+PSM. *Continuous Iterative Development Measurement Framework*: Part 1: concepts, definitions, principles, and measures. Version 2.1. [S.l.]: Practical Software and Systems Measurement, 15 abr. 2021a. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>.
+
+PSM. *Continuous Iterative Development Measurement Framework*: Part 2: measurement specifications and enterprise measures. Version 2.1. [S.l.]: Practical Software and Systems Measurement, 15 abr. 2021b. Disponível em: <http://www.psmsc.com/CIDMeasurement.asp>.
+
+RAMOS, C. S. *Medição prática de software e sistemas*: PSM. Aula 09 da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a. Material de aula.
