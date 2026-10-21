@@ -10,15 +10,34 @@ interpretação dos resultados na Fase 4 e podem ser valores ou ideias comparati
 
 ## G1: Usabilidade
 
-!!! info "Em construção"
-    Seção da issue #24.
+| ID | Questão | Hipótese | Base |
+|---|---|---|---|
+| H1.1 | Q1.1 | Pelo menos dois terços das seções explicam a própria finalidade na página de entrada (M1.1.1). No primeiro clique a partir da página Início (M1.1.2), a maioria dos participantes acerta a seção de T1 (Meu Território) e de T3 (Biblioteca Territorial), mas a minoria acerta a de T2, porque o nome "SITGeo" é uma sigla que não indica que a seção contém mapas | Textos de abertura observados na Fase 1 (seção 4.2); nome das seções no menu (Fase 1, seção 3.1) |
+| H1.2 | Q1.2 | T1 e T3 atingem taxa de conclusão sem ajuda (M1.2.1) de pelo menos 78%, a média de referência de testes de usabilidade; T2 fica abaixo desse valor | Média de conclusão de tarefas (SAURO; LEWIS, 2016); SITGeo exige ativar camadas e interpretar legendas (Fase 1, seção 3.3) |
+| H1.3 | Q1.3 | T2 tem a menor eficiência de caminho (M1.3.1) das três tarefas, abaixo de 0,5: os participantes executam mais que o dobro dos passos mínimos | Hipótese comparativa; mesma base de H1.2 |
+| H1.4 | Q1.4 | Seleções incompletas e campos obrigatórios vazios são bloqueados, mas formatos inválidos (e-mail e telefone) nem sempre: a prevenção de erros (M1.4.1) fica entre 50% e 100%. Menos da metade das mensagens identifica o campo e diz como corrigir (M1.4.2) | Botões desabilitados até a seleção estar completa, observados na Fase 1 (seção 4.2) |
+| H1.5 | Q1.5 | A pontuação SUS média (M1.5.1) fica entre 51 e 68: acima do adjetivo "OK", mas abaixo da média de referência. A nota de aparência (M1.5.2) fica acima do ponto neutro (3) | Média de referência do SUS (SAURO; LEWIS, 2016); escala de adjetivos (BANGOR; KORTUM; MILLER, 2009) |
+| H1.6 | Q1.6 | Todas as páginas aprovam pelo menos 80% das regras automáticas aplicáveis (M1.6.1), mas nenhuma fica livre de violações críticas ou sérias (M1.6.2). O SITGeo tem o maior número delas, por causa do mapa interativo | Hipótese comparativa; critérios WCAG 2.1 (W3C, 2018) e eMAG (BRASIL, 2014) |
+
+!!! warning "Hipóteses sem medição piloto"
+    Diferentemente de G3, as hipóteses de G1 foram formuladas a partir das observações da Fase 1 e
+    de valores de referência da literatura, sem medição piloto. Antes da Fase 4, recomenda-se um
+    piloto com um participante (que não entra na amostra) e uma execução do axe em cada página,
+    para conferir o roteiro e a ordem de grandeza dos valores.
 
 ---
 
 ## G2: Portabilidade
 
-!!! info "Em construção"
-    Seção da issue #25.
+| ID | Questão | Hipótese | Base |
+|---|---|---|---|
+| H2.1 | Q2.1 | Nos navegadores baseados em Chromium (Chrome, Edge e Samsung Internet), todas as execuções são concluídas (M2.1.1 = 100%). No Safari/iOS e no Firefox, pelo menos uma execução falha, com maior chance em T2 (SITGeo) | Hipótese comparativa; predominância do Chrome no Brasil (Fase 1, seção 1.3), o que sugere ser esse o navegador mais testado pelo fornecedor |
+| H2.2 | Q2.2 | Em 768 px ou mais, nenhuma página tem rolagem horizontal; em 360 px, pelo menos uma das três páginas tem (M2.2.1 < 100%). Meu Território e Biblioteca Territorial mantêm todas as funções no celular, e o SITGeo não (M2.2.2 < 100% apenas no SITGeo) | Hipótese comparativa; o SITGeo combina mapa, painel de camadas e legenda na mesma tela (Fase 1, seção 3.1) |
+| H2.3 | Q2.3 | As falhas dependentes de ambiente (M2.3.1) se concentram no SITGeo, nas larguras de celular e no Safari/iOS. Chrome/Android, o ambiente de maior participação, não tem falhas bloqueantes | Consequência de H2.1 e H2.2 |
+
+!!! warning "Hipóteses sem medição piloto"
+    As hipóteses de G2 também foram formuladas sem medição piloto. Um piloto rápido (as três
+    páginas em 360 px e 1366 px, no Chrome e no Firefox) permite ajustá-las antes da Fase 4.
 
 ---
 
@@ -73,6 +92,10 @@ valor abaixo possa ser conferido ou recalculado:
 
 ## Referências
 
+BANGOR, A.; KORTUM, P.; MILLER, J. Determining what individual SUS scores mean: adding an adjective rating scale. **Journal of Usability Studies**, v. 4, n. 3, p. 114-123, 2009.
+
+BRASIL. Ministério do Planejamento, Orçamento e Gestão. **eMAG**: Modelo de Acessibilidade em Governo Eletrônico. Versão 3.1. Brasília: MP, 2014. Disponível em: <https://emag.governoeletronico.gov.br>. Acesso em: 20 out. 2026.
+
 GOOGLE. **Minimize main-thread work**. [S.l.]: Google, 2019. Disponível em: <https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown>. Acesso em: 20 out. 2026.
 
 GOOGLE. **First Contentful Paint (FCP)**. [S.l.]: Google, 2023a. Disponível em: <https://web.dev/articles/fcp>. Acesso em: 20 out. 2026.
@@ -82,3 +105,7 @@ GOOGLE. **Largest Contentful Paint (LCP)**. [S.l.]: Google, 2025. Disponível em
 NIELSEN, J. **Usability engineering**. Boston: Academic Press, 1993.
 
 RAMOS, C. S. **Medição baseada em objetivos**: determinando o que medir. Notas de aula da disciplina Qualidade de Software 1. Brasília: FCTE/UnB, 2026a.
+
+SAURO, J.; LEWIS, J. R. **Quantifying the user experience**: practical statistics for user research. 2. ed. Cambridge: Morgan Kaufmann, 2016.
+
+WORLD WIDE WEB CONSORTIUM. **Web Content Accessibility Guidelines (WCAG) 2.1**. [S.l.]: W3C, 2018. Disponível em: <https://www.w3.org/TR/WCAG21/>. Acesso em: 20 out. 2026.
