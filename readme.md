@@ -9,6 +9,7 @@ Projeto da disciplina de **Qualidade de Software - 2026/2**.
 - Cayo
 - Felipe
 - Gabriel Augusto V. V. Rocha - 221022533
+- Tales Rodrigues Gonçalves - 211041295
 
 ## Sobre o projeto
 
