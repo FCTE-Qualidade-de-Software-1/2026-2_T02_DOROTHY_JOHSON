@@ -77,6 +77,43 @@ desempenho e portabilidade. As demais ficam fora do escopo pelos motivos indicad
     Na ISO/IEC 25010:2011, compatibilidade trata de coexistência e interoperabilidade
     com outros produtos, o que não é observável nesta avaliação.
 
+### 1.4 Relação com os Objetivos de Desenvolvimento Sustentável (ODS)
+
+A Portaria que instituiu o Programa Nacional de Desenvolvimento Territorial Sustentável não
+cita a Agenda 2030, mas inclui o SIT entre os instrumentos de implementação do Programa
+(art. 9º, VII) e tem como diretriz a ampliação do acesso a políticas públicas nos territórios
+(art. 4º, I) ([BRASIL, 2025](../referencias.md)). Esse papel de canal de informação para
+agentes territoriais e agricultores familiares em áreas rurais, que precisam usar o portal
+inclusive no celular (Seção 2), liga o produto a duas metas dos ODS.
+
+O texto das metas segue a adequação à realidade brasileira feita pelo Ipea; quando a meta foi
+mantida sem alteração, vale o texto das Nações Unidas (IPEA, 2019a; IPEA, 2019b). O status
+dos indicadores é o informado pelo IBGE no portal ODS Brasil (IBGE, 2026).
+
+| ODS | Meta (versão Brasil) | Indicador (status no Brasil) | Papel do SIT | Característica avaliada que afeta a contribuição |
+|---|---|---|---|---|
+| 9: Indústria, inovação e infraestrutura | **9.c** Aumentar significativamente o acesso às tecnologias de informação e comunicação e empenhar-se para oferecer acesso universal e a preços acessíveis à internet, até 2020, **buscando garantir a qualidade**, a privacidade, a proteção de dados e a segurança cibernética | **9.c.1** Proporção da população coberta por rede móvel, por tipo de tecnologia (produzido) | Serviço digital do governo oferecido a quem está nas áreas cobertas por rede móvel, inclusive as rurais | **Eficiência de desempenho**: o portal precisa ser utilizável na conexão móvel que a cobertura oferece. **Portabilidade**: o acesso é feito por celulares e navegadores variados |
+| 16: Paz, justiça e instituições eficazes | **16.10** Assegurar o acesso público à informação e proteger as liberdades fundamentais, em conformidade com a legislação nacional e os acordos internacionais (meta mantida sem alteração) | **16.10.2** Número de países que adotam e implementam garantias constitucionais, estatutárias e/ou políticas para acesso público à informação (produzido) | Publica dados socioeconômicos, mapas e atos normativos dos territórios rurais | **Usabilidade**: a informação publicada só é acessada de fato se o usuário consegue encontrá-la e interpretá-la sem ajuda |
+
+**Pertinência ao software avaliado.** Os dois indicadores medem condições do país, e não o
+SIT: a cobertura de rede móvel (9.c.1) e a existência de garantias de acesso à informação
+(16.10.2). O SIT não altera esses números, mas é um dos meios pelos quais essas condições se
+convertem em acesso efetivo. A própria meta 9.c, na versão brasileira, associa o acesso às TIC
+à sua qualidade, e a meta 16.10 fala em *implementar* o acesso à informação, não apenas em
+garanti-lo em lei. Por isso a avaliação contribui para as duas metas no ponto em que o
+software tem influência:
+
+- uma pessoa coberta por rede móvel (9.c.1) só tem acesso efetivo ao SIT se as páginas
+  carregam em tempo aceitável nessa conexão e funcionam no aparelho que ela usa, o que é
+  verificado pelas métricas de eficiência de desempenho e de portabilidade da Fase 2;
+- um dado publicado pelo SIT só cumpre a meta 16.10 se o público consegue chegar até ele, o
+  que é verificado pelas métricas de usabilidade.
+
+!!! note "Prazo da meta 9.c"
+    A meta 9.c tinha 2020 como horizonte para o acesso universal à internet. O IBGE continua
+    produzindo o indicador 9.c.1, e a parte da meta ligada à qualidade do acesso segue
+    pertinente para o SIT.
+
 ---
 
 ## 2. Stakeholders
@@ -287,6 +324,12 @@ BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. Portaria
 BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. **Plataforma Territórios da Cidadania**: Sistema de Informações Territoriais (SIT). Brasília: MDA, 2026. Disponível em: <https://territoriosdacidadania.mda.gov.br>. Acesso em: 20 out. 2026.
 
 INSTITUTE OF ELECTRICAL AND ELECTRONICS ENGINEERS. **IEEE Std 1062-1998**: IEEE recommended practice for software acquisition. New York: IEEE, 1998.
+
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. **Indicadores dos Objetivos de Desenvolvimento Sustentável**: Brasil. Rio de Janeiro: IBGE, 2026. Disponível em: <https://odsbrasil.gov.br>. Acesso em: 20 out. 2026.
+
+INSTITUTO DE PESQUISA ECONÔMICA APLICADA. **ODS 9**: indústria, inovação e infraestrutura. Brasília: Ipea, 2019a. Disponível em: <https://www.ipea.gov.br/ods/ods9.html>. Acesso em: 20 out. 2026.
+
+INSTITUTO DE PESQUISA ECONÔMICA APLICADA. **ODS 16**: paz, justiça e instituições eficazes. Brasília: Ipea, 2019b. Disponível em: <https://www.ipea.gov.br/ods/ods16.html>. Acesso em: 20 out. 2026.
 
 INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2011**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — system and software quality models. Genebra: ISO, 2011a.
 
