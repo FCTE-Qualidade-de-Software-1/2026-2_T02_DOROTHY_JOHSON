@@ -4,7 +4,7 @@
 
 A qualidade de um produto de software é o grau em que ele satisfaz as necessidades,
 explícitas e implícitas, das partes interessadas quando usado em condições especificadas
-([ISO/IEC, 2011](../referencias.md)). Em serviços públicos digitais, essa definição tem um
+([ISO/IEC, 2011a](../referencias.md)). Em serviços públicos digitais, essa definição tem um
 peso particular: o usuário não escolhe outro fornecedor quando o sistema falha, e problemas
 de qualidade se convertem diretamente em dificuldade de acesso a informações e políticas
 públicas.
@@ -28,14 +28,14 @@ aparelhos e conexões modestos.
 ## Objetivo do trabalho
 
 O **objetivo geral** é avaliar a qualidade do produto SIT, em sua área pública, segundo o
-modelo da ISO/IEC 25010:2011, a fim de indicar ao MDA melhorias priorizadas com base em
+modelo da ISO/IEC 25010:2023 ([ISO/IEC, 2023](../referencias.md)), a fim de indicar ao MDA melhorias priorizadas com base em
 evidências.
 
 Os **objetivos específicos** são:
 
 1. estabelecer os requisitos da avaliação, isto é, o propósito, os stakeholders, o tipo de
    produto e o modelo de qualidade ([Fase 1](../fase-1/index.md));
-2. especificar a avaliação das características priorizadas (usabilidade, portabilidade e
+2. especificar a avaliação das características priorizadas (capacidade de interação, flexibilidade e
    eficiência de desempenho) com a abordagem *Goal–Question–Metric* (GQM)
    ([BASILI; CALDIERA; ROMBACH, 1994](../referencias.md)), definindo questões, hipóteses,
    métricas, níveis de pontuação e critérios de julgamento ([Fase 2](../fase-2/index.md));

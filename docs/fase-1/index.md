@@ -11,7 +11,7 @@ As decisões registradas aqui orientam diretamente a [Fase 2 (GQM)](../fase-2/in
 | Responsável pelo produto | Ministério do Desenvolvimento Agrário e Agricultura Familiar (MDA) |
 | Versão avaliada | Versão em produção na data de acesso (o portal não exibe número de versão) |
 | Primeiro acesso para esta avaliação | 19/10/2026 |
-| Modelo de qualidade | ISO/IEC 25010:2011, modelo de qualidade de produto (ISO/IEC, 2011a) |
+| Modelo de qualidade | ISO/IEC 25010:2023, modelo de qualidade de produto (ISO/IEC, 2023) |
 | Tipo de avaliação | Externa (caixa-preta), restrita à área pública do portal |
 
 ---
@@ -45,11 +45,11 @@ dificultam o acesso do público-alvo às informações territoriais e, portanto,
 tratados primeiro?** Os resultados apoiarão três decisões concretas do requisitante:
 
 1. **Interface e fluxos de navegação** — quais telas e tarefas precisam ser redesenhadas
-   para usuários com pouca familiaridade digital (usabilidade).
+   para usuários com pouca familiaridade digital (capacidade de interação).
 2. **Desempenho em condições reais de acesso** — se é necessário otimizar o carregamento
    das páginas e dos mapas para conexões móveis e aparelhos modestos (eficiência de desempenho).
 3. **Cobertura de ambientes** — quais combinações de navegador, sistema operacional e
-   tamanho de tela devem entrar na matriz de testes do fornecedor (portabilidade).
+   tamanho de tela devem entrar na matriz de testes do fornecedor (flexibilidade).
 
 ### 1.3 Ênfase por característica
 
@@ -57,24 +57,25 @@ A ênfase segue a escala do processo de avaliação de produto (RAMOS, 2026c), e
 e considera o propósito acima, os stakeholders (Seção 2) e a viabilidade de medição em uma
 avaliação caixa-preta.
 
-| Característica (ISO/IEC 25010:2011) | Ênfase | Justificativa |
+| Característica (ISO/IEC 25010:2023) | Ênfase | Justificativa |
 |---|:---:|---|
-| Usabilidade | **5** | Público com níveis muito diferentes de letramento digital; o valor do SIT depende de o usuário encontrar e interpretar os dados sozinho. |
+| Capacidade de interação | **5** | Público com níveis muito diferentes de letramento digital; o valor do SIT depende de o usuário encontrar e interpretar os dados sozinho. |
 | Eficiência de desempenho | **4** | Uso em áreas rurais, com conexões móveis limitadas; o portal carrega mapas interativos e renderiza o conteúdo no navegador. |
-| Portabilidade | **4** | Acesso predominante por celular (no Brasil, o Chrome para Android responde por cerca de 39% das versões de navegador em uso) e diversidade de navegadores e telas. |
+| Flexibilidade | **4** | Acesso predominante por celular (no Brasil, o Chrome para Android responde por cerca de 39% das versões de navegador em uso) e diversidade de navegadores e telas. |
 | Adequação funcional | 3 | Relevante, mas não há especificação de requisitos pública que sirva de referência para medir completude e correção. |
 | Confiabilidade | 2 | Medir disponibilidade exigiria monitoramento contínuo por um período maior que o da disciplina. |
 | Segurança | 2 | A área restrita (Espaço do Colegiado) exige credenciais que a equipe não possui. |
 | Compatibilidade | 2 | Interoperabilidade com outros sistemas do governo não é observável externamente. |
 | Manutenibilidade | 1 | Sem acesso ao código-fonte nem à documentação técnica. |
+| Segurança operacional (*safety*) | 1 | Portal de consulta de informações, sem controle de equipamentos ou processos físicos: uma falha não coloca pessoas, bens ou o ambiente em risco. |
 
-Foram selecionadas as características com ênfase **4 ou 5**: usabilidade, eficiência de
-desempenho e portabilidade. As demais ficam fora do escopo pelos motivos indicados.
+Foram selecionadas as características com ênfase **4 ou 5**: capacidade de interação,
+eficiência de desempenho e flexibilidade. As demais ficam fora do escopo pelos motivos indicados.
 
-!!! note "Compatibilidade × portabilidade"
+!!! note "Compatibilidade × flexibilidade"
     O funcionamento do portal em diferentes navegadores e dispositivos é tratado como
-    **adaptabilidade** (subcaracterística de portabilidade), e não como compatibilidade.
-    Na ISO/IEC 25010:2011, compatibilidade trata de coexistência e interoperabilidade
+    **adaptabilidade** (subcaracterística de flexibilidade), e não como compatibilidade.
+    Na ISO/IEC 25010:2023, compatibilidade trata de coexistência e interoperabilidade
     com outros produtos, o que não é observável nesta avaliação.
 
 ---
@@ -84,10 +85,10 @@ desempenho e portabilidade. As demais ficam fora do escopo pelos motivos indicad
 | Stakeholder | Papel | Necessidade principal | Critério de sucesso | Característica que motiva |
 |---|---|---|---|---|
 | MDA (área gestora da política territorial) | Requisitante | Saber onde investir na evolução do SIT | Lista priorizada de melhorias apoiada em evidências | Todas |
-| Equipe de desenvolvimento e TI do SIT | Fornecedor | Saber o que corrigir e em quais ambientes testar | Defeitos reproduzíveis, com ambiente e passos | Portabilidade, eficiência |
-| Colegiados e agentes territoriais | Usuários frequentes | Consultar dados do território para planejar e prestar contas | Encontrar a informação rapidamente, inclusive no celular | Usabilidade, portabilidade |
-| Gestores públicos e organizações sociais | Usuários eventuais | Subsidiar projetos e políticas com dados territoriais | Dados acessíveis e baixáveis | Usabilidade, eficiência |
-| Agricultores familiares e cidadãos | Público final | Conhecer as políticas que chegam ao seu território | Uso sem ajuda, em aparelho e conexão modestos | Usabilidade, eficiência, portabilidade |
+| Equipe de desenvolvimento e TI do SIT | Fornecedor | Saber o que corrigir e em quais ambientes testar | Defeitos reproduzíveis, com ambiente e passos | Flexibilidade, eficiência |
+| Colegiados e agentes territoriais | Usuários frequentes | Consultar dados do território para planejar e prestar contas | Encontrar a informação rapidamente, inclusive no celular | Capacidade de interação, flexibilidade |
+| Gestores públicos e organizações sociais | Usuários eventuais | Subsidiar projetos e políticas com dados territoriais | Dados acessíveis e baixáveis | Capacidade de interação, eficiência |
+| Agricultores familiares e cidadãos | Público final | Conhecer as políticas que chegam ao seu território | Uso sem ajuda, em aparelho e conexão modestos | Capacidade de interação, eficiência, flexibilidade |
 | Equipe Dorothy Johnson | Avaliadora | Executar uma avaliação repetível | Métricas objetivas e coleta reprodutível | — |
 
 ---
@@ -130,8 +131,11 @@ O SIT é uma **aplicação web pública** do governo federal. A navegação prin
   O SITGeo exige um pouco mais: ativar camadas e interpretar legendas.
 - **Conhecimento do domínio exigido:** baixo para consultas gerais; médio para interpretar
   indicadores e documentos da política territorial.
-- **Ambiente de uso:** navegador web em computador ou celular, muitas vezes em áreas rurais
-  com conexão móvel instável.
+- **Ambiente de uso:** navegador web em computador ou celular. O público final e os agentes
+  territoriais acessam, em geral, pelo próprio celular, em casa, na sede do colegiado ou no
+  campo, em municípios do interior com sinal de rede móvel fraco ou instável; gestores e
+  organizações sociais acessam também por computadores em escritórios de prefeituras,
+  sindicatos e órgãos públicos.
 
 ### 3.4 Requisitos de hardware e software
 
@@ -183,8 +187,10 @@ descrição oficial da plataforma.*
 
 ## 4. Modelo de qualidade
 
-A avaliação usa o modelo de qualidade de produto da **ISO/IEC 25010:2011** (ISO/IEC, 2011a). A nomenclatura
-desta edição é mantida em todo o projeto (no artigo, nesta página e no GQM).
+A avaliação usa o modelo de qualidade de produto da **ISO/IEC 25010:2023** (ISO/IEC, 2023), edição
+que substituiu a de 2011. A nomenclatura desta edição é mantida em todo o projeto (no artigo,
+nas páginas e no GQM); a correspondência com os termos de 2011, ainda usados pela ISO/IEC 25023,
+está na Seção 4.3.
 
 Seguindo a orientação de adaptar o modelo de qualidade ao contexto do software e ao objetivo
 do requisitante (RAMOS, 2026c), o modelo foi adaptado ao SIT a partir de dois filtros: a ênfase de cada característica
@@ -196,36 +202,40 @@ do requisitante (RAMOS, 2026c), o modelo foi adaptado ao SIT a partir de dois fi
 
 ```mermaid
 flowchart LR
-    Q["Qualidade do produto<br/>ISO/IEC 25010:2011"]
+    Q["Qualidade do produto<br/>ISO/IEC 25010:2023"]
 
-    Q --> US[Usabilidade]
+    Q --> US[Capacidade de interação]
     Q --> EF[Eficiência de desempenho]
-    Q --> PO[Portabilidade]
+    Q --> PO[Flexibilidade]
     Q -.->|sem especificação pública| AF[Adequação funcional]
     Q -.->|exige monitoramento contínuo| CF[Confiabilidade]
     Q -.->|área restrita| SE[Segurança]
     Q -.->|não observável externamente| CO[Compatibilidade]
     Q -.->|sem código-fonte| MA[Manutenibilidade]
+    Q -.->|sem risco físico| SO[Segurança operacional]
 
     US --> US1[Reconhecibilidade de adequação]
     US --> US2[Apreensibilidade]
     US --> US3[Operabilidade]
     US --> US4[Proteção contra erros do usuário]
-    US --> US5[Estética da interface]
-    US --> US6[Acessibilidade]
+    US --> US5[Engajamento do usuário]
+    US --> US6[Assistência ao usuário]
+    US -.->|exige amostra por perfil| US7[Inclusividade]
+    US -.->|coberta por Q1.1 e Q1.2| US8[Autodescritividade]
 
     EF --> EF1[Comportamento temporal]
     EF --> EF2[Utilização de recursos]
     EF -.->|exige teste de carga| EF3[Capacidade]
 
     PO --> PO1[Adaptabilidade]
+    PO -.->|exige teste de carga| PO4[Escalabilidade]
     PO -.->|aplicação web| PO2[Instalabilidade]
     PO -.->|sem produto equivalente| PO3[Substituibilidade]
 
     classDef selecionada stroke-width:3px
     classDef fora stroke-dasharray:5 5,opacity:0.55
     class US,EF,PO selecionada
-    class AF,CF,SE,CO,MA,EF3,PO2,PO3 fora
+    class AF,CF,SE,CO,MA,SO,US7,US8,EF3,PO2,PO3,PO4 fora
 ```
 
 *Figura 2: Modelo de qualidade adaptado ao SIT. Linhas contínuas e bordas grossas indicam as
@@ -239,15 +249,39 @@ A coluna **Decisão que apoia** remete às três decisões do requisitante (Seç
 
 | Característica | Subcaracterística | Onde é observável no SIT | Decisão que apoia | Stakeholder |
 |---|---|---|---|---|
-| Usabilidade | Reconhecibilidade de adequação | Textos de abertura que explicam a finalidade de cada seção (ex.: Meu Território, SITGeo, Biblioteca Territorial) | 1. Interface e fluxos | Agricultores familiares e cidadãos; gestores públicos e organizações sociais |
-| Usabilidade | Apreensibilidade | Fluxo de seleção UF → Território → Selecionar (Meu Território e Biblioteca Territorial); escolha de tema e ativação de camadas no SITGeo | 1. Interface e fluxos | Agricultores familiares e cidadãos; colegiados e agentes territoriais |
-| Usabilidade | Operabilidade | Caixas de seleção, abas de programas (CAF, PRONAF, PAA etc.) e controles do mapa (zoom, camadas) | 1. Interface e fluxos | Colegiados e agentes territoriais |
-| Usabilidade | Proteção contra erros do usuário | Formulário do Fale Conosco (nome, e-mail, telefone, assunto, mensagem) e botões desabilitados até a seleção estar completa (ex.: "Buscar PTDRS" na Biblioteca Territorial) | 1. Interface e fluxos | Agricultores familiares e cidadãos |
-| Usabilidade | Estética da interface | Todas as seções públicas | 1. Interface e fluxos | Agricultores familiares e cidadãos |
-| Usabilidade | Acessibilidade | Todas as seções públicas, com prioridade para Meu Território, SITGeo e Biblioteca Territorial | 1. Interface e fluxos | Agricultores familiares e cidadãos; MDA |
+| Capacidade de interação | Reconhecibilidade de adequação | Textos de abertura que explicam a finalidade de cada seção (ex.: Meu Território, SITGeo, Biblioteca Territorial) | 1. Interface e fluxos | Agricultores familiares e cidadãos; gestores públicos e organizações sociais |
+| Capacidade de interação | Apreensibilidade | Fluxo de seleção UF → Território → Selecionar (Meu Território e Biblioteca Territorial); escolha de tema e ativação de camadas no SITGeo | 1. Interface e fluxos | Agricultores familiares e cidadãos; colegiados e agentes territoriais |
+| Capacidade de interação | Operabilidade | Caixas de seleção, abas de programas (CAF, PRONAF, PAA etc.) e controles do mapa (zoom, camadas) | 1. Interface e fluxos | Colegiados e agentes territoriais |
+| Capacidade de interação | Proteção contra erros do usuário | Formulário do Fale Conosco (nome, e-mail, telefone, assunto, mensagem) e botões desabilitados até a seleção estar completa (ex.: "Buscar PTDRS" na Biblioteca Territorial) | 1. Interface e fluxos | Agricultores familiares e cidadãos |
+| Capacidade de interação | Engajamento do usuário | Todas as seções públicas (apresentação convidativa das informações e das funções) | 1. Interface e fluxos | Agricultores familiares e cidadãos |
+| Capacidade de interação | Assistência ao usuário (uso por pessoas com deficiência) | Todas as seções públicas, com prioridade para Meu Território, SITGeo e Biblioteca Territorial | 1. Interface e fluxos | Agricultores familiares e cidadãos; MDA |
 | Eficiência de desempenho | Comportamento temporal | Carregamento das páginas renderizadas no navegador (Seção 3.4) e das camadas do SITGeo | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
 | Eficiência de desempenho | Utilização de recursos | Volume de dados transferidos e processamento exigido do aparelho (mapas e scripts) | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
-| Portabilidade | Adaptabilidade | Execução das mesmas tarefas em diferentes navegadores, sistemas operacionais e tamanhos de tela | 3. Cobertura de ambientes | Equipe de desenvolvimento e TI; colegiados e agentes territoriais |
+| Flexibilidade | Adaptabilidade | Execução das mesmas tarefas em diferentes navegadores, sistemas operacionais e tamanhos de tela | 3. Cobertura de ambientes | Equipe de desenvolvimento e TI; colegiados e agentes territoriais |
+
+### 4.3 Correspondência com a ISO/IEC 25010:2011
+
+A ISO/IEC 25010:2023 renomeou duas das características selecionadas e reorganizou parte das
+subcaracterísticas em relação à edição anterior (ISO/IEC, 2011a; ISO/IEC, 2023). Como as
+medidas da ISO/IEC 25023 usadas na [Fase 2](../fase-2/metricas.md) ainda seguem os termos de
+2011, a tabela abaixo registra a correspondência.
+
+| ISO/IEC 25010:2011 | ISO/IEC 25010:2023 | Situação nesta avaliação |
+|---|---|---|
+| Usabilidade | **Capacidade de interação** | Selecionada (ênfase 5) |
+| Reconhecibilidade de adequação | Reconhecibilidade de adequação | Avaliada (Q1.1) |
+| Apreensibilidade | Apreensibilidade | Avaliada (Q1.2) |
+| Operabilidade | Operabilidade | Avaliada (Q1.3) |
+| Proteção contra erros do usuário | Proteção contra erros do usuário | Avaliada (Q1.4) |
+| Estética da interface do usuário | **Engajamento do usuário** (substitui) | Avaliada (Q1.5) |
+| Acessibilidade | **Assistência ao usuário** e **inclusividade** (dividida) | Assistência ao usuário avaliada (Q1.6); inclusividade fora do escopo |
+| — | **Autodescritividade** (nova) | Coberta por Q1.1 e Q1.2 |
+| Portabilidade | **Flexibilidade** | Selecionada (ênfase 4) |
+| Adaptabilidade | Adaptabilidade | Avaliada (Q2.1 a Q2.3) |
+| — | **Escalabilidade** (nova) | Fora do escopo |
+| Instalabilidade | Instalabilidade | Fora do escopo |
+| Substituibilidade | Substituibilidade | Fora do escopo |
+| — | **Segurança operacional (*safety*)** (nova característica) | Fora do escopo (ênfase 1) |
 
 ---
 
@@ -268,8 +302,12 @@ A coluna **Decisão que apoia** remete às três decisões do requisitante (Seç
 | Compatibilidade | A interoperabilidade com outros sistemas do governo não é observável externamente | Os resultados não cobrem a troca de dados com as bases de origem (IBGE, Datasus, CadÚnico) |
 | Manutenibilidade | Sem acesso ao código-fonte nem à documentação técnica | Nenhuma conclusão sobre a facilidade de evolução do sistema |
 | Capacidade (eficiência de desempenho) | Exigiria testes de carga no servidor de produção, com risco de afetar usuários reais | Os resultados de desempenho valem para acessos individuais, não para picos de uso |
-| Instalabilidade (portabilidade) | Aplicação web, sem instalação pelo usuário | Não se aplica ao produto |
-| Substituibilidade (portabilidade) | Não há produto equivalente que o SIT substitua para o mesmo público | Não se aplica ao produto |
+| Inclusividade (capacidade de interação) | Avaliar o uso por pessoas de diferentes idades, escolaridades, regiões e condições econômicas exigiria uma amostra estratificada por perfil, maior que a viável na disciplina | Os perfis dos participantes são registrados, mas os resultados não permitem conclusões por grupo de usuários |
+| Autodescritividade (capacidade de interação) | Nesta avaliação, se sobrepõe às medidas de reconhecibilidade de adequação e de apreensibilidade, que já usam as medidas de autodescrição da ISO/IEC 25023 (Q1.1 e Q1.2); uma questão separada mediria o mesmo atributo duas vezes | Coberta indiretamente pelas questões Q1.1 e Q1.2 |
+| Escalabilidade (flexibilidade) | Exigiria variar a carga de trabalho no servidor de produção, com o mesmo risco da capacidade | Os resultados não indicam como o portal se comporta com aumento ou redução de demanda |
+| Segurança operacional (*safety*) | O portal não controla equipamentos nem processos físicos | Não se aplica ao produto |
+| Instalabilidade (flexibilidade) | Aplicação web, sem instalação pelo usuário | Não se aplica ao produto |
+| Substituibilidade (flexibilidade) | Não há produto equivalente que o SIT substitua para o mesmo público | Não se aplica ao produto |
 | Espaço do Colegiado | Área restrita, sem credenciais | Os resultados não valem para o registro de atividades dos colegiados |
 | Servidores, APIs internas e código-fonte | Avaliação caixa-preta | Os resultados descrevem apenas o comportamento observável no navegador |
 | Envio real de mensagens pelo Fale Conosco | A avaliação não deve gerar demandas reais ao MDA | A proteção contra erros é avaliada na validação do formulário antes do envio, sem cobrir o tratamento da mensagem |
@@ -289,6 +327,8 @@ BRASIL. Ministério do Desenvolvimento Agrário e Agricultura Familiar. **Plataf
 INSTITUTE OF ELECTRICAL AND ELECTRONICS ENGINEERS. **IEEE Std 1062-1998**: IEEE recommended practice for software acquisition. New York: IEEE, 1998.
 
 INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2011**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — system and software quality models. Genebra: ISO, 2011a.
+
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2023**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — product quality model. 2. ed. Genebra: ISO, 2023.
 
 PRESSMAN, R. S. **Engenharia de software**. 5. ed. Rio de Janeiro: McGraw-Hill, 2002.
 

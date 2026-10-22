@@ -7,9 +7,11 @@ fonte dos dados, procedimento de coleta e critério de interpretação (premissa
 
 ---
 
-## G1: Usabilidade
+## G1: Capacidade de interação
 
-As métricas de G1 operacionalizam medidas de usabilidade da ISO/IEC 25023 (ISO/IEC, 2011b). As
+As métricas de G1 operacionalizam medidas de usabilidade da ISO/IEC 25023 (ISO/IEC, 2011b), que
+ainda usa os termos da ISO/IEC 25010:2011; a correspondência com a capacidade de interação da
+edição de 2023 está na [Fase 1, seção 4.3](../fase-1/index.md#43-correspondencia-com-a-isoiec-250102011). As
 medidas M1.1.2, M1.2.1, M1.3.1, M1.5.1 e M1.5.2 vêm de testes com usuários; M1.1.1, M1.4.1 e
 M1.4.2 vêm de inspeção pela equipe; M1.6.1 e M1.6.2 vêm de verificação automática com o axe-core
 (DEQUE SYSTEMS, 2026).
@@ -139,7 +141,7 @@ detalhadas no plano de avaliação da Fase 3:
 | Campo | Especificação |
 |---|---|
 | Questão | Q1.5 |
-| Definição | Na ISO/IEC 25023, estética da aparência da interface: o quanto os usuários consideram a aparência agradável (ISO/IEC, 2011b). Medida por um item adicional, aplicado após o SUS: "A aparência das páginas é agradável e organizada", com respostas de 1 (discordo totalmente) a 5 (concordo totalmente) |
+| Definição | Na ISO/IEC 25023, estética da aparência da interface: o quanto os usuários consideram a aparência agradável (ISO/IEC, 2011b). Na ISO/IEC 25010:2023, a estética foi substituída pelo engajamento do usuário, que inclui apresentar as funções e as informações de forma convidativa (ISO/IEC, 2023); a nota de aparência é usada como indicador desse aspecto. Medida por um item adicional, aplicado após o SUS: "A aparência das páginas é agradável e organizada", com respostas de 1 (discordo totalmente) a 5 (concordo totalmente) |
 | Procedimento de cálculo | X = média das respostas dos participantes |
 | Fonte dos dados | O mesmo formulário do SUS |
 | Procedimento de coleta | Na mesma aplicação de M1.5.1 |
@@ -172,11 +174,13 @@ detalhadas no plano de avaliação da Fase 3:
 
 ---
 
-## G2: Portabilidade
+## G2: Flexibilidade
 
-As métricas de G2 operacionalizam as medidas de adaptabilidade da ISO/IEC 25023 (ISO/IEC, 2011b).
+As métricas de G2 operacionalizam as medidas de adaptabilidade da ISO/IEC 25023 (ISO/IEC, 2011b),
+que na norma aparecem sob portabilidade, nome da característica na edição de 2011 (ver
+[Fase 1, seção 4.3](../fase-1/index.md#43-correspondencia-com-a-isoiec-250102011)).
 Todas são coletadas pela equipe, sem participantes externos, seguindo as tarefas T1, T2 e T3 de
-[G1](objetivos.md#g1-usabilidade).
+[G1](objetivos.md#g1-capacidade-de-interacao).
 
 | ID | Questão | Métrica (ISO/IEC 25023) | Operacionalização | Instrumento |
 |---|---|---|---|---|
@@ -190,7 +194,7 @@ Todas são coletadas pela equipe, sem participantes externos, seguindo as tarefa
 Valem para todas as métricas de G2 e serão detalhadas no plano de avaliação da Fase 3:
 
 - **Ambientes:** a matriz de navegadores, sistemas operacionais e larguras definida no
-  [objetivo G2](objetivos.md#g2-portabilidade).
+  [objetivo G2](objetivos.md#g2-flexibilidade).
 - **Ambiente de referência:** Chrome/Windows em 1366 px. Um comportamento é considerado falha
   quando difere do ambiente de referência a ponto de impedir ou prejudicar a tarefa.
 - **Registro:** cada execução registra data e hora, versão do navegador e do sistema, largura da
@@ -371,6 +375,8 @@ GOOGLE. **Lighthouse variability**. [S.l.]: Google, 2023b. Disponível em: <http
 GOOGLE. **Largest Contentful Paint (LCP)**. [S.l.]: Google, 2025. Disponível em: <https://web.dev/articles/lcp>. Acesso em: 20 out. 2026.
 
 INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC WD 25023**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — measurement of system and software product quality. Working Draft, version 0.1.0. Genebra: ISO, 2011b.
+
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2023**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — product quality model. 2. ed. Genebra: ISO, 2023.
 
 NIELSEN, J. **Usability engineering**. Boston: Academic Press, 1993.
 
