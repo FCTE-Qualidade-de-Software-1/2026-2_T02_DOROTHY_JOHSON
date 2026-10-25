@@ -24,6 +24,12 @@ GOOGLE. **Largest Contentful Paint (LCP)**. [S.l.]: Google, 2025. Disponível em
 
 INSTITUTE OF ELECTRICAL AND ELECTRONICS ENGINEERS. **IEEE Std 1062-1998**: IEEE recommended practice for software acquisition. New York: IEEE, 1998.
 
+INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. **Indicadores dos Objetivos de Desenvolvimento Sustentável**: Brasil. Rio de Janeiro: IBGE, 2026. Disponível em: <https://odsbrasil.gov.br>. Acesso em: 20 out. 2026.
+
+INSTITUTO DE PESQUISA ECONÔMICA APLICADA. **ODS 9**: indústria, inovação e infraestrutura. Brasília: Ipea, 2019a. Disponível em: <https://www.ipea.gov.br/ods/ods9.html>. Acesso em: 20 out. 2026.
+
+INSTITUTO DE PESQUISA ECONÔMICA APLICADA. **ODS 16**: paz, justiça e instituições eficazes. Brasília: Ipea, 2019b. Disponível em: <https://www.ipea.gov.br/ods/ods16.html>. Acesso em: 20 out. 2026.
+
 INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2011**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — system and software quality models. Genebra: ISO, 2011a.
 
 INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC WD 25023**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — measurement of system and software product quality. Working Draft, version 0.1.0. Genebra: ISO, 2011b.
