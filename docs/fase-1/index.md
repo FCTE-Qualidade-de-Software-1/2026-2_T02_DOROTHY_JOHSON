@@ -93,8 +93,8 @@ dos indicadores é o informado pelo IBGE no portal ODS Brasil (IBGE, 2026).
 
 | ODS | Meta (versão Brasil) | Indicador (status no Brasil) | Papel do SIT | Característica avaliada que afeta a contribuição |
 |---|---|---|---|---|
-| 9: Indústria, inovação e infraestrutura | **9.c** Aumentar significativamente o acesso às tecnologias de informação e comunicação e empenhar-se para oferecer acesso universal e a preços acessíveis à internet, até 2020, **buscando garantir a qualidade**, a privacidade, a proteção de dados e a segurança cibernética | **9.c.1** Proporção da população coberta por rede móvel, por tipo de tecnologia (produzido) | Serviço digital do governo oferecido a quem está nas áreas cobertas por rede móvel, inclusive as rurais | **Eficiência de desempenho**: o portal precisa ser utilizável na conexão móvel que a cobertura oferece. **Portabilidade**: o acesso é feito por celulares e navegadores variados |
-| 16: Paz, justiça e instituições eficazes | **16.10** Assegurar o acesso público à informação e proteger as liberdades fundamentais, em conformidade com a legislação nacional e os acordos internacionais (meta mantida sem alteração) | **16.10.2** Número de países que adotam e implementam garantias constitucionais, estatutárias e/ou políticas para acesso público à informação (produzido) | Publica dados socioeconômicos, mapas e atos normativos dos territórios rurais | **Usabilidade**: a informação publicada só é acessada de fato se o usuário consegue encontrá-la e interpretá-la sem ajuda |
+| 9: Indústria, inovação e infraestrutura | **9.c** Aumentar significativamente o acesso às tecnologias de informação e comunicação e empenhar-se para oferecer acesso universal e a preços acessíveis à internet, até 2020, **buscando garantir a qualidade**, a privacidade, a proteção de dados e a segurança cibernética | **9.c.1** Proporção da população coberta por rede móvel, por tipo de tecnologia (produzido) | Serviço digital do governo oferecido a quem está nas áreas cobertas por rede móvel, inclusive as rurais | **Eficiência de desempenho**: o portal precisa ser utilizável na conexão móvel que a cobertura oferece. **Flexibilidade**: o acesso é feito por celulares e navegadores variados |
+| 16: Paz, justiça e instituições eficazes | **16.10** Assegurar o acesso público à informação e proteger as liberdades fundamentais, em conformidade com a legislação nacional e os acordos internacionais (meta mantida sem alteração) | **16.10.2** Número de países que adotam e implementam garantias constitucionais, estatutárias e/ou políticas para acesso público à informação (produzido) | Publica dados socioeconômicos, mapas e atos normativos dos territórios rurais | **Capacidade de interação**: a informação publicada só é acessada de fato se o usuário consegue encontrá-la e interpretá-la sem ajuda |
 
 **Pertinência ao software avaliado.** Os dois indicadores medem condições do país, e não o
 SIT: a cobertura de rede móvel (9.c.1) e a existência de garantias de acesso à informação
@@ -106,9 +106,9 @@ software tem influência:
 
 - uma pessoa coberta por rede móvel (9.c.1) só tem acesso efetivo ao SIT se as páginas
   carregam em tempo aceitável nessa conexão e funcionam no aparelho que ela usa, o que é
-  verificado pelas métricas de eficiência de desempenho e de portabilidade da Fase 2;
+  verificado pelas métricas de eficiência de desempenho e de flexibilidade da Fase 2;
 - um dado publicado pelo SIT só cumpre a meta 16.10 se o público consegue chegar até ele, o
-  que é verificado pelas métricas de usabilidade.
+  que é verificado pelas métricas de capacidade de interação.
 
 !!! note "Prazo da meta 9.c"
     A meta 9.c tinha 2020 como horizonte para o acesso universal à internet. O IBGE continua
@@ -258,7 +258,7 @@ flowchart LR
     US --> US5[Engajamento do usuário]
     US --> US6[Assistência ao usuário]
     US -.->|exige amostra por perfil| US7[Inclusividade]
-    US -.->|coberta por Q1.1 e Q1.2| US8[Autodescritividade]
+    US -.->|coberta indiretamente por Q1.1 e Q1.2| US8[Autodescritividade]
 
     EF --> EF1[Comportamento temporal]
     EF --> EF2[Utilização de recursos]
@@ -271,13 +271,16 @@ flowchart LR
 
     classDef selecionada stroke-width:3px
     classDef fora stroke-dasharray:5 5,opacity:0.55
+    classDef indireta stroke-dasharray:5 5
     class US,EF,PO selecionada
-    class AF,CF,SE,CO,MA,SO,US7,US8,EF3,PO2,PO3,PO4 fora
+    class AF,CF,SE,CO,MA,SO,US7,EF3,PO2,PO3,PO4 fora
+    class US8 indireta
 ```
 
 *Figura 2: Modelo de qualidade adaptado ao SIT. Linhas contínuas e bordas grossas indicam as
 características e subcaracterísticas avaliadas; linhas e bordas tracejadas indicam o que ficou
-fora do escopo, com o motivo resumido na ligação (detalhado na Seção 5).*
+fora do escopo, com o motivo resumido na ligação (detalhado na Seção 5). A autodescritividade
+aparece tracejada, mas sem esmaecer, porque é coberta indiretamente pelas questões Q1.1 e Q1.2.*
 
 ### 4.2 Subcaracterísticas avaliadas
 

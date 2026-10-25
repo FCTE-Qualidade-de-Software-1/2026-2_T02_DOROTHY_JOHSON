@@ -215,7 +215,7 @@ A matriz inicial proposta é:
 | **Com o propósito de** | entender |
 | **Com respeito a** | eficiência de desempenho: comportamento temporal e utilização de recursos |
 | **Do ponto de vista de** | requisitante (MDA, simulado) |
-| **No contexto de** | uso do portal em área rural, por um usuário de cada vez, em um celular de entrada (pouca memória e processador modesto) conectado a uma rede móvel 3G/4G com sinal fraco ou instável. Nos testes, esse contexto é reproduzido pelo perfil móvel do Lighthouse, que limita a velocidade da rede e do processador |
+| **No contexto de** | uso do portal em área rural, por um usuário de cada vez, em um celular de entrada (pouca memória e processador modesto) conectado a uma rede móvel lenta ou instável. Nos testes, esse contexto é reproduzido pelo perfil móvel do Lighthouse, que limita a velocidade da rede e do processador |
 
 **Tarefas medidas:**
 
