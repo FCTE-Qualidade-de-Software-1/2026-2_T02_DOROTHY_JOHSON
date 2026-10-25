@@ -195,7 +195,34 @@ Pelas observações feitas, o acesso exige:
   reais de todos os territórios, e a avaliação usa um conjunto fixo de territórios de
   referência, definido na Fase 3, para garantir a repetibilidade.
 
-### 3.6 Diagrama de contexto (inferido)
+### 3.6 Páginas e tarefas avaliadas
+
+Os objetivos de medição da Fase 2 analisam o SIT por meio das páginas e tarefas abaixo. Cada
+característica usa as páginas em que suas subcaracterísticas são observáveis (Seção 4.2).
+
+| Característica | Objetivo | Páginas | Tarefas |
+|---|---|---|---|
+| Capacidade de interação | G1 | Início, Meu Território, SITGeo, Biblioteca Territorial e Fale Conosco | T1, T2 e T3 |
+| Flexibilidade | G2 | Meu Território, SITGeo e Biblioteca Territorial | T1, T2 e T3 |
+| Eficiência de desempenho | G3 | Meu Território, SITGeo e Biblioteca Territorial | T1 e T2 |
+
+Na capacidade de interação entram também a página Início, ponto de partida das tarefas, e o
+Fale Conosco, onde a Seção 4.2 localiza a proteção contra erros do usuário.
+
+- **T1, consultar um território:** em Meu Território, selecionar a UF e o território e acionar
+  "Selecionar" até os dados do território serem exibidos.
+- **T2, ativar uma camada no mapa:** no SITGeo, escolher um tema e ativar uma camada até ela
+  ser exibida no mapa.
+- **T3, baixar um documento do território:** na Biblioteca Territorial, selecionar a UF e o
+  território e baixar o PTDRS.
+
+Na capacidade de interação e na flexibilidade, cada tarefa começa na página Início, porque a
+navegação até a seção faz parte do que é avaliado. Na eficiência de desempenho, a tarefa
+começa já na página correspondente, porque a medida é o tempo entre a ação do usuário e a
+exibição do resultado. O território, a camada e o documento de referência são fixados na
+Fase 3 e são os mesmos para todas as características.
+
+### 3.7 Diagrama de contexto (inferido)
 
 ```mermaid
 flowchart LR
@@ -296,7 +323,7 @@ A coluna **Decisão que apoia** remete às três decisões do requisitante (Seç
 | Capacidade de interação | Engajamento do usuário | Todas as seções públicas (apresentação convidativa das informações e das funções) | 1. Interface e fluxos | Agricultores familiares e cidadãos |
 | Capacidade de interação | Assistência ao usuário (uso por pessoas com deficiência) | Todas as seções públicas, com prioridade para Meu Território, SITGeo e Biblioteca Territorial | 1. Interface e fluxos | Agricultores familiares e cidadãos; MDA |
 | Eficiência de desempenho | Comportamento temporal | Carregamento das páginas renderizadas no navegador (Seção 3.4) e das camadas do SITGeo | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
-| Eficiência de desempenho | Utilização de recursos | Volume de dados transferidos e processamento exigido do aparelho (mapas e scripts) | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
+| Eficiência de desempenho | Utilização de recursos | Processamento (CPU) e memória exigidos do aparelho pelo carregamento das páginas e pelas tarefas (mapas e scripts) | 2. Desempenho em condições reais | Agricultores familiares e cidadãos; equipe de desenvolvimento e TI |
 | Flexibilidade | Adaptabilidade | Execução das mesmas tarefas em diferentes navegadores, sistemas operacionais e tamanhos de tela | 3. Cobertura de ambientes | Equipe de desenvolvimento e TI; colegiados e agentes territoriais |
 
 ### 4.3 Correspondência com a ISO/IEC 25010:2011
