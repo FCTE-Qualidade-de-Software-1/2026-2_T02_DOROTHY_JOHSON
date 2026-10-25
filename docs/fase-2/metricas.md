@@ -179,8 +179,8 @@ detalhadas no plano de avaliação da Fase 3:
 As métricas de G2 operacionalizam as medidas de adaptabilidade da ISO/IEC 25023 (ISO/IEC, 2011b),
 que na norma aparecem sob portabilidade, nome da característica na edição de 2011 (ver
 [Fase 1, seção 4.3](../fase-1/index.md#43-correspondencia-com-a-isoiec-250102011)).
-Todas são coletadas pela equipe, sem participantes externos, seguindo as tarefas T1, T2 e T3 de
-[G1](objetivos.md#g1-capacidade-de-interacao).
+Todas são coletadas pela equipe, sem participantes externos, seguindo as tarefas T1, T2 e T3 da
+[Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas).
 
 | ID | Questão | Métrica (ISO/IEC 25023) | Operacionalização | Instrumento |
 |---|---|---|---|---|
@@ -268,7 +268,7 @@ elas.
 | M3.3.1 | Q3.3 | Utilização média de CPU | Tempo de CPU na thread principal durante o carregamento | Lighthouse |
 | M3.4.1 | Q3.4 | Utilização média de memória | Memória ocupada pelo JavaScript (*JS heap*) após o carregamento e após cada tarefa | Chrome DevTools |
 
-### Condições comuns de coleta
+### Condições comuns de coleta {#condicoes-comuns-de-coleta-g3}
 
 Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação da Fase 3:
 

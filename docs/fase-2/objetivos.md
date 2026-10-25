@@ -17,30 +17,23 @@ descrito com o *template* do GQM (BASILI; CALDIERA; ROMBACH, 1994; RAMOS, 2026a)
 
 | Campo | Descrição |
 |---|---|
-| **Analisar** | a área pública do SIT: as páginas Início, Meu Território, SITGeo, Biblioteca Territorial e Fale Conosco, e as tarefas T1, T2 e T3 (abaixo) |
+| **Analisar** | o SIT |
 | **Com o propósito de** | avaliar |
 | **Com respeito a** | capacidade de interação: reconhecibilidade de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, engajamento do usuário e assistência ao usuário |
 | **Do ponto de vista de** | usuários do portal: colegiados e agentes territoriais, agricultores familiares e cidadãos |
 | **No contexto de** | uso do portal no interior do país, na casa do agricultor familiar ou na sede do colegiado territorial, pelo celular do próprio usuário, por pessoas que acessam o portal pela primeira vez, sem treinamento e sem ninguém por perto para ajudar. Nos testes, esse contexto é reproduzido com participantes que nunca usaram o portal, em um celular, sem ajuda do moderador |
 
-**Tarefas dos testes com usuários:**
-
-- **T1, consultar um território:** a partir da página Início, chegar a Meu Território, selecionar a
-  UF e o território e acionar "Selecionar" até os dados do território serem exibidos (mesma
-  tarefa de G3).
-- **T2, ativar uma camada no mapa:** a partir da página Início, chegar ao SITGeo, escolher um tema
-  e ativar uma camada até ela ser exibida no mapa (mesma tarefa de G3).
-- **T3, baixar um documento do território:** a partir da página Início, chegar à Biblioteca
-  Territorial, selecionar a UF e o território e baixar o PTDRS.
-
-O território, a camada e o documento de referência são fixados na Fase 3, os mesmos usados em G3.
+**Páginas e tarefas:** Início, Meu Território, SITGeo, Biblioteca Territorial e Fale Conosco,
+com as tarefas T1 (consultar um território), T2 (ativar uma camada no mapa) e T3 (baixar um
+documento do território), todas a partir da página Início. A descrição completa está na
+[Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas).
 
 ### Ligação com a Fase 1
 
 | Elemento do objetivo | Origem na Fase 1 |
 |---|---|
 | Foco (seis subcaracterísticas de capacidade de interação) | Subcaracterísticas mantidas na seção 4.2; inclusividade e autodescritividade tratadas na seção 5.1 |
-| Páginas medidas | Seções prioritárias da seção 3.5, mais o Fale Conosco, onde a seção 4.2 localiza a proteção contra erros |
+| Páginas e tarefas | Seção 3.6: seções prioritárias da seção 3.5, mais a página Início, ponto de partida das tarefas, e o Fale Conosco, onde a seção 4.2 localiza a proteção contra erros |
 | Ponto de vista | Stakeholders "colegiados e agentes territoriais" e "agricultores familiares e cidadãos" (seção 2), para quem a capacidade de interação é a característica de ênfase 5 (seção 1.3) |
 | Contexto (interior do país, celular próprio, primeiro uso sem ajuda) | Ambiente de uso (seção 3.3), critério de sucesso "uso sem ajuda" do público final (seção 2) e conhecimento de informática básico exigido (seção 3.3) |
 | Propósito (avaliar) | Decisão 1 do requisitante: quais telas e fluxos redesenhar (seção 1.2) |
@@ -117,11 +110,15 @@ O território, a camada e o documento de referência são fixados na Fase 3, os 
 
 | Campo | Descrição |
 |---|---|
-| **Analisar** | a área pública do SIT: as páginas Meu Território, SITGeo e Biblioteca Territorial, e as tarefas T1, T2 e T3 (descritas em [G1](#g1-capacidade-de-interacao)) |
+| **Analisar** | o SIT |
 | **Com o propósito de** | avaliar |
 | **Com respeito a** | flexibilidade: adaptabilidade a diferentes navegadores, sistemas operacionais e tamanhos de tela |
 | **Do ponto de vista de** | equipe de desenvolvimento e TI do SIT (fornecedor) |
 | **No contexto de** | uso do portal em lugares e aparelhos diferentes: no campo e em casa, em municípios do interior, por celulares Android e iPhone de vários tamanhos; e em escritórios de prefeituras, sindicatos e órgãos públicos, por computadores com Windows. Nos testes, esse contexto é reproduzido pela matriz de ambientes abaixo, com aparelhos reais para os celulares de maior participação |
+
+**Páginas e tarefas:** Meu Território, SITGeo e Biblioteca Territorial, com as tarefas T1, T2 e
+T3 executadas a partir da página Início, como no G1. A descrição completa está na
+[Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas).
 
 **Ambientes de referência:** a combinação de navegador, sistema operacional e largura de tela
 é fixada na Fase 3 a partir de dados de participação de mercado no Brasil (STATCOUNTER, 2026).
@@ -137,6 +134,7 @@ A matriz inicial proposta é:
 | Elemento do objetivo | Origem na Fase 1 |
 |---|---|
 | Foco (adaptabilidade) | Única subcaracterística de flexibilidade mantida na seção 4.2; escalabilidade, instalabilidade e substituibilidade ficaram fora (seção 5.1) |
+| Páginas e tarefas | Seção 3.6: seções prioritárias da seção 3.5, com as tarefas T1, T2 e T3 |
 | Navegadores, sistemas e telas | Nota "Compatibilidade × flexibilidade" da seção 1.3 |
 | Ponto de vista | Stakeholder "equipe de desenvolvimento e TI do SIT", cujo critério de sucesso é ter defeitos reproduzíveis, com ambiente e passos (seção 2) |
 | Contexto (campo e escritório, celular e computador) | Ambiente de uso (seção 3.3) e justificativa da ênfase 4 (seção 1.3): acesso predominante por celular |
@@ -211,25 +209,22 @@ A matriz inicial proposta é:
 
 | Campo | Descrição |
 |---|---|
-| **Analisar** | a área pública do SIT: as páginas Meu Território, SITGeo e Biblioteca Territorial, e as tarefas T1 e T2 (abaixo) |
+| **Analisar** | o SIT |
 | **Com o propósito de** | entender |
 | **Com respeito a** | eficiência de desempenho: comportamento temporal e utilização de recursos |
 | **Do ponto de vista de** | requisitante (MDA, simulado) |
 | **No contexto de** | uso do portal em área rural, por um usuário de cada vez, em um celular de entrada (pouca memória e processador modesto) conectado a uma rede móvel lenta ou instável. Nos testes, esse contexto é reproduzido pelo perfil móvel do Lighthouse, que limita a velocidade da rede e do processador |
 
-**Tarefas medidas:**
-
-- **T1, consultar um território:** em Meu Território, selecionar a UF, selecionar o território e
-  acionar "Selecionar" até os dados do território serem exibidos.
-- **T2, ativar uma camada no mapa:** no SITGeo, escolher um tema e ativar uma camada até ela ser
-  exibida no mapa.
+**Páginas e tarefas:** Meu Território, SITGeo e Biblioteca Territorial, com as tarefas T1
+(consultar um território) e T2 (ativar uma camada no mapa), medidas a partir da página de cada
+tarefa. A descrição completa está na [Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas).
 
 ### Ligação com a Fase 1
 
 | Elemento do objetivo | Origem na Fase 1 |
 |---|---|
 | Foco (comportamento temporal e utilização de recursos) | Subcaracterísticas mantidas na seção 4.2; capacidade ficou fora (seção 5.1) |
-| Páginas medidas | Seções prioritárias definidas na seção 3.5 |
+| Páginas e tarefas | Seção 3.6: seções prioritárias definidas na seção 3.5, com as tarefas T1 e T2 |
 | Ponto de vista | Requisitante definido na seção 1.2 |
 | Contexto (área rural, celular de entrada, rede móvel fraca) | Ambiente de uso (seção 3.3), decisão 2 do requisitante (seção 1.2) e stakeholders "agricultores familiares e cidadãos" e "equipe de desenvolvimento e TI" (seção 2) |
 | Acesso individual | Corte da capacidade: os resultados não valem para picos de uso (seção 5.1) |

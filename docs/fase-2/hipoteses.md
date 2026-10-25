@@ -55,7 +55,7 @@ interpretação dos resultados na Fase 4 e podem ser valores ou ideias comparati
 Para confirmar que as métricas podem ser coletadas e ter a ordem de grandeza dos valores, a
 equipe fez uma medição piloto em 20/10/2026, entre 14h20 e 14h32 (horário de Brasília),
 seguindo as condições comuns de coleta descritas em
-[Métricas](metricas.md#condicoes-comuns-de-coleta): 5 execuções por página ou tarefa, cache
+[Métricas](metricas.md#condicoes-comuns-de-coleta-g3): 5 execuções por página ou tarefa, cache
 vazio, perfil móvel do Lighthouse e mediana.
 
 Os dados brutos, o resumo e os scripts estão versionados no repositório, para que qualquer

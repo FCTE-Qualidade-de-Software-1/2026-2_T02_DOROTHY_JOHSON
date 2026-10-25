@@ -18,7 +18,7 @@ As questões refinam cada objetivo de medição e, quando respondidas, permitem 
 | Q1.5 | Engajamento do usuário | Como os usuários percebem a facilidade de uso e o quanto a aparência das páginas torna o uso convidativo? |
 | Q1.6 | Assistência ao usuário | Em que medida as páginas atendem aos critérios de acessibilidade para pessoas com deficiência? |
 
-As tarefas T1, T2 e T3 estão descritas no [objetivo G1](objetivos.md#g1-capacidade-de-interacao).
+As tarefas T1, T2 e T3 estão descritas na [Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas).
 
 ---
 
@@ -43,7 +43,7 @@ Os ambientes de referência estão descritos no [objetivo G2](objetivos.md#g2-fl
 | Q3.3 | Utilização de recursos | Quanto tempo de processamento (CPU) o carregamento das páginas exige do aparelho? |
 | Q3.4 | Utilização de recursos | Quanta memória as páginas e as tarefas ocupam no aparelho? |
 
-As tarefas T1 e T2 estão descritas no [objetivo G3](objetivos.md#g3-eficiencia-de-desempenho).
+As tarefas T1 e T2 estão descritas na [Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas).
 
 ---
 
