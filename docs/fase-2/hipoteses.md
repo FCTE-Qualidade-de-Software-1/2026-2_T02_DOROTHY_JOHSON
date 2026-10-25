@@ -8,7 +8,7 @@ interpretação dos resultados na Fase 4 e podem ser valores ou ideias comparati
 
 ---
 
-## G1: Usabilidade
+## G1: Capacidade de interação
 
 | ID | Questão | Hipótese | Base |
 |---|---|---|---|
@@ -27,7 +27,7 @@ interpretação dos resultados na Fase 4 e podem ser valores ou ideias comparati
 
 ---
 
-## G2: Portabilidade
+## G2: Flexibilidade
 
 | ID | Questão | Hipótese | Base |
 |---|---|---|---|

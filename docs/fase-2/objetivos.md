@@ -5,23 +5,23 @@
 Cada característica selecionada na [Fase 1](../fase-1/index.md) gera um objetivo de medição,
 descrito com o *template* do GQM (BASILI; CALDIERA; ROMBACH, 1994; RAMOS, 2026a).
 
-| ID | Característica (ISO/IEC 25010:2011) | Issue |
+| ID | Característica (ISO/IEC 25010:2023) | Issue |
 |---|---|---|
-| G1 | Usabilidade | #24 |
-| G2 | Portabilidade | #25 |
+| G1 | Capacidade de interação | #24 |
+| G2 | Flexibilidade | #25 |
 | G3 | Eficiência de desempenho | #26 |
 
 ---
 
-## G1: Usabilidade
+## G1: Capacidade de interação
 
 | Campo | Descrição |
 |---|---|
 | **Analisar** | a área pública do SIT: as páginas Início, Meu Território, SITGeo, Biblioteca Territorial e Fale Conosco, e as tarefas T1, T2 e T3 (abaixo) |
 | **Com o propósito de** | avaliar |
-| **Com respeito a** | usabilidade: reconhecibilidade de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, estética da interface e acessibilidade |
+| **Com respeito a** | capacidade de interação: reconhecibilidade de adequação, apreensibilidade, operabilidade, proteção contra erros do usuário, engajamento do usuário e assistência ao usuário |
 | **Do ponto de vista de** | usuários do portal: colegiados e agentes territoriais, agricultores familiares e cidadãos |
-| **No contexto de** | primeiro uso do portal, sem treinamento nem ajuda, por usuários com níveis diferentes de familiaridade digital |
+| **No contexto de** | uso do portal no interior do país, na casa do agricultor familiar ou na sede do colegiado territorial, pelo celular do próprio usuário, por pessoas que acessam o portal pela primeira vez, sem treinamento e sem ninguém por perto para ajudar. Nos testes, esse contexto é reproduzido com participantes que nunca usaram o portal, em um celular, sem ajuda do moderador |
 
 **Tarefas dos testes com usuários:**
 
@@ -39,10 +39,10 @@ O território, a camada e o documento de referência são fixados na Fase 3, os 
 
 | Elemento do objetivo | Origem na Fase 1 |
 |---|---|
-| Foco (seis subcaracterísticas de usabilidade) | Subcaracterísticas mantidas na seção 4.2 |
+| Foco (seis subcaracterísticas de capacidade de interação) | Subcaracterísticas mantidas na seção 4.2; inclusividade e autodescritividade tratadas na seção 5.1 |
 | Páginas medidas | Seções prioritárias da seção 3.5, mais o Fale Conosco, onde a seção 4.2 localiza a proteção contra erros |
-| Ponto de vista | Stakeholders "colegiados e agentes territoriais" e "agricultores familiares e cidadãos" (seção 2), para quem a usabilidade é a característica de ênfase 5 (seção 1.3) |
-| Contexto (primeiro uso, sem ajuda) | Critério de sucesso "uso sem ajuda" do público final (seção 2) e conhecimento de informática básico exigido (seção 3.3) |
+| Ponto de vista | Stakeholders "colegiados e agentes territoriais" e "agricultores familiares e cidadãos" (seção 2), para quem a capacidade de interação é a característica de ênfase 5 (seção 1.3) |
+| Contexto (interior do país, celular próprio, primeiro uso sem ajuda) | Ambiente de uso (seção 3.3), critério de sucesso "uso sem ajuda" do público final (seção 2) e conhecimento de informática básico exigido (seção 3.3) |
 | Propósito (avaliar) | Decisão 1 do requisitante: quais telas e fluxos redesenhar (seção 1.2) |
 | Envio real pelo Fale Conosco fora do escopo | Corte da seção 5.1: a proteção contra erros é avaliada antes do envio |
 
@@ -50,7 +50,7 @@ O território, a camada e o documento de referência são fixados na Fase 3, os 
 
 | Objeto | Propósito | Foco da qualidade | Ponto de vista |
 |---|---|---|---|
-| Área pública do SIT (5 páginas e 3 tarefas) | Avaliar | Usabilidade (seis subcaracterísticas) | Usuários do portal |
+| Área pública do SIT (5 páginas e 3 tarefas) | Avaliar | Capacidade de interação (seis subcaracterísticas) | Usuários do portal |
 
 <div class="grid" markdown>
 
@@ -113,15 +113,15 @@ O território, a camada e o documento de referência são fixados na Fase 3, os 
 
 ---
 
-## G2: Portabilidade
+## G2: Flexibilidade
 
 | Campo | Descrição |
 |---|---|
-| **Analisar** | a área pública do SIT: as páginas Meu Território, SITGeo e Biblioteca Territorial, e as tarefas T1, T2 e T3 (descritas em [G1](#g1-usabilidade)) |
+| **Analisar** | a área pública do SIT: as páginas Meu Território, SITGeo e Biblioteca Territorial, e as tarefas T1, T2 e T3 (descritas em [G1](#g1-capacidade-de-interacao)) |
 | **Com o propósito de** | avaliar |
-| **Com respeito a** | portabilidade: adaptabilidade a diferentes navegadores, sistemas operacionais e tamanhos de tela |
+| **Com respeito a** | flexibilidade: adaptabilidade a diferentes navegadores, sistemas operacionais e tamanhos de tela |
 | **Do ponto de vista de** | equipe de desenvolvimento e TI do SIT (fornecedor) |
-| **No contexto de** | acesso pelos navegadores, sistemas operacionais e tamanhos de tela mais usados no Brasil, com prioridade para o celular |
+| **No contexto de** | uso do portal em lugares e aparelhos diferentes: no campo e em casa, em municípios do interior, por celulares Android e iPhone de vários tamanhos; e em escritórios de prefeituras, sindicatos e órgãos públicos, por computadores com Windows. Nos testes, esse contexto é reproduzido pela matriz de ambientes abaixo, com aparelhos reais para os celulares de maior participação |
 
 **Ambientes de referência:** a combinação de navegador, sistema operacional e largura de tela
 é fixada na Fase 3 a partir de dados de participação de mercado no Brasil (STATCOUNTER, 2026).
@@ -136,10 +136,10 @@ A matriz inicial proposta é:
 
 | Elemento do objetivo | Origem na Fase 1 |
 |---|---|
-| Foco (adaptabilidade) | Única subcaracterística mantida na seção 4.2; instalabilidade e substituibilidade ficaram fora (seção 5.1) |
-| Navegadores, sistemas e telas | Nota "Compatibilidade × portabilidade" da seção 1.3 |
+| Foco (adaptabilidade) | Única subcaracterística de flexibilidade mantida na seção 4.2; escalabilidade, instalabilidade e substituibilidade ficaram fora (seção 5.1) |
+| Navegadores, sistemas e telas | Nota "Compatibilidade × flexibilidade" da seção 1.3 |
 | Ponto de vista | Stakeholder "equipe de desenvolvimento e TI do SIT", cujo critério de sucesso é ter defeitos reproduzíveis, com ambiente e passos (seção 2) |
-| Contexto (prioridade para o celular) | Justificativa da ênfase 4 (seção 1.3): acesso predominante por celular |
+| Contexto (campo e escritório, celular e computador) | Ambiente de uso (seção 3.3) e justificativa da ênfase 4 (seção 1.3): acesso predominante por celular |
 | Propósito (avaliar) | Decisão 3 do requisitante: quais ambientes entram na matriz de testes do fornecedor (seção 1.2) |
 
 ### Abstraction sheet
@@ -215,7 +215,7 @@ A matriz inicial proposta é:
 | **Com o propósito de** | entender |
 | **Com respeito a** | eficiência de desempenho: comportamento temporal e utilização de recursos |
 | **Do ponto de vista de** | requisitante (MDA, simulado) |
-| **No contexto de** | acesso individual por navegador em celular, com conexão móvel limitada, típico dos usuários em áreas rurais |
+| **No contexto de** | uso do portal em área rural, por um usuário de cada vez, em um celular de entrada (pouca memória e processador modesto) conectado a uma rede móvel lenta ou instável. Nos testes, esse contexto é reproduzido pelo perfil móvel do Lighthouse, que limita a velocidade da rede e do processador |
 
 **Tarefas medidas:**
 
@@ -231,7 +231,7 @@ A matriz inicial proposta é:
 | Foco (comportamento temporal e utilização de recursos) | Subcaracterísticas mantidas na seção 4.2; capacidade ficou fora (seção 5.1) |
 | Páginas medidas | Seções prioritárias definidas na seção 3.5 |
 | Ponto de vista | Requisitante definido na seção 1.2 |
-| Contexto (celular, conexão limitada) | Decisão 2 do requisitante (seção 1.2) e stakeholders "agricultores familiares e cidadãos" e "equipe de desenvolvimento e TI" (seção 2) |
+| Contexto (área rural, celular de entrada, rede móvel fraca) | Ambiente de uso (seção 3.3), decisão 2 do requisitante (seção 1.2) e stakeholders "agricultores familiares e cidadãos" e "equipe de desenvolvimento e TI" (seção 2) |
 | Acesso individual | Corte da capacidade: os resultados não valem para picos de uso (seção 5.1) |
 
 ### Abstraction sheet
