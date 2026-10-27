@@ -51,32 +51,103 @@ tratados primeiro?** Os resultados apoiarão três decisões concretas do requis
 3. **Cobertura de ambientes** — quais combinações de navegador, sistema operacional e
    tamanho de tela devem entrar na matriz de testes do fornecedor (flexibilidade).
 
-### 1.3 Ênfase por característica
+### 1.3 Ênfase por característica e priorização {#13-enfase-por-caracteristica}
 
-A ênfase segue a escala do processo de avaliação de produto (RAMOS, 2026c), em que 1 = nenhum interesse e 5 = grande interesse,
-e considera o propósito acima, os stakeholders (Seção 2) e a viabilidade de medição em uma
-avaliação caixa-preta.
+A seleção utiliza o **modelo de qualidade de produto da ISO/IEC 25010:2023** (família SQuaRE),
+que compreende nove características (ISO/IEC, 2023). A escala de ênfase de 1 a 5 apresentada
+no processo de avaliação de produto (RAMOS, 2026c) foi desdobrada em uma **matriz de decisão
+multicritério ponderada**, para explicitar por que certas características têm prioridade.
+O método reflete o propósito da Seção 1.2, as necessidades e os critérios de sucesso dos
+stakeholders da Seção 2 e o caráter externo/caixa-preta da avaliação (Seções 3.5 e 5.1).
 
-| Característica (ISO/IEC 25010:2023) | Ênfase | Justificativa |
-|---|:---:|---|
-| Capacidade de interação | **5** | Público com níveis muito diferentes de letramento digital; o valor do SIT depende de o usuário encontrar e interpretar os dados sozinho. |
-| Eficiência de desempenho | **4** | Uso em áreas rurais, com conexões móveis limitadas; o portal carrega mapas interativos e renderiza o conteúdo no navegador. |
-| Flexibilidade | **4** | Acesso predominante por celular (no Brasil, o Chrome para Android responde por cerca de 39% das versões de navegador em uso) e diversidade de navegadores e telas. |
-| Adequação funcional | 3 | Relevante, mas não há especificação de requisitos pública que sirva de referência para medir completude e correção. |
-| Confiabilidade | 2 | Medir disponibilidade exigiria monitoramento contínuo por um período maior que o da disciplina. |
-| Segurança | 2 | A área restrita (Espaço do Colegiado) exige credenciais que a equipe não possui. |
-| Compatibilidade | 2 | Interoperabilidade com outros sistemas do governo não é observável externamente. |
-| Manutenibilidade | 1 | Sem acesso ao código-fonte nem à documentação técnica. |
-| Segurança operacional (*safety*) | 1 | Portal de consulta de informações, sem controle de equipamentos ou processos físicos: uma falha não coloca pessoas, bens ou o ambiente em risco. |
+#### 1.3.1 Método de priorização
 
-Foram selecionadas as características com ênfase **4 ou 5**: capacidade de interação,
-eficiência de desempenho e flexibilidade. As demais ficam fora do escopo pelos motivos indicados.
+Cada característica recebe notas inteiras de **1 (menor) a 5 (maior)** em três critérios.
+As notas são **julgamentos prévios de priorização**, baseados no contexto documentado, e
+**não resultados de medições ou evidência de falhas** no SIT.
+
+| Critério | Peso | O que representa | Âncoras para atribuir a nota |
+|---|:---:|---|---|
+| **I — Impacto no propósito e nos stakeholders** | **45%** | Quanto a característica contribui para uma das três decisões do MDA (Seção 1.2) e para os critérios de sucesso do público da Seção 2 | **1:** sem relação prática com as decisões; **3:** contribuição indireta ou a uma parte do público; **5:** contribuição direta para decisão prioritária e acesso do público-alvo |
+| **R — Risco contextual de uma falha** | **30%** | Gravidade potencial da consequência de a característica não ser atendida no uso público do portal; **não** é a probabilidade medida de existir uma falha | **1:** consequência desprezível no contexto; **3:** prejuízo localizado; **5:** barreira grave ao acesso ou outro impacto importante |
+| **V — Viabilidade da avaliação** | **25%** | Possibilidade de obter evidências repetíveis, éticas e válidas com acesso somente às páginas públicas e no prazo da disciplina | **1:** inviável de avaliar adequadamente; **3:** avaliação parcial viável; **5:** medição reproduzível viável no escopo |
+
+A **pontuação ponderada** é calculada por:
+
+**P = (0,45 × I) + (0,30 × R) + (0,25 × V)**
+
+Aplica-se primeiro um **filtro de elegibilidade**: somente características com
+**V ≥ 3** podem integrar o conjunto avaliado, pois não seria defensável prometer uma
+avaliação sem evidências suficientes. Entre as elegíveis, selecionam-se as **três de maior
+pontuação**, respeitando a orientação de avaliar de três a quatro características. Empates
+seriam resolvidos por maior impacto (**I**) e, persistindo, por maior viabilidade (**V**).
+O filtro não significa que uma característica inelegível seja pouco importante; sua exclusão
+é uma **limitação de cobertura**, discutida abaixo e na Seção 5.1.
+
+#### 1.3.2 Aplicação da matriz
+
+| Característica — ISO/IEC 25010:2023 | I | R | V | P (1–5) | Decisão | Fundamentação contextual das notas |
+|---|:---:|:---:|:---:|:---:|---|---|
+| **Capacidade de interação** | 5 | 5 | 4 | **4,75** | **Selecionada — 1ª** | Encontrar dados sem ajuda é essencial para cidadãos e agentes territoriais (Seção 2) e orienta a decisão 1; testes com usuários e acessibilidade são possíveis, mas dependem de recrutamento. |
+| **Eficiência de desempenho** | 5 | 4 | 5 | **4,70** | **Selecionada — 2ª** | Lentidão em conexão móvel pode dificultar consultas por agricultores familiares; atende à decisão 2 e permite medições instrumentadas e repetíveis no navegador. |
+| **Flexibilidade** | 4 | 4 | 4 | **4,00** | **Selecionada — 3ª** | A adaptação a navegadores e telas atende à decisão 3 e à necessidade de uso em celulares; os testes são observáveis, mas exigem uma matriz viável de ambientes. |
+| Adequação funcional | 4 | 3 | 2 | 3,20 | Não elegível | A correção dos dados seria relevante para gestores e usuários, porém não há requisitos públicos suficientes para julgar completude ou correção funcional de modo abrangente. |
+| Segurança | 3 | 5 | 1 | 3,10 | Não elegível | Falhas de segurança poderiam ter consequências graves; a área restrita não é acessível e testes intrusivos no sistema público exigiriam autorização. **A nota de risco não afirma vulnerabilidade existente.** |
+| Confiabilidade | 3 | 4 | 1 | 2,80 | Não elegível | Indisponibilidade prejudicaria o acesso, mas disponibilidade e recuperação exigem observação temporal incompatível com a coleta prevista. |
+| Compatibilidade | 2 | 3 | 1 | 2,05 | Não elegível | Interoperabilidade com bases e sistemas de governo importa ao funcionamento institucional, porém não é verificável adequadamente pela interface pública. |
+| Manutenibilidade | 2 | 2 | 1 | 1,75 | Não elegível | A facilidade de evolução interessa à equipe técnica, mas depende de código e informações internas indisponíveis. |
+| Segurança operacional (*safety*) | 1 | 1 | 1 | 1,00 | Não elegível | Não há controle de processos ou equipamentos físicos; o atributo tem baixa pertinência ao propósito desta avaliação. |
+
+A classificação resulta de **julgamento contextual explícito**, não de análise estatística:
+a diferença entre 4,75 e 4,70, por exemplo, não demonstra superioridade objetiva de uma
+característica. O resultado determina **prioridade de avaliação**, não um diagnóstico de
+qualidade do produto nem a ordem definitiva de correção de defeitos. O MDA decidirá sobre o
+*backlog* após examinar as evidências coletadas.
+
+#### 1.3.3 Vínculo com as decisões, stakeholders e GQM
+
+| Prioridade | Característica escolhida | Decisão da Seção 1.2 | Stakeholders e critérios de sucesso da Seção 2 | Desdobramento na Fase 2 |
+|---|---|---|---|---|
+| **1** | Capacidade de interação | **1. Interface e fluxos:** identificar tarefas e telas a redesenhar | Colegiados e agentes: encontrar informação rapidamente; agricultores e cidadãos: consultar sem ajuda; gestores: acessar dados | [G1 — Capacidade de interação](../fase-2/objetivos.md#g1-capacidade-de-interacao) |
+| **2** | Eficiência de desempenho | **2. Desempenho:** decidir se é necessário otimizar páginas e mapas sob conexão móvel | Agricultores e cidadãos: usar aparelhos e conexões modestos; equipe de TI: obter problemas reproduzíveis | [G3 — Eficiência de desempenho](../fase-2/objetivos.md#g3-eficiencia-de-desempenho) |
+| **3** | Flexibilidade | **3. Cobertura de ambientes:** definir navegadores, sistemas e telas a testar | Equipe de TI: reproduzir falhas por ambiente; colegiados e agentes: acessar pelo celular | [G2 — Flexibilidade](../fase-2/objetivos.md#g2-flexibilidade) |
+
+A matriz não atribui pesos numéricos diferentes a grupos de pessoas: as notas de impacto
+consideram conjuntamente as necessidades documentadas, sem supor representatividade
+estatística ou entrevistas de validação que não foram realizadas.
+
+#### 1.3.4 Trade-offs e riscos residuais
+
+- **Cobertura do produto × evidência válida.** Avaliar também adequação funcional seria útil
+  para verificar se informações e funções atendem às necessidades dos gestores; sem uma
+  especificação pública de referência, a equipe poderia confundir comportamento observado
+  com requisito esperado. A prioridade é garantir resultados verificáveis em três dimensões.
+- **Importância da segurança × autorização.** O potencial impacto de problemas de segurança
+  é elevado, mas isso não autoriza testes de invasão nem permite inferir a segurança de áreas
+  autenticadas. A exclusão é uma **lacuna relevante** a ser comunicada ao MDA, com sugestão
+  de avaliação própria por equipe autorizada, e não uma declaração de que o portal é seguro.
+- **Acesso contínuo × prazo da avaliação.** Confiabilidade merece acompanhamento do gestor,
+  mas uma janela curta não permite sustentar conclusões sobre disponibilidade e recuperação.
+- **Amplitude técnica × caixa-preta.** Compatibilidade entre sistemas e manutenibilidade
+  exigiriam acesso a integrações, código ou documentação interna. Segurança operacional é
+  pouco pertinente à aplicação; nenhuma dessas exclusões constitui evidência de boa ou má qualidade.
+- **Profundidade × número de características.** Incluir uma quarta característica reduziria
+  o esforço disponível para testar tarefas, ambientes e perfis das três selecionadas; o
+  benefício só superaria esse custo com acesso adicional a requisitos, sistemas ou métricas
+  que tornasse uma quarta dimensão avaliável. A inclusão de usuários de perfis diversos
+  também não substitui uma avaliação conclusiva de inclusividade (Seção 5.1).
+
+!!! note "Limite e revisão da decisão"
+A matriz é uma proposta justificada a partir do contexto registrado. As notas, os pesos
+e os trade-offs devem ser conferidos por **outro integrante da equipe** antes de encerrar
+a issue #37; essa revisão ainda não está documentada neste arquivo. Caso o escopo ou o
+acesso ao sistema mude, a priorização deverá ser reavaliada.
 
 !!! note "Compatibilidade × flexibilidade"
-    O funcionamento do portal em diferentes navegadores e dispositivos é tratado como
-    **adaptabilidade** (subcaracterística de flexibilidade), e não como compatibilidade.
-    Na ISO/IEC 25010:2023, compatibilidade trata de coexistência e interoperabilidade
-    com outros produtos, o que não é observável nesta avaliação.
+O funcionamento do portal em diferentes navegadores e dispositivos é tratado como
+**adaptabilidade** (subcaracterística de flexibilidade), e não como compatibilidade.
+Na ISO/IEC 25010:2023, compatibilidade trata de coexistência e interoperabilidade
+com outros produtos, o que não é observável nesta avaliação.
 
 ### 1.4 Relação com os Objetivos de Desenvolvimento Sustentável (ODS)
 
@@ -111,9 +182,9 @@ software tem influência:
   que é verificado pelas métricas de capacidade de interação.
 
 !!! note "Prazo da meta 9.c"
-    A meta 9.c tinha 2020 como horizonte para o acesso universal à internet. O IBGE continua
-    produzindo o indicador 9.c.1, e a parte da meta ligada à qualidade do acesso segue
-    pertinente para o SIT.
+A meta 9.c tinha 2020 como horizonte para o acesso universal à internet. O IBGE continua
+produzindo o indicador 9.c.1, e a parte da meta ligada à qualidade do acesso segue
+pertinente para o SIT.
 
 ---
 
@@ -257,8 +328,8 @@ nas páginas e no GQM); a correspondência com os termos de 2011, ainda usados p
 está na Seção 4.3.
 
 Seguindo a orientação de adaptar o modelo de qualidade ao contexto do software e ao objetivo
-do requisitante (RAMOS, 2026c), o modelo foi adaptado ao SIT a partir de dois filtros: a ênfase de cada característica
-(Seção 1.3) e a possibilidade de medir cada subcaracterística de fora do sistema, apenas pela
+do requisitante (RAMOS, 2026c), o modelo foi adaptado ao SIT a partir de dois filtros: a matriz multicritério e o filtro
+de viabilidade (Seção 1.3), seguidos da possibilidade de medir cada subcaracterística de fora do sistema, apenas pela
 área pública do portal (Seção 3.5). Cada subcaracterística mantida foi conferida no portal (BRASIL, 2026) em
 20/10/2026, identificando onde ela pode ser observada.
 
@@ -335,7 +406,7 @@ medidas da ISO/IEC 25023 usadas na [Fase 2](../fase-2/metricas.md) ainda seguem 
 
 | ISO/IEC 25010:2011 | ISO/IEC 25010:2023 | Situação nesta avaliação |
 |---|---|---|
-| Usabilidade | **Capacidade de interação** | Selecionada (ênfase 5) |
+| Usabilidade | **Capacidade de interação** | Selecionada (prioridade 1; P = 4,75) |
 | Reconhecibilidade de adequação | Reconhecibilidade de adequação | Avaliada (Q1.1) |
 | Apreensibilidade | Apreensibilidade | Avaliada (Q1.2) |
 | Operabilidade | Operabilidade | Avaliada (Q1.3) |
@@ -343,12 +414,12 @@ medidas da ISO/IEC 25023 usadas na [Fase 2](../fase-2/metricas.md) ainda seguem 
 | Estética da interface do usuário | **Engajamento do usuário** (substitui) | Avaliada (Q1.5) |
 | Acessibilidade | **Assistência ao usuário** e **inclusividade** (dividida) | Assistência ao usuário avaliada (Q1.6); inclusividade fora do escopo |
 | — | **Autodescritividade** (nova) | Coberta por Q1.1 e Q1.2 |
-| Portabilidade | **Flexibilidade** | Selecionada (ênfase 4) |
+| Portabilidade | **Flexibilidade** | Selecionada (prioridade 3; P = 4,00) |
 | Adaptabilidade | Adaptabilidade | Avaliada (Q2.1 a Q2.3) |
 | — | **Escalabilidade** (nova) | Fora do escopo |
 | Instalabilidade | Instalabilidade | Fora do escopo |
 | Substituibilidade | Substituibilidade | Fora do escopo |
-| — | **Segurança operacional (*safety*)** (nova característica) | Fora do escopo (ênfase 1) |
+| — | **Segurança operacional (*safety*)** (nova característica) | Não elegível (P = 1,00; Seção 1.3) |
 
 ---
 
@@ -401,7 +472,7 @@ INSTITUTO DE PESQUISA ECONÔMICA APLICADA. **ODS 16**: paz, justiça e institui�
 
 INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2011**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — system and software quality models. Genebra: ISO, 2011a.
 
-INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2023**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — product quality model. 2. ed. Genebra: ISO, 2023.
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION; INTERNATIONAL ELECTROTECHNICAL COMMISSION. **ISO/IEC 25010:2023**: systems and software engineering — systems and software quality requirements and evaluation (SQuaRE) — product quality model. 2. ed. Genebra: ISO, 2023. Disponível em: <https://www.iso.org/standard/78176.html>. Acesso em: 26 out. 2026.
 
 PRESSMAN, R. S. **Engenharia de software**. 5. ed. Rio de Janeiro: McGraw-Hill, 2002.
 
