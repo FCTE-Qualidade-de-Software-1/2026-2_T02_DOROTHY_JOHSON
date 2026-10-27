@@ -6,7 +6,7 @@ Projeto da disciplina de **Qualidade de Software - 2026/2**.
 
 - Ana Luíza
 - Artur Henrique Holz Bartz - 221007869
-- Cayo
+- Cayo Felipe Alencar Câmara - 221022506
 - Felipe
 - Gabriel Augusto V. V. Rocha - 221022533
 - Tales Rodrigues Gonçalves - 211041295
