@@ -100,6 +100,7 @@ nav:
       - Gráfico GQM: fase-2/grafico-gqm.md
   - Gestão:
       - Plano de Medição (PSM/CID): gestao/plano-medicao.md
+      - Registro Semanal das Medições: gestao/registro-medicoes.md
   - Uso de IA: uso-de-ia.md
   - Equipe:
       - Contribuição: contribuicao.md
