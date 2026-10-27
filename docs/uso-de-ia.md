@@ -1,16 +1,5 @@
 # Uso de Inteligência Artificial
 
-!!! info "Em construção"
-    Esta seção ainda será preenchida pela equipe.
+## Declaração de uso de inteligência artificial
 
-## Declaração
-
-<!-- Informe se e como ferramentas de IA foram utilizadas. -->
-
-| Ferramenta | Onde foi usada | Finalidade | Como o resultado foi revisado |
-|---|---|---|---|
-| | | | |
-
-## Análise crítica
-
-<!-- Limitações percebidas e como a equipe validou o conteúdo gerado. -->
+Na elaboração do artigo, a equipe utilizou o Claude (Anthropic) como assistente de edição: na conversão do conteúdo das páginas da GitPage (Markdown) para LaTeX, no redesenho dos diagramas em TikZ, no rascunho do resumo, do *abstract* e do referencial teórico a partir das páginas escritas pela equipe, na adaptação do documento ao modelo da SBC e na organização da tabela de contribuição a partir das *issues* do repositório. Não foram usadas imagens, ícones ou figuras geradas por IA. Cada trecho produzido com apoio da ferramenta foi conferido por um integrante contra as páginas da GitPage, as *issues* e as referências citadas, e ajustado antes de ser incorporado ao texto.
