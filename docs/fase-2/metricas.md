@@ -4,6 +4,9 @@
 
 Cada métrica responde a uma questão e é documentada com definição, procedimento de cálculo,
 fonte dos dados, procedimento de coleta e critério de interpretação (premissa 2 do enunciado).
+O critério de interpretação indica o sentido da métrica e as referências usadas; as faixas de
+cada nível (Insatisfatório, Aceitável, Bom e Excelente) estão em
+[Níveis de Pontuação](niveis-pontuacao.md).
 
 ---
 
@@ -70,7 +73,7 @@ detalhadas no plano de avaliação da Fase 3:
 | Fonte dos dados | Gravação da sessão e planilha de observação |
 | Procedimento de coleta | O observador registra o destino do primeiro clique de cada participante em cada tarefa, conferindo depois na gravação |
 | Unidade e escala | Proporção de 0 a 1; escala de razão |
-| Critério de interpretação | Quanto maior, melhor. Não foi encontrada referência externa de limite: a interpretação é comparativa entre as tarefas |
+| Critério de interpretação | Quanto maior, melhor. Não foi encontrada referência externa de limite. As faixas são da equipe e usam os mesmos cortes de M1.2.1, julgados por tarefa: abaixo de 60% é insatisfatório, e 100% é excelente ([níveis de G1](niveis-pontuacao.md#2-g1-capacidade-de-interacao)) |
 
 ### M1.2.1: Conclusão de tarefas sem ajuda
 
@@ -165,12 +168,12 @@ detalhadas no plano de avaliação da Fase 3:
 | Campo | Especificação |
 |---|---|
 | Questão | Q1.6 |
-| Definição | Número de violações de acessibilidade que o axe-core classifica com impacto "crítico" ou "sério", ou seja, que bloqueiam ou dificultam muito o uso por pessoas com deficiência |
+| Definição | Número de elementos da página afetados por violações de acessibilidade que o axe-core classifica com impacto "crítico" ou "sério", ou seja, que bloqueiam ou dificultam muito o uso por pessoas com deficiência. Um elemento afetado por várias violações é contado uma vez, pela maior gravidade |
 | Procedimento de cálculo | Para cada página, X = número de elementos com violação de impacto crítico ou sério |
 | Fonte dos dados | O mesmo relatório JSON de M1.6.1, campo `violations` com `impact` igual a `critical` ou `serious` |
 | Procedimento de coleta | As mesmas execuções de M1.6.1 |
 | Unidade e escala | Contagem; escala absoluta |
-| Critério de interpretação | Quanto menor, melhor. Qualquer violação crítica indica uma barreira que pode impedir o uso da página por parte do público |
+| Critério de interpretação | Quanto menor, melhor. Qualquer violação crítica indica uma barreira que pode impedir o uso da página por parte do público e leva a página ao nível insatisfatório, assim como 6 ou mais elementos com violação séria ([níveis de G1](niveis-pontuacao.md#2-g1-capacidade-de-interacao)) |
 
 ---
 
@@ -347,7 +350,7 @@ Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação 
 | Fonte dos dados | Valor de *JS heap* usado informado pelo Chrome DevTools |
 | Procedimento de coleta | Com o mesmo perfil e cache vazio, carregar a página, aguardar o fim da atividade de rede, forçar a coleta de lixo pelo DevTools e registrar o *JS heap* usado; repetir após executar a tarefa |
 | Unidade e escala | Megabytes; escala de razão |
-| Critério de interpretação | Quanto menor, melhor. Não foi encontrada referência externa de limite para esta medida: a interpretação é comparativa entre as páginas e tarefas |
+| Critério de interpretação | Quanto menor, melhor. Não foi encontrada referência externa de limite para esta medida. As faixas de 8, 12 e 20 MB são internas e exploratórias, baseadas na ordem de grandeza do piloto, e servem para triagem, e não como limite do aparelho ([níveis de G3](niveis-pontuacao.md#4-g3-eficiencia-de-desempenho)) |
 
 !!! note "Adaptação da medida"
     A ISO/IEC 25023 define a utilização de memória como razão entre a memória usada e a memória

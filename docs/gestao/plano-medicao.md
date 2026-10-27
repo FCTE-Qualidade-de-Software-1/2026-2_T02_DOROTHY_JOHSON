@@ -10,7 +10,7 @@ enunciado. As medidas cobrem as três categorias pedidas: **Calendário e Progre
 | Abordagem | PSM, com o *Continuous Iterative Development (CID) Measurement Framework* v2.1 (2021) |
 | Fonte dos dados | Quadro kanban do projeto no GitHub (issues, campos `Status`, `Estimate` e `Horas`) e pull requests do repositório |
 | Coleta | Automática e diária (GitHub Actions), com snapshot em CSV em [`data/psm/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data/psm) |
-| Interpretação | Semanal, registrada no registro de medições (issue #20) e em ata (issue #18) |
+| Interpretação | Semanal, registrada no [registro de medições](registro-medicoes.md) (issue #20) e em ata (issue #18) |
 | Início da medição | 20/10/2026 |
 
 ---
