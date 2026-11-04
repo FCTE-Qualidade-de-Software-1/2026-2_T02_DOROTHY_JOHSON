@@ -3,6 +3,11 @@ name: Deploy GitHub Pages
 on:
   push:
     branches: [main]
+  # Commits da coleta usam o GITHUB_TOKEN e não disparam o push acima; o painel PSM
+  # (hooks/psm_painel.py) é recalculado publicando o site ao fim de cada coleta.
+  workflow_run:
+    workflows: ["Coleta PSM/CID"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
@@ -16,9 +21,13 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # No workflow_run, publica a main com o commit que a coleta acabou de fazer.
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
