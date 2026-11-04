@@ -11,6 +11,7 @@ enunciado. As medidas cobrem as três categorias pedidas: **Calendário e Progre
 | Fonte dos dados | Quadro kanban do projeto no GitHub (issues, campos `Status`, `Estimate` e `Horas`) e pull requests do repositório |
 | Coleta | Automática e diária (GitHub Actions), com snapshot em CSV em [`data/psm/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data/psm) |
 | Interpretação | Semanal, registrada no [registro de medições](registro-medicoes.md) (issue #20) e em ata (issue #18) |
+| Visualização | [Painel PSM](painel.md), atualizado depois de cada coleta |
 | Início da medição | 20/10/2026 |
 
 ---
@@ -131,9 +132,9 @@ e baixo grau de intrusão nas tarefas da equipe.
 | Necessidade de informação | NI4. O trabalho flui ou fica parado em execução ou em revisão? |
 | Categoria de informação | Desempenho dos Processos |
 | Conceito mensurável | *Process Efficiency – Speed* |
-| Entidades e atributos | Issues (datas de criação e fechamento) e pull requests (datas de abertura e merge) |
+| Entidades e atributos | Issues (datas de criação e fechamento) e pull requests (datas de abertura e merge, autor e quem fez o merge) |
 | Medidas básicas | Datas de criação e fechamento da issue; datas de abertura e merge do PR |
-| Medidas derivadas | MD6: lead time = fechamento − criação da issue. MD7: tempo de revisão = merge − abertura do PR |
+| Medidas derivadas | MD6: lead time = fechamento − criação da issue. MD7: tempo de revisão = merge − abertura do PR. MD8: proporção de PRs mergeados por um membro diferente do autor, que é o padrão de revisão da equipe |
 | Indicador | Gráfico de lead time por issue e de tempo de revisão por PR, com a linha da média |
 | Modelo de análise | Comparação de cada item com a média do período |
 | Critérios de decisão | Cada item mais de 10% acima da média é investigado para identificar a causa (impedimento, revisão parada, issue grande demais). **Fonte:** PSM (2021b), especificação 8.5 (*Cycle Time / Lead Time*) |
@@ -159,22 +160,30 @@ e baixo grau de intrusão nas tarefas da equipe.
      - `prs-AAAA-MM-DD.csv`: um registro por pull request.
 
    A data do arquivo segue o fuso de Brasília. O workflow também pode ser disparado
-   manualmente. O token usado tem apenas o escopo `read:project`.
-6. **Interpretação:** semanalmente a equipe gera os indicadores a partir dos CSVs, compara com
-   os critérios de decisão e registra interpretação e decisões no registro da issue #20 e na ata
-   da reunião (#18).
+   manualmente. O token usado tem apenas o escopo `read:project`. Na prática, o GitHub
+   atrasa a execução agendada para a madrugada seguinte, então cada snapshot representa o
+   estado ao fim do dia anterior. Quando o snapshot repete o último arquivo (desconsiderando
+   a coluna `coletado_em`), ele é descartado e não há commit.
+6. **Interpretação:** semanalmente a equipe gera os indicadores a partir dos CSVs com
+   `scripts/psm/indicadores.py`, compara com os critérios de decisão e registra interpretação e
+   decisões no registro da issue #20 e na ata da reunião (#18).
+7. **Painel:** a cada publicação do site, o mesmo script gera os dados do
+   [Painel PSM](painel.md). O deploy roda ao fim de cada coleta, então o painel acompanha o
+   último snapshot.
 
 ---
 
 ## 6. Plano de análise
 
+Os gráficos abaixo estão no [Painel PSM](painel.md).
+
 | Indicador | Medidas | Forma de apresentação |
 |---|---|---|
-| Burndown da entrega | M1 | Linha de pontos restantes por dia × linha ideal |
+| Burndown da entrega | M1 | Linhas de issues e pontos restantes (%) por dia × linha ideal |
 | % concluído | M1 | Valor acumulado no registro semanal |
 | Esforço por membro | M2 | Barras de horas por membro por semana |
-| Precisão da estimativa | M3 | Linha de horas por ponto por semana |
-| Fluxo de trabalho | M4 | Pontos de lead time por issue e de tempo de revisão por PR, com a linha da média |
+| Precisão da estimativa | M3 | Barras de horas por ponto por semana |
+| Fluxo de trabalho | M4 | Barras de lead time por issue e de tempo até o merge por PR, com as linhas da média e do limite |
 
 ---
 
