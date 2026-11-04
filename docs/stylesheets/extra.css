@@ -304,3 +304,109 @@
   .md-typeset .dj-hero h1 { font-size: 1.9rem; }
   .dj-hero::before { opacity: 0.45; }
 }
+
+/* Painel PSM (docs/gestao/painel.md) */
+.painel-psm {
+  --psm-serie-1: #2a78d6;
+  --psm-serie-2: #eb6834;
+  --psm-ideal: #898781;
+  --psm-critico: #d03b3b;
+  --psm-texto: #0b0b0b;
+  --psm-texto-2: #52514e;
+  --psm-grade: #e1e0d9;
+  --psm-eixo: #c3c2b7;
+  --psm-superficie: #ffffff;
+  --psm-borda: rgba(11, 11, 11, 0.1);
+}
+[data-md-color-scheme="slate"] .painel-psm {
+  --psm-serie-1: #3987e5;
+  --psm-serie-2: #d95926;
+  --psm-ideal: #898781;
+  --psm-critico: #e66767;
+  --psm-texto: #f0efec;
+  --psm-texto-2: #c3c2b7;
+  --psm-grade: #23324d;
+  --psm-eixo: #3a4a66;
+  --psm-superficie: #0b1d3d;
+  --psm-borda: rgba(255, 255, 255, 0.1);
+}
+.painel-psm__kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+.painel-psm__kpi {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--psm-borda);
+  border-radius: 6px;
+  background: var(--psm-superficie);
+}
+.painel-psm__kpi span,
+.painel-psm__kpi small {
+  color: var(--psm-texto-2);
+  font-size: 0.68rem;
+}
+.painel-psm__kpi strong {
+  color: var(--psm-texto);
+  font-size: 1.3rem;
+}
+.painel-psm__bloco {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  border: 1px solid var(--psm-borda);
+  border-radius: 6px;
+  background: var(--psm-superficie);
+}
+.md-typeset .painel-psm__bloco h2 {
+  margin: 0 0 0.3rem;
+  font-size: 0.9rem;
+}
+.md-typeset .painel-psm__nota {
+  margin: 0 0 0.6rem;
+  color: var(--psm-texto-2);
+  font-size: 0.7rem;
+}
+.painel-psm__grafico {
+  position: relative;
+  height: 16rem;
+}
+.painel-psm__grafico--alto { height: 20rem; }
+.painel-psm__grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 0 1rem;
+}
+.painel-psm__filtro {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+}
+.painel-psm__filtro select {
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--psm-eixo);
+  border-radius: 4px;
+  background: var(--psm-superficie);
+  color: var(--psm-texto);
+  font: inherit;
+}
+/* Tabelas largas do painel rolam na horizontal dentro do bloco */
+.painel-psm__tabela [data-tabela] {
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  padding-bottom: 0.3rem;
+}
+.md-typeset .painel-psm__tabela table {
+  display: table;
+  min-width: 100%;
+  white-space: nowrap;
+}
+.md-typeset .painel-psm__rodape {
+  color: var(--psm-texto-2);
+  font-size: 0.65rem;
+}

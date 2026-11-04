@@ -8,22 +8,34 @@ decisões registradas) e à [issue #20](https://github.com/FCTE-Qualidade-de-Sof
 | Item | Valor |
 |---|---|
 | Fonte dos dados | Snapshots diários em [`data/psm/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data/psm) |
-| Cálculo | `scripts/psm/indicadores.py INICIO FIM PRAZO`, que lê os CSVs da semana e imprime M1 a M4 |
+| Cálculo | `scripts/psm/indicadores.py INICIO FIM PRAZO`, que lê os CSVs e imprime M1 a M4 da semana |
+| Visualização | [Painel PSM](painel.md), com os mesmos cálculos em gráficos |
 | Escopo de M1 | Issues das milestones **Fase 1** e **Fase 2**, que formam a Entrega 1 (prazo das milestones: 26/10/2026) |
 | Escopo de M2 a M4 | Issues fechadas e PRs mergeados dentro da semana, pelo fuso de Brasília |
 | Ligação com as atas | Cada registro é levado à reunião da semana e citado na seção 5 da ata (issue #18) |
 
-Para reproduzir os números da semana 1:
+Para reproduzir os números de cada semana:
 
 ```bash
-scripts/psm/indicadores.py 2026-10-20 2026-10-26 2026-10-26
+scripts/psm/indicadores.py 2026-10-20 2026-10-26 2026-10-26   # semana 1
+scripts/psm/indicadores.py 2026-10-27 2026-11-02 2026-10-26   # semana 2
 ```
 
 ## Resumo por semana
 
 | Semana | % concluído (issues) | % concluído (pontos) | Horas registradas | Horas por ponto | Lead time médio | Revisão média de PR | Decisões |
 |---|---|---|---|---|---|---|---|
-| [1 (20/10 a 26/10)](#semana-1-2010-a-26102026) | 61% (27 de 44) | 89% (25 de 28) | 10,05 h | 0,40 h/ponto | 4,9 dias | 17,7 h | D1 a D4 |
+| [1 (20/10 a 26/10)](#semana-1-2010-a-26102026) | 100% (34 de 34)¹ | 100% (28 de 28)¹ | 42,15 h² | 0,40 h/ponto² | 8,3 dias¹ | 13,2 h¹ | D1 a D4 |
+| [2 (27/10 a 02/11)](#semana-2-2710-a-02112026) | 100% (34 de 34) | 100% (28 de 28) | 0 h | Sem dado | Sem dado | Sem dado | D5 a D7 |
+
+¹ Valores recalculados em 04/11/2026 com o estado ao fim de 26/10 (ver a
+[correção da semana 1](#correcao-de-04112026)). No registro original: 61% (27 de 44), 89% (25 de 28),
+lead time de 4,9 dias e revisão de 17,7 h. Desde 04/11, as 10 issues duplicadas fechadas como
+*not planned* (#1 a #4, #7, #8, #10, #12 a #14) ficam fora de todos os indicadores, em todos os
+dias; por isso a entrega passa a ter 34 issues, e não 44.
+² Inclui o preenchimento retroativo de `Estimate` e `Horas` feito em 04/11/2026 (ver a
+[semana 2](#preenchimento-retroativo-de-estimate-e-horas-d3)). No registro original: 10,05 h,
+todas de um único membro.
 
 ---
 
@@ -32,6 +44,24 @@ scripts/psm/indicadores.py 2026-10-20 2026-10-26 2026-10-26
 Primeira semana de medição. Os snapshots usados vão de `2026-10-20.csv` a `2026-10-26.csv`; o
 último foi coletado em 26/10 às 04:23 (Brasília), portanto os merges da noite de 26/10 (PRs #55
 e #56) entram no registro da semana 2.
+
+### Correção de 04/11/2026
+
+!!! warning "O texto abaixo descreve o estado de 26/10 às 04:23"
+    A coleta agendada para 23:00 roda, na prática, na madrugada seguinte (entre 04:00 e 06:30
+    de Brasília). Assim, cada snapshot representa o **fim do dia anterior**, e o arquivo
+    `2026-10-26.csv` não continha o que aconteceu durante 26/10. Na noite de 26/10, entre 21:40
+    e 23:39, fecharam 17 issues (#5, #9, #11, #15, #17, #18, #20, #27, #28, #31, #33, #34, #37,
+    #45, #46, #47 e #49) e foram mergeados os PRs #55, #56 e #57. Pela data, eles pertencem à
+    semana 1; pelo método antigo, não entravam em semana nenhuma.
+
+    O `indicadores.py` passou a usar, para cada dia, o primeiro snapshot coletado depois das
+    23:59 desse dia (issue #58). Com isso, **a semana 1 termina com 34 de 34 issues concluídas e
+    desvio de 0 p.p.**, lead time médio de 8,3 dias (13 issues acima do limite de 9,2 dias) e
+    tempo médio até o merge de 13,2 h (#43 e #51 acima do limite de 14,6 h). Pelo padrão de
+    revisão da equipe, o merge feito por outro membro, 8 de 12 PRs foram revisados; nenhum tem
+    review formal do GitHub. A análise a seguir foi mantida como registrada, porque foi a base das decisões D1
+    a D4; os números corrigidos estão no resumo e no [Painel PSM](painel.md).
 
 ### M1: progresso da entrega
 
@@ -126,11 +156,117 @@ abaixo do limite.*
 
 ---
 
+## Semana 2: 27/10 a 02/11/2026
+
+Semana posterior ao prazo da Entrega 1. Registro feito em 04/11/2026 com os snapshots de
+`2026-10-28.csv` a `2026-11-03.csv`, que representam o fim de cada dia de 27/10 a 02/11.
+
+### M1: progresso da entrega
+
+- **Resultado:** 34 de 34 issues (100%) e 28 de 28 pontos (100%) concluídos em todos os dias
+  da semana. Desvio de **0 p.p.** em issues e em pontos.
+- **Critério do plano:** desvio acima de 10% leva a considerar o replanejamento. Não se aplica.
+- **Interpretação:** a Entrega 1 terminou na noite de 26/10 (ver a correção da semana 1). As
+  milestones Fase 3 e Fase 4 existem, mas estão vazias, então o M1 não tem trabalho novo para
+  acompanhar. Os oito snapshots de 27/10 a 03/11 são idênticos, a não ser pela coluna
+  `coletado_em`.
+
+### M2 a M4
+
+- **Resultado:** nenhuma issue foi fechada e nenhum PR foi mergeado na semana. O único commit
+  fora da coleta foi o documento de retrospectiva (`018e799`, 28/10), feito direto na `main`.
+- **Interpretação:** sem itens concluídos, M2, M3 e M4 não têm valor nesta semana. A versão
+  anterior do `indicadores.py` terminava com erro (divisão por zero) nesse caso; a versão da
+  issue #58 imprime "nenhuma issue concluída na semana".
+
+### Preenchimento retroativo de `Estimate` e `Horas` (D3)
+
+A decisão D3 pedia que cada membro preenchesse os campos das próprias issues concluídas antes
+deste registro, o que não aconteceu. Para que M2 e M3 tenham alguma base, os campos das 28
+issues concluídas como *completed* que estavam vazios foram preenchidos em 04/11/2026. As 10
+issues fechadas como *not planned* (#1 a #4, #7, #8, #10, #12 a #14) ficaram de fora: são
+duplicatas das issues detalhadas e foram retiradas do Project em 04/11/2026. A exclusão das
+issues no repositório depende de permissão do dono da organização.
+
+**Método:**
+
+1. **Horários de status:** foram consultados, mas não servem para estimar esforço. Em 18 das
+   28 issues, a issue foi para `Done` poucos minutos depois de entrar em `In progress`, ou
+   direto do `Backlog`, quase sempre na noite de 26/10.
+2. **Estimate:** atribuído por analogia com as issues que já tinham o campo preenchido:
+   1 ponto para um ajuste pontual (como a #52), 2 para uma página ou um diagrama (#6), 3 para
+   uma seção com pesquisa (#23, #38), 5 para uma seção extensa e 8 para um GQM ou plano
+   completo (#19, #26). O tamanho do entregável no repositório (linhas alteradas) e a
+   quantidade de critérios da rubrica serviram de apoio.
+3. **Horas:** `Estimate` × 0,40 h/ponto, a base do M3 na semana 1, que é a única taxa medida na
+   equipe. Quando os commits mostram um tempo de trabalho maior, vale o valor observado: só a
+   #33, com commits das 22:49 às 23:43 de 26/10 (0,9 h).
+
+| Issue | Responsável | Estimate | Horas | Evidência no repositório |
+|---|---|---|---|---|
+| #5 Níveis de pontuação | analufernanndess | 5 | 2,0 | `2f4e7db` (+178 linhas) |
+| #9 Declaração de uso de IA | TalesRG | 2 | 0,8 | `5a85a98` e texto no artigo |
+| #11 Rastreabilidade F1 → F2 | feliperodri0, Cayoalencar | 3 (já preenchido) | 1,2 | PR #57 |
+| #15 Release da E1 | analufernanndess | 1 | 0,4 | Sem release publicada no GitHub |
+| #16 Kanban, labels e milestones | analufernanndess | 2 | 0,8 | Configuração do Project |
+| #17 Estrutura de pastas | TalesRG | 2 | 0,8 | Commits de 05/10 (estrutura do site) |
+| #18 Template de ata e atas | analufernanndess | 2 | 0,8 | `6fd2026` (+164 linhas) |
+| #20 Registro semanal (E1) | Cayoalencar | 5 | 2,0 | PR #57 |
+| #21 Propósito da avaliação | H0lzz | 3 | 1,2 | PR #36 |
+| #22 Tipo de produto | H0lzz | 2 | 0,8 | PR #36 |
+| #24 GQM capacidade de interação | Cayoalencar | 8 | 3,2 | PR #44 |
+| #25 GQM flexibilidade | Cayoalencar, H0lzz | 5 | 2,0 | PR #44 |
+| #27 Fichas das métricas | Cayoalencar | 3 | 1,2 | `6797a86` e PR #44 |
+| #28 Modelo LaTeX e esqueleto | TalesRG | 3 | 1,2 | Overleaf |
+| #29 Introdução | H0lzz | 3 | 1,2 | `0654728` e `1a11202` |
+| #30 Referencial teórico | Cayoalencar | 5 | 2,0 | PR #44 |
+| #31 Metodologia | Cayoalencar | 3 | 1,2 | PR #57 |
+| #32 Seções Fase 1 e Fase 2 (artigo) | H0lzz | 5 | 2,0 | Overleaf |
+| #33 Tabela de contribuição | TalesRG | 2 | 0,9 | `11c627d` a `1fc710b` |
+| #34 Revisão final da E1 | analufernanndess | 3 | 1,2 | Sem commit associado |
+| #35 Páginas Fase 1 e Fase 2 | H0lzz | 3 | 1,2 | PR #51 |
+| #37 Seleção e priorização | analufernanndess | 5 | 2,0 | PR #55 (+104 linhas) |
+| #45 Artigo no formato SBC | TalesRG | 2 | 0,8 | Overleaf |
+| #46 Retirar o PSM do artigo | TalesRG | 1 | 0,4 | Overleaf |
+| #47 Declaração de IA no artigo | TalesRG | 1 | 0,4 | Overleaf |
+| #48 Termos 2023 no site | H0lzz | 3 | 1,2 | `0316118` |
+| #49 Termos 2023 no artigo | TalesRG | 2 | 0,8 | Overleaf |
+| #50 Tabelas de objetivo de medição | H0lzz | 1 | 0,4 | `dd010cb` |
+
+*Tabela 3: Valores preenchidos retroativamente em 04/11/2026.*
+
+- **Limitação:** essas horas são **previstas**, não medidas. Por construção, elas reproduzem a
+  taxa de 0,40 h/ponto, então o M3 da semana 1 recalculado não é uma medição independente. Os
+  valores servem para dar ordem de grandeza ao M2 e devem ser corrigidos por cada responsável
+  que tiver o tempo real.
+
+### Situação das decisões da semana 1
+
+| ID | Situação em 04/11 | Evidência |
+|---|---|---|
+| D1 | Executada | #5, #9 e #20 concluídas pelos novos responsáveis |
+| D2 | Executada | #11, #27, #31 e #34 concluídas em 26/10; #45 a #49 tratadas no Overleaf |
+| D3 | Não cumprida pelos responsáveis; suprida pelo preenchimento retroativo | Cobertura de `Estimate` e `Horas` passou de 7 e 6 para 34 e 34 das 34 issues concluídas como *completed* (as 10 *not planned* não entram na cobertura) |
+| D4 | Parcialmente cumprida | A equipe adota como revisão o merge feito por outro membro, que não exige aprovação formal no GitHub. Por esse critério, 8 de 12 PRs da semana 1 foram revisados; #42, #44, #53 e #57 foram mergeados pelo próprio autor |
+
+### Decisões e encaminhamentos
+
+| ID | Medida | Decisão ou encaminhamento | Responsável | Situação |
+|---|---|---|---|---|
+| D5 | M1 | Criar as issues da Fase 3 na milestone correspondente, com `Estimate`, e atualizar `extra.psm` no `mkdocs.yml` (início, prazo e milestones) para o painel acompanhar a nova entrega | Equipe | Proposta: confirmar na reunião |
+| D6 | M2/M3 | Cada responsável confere a Tabela 3 e corrige `Horas` quando tiver o tempo real; a partir da Fase 3, `Horas` é preenchido ao mover a issue para `Done` (regra 2) | Cada responsável | Proposta: confirmar na reunião |
+| D7 | M4 | Manter o padrão de revisão da equipe (merge feito por outro membro) e evitar o merge pelo próprio autor; o indicador "PRs mergeados por outra pessoa" passa a acompanhar isso no [Painel PSM](painel.md) | Equipe | Proposta: confirmar na reunião |
+
+!!! warning "Registro na ata"
+    Como na semana 1, as decisões D5 a D7 só valem como decisões da equipe depois de aprovadas
+    em reunião e registradas na seção 5 da ata (issue #18).
+
+---
+
 ## Próximo registro
 
-A semana 2 (27/10 a 02/11) deve:
+O registro da semana 3 deve:
 
-- comparar M3 com a base de 0,40 h/ponto;
-- verificar se D3 aumentou a cobertura de `Estimate` e `Horas`;
-- verificar se D4 fez aparecer reviews nos PRs;
-- incluir os PRs #55 e #56, mergeados em 26/10 depois do último snapshot da semana 1.
+- verificar se D5 criou trabalho novo para o M1 e se o `mkdocs.yml` foi atualizado;
+- verificar se D6 corrigiu algum valor da Tabela 3;
+- verificar se D7 reduziu os PRs mergeados pelo próprio autor.

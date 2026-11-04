@@ -49,11 +49,24 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js
+  - javascripts/painel-psm.js
+
+# Gera assets/psm/painel.json a partir de data/psm/ (ver hooks/psm_painel.py).
+hooks:
+  - hooks/psm_painel.py
+
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON
       name: Repositório no GitHub
+  # Período e milestones do Painel PSM; atualizar ao abrir uma nova entrega.
+  psm:
+    inicio: "2026-10-20"
+    prazo: "2026-10-26"
+    milestones: ["Fase 1", "Fase 2"]
 
 markdown_extensions:
   - abbr
@@ -101,6 +114,7 @@ nav:
   - Gestão:
       - Plano de Medição (PSM/CID): gestao/plano-medicao.md
       - Registro Semanal das Medições: gestao/registro-medicoes.md
+      - Painel PSM: gestao/painel.md
   - Uso de IA: uso-de-ia.md
   - Equipe:
       - Contribuição: contribuicao.md
