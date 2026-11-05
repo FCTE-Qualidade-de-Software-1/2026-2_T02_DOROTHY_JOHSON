@@ -29,8 +29,9 @@ Regras de cálculo:
     preenchimento retroativo desses campos (regra 4 da Seção 5).
   - Em M2, as horas de uma issue com mais de um responsável são divididas igualmente.
   - Issues fechadas como não planejadas (duplicatas) ficam fora de todos os indicadores, em
-    todos os dias. Os snapshots anteriores à coluna motivo_fechamento não dizem o motivo, então
-    o conjunto é montado com todos os snapshots que têm a coluna.
+    todos os dias. A lista vem de data/psm/issues-excluidas.csv, somada às issues que algum
+    snapshot registra com motivo_fechamento NOT_PLANNED; os snapshots anteriores a essa coluna
+    não dizem o motivo, e uma issue retirada do Project some dos snapshots seguintes.
   - Em M4, o padrão de revisão da equipe é o merge feito por outro membro; a review formal
     do GitHub é contada à parte.
 
@@ -45,6 +46,7 @@ from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
 
 DADOS = Path(__file__).resolve().parents[2] / "data" / "psm"
+EXCLUIDAS = DADOS / "issues-excluidas.csv"
 BRASILIA = timezone(timedelta(hours=-3))
 LIMITE_M4 = 1.10  # item mais de 10% acima da média é investigado (PSM, 2021b, 8.5)
 MILESTONES_PADRAO = ["Fase 1", "Fase 2"]
@@ -93,8 +95,9 @@ def snapshot_do_dia(dia, snapshots):
 
 
 def nao_planejadas(snapshots):
-    """Números das issues que algum snapshot registra como fechadas como não planejadas."""
-    return {
+    """Números das issues fora dos indicadores: lista fixa e motivo NOT_PLANNED nos snapshots."""
+    fixas = {r["numero"] for r in ler(EXCLUIDAS)} if EXCLUIDAS.exists() else set()
+    return fixas | {
         r["numero"]
         for _, caminho in snapshots
         for r in ler(caminho)
