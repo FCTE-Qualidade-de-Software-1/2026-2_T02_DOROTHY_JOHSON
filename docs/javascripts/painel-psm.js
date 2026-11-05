@@ -107,7 +107,7 @@
       ["Concluído (issues)", `${numero(100 * ultimo.concluidas / ultimo.issues, 0)}%`, `${ultimo.concluidas} de ${ultimo.issues} em ${diaCurto(ultimo.dia)}`],
       ["Desvio da linha ideal", `${numero(desvio, 0)} p.p.`, desvio > 10 ? "⚠ acima do limite de 10 p.p." : "dentro do limite de 10 p.p."],
       ["Horas registradas", `${numero(horas, 1)} h`, "issues concluídas no período"],
-      ["Cobertura de Estimate e Horas", `${dados.cobertura.com_horas} de ${dados.cobertura.issues}`, `com Horas; ${dados.cobertura.com_estimate} com Estimate (sem as não planejadas)`],
+      ["Cobertura de Estimate e Horas", `${dados.cobertura.com_horas} de ${dados.cobertura.issues}`, `com Horas; ${dados.cobertura.com_estimate} com Estimate`],
       ["PRs mergeados por outra pessoa", `${revisados} de ${prs.length}`, "padrão de revisão da equipe"],
     ];
     raiz.querySelector("[data-kpis]").innerHTML = blocos

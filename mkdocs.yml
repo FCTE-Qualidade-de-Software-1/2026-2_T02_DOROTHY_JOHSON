@@ -53,9 +53,10 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js
   - javascripts/painel-psm.js
 
-# Gera assets/psm/painel.json a partir de data/psm/ (ver hooks/psm_painel.py).
+# psm_painel.py gera assets/psm/painel.json; versao_assets.py versiona o CSS e o JS próprios.
 hooks:
   - hooks/psm_painel.py
+  - hooks/versao_assets.py
 
 extra:
   social:
