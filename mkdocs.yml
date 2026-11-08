@@ -65,9 +65,9 @@ extra:
       name: Repositório no GitHub
   # Período e milestones do Painel PSM; atualizar ao abrir uma nova entrega.
   psm:
-    inicio: "2026-10-20"
-    prazo: "2026-10-26"
-    milestones: ["Fase 1", "Fase 2"]
+    inicio: "2026-11-05"
+    prazo: "2026-11-16"
+    milestones: ["Fase 3", "Fase 4"]
 
 markdown_extensions:
   - abbr
