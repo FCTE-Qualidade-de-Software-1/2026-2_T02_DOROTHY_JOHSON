@@ -53,7 +53,7 @@ extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js
   - javascripts/painel-psm.js
 
-# psm_painel.py gera assets/psm/painel.json; versao_assets.py versiona o CSS e o JS próprios.
+# psm_painel.py gera os dados do Painel PSM em assets/psm/; versao_assets.py versiona o CSS e o JS próprios.
 hooks:
   - hooks/psm_painel.py
   - hooks/versao_assets.py
@@ -63,11 +63,19 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON
       name: Repositório no GitHub
-  # Período e milestones do Painel PSM; atualizar ao abrir uma nova entrega.
+  # Entregas do Painel PSM; a última é a exibida por padrão. Ao abrir uma nova entrega,
+  # acrescentar um item. "fim" é opcional: sem ele, a entrega vai até a véspera do início
+  # da seguinte (ou até hoje, na última).
   psm:
-    inicio: "2026-11-05"
-    prazo: "2026-11-16"
-    milestones: ["Fase 3", "Fase 4"]
+    entregas:
+      - nome: "Entrega 1"
+        inicio: "2026-10-20"
+        prazo: "2026-10-26"
+        milestones: ["Fase 1", "Fase 2"]
+      - nome: "Entrega 2"
+        inicio: "2026-11-05"
+        prazo: "2026-11-16"
+        milestones: ["Fase 3", "Fase 4"]
 
 markdown_extensions:
   - abbr

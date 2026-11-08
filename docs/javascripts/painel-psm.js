@@ -218,15 +218,14 @@
     graficosSemana(raiz, c, Number(seletor.value));
   }
 
-  async function iniciar() {
-    const raiz = document.getElementById("painel-psm-dados");
-    if (!raiz || typeof Chart === "undefined") return;
+  async function carregarEntrega(raiz, endereco) {
     const estado = raiz.querySelector(".painel-psm__estado");
     try {
-      const resposta = await fetch(raiz.dataset.fonte, { cache: "no-store" });
+      const resposta = await fetch(endereco, { cache: "no-store" });
       dados = await resposta.json();
     } catch (erro) {
-      estado.textContent = "Não foi possível carregar os dados do painel.";
+      estado.hidden = false;
+      estado.textContent = "Não foi possível carregar os dados da entrega.";
       return;
     }
     estado.hidden = true;
@@ -237,13 +236,37 @@
       .join("");
     const comDados = dados.semanas.map((s, i) => (s.issues_concluidas || s.m4_prs.itens.length ? i : -1)).filter((i) => i >= 0);
     seletor.value = String(comDados.length ? comDados[comDados.length - 1] : dados.semanas.length - 1);
-    seletor.addEventListener("change", () => graficosSemana(raiz, cores(raiz), Number(seletor.value)));
+    seletor.onchange = () => graficosSemana(raiz, cores(raiz), Number(seletor.value));
 
     raiz.querySelector("[data-rodape]").textContent =
       `Último snapshot: ${dados.ultimo_snapshot.arquivo}, coletado em ${new Date(dados.ultimo_snapshot.coletado_em).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })}. ` +
       `Milestones: ${dados.milestones.join(", ")}; prazo em ${diaCurto(dados.prazo)}.`;
 
     renderizar(raiz);
+  }
+
+  async function iniciar() {
+    const raiz = document.getElementById("painel-psm-dados");
+    if (!raiz || typeof Chart === "undefined") return;
+    const indiceUrl = new URL(raiz.dataset.fonte, window.location.href);
+    let indice;
+    try {
+      indice = await (await fetch(indiceUrl, { cache: "no-store" })).json();
+    } catch (erro) {
+      raiz.querySelector(".painel-psm__estado").textContent = "Não foi possível carregar os dados do painel.";
+      return;
+    }
+
+    // A última entrega da lista é a atual e aparece primeiro.
+    const seletorEntrega = raiz.querySelector("[data-entrega]");
+    seletorEntrega.innerHTML = indice.entregas
+      .map((e, i) => `<option value="${i}">${e.nome}</option>`)
+      .join("");
+    seletorEntrega.value = String(indice.entregas.length - 1);
+    const endereco = () => new URL(indice.entregas[Number(seletorEntrega.value)].arquivo, indiceUrl);
+    seletorEntrega.onchange = () => carregarEntrega(raiz, endereco());
+
+    await carregarEntrega(raiz, endereco());
     observador?.disconnect();
     observador = new MutationObserver(() => renderizar(raiz));
     observador.observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });

@@ -8,6 +8,10 @@ site é publicado logo depois de cada coleta diária. A interpretação de cada 
 tomadas ficam no [Registro Semanal](registro-medicoes.md).
 
 <div id="painel-psm-dados" class="painel-psm" data-fonte="../../assets/psm/painel.json">
+  <div class="painel-psm__filtro painel-psm__filtro--topo">
+    <label for="painel-entrega">Entrega</label>
+    <select id="painel-entrega" data-entrega></select>
+  </div>
   <p class="painel-psm__estado" role="status">Carregando os dados do painel…</p>
   <div class="painel-psm__kpis" data-kpis></div>
 

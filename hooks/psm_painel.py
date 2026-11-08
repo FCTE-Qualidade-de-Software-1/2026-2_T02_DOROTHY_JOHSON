@@ -1,12 +1,13 @@
-"""Hook do MkDocs: gera assets/psm/painel.json, lido pela página Gestão > Painel PSM.
+"""Hook do MkDocs: gera os dados da página Gestão > Painel PSM em assets/psm/.
 
 Os dados vêm de scripts/psm/indicadores.py e são recalculados a cada build, então o painel
-acompanha a coleta diária sem versionar o JSON. Período, prazo e milestones ficam em
-extra.psm no mkdocs.yml.
+acompanha a coleta diária sem versionar o JSON. Cada entrega de extra.psm.entregas no
+mkdocs.yml gera um arquivo entrega-N.json, e painel.json lista as entregas para o seletor.
 """
 
 import importlib.util
-from datetime import date, datetime
+import json
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parents[1]
@@ -21,17 +22,31 @@ def _indicadores():
 
 
 def on_post_build(config, **kwargs):
-    psm = config["extra"]["psm"]
+    entregas = config["extra"]["psm"]["entregas"]
     indicadores = _indicadores()
     hoje = datetime.now(indicadores.BRASILIA).date()
-    saida = Path(config["site_dir"]) / "assets" / "psm" / "painel.json"
-    indicadores.main(
-        [
-            "--json",
-            str(saida),
-            date.fromisoformat(str(psm["inicio"])).isoformat(),
-            hoje.isoformat(),
-            date.fromisoformat(str(psm["prazo"])).isoformat(),
-            *psm["milestones"],
-        ]
+    pasta = Path(config["site_dir"]) / "assets" / "psm"
+    indice = []
+    for numero, entrega in enumerate(entregas, start=1):
+        inicio = date.fromisoformat(str(entrega["inicio"]))
+        if "fim" in entrega:
+            fim = date.fromisoformat(str(entrega["fim"]))
+        elif numero < len(entregas):
+            fim = date.fromisoformat(str(entregas[numero]["inicio"])) - timedelta(days=1)
+        else:
+            fim = hoje
+        arquivo = f"entrega-{numero}.json"
+        indicadores.main(
+            [
+                "--json",
+                str(pasta / arquivo),
+                inicio.isoformat(),
+                min(fim, hoje).isoformat(),
+                date.fromisoformat(str(entrega["prazo"])).isoformat(),
+                *entrega["milestones"],
+            ]
+        )
+        indice.append({"nome": entrega["nome"], "arquivo": arquivo})
+    (pasta / "painel.json").write_text(
+        json.dumps({"entregas": indice}, ensure_ascii=False), encoding="utf-8"
     )
