@@ -267,16 +267,16 @@ elas.
 |---|---|---|---|---|
 | M3.1.1 | Q3.1 | Tempo médio de resposta | *First Contentful Paint* (FCP) | Lighthouse |
 | M3.1.2 | Q3.1 | Tempo médio de execução (*turnaround*) do carregamento | *Largest Contentful Paint* (LCP) | Lighthouse |
-| M3.2.1 | Q3.2 | Tempo médio de execução (*turnaround*) da tarefa | Tempo entre a ação do usuário e a exibição do resultado de T1 e T2 | Chrome DevTools (painel Performance) |
+| M3.2.1 | Q3.2 | Tempo médio de execução (*turnaround*) da tarefa | Tempo entre a ação do usuário e a exibição do resultado de T1 e T2 | Script com o protocolo do Chrome DevTools |
 | M3.3.1 | Q3.3 | Utilização média de CPU | Tempo de CPU na thread principal durante o carregamento | Lighthouse |
-| M3.4.1 | Q3.4 | Utilização média de memória | Memória ocupada pelo JavaScript (*JS heap*) após o carregamento e após cada tarefa | Chrome DevTools |
+| M3.4.1 | Q3.4 | Utilização média de memória | Memória ocupada pelo JavaScript (*JS heap*) após o carregamento e após cada tarefa | Script com o protocolo do Chrome DevTools |
 
 ### Condições comuns de coleta {#condicoes-comuns-de-coleta-g3}
 
 Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação da Fase 3:
 
 - **Perfil de acesso:** celular simulado, com a limitação de rede e de CPU do perfil móvel padrão
-  do Lighthouse, aplicada também no DevTools.
+  do Lighthouse, aplicada também no script das tarefas.
 - **Cache:** sempre vazio no início de cada execução.
 - **Repetições:** 5 execuções por página ou tarefa, consolidadas pela **mediana**. A documentação
   do Lighthouse indica que a mediana de 5 execuções é duas vezes mais estável que uma única
@@ -318,8 +318,8 @@ Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação 
 | Questão | Q3.2 |
 | Definição | Na ISO/IEC 25023, tempo entre o início de um trabalho e a sua conclusão (ISO/IEC, 2011b). Em T1, vai do clique em "Selecionar" até a exibição dos dados do território; em T2, vai do clique para ativar a camada até a camada aparecer no mapa |
 | Procedimento de cálculo | Para cada tarefa, mediana das 5 execuções |
-| Fonte dos dados | Gravação do painel Performance do Chrome DevTools: instante do clique e instante do último quadro em que o resultado termina de aparecer |
-| Procedimento de coleta | Com a página já carregada e o mesmo perfil móvel, iniciar a gravação, executar a tarefa com o território ou a camada de referência (fixados na Fase 3) e encerrar a gravação; repetir 5 vezes com cache vazio |
+| Fonte dos dados | Arquivo de tarefas gerado pelo script de coleta, que registra pelo protocolo do Chrome DevTools o instante do clique e o fim da última requisição disparada pela ação |
+| Procedimento de coleta | Com a página já carregada e o mesmo perfil móvel, o script executa a tarefa com o território ou a camada de referência e considera a tarefa concluída quando a rede fica 1 s ociosa; 5 execuções com cache vazio ([Fase 3, Procedimento B](../fase-3/metodo-eficiencia.md#4-procedimento-b-tarefas-e-memoria-m321-e-m341)) |
 | Unidade e escala | Segundos; escala de razão |
 | Critério de interpretação | Quanto menor, melhor. Referência externa: até 1 s o fluxo de pensamento do usuário não é interrompido; acima de 10 s o usuário tende a perder a atenção na tarefa (NIELSEN, 1993) |
 
@@ -347,8 +347,8 @@ Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação 
 | Questão | Q3.4 |
 | Definição | Na ISO/IEC 25023, quanto espaço de memória é usado para executar uma tarefa (ISO/IEC, 2011b). Nesta avaliação, é a memória ocupada pelo JavaScript da página (*JS heap* usado) |
 | Procedimento de cálculo | Mediana das 5 execuções, medida em dois momentos: após o carregamento de cada página e após a conclusão de T1 e de T2 |
-| Fonte dos dados | Valor de *JS heap* usado informado pelo Chrome DevTools |
-| Procedimento de coleta | Com o mesmo perfil e cache vazio, carregar a página, aguardar o fim da atividade de rede, forçar a coleta de lixo pelo DevTools e registrar o *JS heap* usado; repetir após executar a tarefa |
+| Fonte dos dados | Valor de *JS heap* usado, lido pelo script de coleta no protocolo do Chrome DevTools |
+| Procedimento de coleta | Com o mesmo perfil e cache vazio, carregar a página, aguardar o fim da atividade de rede, forçar a coleta de lixo e registrar o *JS heap* usado; repetir após executar a tarefa ([Fase 3, Procedimento B](../fase-3/metodo-eficiencia.md#4-procedimento-b-tarefas-e-memoria-m321-e-m341)) |
 | Unidade e escala | Megabytes; escala de razão |
 | Critério de interpretação | Quanto menor, melhor. Não foi encontrada referência externa de limite para esta medida. As faixas de 8, 12 e 20 MB são internas e exploratórias, baseadas na ordem de grandeza do piloto, e servem para triagem, e não como limite do aparelho ([níveis de G3](niveis-pontuacao.md#4-g3-eficiencia-de-desempenho)) |
 
