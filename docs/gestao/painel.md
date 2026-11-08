@@ -60,6 +60,8 @@ tomadas ficam no [Registro Semanal](registro-medicoes.md).
 !!! note "Como ler"
     - **M1:** a linha ideal cai até zero no prazo da entrega. Linhas acima dela indicam atraso;
       pelo plano, um desvio maior que 10 pontos percentuais leva a considerar o replanejamento.
+      Em entregas encerradas, o gráfico e os cards de progresso terminam no prazo, e o card
+      "Maior desvio" mostra o pior atraso registrado durante a entrega.
     - **M2 e M3:** usam `Estimate` e `Horas` atuais das issues concluídas na semana. Parte dos
       valores da Entrega 1 foi preenchida retroativamente (ver o
       [Registro Semanal](registro-medicoes.md#semana-2-2710-a-02112026)).

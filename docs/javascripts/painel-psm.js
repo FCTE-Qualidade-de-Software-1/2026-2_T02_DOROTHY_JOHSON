@@ -103,9 +103,16 @@
     const prs = dados.semanas.flatMap((s) => s.m4_prs.itens);
     const revisados = prs.filter((p) => p.por_outra_pessoa).length;
     const desvio = ultimo.restante_issues_pct - ultimo.ideal_pct;
+    const pior = dados.m1.reduce(
+      (maior, p) => (p.restante_issues_pct - p.ideal_pct > maior.valor ? { valor: p.restante_issues_pct - p.ideal_pct, dia: p.dia } : maior),
+      { valor: 0, dia: null }
+    );
     const blocos = [
       ["Concluído (issues)", `${numero(100 * ultimo.concluidas / ultimo.issues, 0)}%`, `${ultimo.concluidas} de ${ultimo.issues} em ${diaCurto(ultimo.dia)}`],
-      ["Desvio da linha ideal", `${numero(desvio, 0)} p.p.`, desvio > 10 ? "⚠ acima do limite de 10 p.p." : "dentro do limite de 10 p.p."],
+      ["Desvio da linha ideal", `${numero(desvio, 0)} p.p.`, `em ${diaCurto(ultimo.dia)}; ${desvio > 10 ? "⚠ acima do limite de 10 p.p." : "dentro do limite de 10 p.p."}`],
+      pior.dia
+        ? ["Maior desvio da entrega", `${numero(pior.valor, 0)} p.p.`, `em ${diaCurto(pior.dia)}${pior.valor > 10 ? "; ⚠ acima do limite de 10 p.p." : ""}`]
+        : ["Maior desvio da entrega", "0 p.p.", "sem atraso em relação à linha ideal"],
       ["Horas registradas", `${numero(horas, 1)} h`, "issues concluídas no período"],
       ["Cobertura de Estimate e Horas", `${dados.cobertura.com_horas} de ${dados.cobertura.issues}`, `com Horas; ${dados.cobertura.com_estimate} com Estimate`],
       ["PRs mergeados por outra pessoa", `${revisados} de ${prs.length}`, "padrão de revisão da equipe"],
@@ -218,11 +225,13 @@
     graficosSemana(raiz, c, Number(seletor.value));
   }
 
-  async function carregarEntrega(raiz, endereco) {
+  async function carregarEntrega(raiz, endereco, encerrada) {
     const estado = raiz.querySelector(".painel-psm__estado");
     try {
       const resposta = await fetch(endereco, { cache: "no-store" });
       dados = await resposta.json();
+      // Entrega encerrada: o burndown termina no prazo; M2 a M4 seguem até o fim do período.
+      if (encerrada) dados.m1 = dados.m1.filter((p) => p.dia <= dados.prazo);
     } catch (erro) {
       estado.hidden = false;
       estado.textContent = "Não foi possível carregar os dados da entrega.";
@@ -263,10 +272,14 @@
       .map((e, i) => `<option value="${i}">${e.nome}</option>`)
       .join("");
     seletorEntrega.value = String(indice.entregas.length - 1);
-    const endereco = () => new URL(indice.entregas[Number(seletorEntrega.value)].arquivo, indiceUrl);
-    seletorEntrega.onchange = () => carregarEntrega(raiz, endereco());
+    const carregar = () => {
+      const indiceEntrega = Number(seletorEntrega.value);
+      const entrega = indice.entregas[indiceEntrega];
+      return carregarEntrega(raiz, new URL(entrega.arquivo, indiceUrl), indiceEntrega < indice.entregas.length - 1);
+    };
+    seletorEntrega.onchange = carregar;
 
-    await carregarEntrega(raiz, endereco());
+    await carregar();
     observador?.disconnect();
     observador = new MutationObserver(() => renderizar(raiz));
     observador.observe(document.body, { attributes: true, attributeFilter: ["data-md-color-scheme"] });
