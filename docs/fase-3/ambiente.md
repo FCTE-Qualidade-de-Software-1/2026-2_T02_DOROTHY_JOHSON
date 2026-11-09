@@ -37,18 +37,24 @@ de G1, G2 e G3 sejam comparáveis entre si e entre execuções:
 |---|---|---|
 | T1, consultar um território | UF **GO**, território **Chapada dos Veadeiros - GO** | Confirmado em 08/11/2026 |
 | T2, ativar uma camada no mapa | Camada **PRONAF - Valor Total de Crédito Acessado** | Confirmado em 08/11/2026 |
-| T3, baixar um documento | **PTDRS** do território Chapada dos Veadeiros - GO | A confirmar |
+| T3, baixar um documento | UF **GO**, **PTDRS** do território **Estrada de Ferro - GO** | Confirmado em 08/11/2026 |
 
-São os mesmos objetos da medição piloto do G3 (20/10/2026), o que permite comparar a coleta
-da Fase 4 com o piloto. O território é o primeiro da lista de GO no portal, e a camada mostra
-dados do PRONAF, um dos programas que o portal destaca nas abas de Meu Território
+T1 e T2 usam os mesmos objetos da medição piloto do G3 (20/10/2026), o que permite comparar a
+coleta da Fase 4 com o piloto. O território de T1 é o primeiro da lista de GO no portal, e a
+camada mostra dados do PRONAF, um dos programas que o portal destaca nas abas de Meu Território
 ([Fase 1, seção 4.2](../fase-1/index.md#42-subcaracteristicas-avaliadas)).
 
-!!! warning "Biblioteca Territorial em 08/11/2026"
-    Na verificação de 08/11/2026, o seletor de UF da Biblioteca Territorial permaneceu
-    desabilitado, inclusive no Google Chrome completo, enquanto o mesmo seletor funcionou em
-    Meu Território. Por isso o PTDRS de referência ainda não foi confirmado. Se o problema
-    persistir, ele é registrado como falha observada e a T3 de G1 e G2 precisa ser revista.
+A T3 usa outro território porque Chapada dos Veadeiros - GO não tem PTDRS disponível na
+Biblioteca Territorial: em 08/11/2026, o único PTDRS de GO para download era o de Estrada de
+Ferro - GO. Manter a UF GO nas três tarefas preserva o mesmo caminho de seleção. Nos testes com
+usuários (G1) e na matriz de ambientes (G2), o roteiro informa em cada tarefa qual território
+usar.
+
+!!! note "Biblioteca Territorial em navegador automatizado"
+    Em navegador controlado por automação (Playwright), o seletor de UF da Biblioteca
+    Territorial permaneceu desabilitado em 08/11/2026, enquanto na navegação manual ele
+    funciona normalmente. Por isso a T3 é executada manualmente, e medições automáticas na
+    Biblioteca (como as do G3) avaliam apenas o carregamento da página.
 
 ## 3. Ambiente por característica
 
