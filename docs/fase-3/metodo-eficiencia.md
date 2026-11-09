@@ -114,7 +114,7 @@ Gera `data/fase-4/eficiencia/resumo.csv` com, para cada página ou tarefa e mét
   possível obtê-las, o resumo mostra o número real de execuções, e a lacuna é registrada como
   limitação na Fase 4.
 
-A pontuação de cada métrica (1 a 4) e o julgamento do G3 seguem os
+A pontuação de cada recorte, de 0 (Insatisfatório) a 3 (Excelente), e o julgamento do G3 seguem os
 [níveis de pontuação de G3](../fase-2/niveis-pontuacao.md#4-g3-eficiencia-de-desempenho).
 
 ## 6. Diferença em relação à Fase 2
