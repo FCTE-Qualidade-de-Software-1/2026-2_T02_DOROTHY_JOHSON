@@ -23,8 +23,9 @@ Regras de cálculo:
   - A coleta roda de madrugada, então o estado ao fim do dia D vem do primeiro snapshot
     coletado depois das 23:59 de D; uma issue conta como concluída em D se fechou até esse
     instante. O dia corrente fica fora do M1.
-  - A coleta descarta o snapshot igual ao anterior. Se não há snapshot nas 36 h seguintes ao
-    fim de D, nada mudou desde o último snapshot anterior, que passa a representar D.
+  - A coleta descarta o snapshot igual ao anterior. Se não há snapshot nas 12 h seguintes ao
+    fim de D (a coleta roda de madrugada), nada mudou desde o último snapshot anterior, que
+    passa a representar D.
   - M2 e M3 usam Estimate e Horas do snapshot mais recente, porque o plano permite o
     preenchimento retroativo desses campos (regra 4 da Seção 5).
   - Em M2, as horas de uma issue com mais de um responsável são divididas igualmente.
@@ -51,7 +52,7 @@ BRASILIA = timezone(timedelta(hours=-3))
 LIMITE_M4 = 1.10  # item mais de 10% acima da média é investigado (PSM, 2021b, 8.5)
 MILESTONES_PADRAO = ["Fase 1", "Fase 2"]
 MOTIVOS_EXCLUIDOS = {"NOT_PLANNED", "DUPLICATE"}
-JANELA_COLETA = timedelta(hours=36)  # atraso máximo aceito entre o fim do dia e a coleta
+JANELA_COLETA = timedelta(hours=12)  # atraso máximo aceito entre o fim do dia e a coleta
 
 
 def instante(texto):
