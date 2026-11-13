@@ -124,6 +124,9 @@ nav:
       - fase-3/index.md
       - Recursos e Ambiente: fase-3/ambiente.md
       - Método de Eficiência: fase-3/metodo-eficiencia.md
+  - Fase 4:
+      - fase-4/index.md
+      - Análise de Eficiência: fase-4/eficiencia.md
   - Gestão:
       - Plano de Medição (PSM/CID): gestao/plano-medicao.md
       - Registro Semanal das Medições: gestao/registro-medicoes.md
