@@ -74,7 +74,7 @@ extra:
         milestones: ["Fase 1", "Fase 2"]
       - nome: "Entrega 2"
         inicio: "2026-11-05"
-        prazo: "2026-11-16"
+        prazo: "2026-11-22"
         milestones: ["Fase 3", "Fase 4"]
 
 markdown_extensions:

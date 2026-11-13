@@ -268,7 +268,7 @@ issues no repositório depende de permissão do dono da organização.
 
 Semana de transição entre as entregas. Os dias 03/11 e 04/11 ainda pertencem à Entrega 1; a
 Entrega 2 começou em 05/11, quando foram criadas as issues das milestones Fase 3 e Fase 4,
-com prazo em 16/11/2026. São 37 issues na E2: a #84, fechada como duplicada, fica fora dos
+com entrega final em 22/11/2026 e apresentação do Ponto de Controle 2 em 16/11. São 37 issues na E2: a #84, fechada como duplicada, fica fora dos
 indicadores, como as duplicatas da E1 (o `indicadores.py` passou a excluir também as issues
 fechadas como duplicadas). A partir desta semana, o [Painel PSM](painel.md) mostra as duas
 entregas, e o `mkdocs.yml` foi atualizado com o período e as milestones da E2 (D5).
@@ -278,23 +278,23 @@ entregas, e o `mkdocs.yml` foi atualizado com o período e as milestones da E2 (
 | Fim do dia | Issues | Concluídas | % concluído | Aberto (real) | Aberto (ideal) | Desvio |
 |---|---|---|---|---|---|---|
 | 05/11 | 37 | 1 | 3% | 97% | 100% | −3 p.p. |
-| 06/11 | 37 | 1 | 3% | 97% | 91% | +6 p.p. |
-| 07/11 | 37 | 1 | 3% | 97% | 82% | +15 p.p. |
-| 08/11 | 37 | 1 | 3% | 97% | 73% | +25 p.p. |
-| 09/11 | 37 | 1 | 3% | 97% | 64% | **+34 p.p.** |
+| 06/11 | 37 | 1 | 3% | 97% | 94% | +3 p.p. |
+| 07/11 | 37 | 1 | 3% | 97% | 88% | +9 p.p. |
+| 08/11 | 37 | 1 | 3% | 97% | 82% | +15 p.p. |
+| 09/11 | 37 | 1 | 3% | 97% | 76% | **+21 p.p.** |
 
-*Tabela 4: Burndown da Entrega 2 na semana 3 (prazo em 16/11).*
+*Tabela 4: Burndown da Entrega 2 na semana 3 (prazo da entrega final em 22/11).*
 
-- **Resultado:** ao fim de 09/11, 1 de 37 issues concluída (3%), contra 36% esperados pela
-  linha ideal: desvio de **34 p.p.**, o maior da E2 até aqui e já acima do pior momento da E1
-  (+33 p.p. em 25/10). A única concluída é a #60, triagem das correções do Ponto de Controle 1,
+- **Resultado:** ao fim de 09/11, 1 de 37 issues concluída (3%), contra 24% esperados pela
+  linha ideal: desvio de **21 p.p.**, o maior da E2 até aqui. A única concluída é a #60, triagem das correções do Ponto de Controle 1,
   aberta e fechada em 05/11. Em pontos, as 6 issues estimadas somam 19 pontos, nenhum
-  concluído: desvio de **36 p.p.**
+  concluído: desvio de **24 p.p.**
 - **Critério do plano:** desvio acima de 10 p.p. leva a considerar o replanejamento. O limite
-  foi ultrapassado em 07/11, terceiro dia da entrega, e o desvio cresceu cerca de 10 p.p. por
-  dia desde então.
-- **Interpretação:** com 7 dias até o prazo e só uma issue concluída, a E2 repete o padrão da E1,
-  que concentrou 17 issues na última noite. O trabalho em andamento existe, mas ainda não virou
+  foi ultrapassado em 08/11, quarto dia da entrega, e o desvio cresce cerca de 6 p.p. por dia,
+  porque a linha ideal avança e quase nenhuma issue é fechada.
+- **Interpretação:** com 13 dias até a entrega final, 7 até o Ponto de Controle 2 e só uma issue
+  concluída, a E2 repete o início da E1, que chegou a +33 p.p. na véspera do prazo e
+  concentrou 17 issues na última noite. O trabalho em andamento existe, mas ainda não virou
   issue fechada: por exemplo, o PR #98, que fecha #65 e #66, foi aberto em 08/11 e não tinha sido
   mergeado até 09/11. A falta de responsáveis agrava o quadro: no snapshot de 06/11, 30 das 36
   issues abertas estavam sem responsável; em 09/11 eram 24, e a redução veio só das seis issues
@@ -329,7 +329,7 @@ entregas, e o `mkdocs.yml` foi atualizado com o período e as milestones da E2 (
 
 | ID | Situação em 09/11 | Evidência |
 |---|---|---|
-| D5 | Executada | Issues da Fase 3 e da Fase 4 criadas em 05/11; `mkdocs.yml` e milestones atualizados com prazo em 16/11 |
+| D5 | Executada | Issues da Fase 3 e da Fase 4 criadas em 05/11; `mkdocs.yml` e milestones atualizados com a entrega final em 22/11 |
 | D6 | Não cumprida | No snapshot de 09/11, nenhum valor da Tabela 3 tinha sido corrigido pelos responsáveis |
 | D7 | Cumprida na semana | O único PR (#59) foi mergeado por outro membro |
 
@@ -345,9 +345,13 @@ entregas, e o `mkdocs.yml` foi atualizado com o período e as milestones da E2 (
 
 ## Próximo registro
 
-O registro da semana 4 (10/11 a 16/11), que fecha a Entrega 2, deve:
+O registro da semana 4 (10/11 a 16/11), que termina na apresentação do Ponto de Controle 2,
+deve:
 
 - verificar se D8 e D9 reduziram as issues sem responsável e sem `Estimate` (em 09/11: 24
   abertas sem responsável e 6 de 37 com `Estimate`);
-- comparar o maior desvio final da E2 com o da E1 (+33 p.p.); em 09/11 ele já era de +34 p.p.;
-- consolidar a série E1 + E2 para o artigo e para a GitPage (#94).
+- comparar o maior desvio da E2 com o da E1 (+33 p.p.);
+- registrar o estado da entrega no Ponto de Controle 2.
+
+O registro da semana 5 (17/11 a 22/11) fecha a Entrega 2 e consolida a série E1 + E2 para o
+artigo e para a GitPage (#94).
