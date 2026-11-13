@@ -1,0 +1,162 @@
+[
+  {
+    "tarefa": "T1",
+    "objeto": "meu-territorio",
+    "referencia": "Chapada dos Veadeiros - GO",
+    "tempo_s": 19.898,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.942405700683594,
+    "heap_tarefa_mb": 15.136009216308594,
+    "execucao": 1,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:30:38.072Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "meu-territorio",
+    "referencia": "Chapada dos Veadeiros - GO",
+    "tempo_s": 20.437,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.730274200439453,
+    "heap_tarefa_mb": 15.007381439208984,
+    "execucao": 2,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:31:09.138Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "meu-territorio",
+    "referencia": "Chapada dos Veadeiros - GO",
+    "tempo_s": 20.391,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.726078033447266,
+    "heap_tarefa_mb": 15.010993957519531,
+    "execucao": 3,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:31:41.022Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "meu-territorio",
+    "referencia": "Chapada dos Veadeiros - GO",
+    "tempo_s": 20.139,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.928134918212891,
+    "heap_tarefa_mb": 14.982322692871094,
+    "execucao": 4,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:32:12.073Z"
+  },
+  {
+    "tarefa": "T1",
+    "objeto": "meu-territorio",
+    "referencia": "Chapada dos Veadeiros - GO",
+    "tempo_s": 20.732,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.72955322265625,
+    "heap_tarefa_mb": 14.878547668457031,
+    "execucao": 5,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:32:47.427Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "plataforma-geoespacial",
+    "referencia": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 6.36,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.635505676269531,
+    "heap_tarefa_mb": 9.414779663085938,
+    "execucao": 1,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:33:23.467Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "plataforma-geoespacial",
+    "referencia": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 6.454,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.7023162841796875,
+    "heap_tarefa_mb": 9.373851776123047,
+    "execucao": 2,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:34:00.770Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "plataforma-geoespacial",
+    "referencia": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 6.296,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.706169128417969,
+    "heap_tarefa_mb": 9.379161834716797,
+    "execucao": 3,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:34:36.416Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "plataforma-geoespacial",
+    "referencia": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 7.184,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.691070556640625,
+    "heap_tarefa_mb": 9.366668701171875,
+    "execucao": 4,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:35:13.986Z"
+  },
+  {
+    "tarefa": "T2",
+    "objeto": "plataforma-geoespacial",
+    "referencia": "PRONAF - Valor Total de Crédito Acessado",
+    "tempo_s": 6.57,
+    "houve_requisicoes": true,
+    "heap_carga_mb": 5.700309753417969,
+    "heap_tarefa_mb": 9.372535705566406,
+    "execucao": 5,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:35:50.576Z"
+  },
+  {
+    "tarefa": null,
+    "objeto": "downloads",
+    "heap_carga_mb": 4.584930419921875,
+    "execucao": 1,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:35:56.429Z"
+  },
+  {
+    "tarefa": null,
+    "objeto": "downloads",
+    "heap_carga_mb": 4.586174011230469,
+    "execucao": 2,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:36:02.975Z"
+  },
+  {
+    "tarefa": null,
+    "objeto": "downloads",
+    "heap_carga_mb": 4.791492462158203,
+    "execucao": 3,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:36:08.631Z"
+  },
+  {
+    "tarefa": null,
+    "objeto": "downloads",
+    "heap_carga_mb": 4.7216796875,
+    "execucao": 4,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:36:13.784Z"
+  },
+  {
+    "tarefa": null,
+    "objeto": "downloads",
+    "heap_carga_mb": 4.603630065917969,
+    "execucao": 5,
+    "navegador": "138.0.7204.157",
+    "coletado_em": "2026-11-09T00:36:19.218Z"
+  }
+]
