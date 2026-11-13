@@ -27,6 +27,7 @@ scripts/psm/indicadores.py 2026-10-27 2026-11-02 2026-10-26   # semana 2
 |---|---|---|---|---|---|---|---|
 | [1 (20/10 a 26/10)](#semana-1-2010-a-26102026) | 100% (34 de 34)¹ | 100% (28 de 28)¹ | 42,15 h² | 0,40 h/ponto² | 8,3 dias¹ | 13,2 h¹ | D1 a D4 |
 | [2 (27/10 a 02/11)](#semana-2-2710-a-02112026) | 100% (34 de 34) | 100% (28 de 28) | 0 h | Sem dado | Sem dado | Sem dado | D5 a D7 |
+| [3 (03/11 a 09/11)](#semana-3-0311-a-09112026) | E2: 3% (1 de 37) em 09/11 | E2: 0% (0 de 19) em 09/11 | 1 h (E1) | 0,12 h/ponto (E1) | 0,0 dia | 0,4 h | D8 a D10 |
 
 ¹ Valores recalculados em 04/11/2026 com o estado ao fim de 26/10 (ver a
 [correção da semana 1](#correcao-de-04112026)). No registro original: 61% (27 de 44), 89% (25 de 28),
@@ -263,10 +264,90 @@ issues no repositório depende de permissão do dono da organização.
 
 ---
 
+## Semana 3: 03/11 a 09/11/2026
+
+Semana de transição entre as entregas. Os dias 03/11 e 04/11 ainda pertencem à Entrega 1; a
+Entrega 2 começou em 05/11, quando foram criadas as issues das milestones Fase 3 e Fase 4,
+com prazo em 16/11/2026. São 37 issues na E2: a #84, fechada como duplicada, fica fora dos
+indicadores, como as duplicatas da E1 (o `indicadores.py` passou a excluir também as issues
+fechadas como duplicadas). A partir desta semana, o [Painel PSM](painel.md) mostra as duas
+entregas, e o `mkdocs.yml` foi atualizado com o período e as milestones da E2 (D5).
+
+### M1: progresso da Entrega 2
+
+| Fim do dia | Issues | Concluídas | % concluído | Aberto (real) | Aberto (ideal) | Desvio |
+|---|---|---|---|---|---|---|
+| 05/11 | 37 | 1 | 3% | 97% | 100% | −3 p.p. |
+| 06/11 | 37 | 1 | 3% | 97% | 91% | +6 p.p. |
+| 07/11 | 37 | 1 | 3% | 97% | 82% | +15 p.p. |
+| 08/11 | 37 | 1 | 3% | 97% | 73% | +25 p.p. |
+| 09/11 | 37 | 1 | 3% | 97% | 64% | **+34 p.p.** |
+
+*Tabela 4: Burndown da Entrega 2 na semana 3 (prazo em 16/11).*
+
+- **Resultado:** ao fim de 09/11, 1 de 37 issues concluída (3%), contra 36% esperados pela
+  linha ideal: desvio de **34 p.p.**, o maior da E2 até aqui e já acima do pior momento da E1
+  (+33 p.p. em 25/10). A única concluída é a #60, triagem das correções do Ponto de Controle 1,
+  aberta e fechada em 05/11. Em pontos, as 6 issues estimadas somam 19 pontos, nenhum
+  concluído: desvio de **36 p.p.**
+- **Critério do plano:** desvio acima de 10 p.p. leva a considerar o replanejamento. O limite
+  foi ultrapassado em 07/11, terceiro dia da entrega, e o desvio cresceu cerca de 10 p.p. por
+  dia desde então.
+- **Interpretação:** com 7 dias até o prazo e só uma issue concluída, a E2 repete o padrão da E1,
+  que concentrou 17 issues na última noite. O trabalho em andamento existe, mas ainda não virou
+  issue fechada: por exemplo, o PR #98, que fecha #65 e #66, foi aberto em 08/11 e não tinha sido
+  mergeado até 09/11. A falta de responsáveis agrava o quadro: no snapshot de 06/11, 30 das 36
+  issues abertas estavam sem responsável; em 09/11 eram 24, e a redução veio só das seis issues
+  atribuídas ao Felipe em 08/11. Seis issues da Fase 3 (#63, #64, #67, #68, #69 e #70), que
+  precisam terminar antes da coleta da Fase 4, continuavam sem responsável.
+- **Pontos:** até 09/11, só as seis issues do Felipe (#61, #65, #66, #73, #78 e #94) tinham
+  `Estimate`, preenchido em 08/11. Por isso o M1 em pontos representa apenas 6 das 37 issues, e
+  o percentual em issues continua sendo a referência mais fiel do trabalho aberto.
+
+### M2 e M3: esforço e horas por ponto
+
+- **Resultado:** só uma issue com `Horas` foi concluída na semana: a #58 (melhorias do PSM), em
+  04/11, ainda na E1, com 8 pontos e 1 h, ou **0,12 h/ponto**. A issue concluída da E2 (#60)
+  não tem `Horas`.
+- **Critério do plano:** variação acima de 10% em relação à semana anterior. A semana 2 não teve
+  valor; em relação à base da semana 1 (0,40 h/ponto), a queda é de 70%.
+- **Interpretação:** uma única issue não sustenta comparação. A diferença indica que a #58 foi
+  superestimada (8 pontos para 1 h de trabalho) e reforça que o M3 só fica útil com mais issues
+  estimadas e com horas medidas, e não previstas.
+
+### M4: lead time e tempo até o merge
+
+- **Resultado:** as issues concluídas (#58 e #60) tiveram lead time menor que um dia. O
+  único PR mergeado na semana, o #59 (04/11), levou 0,4 h e foi mergeado por outro membro. O
+  PR #98, aberto em 08/11, ainda estava aberto em 09/11.
+- **Critério do plano:** item mais de 10% acima da média é investigado. Nenhum item relevante:
+  as médias são próximas de zero.
+- **Interpretação:** sem trabalho da E2 concluído, o M4 desta semana não descreve o fluxo da
+  entrega.
+
+### Situação das decisões da semana 2
+
+| ID | Situação em 09/11 | Evidência |
+|---|---|---|
+| D5 | Executada | Issues da Fase 3 e da Fase 4 criadas em 05/11; `mkdocs.yml` e milestones atualizados com prazo em 16/11 |
+| D6 | Não cumprida | No snapshot de 09/11, nenhum valor da Tabela 3 tinha sido corrigido pelos responsáveis |
+| D7 | Cumprida na semana | O único PR (#59) foi mergeado por outro membro |
+
+### Decisões e encaminhamentos
+
+| ID | Medida | Decisão ou encaminhamento | Responsável | Situação |
+|---|---|---|---|---|
+| D8 | M1 | Atribuir responsável às 24 issues abertas sem dono, começando pelas seis da Fase 3, que bloqueiam a coleta | Equipe | Proposta: confirmar na reunião |
+| D9 | M1/M3 | Cada responsável preenche `Estimate` das próprias issues da E2 até 10/11, para que o M1 em pontos e o M3 tenham base | Cada responsável | Proposta: confirmar na reunião |
+| D10 | M1 | Combinar datas intermediárias, com a Fase 3 concluída antes da coleta da Fase 4, para evitar a concentração na véspera observada na E1 | Equipe | Proposta: confirmar na reunião |
+
+---
+
 ## Próximo registro
 
-O registro da semana 3 deve:
+O registro da semana 4 (10/11 a 16/11), que fecha a Entrega 2, deve:
 
-- verificar se D5 criou trabalho novo para o M1 e se o `mkdocs.yml` foi atualizado;
-- verificar se D6 corrigiu algum valor da Tabela 3;
-- verificar se D7 reduziu os PRs mergeados pelo próprio autor.
+- verificar se D8 e D9 reduziram as issues sem responsável e sem `Estimate` (em 09/11: 24
+  abertas sem responsável e 6 de 37 com `Estimate`);
+- comparar o maior desvio final da E2 com o da E1 (+33 p.p.); em 09/11 ele já era de +34 p.p.;
+- consolidar a série E1 + E2 para o artigo e para a GitPage (#94).
