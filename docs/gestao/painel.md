@@ -68,5 +68,5 @@ tomadas ficam no [Registro Semanal](registro-medicoes.md).
     - **M4:** barras marcadas com "acima do limite" passam de 10% sobre a média da semana e
       devem ser investigadas no registro semanal. O padrão de revisão da equipe é o merge feito
       por outro membro; PRs mergeados pelo próprio autor aparecem como "merge do autor".
-    - **Cobertura de Estimate e Horas:** conta só as issues da entrega que não foram fechadas
-      como não planejadas.
+    - **Issues excluídas:** issues fechadas como não planejadas ou como duplicadas ficam fora de
+      todos os indicadores, inclusive da cobertura de Estimate e Horas.

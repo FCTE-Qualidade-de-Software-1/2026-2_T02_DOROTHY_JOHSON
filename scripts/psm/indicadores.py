@@ -23,15 +23,16 @@ Regras de cálculo:
   - A coleta roda de madrugada, então o estado ao fim do dia D vem do primeiro snapshot
     coletado depois das 23:59 de D; uma issue conta como concluída em D se fechou até esse
     instante. O dia corrente fica fora do M1.
-  - A coleta descarta o snapshot igual ao anterior. Se não há snapshot nas 36 h seguintes ao
-    fim de D, nada mudou desde o último snapshot anterior, que passa a representar D.
+  - A coleta descarta o snapshot igual ao anterior. Se não há snapshot nas 12 h seguintes ao
+    fim de D (a coleta roda de madrugada), nada mudou desde o último snapshot anterior, que
+    passa a representar D.
   - M2 e M3 usam Estimate e Horas do snapshot mais recente, porque o plano permite o
     preenchimento retroativo desses campos (regra 4 da Seção 5).
   - Em M2, as horas de uma issue com mais de um responsável são divididas igualmente.
-  - Issues fechadas como não planejadas (duplicatas) ficam fora de todos os indicadores, em
+  - Issues fechadas como não planejadas ou duplicadas ficam fora de todos os indicadores, em
     todos os dias. A lista vem de data/psm/issues-excluidas.csv, somada às issues que algum
-    snapshot registra com motivo_fechamento NOT_PLANNED; os snapshots anteriores a essa coluna
-    não dizem o motivo, e uma issue retirada do Project some dos snapshots seguintes.
+    snapshot registra com motivo_fechamento NOT_PLANNED ou DUPLICATE; os snapshots anteriores a
+    essa coluna não dizem o motivo, e uma issue retirada do Project some dos snapshots seguintes.
   - Em M4, o padrão de revisão da equipe é o merge feito por outro membro; a review formal
     do GitHub é contada à parte.
 
@@ -50,7 +51,8 @@ EXCLUIDAS = DADOS / "issues-excluidas.csv"
 BRASILIA = timezone(timedelta(hours=-3))
 LIMITE_M4 = 1.10  # item mais de 10% acima da média é investigado (PSM, 2021b, 8.5)
 MILESTONES_PADRAO = ["Fase 1", "Fase 2"]
-JANELA_COLETA = timedelta(hours=36)  # atraso máximo aceito entre o fim do dia e a coleta
+MOTIVOS_EXCLUIDOS = {"NOT_PLANNED", "DUPLICATE"}
+JANELA_COLETA = timedelta(hours=12)  # atraso máximo aceito entre o fim do dia e a coleta
 
 
 def instante(texto):
@@ -95,13 +97,13 @@ def snapshot_do_dia(dia, snapshots):
 
 
 def nao_planejadas(snapshots):
-    """Números das issues fora dos indicadores: lista fixa e motivo NOT_PLANNED nos snapshots."""
+    """Números das issues fora dos indicadores: lista fixa e motivos excluídos nos snapshots."""
     fixas = {r["numero"] for r in ler(EXCLUIDAS)} if EXCLUIDAS.exists() else set()
     return fixas | {
         r["numero"]
         for _, caminho in snapshots
         for r in ler(caminho)
-        if r.get("motivo_fechamento") == "NOT_PLANNED"
+        if r.get("motivo_fechamento") in MOTIVOS_EXCLUIDOS
     }
 
 
@@ -122,6 +124,8 @@ def progresso(dia, snapshots, milestones, excluidas):
     itens = [
         r for r in issues_da_entrega(ler(caminho), milestones, excluidas) if instante(r["criado_em"]) < fim
     ]
+    if not itens:
+        return None
     feitos = [r for r in itens if r["fechado_em"] and instante(r["fechado_em"]) < fim]
     estimados = [r for r in itens if r["estimate"]]
     return {
