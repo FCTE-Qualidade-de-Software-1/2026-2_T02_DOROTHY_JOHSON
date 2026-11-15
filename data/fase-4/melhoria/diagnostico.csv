@@ -1,0 +1,6 @@
+"execucao","lcp_s","elemento_lcp","largura_exibida_px","altura_exibida_px","fase_ttfb_s","fase_load_delay_s","fase_load_time_s","fase_render_delay_s","peso_pagina_kb","peso_imagens_kb","economia_estimada_s"
+1,17.207,"/img/capa_inicio.jpg",343,264,0.972,2.754,12.736,0.745,5339.1,4874.4,12.02
+2,18.85,"/img/capa_inicio.jpg",343,264,0.79,0.328,17.477,0.255,5338.7,4874.1,12.09
+3,23.815,"/img/capa_inicio.jpg",343,264,0.921,3.405,18.655,0.833,5338.4,4873.8,12.43
+4,23.951,"/img/capa_inicio.jpg",343,264,1.262,2.746,19.362,0.581,5337.5,4872.8,12.47
+5,23.453,"/img/capa_inicio.jpg",343,264,0.951,2.77,19.007,0.726,5338.3,4873.7,12.25

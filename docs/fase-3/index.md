@@ -1,8 +1,122 @@
 # Fase 3 — Projetar a avaliação
 
-Nesta fase a equipe define como cada métrica da [Fase 2](../fase-2/index.md) será obtida na
-Fase 4: recursos e ambiente, método e instruções de medição por característica, cronograma e
-protocolo de participantes.
+A Fase 3 do processo de avaliação de produto transforma a especificação da
+[Fase 2](../fase-2/index.md) em um plano executável: para cada métrica, define **como** a
+medida é obtida, **com quais recursos**, **em que ambiente** e **quando**. O plano deve
+permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 
-- [Recursos e ambiente de avaliação](ambiente.md)
-- [Método e instruções de medição: eficiência de desempenho](metodo-eficiencia.md)
+| Item | Valor |
+|---|---|
+| Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de julgamento da [Fase 2](../fase-2/index.md) |
+| Saída | Plano de avaliação executado na [Fase 4](../fase-4/index.md) |
+| Versão do plano | 1.1 |
+| Atualizado em | 14/11/2026 |
+
+## 1. Partes do plano
+
+| Parte | O que define | Página | Situação |
+|---|---|---|---|
+| Recursos e ambiente | Objeto avaliado, páginas, objetos de referência, hardware, software, rede e conhecimento exigido | [Recursos e ambiente](ambiente.md) | Concluída |
+| Método de eficiência de desempenho (G3) | Passos para obter M3.1.1 a M3.4.1 e consolidar os dados | [Método de eficiência](metodo-eficiencia.md) | Concluída e executada em 08/11/2026 |
+| Método de capacidade de interação (G1) | Roteiro das sessões com usuários, casos de inspeção e execução do axe-core | [Fichas de G1](../fase-2/metricas.md#g1-capacidade-de-interacao) e [ambiente, seção 3.2](ambiente.md#32-capacidade-de-interacao-g1) | Em elaboração ([#63](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/63)) |
+| Método de flexibilidade (G2) | Matriz de ambientes, roteiro das tarefas e registro de falhas | [Fichas de G2](../fase-2/metricas.md#g2-flexibilidade) e [ambiente, seção 3.3](ambiente.md#33-flexibilidade-g2) | Em elaboração ([#64](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/64)) |
+| Protocolo de participantes | Recrutamento, termo de consentimento, gravação e anonimização | [Condições comuns de G1](../fase-2/metricas.md#condicoes-comuns-de-coleta) | Em elaboração ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)) |
+| Cronograma | Atividades da Fase 4 e datas | [Seção 4](#4-cronograma-da-avaliacao) desta página | Concluída |
+| Rastreabilidade F2 → F3 | Método, recursos e dado bruto de cada métrica | [Seção 3](#3-rastreabilidade-da-fase-2-para-a-fase-3) desta página | Concluída |
+
+*Tabela 1: Partes do plano de avaliação e situação de cada uma.*
+
+Enquanto os métodos de G1 e G2 não têm página própria, valem os procedimentos de coleta das
+fichas da Fase 2, que já descrevem os passos de cada métrica, e os recursos da página de
+ambiente.
+
+## 2. Ligação com as Fases 1 e 2
+
+O plano não acrescenta decisões novas sobre o que avaliar. Cada elemento vem de uma definição
+anterior:
+
+| Elemento do plano | Origem |
+|---|---|
+| Objeto avaliado e limites | [Fase 1, seção 5](../fase-1/index.md#5-escopo-e-limites-da-avaliacao): área pública do portal, avaliação caixa-preta |
+| Páginas e tarefas T1, T2 e T3 | [Fase 1, seção 3.6](../fase-1/index.md#36-paginas-e-tarefas-avaliadas) |
+| Perfil dos participantes e conhecimento exigido | [Fase 1, seção 3.3](../fase-1/index.md#33-usuarios-ambiente-e-conhecimento-exigido) |
+| Contexto de uso simulado (celular de entrada, rede móvel lenta) | [Fase 2, objetivo G3](../fase-2/objetivos.md#g3-eficiencia-de-desempenho) |
+| Matriz de navegadores, sistemas e larguras | [Fase 2, objetivo G2](../fase-2/objetivos.md#g2-flexibilidade) |
+| Definição, cálculo e fonte de cada medida | [Fase 2, métricas](../fase-2/metricas.md) |
+| Conversão das medidas em níveis e em julgamento | [Fase 2, níveis de pontuação](../fase-2/niveis-pontuacao.md) |
+
+*Tabela 2: Origem de cada elemento do plano.*
+
+Os objetos de referência (território, camada e documento) foram deixados para esta fase pela
+[Fase 1](../fase-1/index.md#36-paginas-e-tarefas-avaliadas) e estão fixados em
+[Recursos e ambiente, seção 2](ambiente.md#2-paginas-tarefas-e-objetos-de-referencia).
+
+## 3. Rastreabilidade da Fase 2 para a Fase 3
+
+A Tabela 3 mostra, para cada métrica, o método previsto, os recursos e onde o dado bruto é
+guardado. As faixas de cada nível e as regras de julgamento não mudam nesta fase: são as da
+[Fase 2](../fase-2/niveis-pontuacao.md).
+
+| Métrica | Questão | Método | Recursos e ambiente | Dado bruto |
+|---|---|---|---|---|
+| M1.1.1 | Q1.1 | Inspeção das 9 páginas de entrada por dois avaliadores | Navegador de computador da equipe | Planilha de inspeção e capturas de tela |
+| M1.1.2 | Q1.1 | Teste com 5 usuários: destino do primeiro clique em T1, T2 e T3 | Celular único, gravação de tela e áudio | Gravações e planilha de observação |
+| M1.2.1 | Q1.2 | Teste com 5 usuários: conclusão sem ajuda, limite de 5 min por tarefa | Os mesmos de M1.1.2 | Gravações e planilha de observação |
+| M1.3.1 | Q1.3 | Contagem de passos nas gravações, conferida por um segundo avaliador | Gravações das sessões | Planilha de passos por participante |
+| M1.4.1 | Q1.4 | Inspeção com lista fixa de entradas inválidas, com a rede em modo offline | Chrome DevTools | Planilha de casos e capturas de tela |
+| M1.4.2 | Q1.4 | Classificação das mensagens de erro por dois avaliadores | As mesmas execuções de M1.4.1 | A mesma planilha, com o texto das mensagens |
+| M1.5.1 | Q1.5 | Questionário SUS ao fim da sessão | Formulário em português | Respostas por participante (P1 a P5) |
+| M1.5.2 | Q1.5 | Nota de aparência, de 1 a 5, no mesmo formulário | O mesmo de M1.5.1 | As mesmas respostas |
+| M1.6.1 | Q1.6 | Verificação automática das regras WCAG 2.1 A e AA em 5 páginas | axe-core | Relatórios JSON do axe-core |
+| M1.6.2 | Q1.6 | Contagem das violações críticas e sérias | As mesmas execuções de M1.6.1 | Os mesmos relatórios |
+| M2.1.1 | Q2.1 | Execução manual de T1, T2 e T3 em 6 combinações de navegador e sistema | Matriz de ambientes; aparelhos reais nos celulares | Planilha de execuções e capturas de tela |
+| M2.2.1 | Q2.2 | Verificação de rolagem horizontal em 3 páginas × 5 larguras | Modo de dispositivo do Chrome DevTools | Planilha de combinações e capturas de tela |
+| M2.2.2 | Q2.2 | Uso em 360 px das funções levantadas em 1366 px | Celular de referência e Chrome DevTools | Lista de funções por página |
+| M2.3.1 | Q2.3 | Registro das falhas das três métricas anteriores, confirmadas em segunda execução | Os mesmos de M2.1.1 a M2.2.2 | Registro de falhas por ambiente e gravidade |
+| M3.1.1 | Q3.1 | Lighthouse, 5 execuções por página, mediana do FCP | [Ambiente, seção 3.1](ambiente.md#31-eficiencia-de-desempenho-g3) | `data/fase-4/eficiencia/lighthouse/` |
+| M3.1.2 | Q3.1 | As mesmas execuções, mediana do LCP | O mesmo de M3.1.1 | O mesmo de M3.1.1 |
+| M3.2.1 | Q3.2 | Script com Playwright, 5 execuções de T1 e de T2 | O mesmo de M3.1.1 | `data/fase-4/eficiencia/tarefas.json` |
+| M3.3.1 | Q3.3 | As mesmas execuções do Lighthouse, tempo de CPU na thread principal | O mesmo de M3.1.1 | O mesmo de M3.1.1 |
+| M3.4.1 | Q3.4 | O mesmo script de M3.2.1, *JS heap* após o carregamento e após a tarefa | O mesmo de M3.1.1 | O mesmo de M3.2.1 |
+
+*Tabela 3: Rastreabilidade entre as métricas da Fase 2 e o plano da Fase 3.*
+
+**Verificação da consistência.** As 19 métricas da Fase 2 têm método, recursos e destino do
+dado bruto. Nenhum método mede algo que não esteja em uma ficha da Fase 2.
+
+**Diferença registrada em relação à Fase 2.** As fichas de M3.2.1 e M3.4.1 previam a gravação
+manual no painel Performance do Chrome DevTools. O plano usa um script que lê as mesmas
+grandezas pelo protocolo do DevTools, o que torna a medição repetível. A justificativa está no
+[método de eficiência, seção 6](metodo-eficiencia.md#6-diferenca-em-relacao-a-fase-2), e as
+fichas da Fase 2 foram atualizadas.
+
+## 4. Cronograma da avaliação
+
+| Período | Atividade | Métricas | Situação |
+|---|---|---|---|
+| 20/10 | Medição piloto de eficiência de desempenho | M3.x | Concluída |
+| 08/11 | Ambiente, objetos de referência e método de eficiência | — | Concluída |
+| 08/11 | Coleta de eficiência de desempenho | M3.1.1 a M3.4.1 | Concluída |
+| 14 a 15/11 | Métodos de G1 e G2, protocolo de participantes e termo de consentimento | — | Em andamento |
+| 15 a 17/11 | Inspeções e verificação automática de G1 | M1.1.1, M1.4.1, M1.4.2, M1.6.1 e M1.6.2 | Prevista |
+| 15 a 17/11 | Matriz de ambientes de G2 | M2.1.1 a M2.3.1 | Prevista |
+| 15/11 | Sessão piloto do roteiro de G1 com uma pessoa da equipe | — | Prevista |
+| 16 a 18/11 | Sessões com os 5 participantes | M1.1.2, M1.2.1, M1.3.1, M1.5.1 e M1.5.2 | Prevista |
+| 18 a 19/11 | Consolidação e respostas às questões de G1 e G2 | M1.x e M2.x | Prevista |
+| 19 a 20/11 | Julgamento final, relações entre as características e oportunidades de melhoria | — | Prevista |
+| 14 a 20/11 | [Ação de melhoria](../fase-4/acao-melhoria.md): entrega técnica e medição do efeito | M3.1.2 | Em andamento |
+| 20 a 21/11 | Artigo, GitPage e revisão final | — | Prevista |
+| 22/11 | Release da Entrega 2 | — | Prevista |
+
+*Tabela 4: Cronograma da avaliação (2026).*
+
+As coletas de uma mesma métrica são feitas em uma única sessão, e cada execução registra data
+e hora, porque o portal está em produção e pode mudar durante o período
+([riscos do ambiente](ambiente.md#5-riscos-do-ambiente)).
+
+## 5. Histórico de versões
+
+| Versão | Data | Alteração |
+|---|---|---|
+| 1.0 | 08/11/2026 | Recursos e ambiente; método de eficiência de desempenho |
+| 1.1 | 14/11/2026 | Visão geral do plano, ligação com as Fases 1 e 2, rastreabilidade F2 → F3 e cronograma |

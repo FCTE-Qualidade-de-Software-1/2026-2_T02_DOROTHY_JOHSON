@@ -1,3 +1,6 @@
 site/
 .cache/
 __pycache__/
+
+# Imagens originais do portal baixadas por scripts/fase-4/melhoria/otimizar.py
+data/fase-4/melhoria/originais/

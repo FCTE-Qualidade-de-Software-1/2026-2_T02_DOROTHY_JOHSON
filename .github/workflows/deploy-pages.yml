@@ -28,6 +28,8 @@ jobs:
         with:
           # No workflow_run, publica a main com o commit que a coleta acabou de fazer.
           ref: ${{ github.event_name == 'workflow_run' && 'main' || github.ref }}
+          # Histórico completo: a data de atualização de cada página vem do último commit dela.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
