@@ -94,14 +94,16 @@ pouco o resultado, desde que seja maior que a do perfil.
 | Navegadores e sistemas | Chrome/Android, Samsung Internet/Android, Safari/iOS, Chrome/Windows, Edge/Windows e Firefox/Windows ([Fase 2, objetivo G2](../fase-2/objetivos.md#g2-flexibilidade)) |
 | Larguras | 360, 412, 768, 1366 e 1920 px |
 | Ambiente de referência | Chrome/Windows em 1366 px |
-| Dispositivos | Aparelhos reais para os celulares de maior participação; larguras pelo modo de dispositivo do Chrome DevTools |
+| Dispositivos | Aparelhos reais nos ambientes móveis da matriz (celular Android de referência e iPhone); larguras pelo modo de dispositivo do Chrome, por script ([método de flexibilidade](metodo-flexibilidade.md)) |
+| Larguras: altura e emulação | 360 × 800, 412 × 915 e 768 × 1024 px em emulação móvel; 1366 × 768 e 1920 × 1080 px em emulação de computador |
+| Ferramentas | Google Chrome 151.0.7922.108, Playwright 1.48.2 e Node.js 24.21.0 |
 | Registro | Data e hora, versões do navegador e do sistema, largura, dispositivo real ou emulado e captura de tela |
 
 !!! note "Itens que dependem dos métodos de G1 e G2"
     O modelo do celular dos testes com usuários, a versão do axe-core, a ferramenta de
-    gravação, os aparelhos reais da matriz de G2 e o local das sessões com participantes são
-    definidos nos métodos de capacidade de interação (#63) e de flexibilidade (#64) e no
-    protocolo de participantes (#68). Esta página é atualizada quando eles forem fixados.
+    gravação e o local das sessões com participantes são definidos no método de capacidade de
+    interação (#63) e no protocolo de participantes (#68). O modelo exato dos aparelhos da
+    matriz de G2 é registrado em `execucoes.csv` a cada execução. Esta página é atualizada quando eles forem fixados.
 
 ## 4. Conhecimento exigido
 
