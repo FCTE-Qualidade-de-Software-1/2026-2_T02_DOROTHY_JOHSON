@@ -1,0 +1,7 @@
+"arquivo","tipo","origem","formato","largura_px","altura_px","bytes","sha256"
+"capa_inicio.jpg","original","https://territoriosdacidadania.mda.gov.br/img/capa_inicio.jpg","JPEG",5568,3132,2553677,"390b036e84d12b445bc3d5091eb6156ef1ba38bd6dd5d6a83c82fad3eb3cec82"
+"capa_inicio-480.webp","otimizada","capa_inicio.jpg","WEBP",480,270,47774,"b03c735d62a02cc983bc6d1c0f5a2c9085e3175aae678003d1e842f1b65e7e5d"
+"capa_inicio-960.webp","otimizada","capa_inicio.jpg","WEBP",960,540,151746,"66662a9021e1bd0fa837d71e51bd192e8ab5ad12563aa3ec8fae68647b42b19b"
+"indicadores.png","original","https://territoriosdacidadania.mda.gov.br/img/indicadores.png","PNG",1999,1142,1928870,"23e90b07bff93417e43c936e3dd0c53b50bb855c25946ff85ef11b70fe3a8023"
+"indicadores-480.webp","otimizada","indicadores.png","WEBP",480,274,12246,"4d4f01399b33a5d87a8cf453b634ec08dc8b5c689408a901d0af71abee286ff9"
+"indicadores-960.webp","otimizada","indicadores.png","WEBP",960,548,25992,"bfa7c9bce1563b42de86da5277fa5991991bed54959deee690562652dcd0f240"

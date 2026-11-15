@@ -13,7 +13,7 @@ otimizar páginas e mapas para conexões móveis, e por onde começar.
 | Tipo (enunciado, seção 3.2) | Modificação técnica para um problema objetivo (tempo de resposta) |
 | Métrica que motiva | M3.1.2, LCP do SITGeo: 23,45 s, nível Insatisfatório (0) |
 | Entrega técnica | Imagens otimizadas, alteração proposta no código e scripts de geração e de medição |
-| Situação | Entrega produzida pela equipe; a implantação no portal depende do MDA |
+| Situação | Entrega produzida e efeito medido em 14/11/2026 (seção 5); a implantação no portal depende do MDA |
 
 ## 1. Escolha da ação
 
@@ -189,10 +189,63 @@ fica registrado em `medicao.json`.
 
 ## 5. Resultado
 
-!!! warning "Medição pendente"
-    Substituir este aviso pelas duas tabelas impressas por `otimizar.py` (imagens geradas) e
-    por `medir.js` (antes × depois), com a data, o avaliador e o modo da troca, e comentar se
-    o efeito esperado da seção 3 foi atingido e em que nível de M3.1.2 o "depois" se enquadra.
+### 5.1 Imagens geradas
+
+| Arquivo | Tipo | Formato | Dimensões (px) | Tamanho (kB) |
+|---|---|---|---|---:|
+| `capa_inicio.jpg` | original | JPEG | 5568 × 3132 | 2553,7 |
+| `capa_inicio-480.webp` | otimizada | WEBP | 480 × 270 | 47,8 |
+| `capa_inicio-960.webp` | otimizada | WEBP | 960 × 540 | 151,7 |
+| `indicadores.png` | original | PNG | 1999 × 1142 | 1928,9 |
+| `indicadores-480.webp` | otimizada | WEBP | 480 × 274 | 12,2 |
+| `indicadores-960.webp` | otimizada | WEBP | 960 × 548 | 26,0 |
+
+*Tabela 5: Imagens originais e otimizadas (`data/fase-4/melhoria/imagens.csv`), geradas em 14/11/2026.*
+
+As duas imagens passam de 4 482,5 kB para 177,7 kB nas versões de 960 px, uma redução de
+96,0%. A original `capa_inicio.jpg` tem 5568 × 3132 px e é exibida em 343 × 264 px.
+
+### 5.2 Efeito medido
+
+| Medida | Antes (mín.–máx.) | Depois (mín.–máx.) | Variação |
+|---|---|---|---:|
+| LCP (s) | 26,45 (26,42–26,63) | 1,87 (1,64–2,07) | −92,9% |
+| Peso da página (kB) | 5338 (5338–5339) | 1033 (1033–1033) | −80,7% |
+
+*Tabela 6: LCP e peso do SITGeo antes e depois da troca das imagens; mediana de 5 execuções
+por condição (`data/fase-4/melhoria/medicao.json` e `resumo.csv`).*
+
+| Item | Valor |
+|---|---|
+| Data e horário | 14/11/2026, das 18:34 às 18:36 (horário de Brasília) |
+| Avaliador | Artur Henrique Holz Bartz |
+| Modo da troca | `local`: imagens otimizadas lidas do repositório, com o tempo de transferência simulado pelo tamanho do arquivo |
+| Versão otimizada usada | 960 px |
+| Navegador | Google Chrome 157.0.8103.51, em modo *headless* |
+| Elemento do LCP | `capa_inicio.jpg` nas duas condições, em todas as execuções |
+| Execuções com falha | Nenhuma |
+
+**Interpretação.** O efeito esperado da seção 3 foi atingido: o LCP caiu 92,9% (esperado: pelo
+menos 50%) e o peso da página caiu 80,7% (esperado: pelo menos 75%). A variação entre
+execuções é pequena nas duas condições, e o elemento do LCP continua sendo a mesma imagem, o
+que indica que a redução vem da troca dos arquivos, e não de outra mudança na página.
+
+**Cuidados ao ler o resultado:**
+
+- **O "depois" é otimista.** No modo `local`, as duas imagens não disputam a banda limitada
+  com os demais recursos da página (cerca de 855 kB de scripts, fontes, estilos e blocos do
+  mapa). Com as imagens servidas pela rede, o LCP do "depois" tende a ser maior que 1,87 s. A
+  medição pela rede (`medir.js` sem `OTIMIZADAS`) deve ser repetida depois que as imagens
+  estiverem publicadas na GitPage.
+- **Não é uma nova medida de M3.1.2.** O valor de 1,87 s cairia na faixa Bom de M3.1.2 (de 1,5
+  a 2,5 s), mas foi obtido com outro instrumento e outra máquina. O julgamento do G3 continua
+  sendo o da [análise de eficiência](eficiencia.md#3-julgamento-do-g3). A previsão da seção 3
+  de que restariam cerca de 4,4 s vinha das fases do LCP estimadas pelo Lighthouse, que simula
+  a rede de outra forma; os dois números não são comparáveis diretamente.
+- **Ambiente diferente do da Fase 3.** A medição foi feita em outra máquina, com Windows, e
+  com versões mais novas do Chrome e do Node.js
+  (`data/fase-4/melhoria/README.md`). Como "antes" e "depois" foram medidos na mesma sessão
+  e na mesma máquina, a comparação entre as duas condições não é afetada.
 
 ## 6. Recomendações ao requisitante
 
@@ -210,9 +263,10 @@ Em ordem de prioridade para o backlog do MDA:
 
 ## 7. Limitações
 
-- **Simulação, não implantação:** a troca das imagens ocorre no navegador de teste. Em
-  produção, as imagens otimizadas seriam servidas pelo próprio portal, sem o redirecionamento
-  nem a segunda conexão usados na medição, que tendem a desfavorecer o "depois".
+- **Simulação, não implantação:** a troca das imagens ocorre no navegador de teste, e o portal
+  não foi alterado. No modo `local` usado na medição, o tempo de transferência das imagens
+  otimizadas é calculado pelo tamanho do arquivo, sem concorrência com os outros recursos, o
+  que favorece o "depois" (seção 5.2).
 - **Uma página e um perfil:** o efeito foi medido só no SITGeo e no perfil móvel do G3. A
   ação não trata a T1 nem Meu Território.
 - **Largura das imagens:** as versões de 480 e 960 px cobrem o cartão observado no celular. O
