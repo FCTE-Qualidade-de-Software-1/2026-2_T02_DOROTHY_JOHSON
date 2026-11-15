@@ -1,0 +1,5 @@
+"condicao","medida","mediana","minimo","maximo","execucoes"
+"antes","LCP (s)",26.448,26.424,26.632,5
+"antes","Peso da página (kB)",5338.219,5338.214,5338.893,5
+"depois","LCP (s)",1.868,1.64,2.068,5
+"depois","Peso da página (kB)",1032.902,1032.854,1032.931,5

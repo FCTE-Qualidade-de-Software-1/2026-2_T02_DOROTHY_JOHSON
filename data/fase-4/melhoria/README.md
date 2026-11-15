@@ -20,13 +20,23 @@ versões otimizadas ficam em `docs/fase-4/melhoria/img/`.
 
 ## Sessão de medição
 
-Preencher ao executar `medir.js`:
-
 | Item | Valor |
 |---|---|
-| Data e horário | |
-| Avaliador | |
-| Conexão | |
-| Chrome, Node.js e Playwright | |
-| Modo da troca (`rede` ou `local`) | |
-| Desvios em relação ao procedimento | |
+| Data e horário | 14/11/2026, das 18:34 às 18:36 (horário de Brasília) |
+| Avaliador | Artur Henrique Holz Bartz |
+| Máquina e sistema | Intel(R) Core(TM) i5-3570 CPU @ 3.40GHz, 8GB RAM e Microsoft Windows 10 Pro |
+| Conexão | cabo |
+| Chrome | 157.0.8103.51 (modo *headless* novo) |
+| Node.js e Playwright | 26.13.1 e 1.48.2 |
+| Python e Pillow (geração das imagens) | 3.15.2 e 13.0.0 |
+| Modo da troca | `local`, com as versões de 960 px |
+| Execuções | 5 por condição, alternadas; nenhuma falhou nem foi repetida |
+
+## Desvios em relação ao procedimento
+
+- A medição foi feita em uma máquina com Windows, e não no notebook com Ubuntu do
+  [ambiente da Fase 3](../../../docs/fase-3/ambiente.md), com Chrome 157 e Node.js 26 no
+  lugar de Chrome 138 e Node.js 24. As duas condições foram medidas na mesma sessão e na
+  mesma máquina.
+- Foi usado o modo `local`, porque as imagens otimizadas ainda não estavam publicadas na
+  GitPage. A medição pela rede fica pendente.
