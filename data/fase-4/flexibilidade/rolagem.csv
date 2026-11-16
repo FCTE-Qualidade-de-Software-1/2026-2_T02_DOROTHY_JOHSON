@@ -1,0 +1,31 @@
+execucao,pagina,largura,emulacao,scroll_width,client_width,rolagem_horizontal,excecao_mapa,elementos,captura,navegador,coletado_em
+1,meu-territorio,360,móvel,360,360,não,não,,rolagem-meu-territorio-360-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:24:31.388Z
+1,meu-territorio,412,móvel,412,412,não,não,,rolagem-meu-territorio-412-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:24:36.973Z
+1,meu-territorio,768,móvel,768,768,não,não,,rolagem-meu-territorio-768-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:24:44.130Z
+1,meu-territorio,1366,computador,1356,1356,não,não,,rolagem-meu-territorio-1366-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:24:51.848Z
+1,meu-territorio,1920,computador,1910,1910,não,não,,rolagem-meu-territorio-1920-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:24:57.908Z
+1,plataforma-geoespacial,360,móvel,360,360,não,não,,rolagem-plataforma-geoespacial-360-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:25:04.337Z
+1,plataforma-geoespacial,412,móvel,412,412,não,não,,rolagem-plataforma-geoespacial-412-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:25:10.570Z
+1,plataforma-geoespacial,768,móvel,768,768,não,não,,rolagem-plataforma-geoespacial-768-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:03.943Z
+1,plataforma-geoespacial,1366,computador,1356,1356,não,não,,rolagem-plataforma-geoespacial-1366-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:13.279Z
+1,plataforma-geoespacial,1920,computador,1910,1910,não,não,,rolagem-plataforma-geoespacial-1920-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:22.492Z
+1,downloads,360,móvel,392,360,sim,não,"span ""Next slide"" (direita em 377 px); span ""Next slide"" (direita em 377 px)",rolagem-downloads-360-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:27.566Z
+1,downloads,412,móvel,445,412,sim,não,"span ""Next slide"" (direita em 429 px); span ""Next slide"" (direita em 429 px)",rolagem-downloads-412-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:32.755Z
+1,downloads,768,móvel,768,768,não,não,,rolagem-downloads-768-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:37.909Z
+1,downloads,1366,computador,1356,1356,não,não,,rolagem-downloads-1366-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:26:44.010Z
+1,downloads,1920,computador,1910,1910,não,não,,rolagem-downloads-1920-e1.jpg,Chrome 151.0.7922.108,2026-11-15T23:27:09.887Z
+2,meu-territorio,360,móvel,360,360,não,não,,rolagem-meu-territorio-360-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:30:07.458Z
+2,meu-territorio,412,móvel,412,412,não,não,,rolagem-meu-territorio-412-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:30:19.328Z
+2,meu-territorio,768,móvel,768,768,não,não,,rolagem-meu-territorio-768-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:30:28.648Z
+2,meu-territorio,1366,computador,1356,1356,não,não,,rolagem-meu-territorio-1366-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:30:44.223Z
+2,meu-territorio,1920,computador,1910,1910,não,não,,rolagem-meu-territorio-1920-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:30:50.894Z
+2,plataforma-geoespacial,360,móvel,360,360,não,não,,rolagem-plataforma-geoespacial-360-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:31:27.940Z
+2,plataforma-geoespacial,412,móvel,412,412,não,não,,rolagem-plataforma-geoespacial-412-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:32:21.421Z
+2,plataforma-geoespacial,768,móvel,768,768,não,não,,rolagem-plataforma-geoespacial-768-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:32:57.635Z
+2,plataforma-geoespacial,1366,computador,1356,1356,não,não,,rolagem-plataforma-geoespacial-1366-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:33:53.461Z
+2,plataforma-geoespacial,1920,computador,1910,1910,não,não,,rolagem-plataforma-geoespacial-1920-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:34:02.743Z
+2,downloads,360,móvel,392,360,sim,não,"span ""Next slide"" (direita em 377 px); span ""Next slide"" (direita em 377 px)",rolagem-downloads-360-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:34:07.533Z
+2,downloads,412,móvel,445,412,sim,não,"span ""Next slide"" (direita em 429 px); span ""Next slide"" (direita em 429 px)",rolagem-downloads-412-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:34:13.617Z
+2,downloads,768,móvel,768,768,não,não,,rolagem-downloads-768-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:34:18.741Z
+2,downloads,1366,computador,1356,1356,não,não,,rolagem-downloads-1366-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:34:55.806Z
+2,downloads,1920,computador,1910,1910,não,não,,rolagem-downloads-1920-e2.jpg,Chrome 151.0.7922.108,2026-11-15T23:35:13.437Z

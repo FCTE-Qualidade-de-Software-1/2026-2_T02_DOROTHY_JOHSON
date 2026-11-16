@@ -4,5 +4,6 @@ Nesta fase a equipe coleta as medidas conforme o plano da [Fase 3](../fase-3/ind
 calcula as métricas, responde às questões e aos objetivos do GQM e emite o julgamento de cada
 característica.
 
+- [Análise e respostas GQM: flexibilidade](flexibilidade.md) (parcial: matriz de ambientes pendente)
 - [Análise e respostas GQM: eficiência de desempenho](eficiencia.md)
 - [Ação de melhoria: imagens do SITGeo](acao-melhoria.md)

@@ -1,0 +1,101 @@
+execucao,pagina,funcao,nome,tipo,largura,elementos,com_problema,disponivel,motivo,observacao,navegador,coletado_em
+1,meu-territorio,MT-01,Seletores de UF e de território,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-01,Seletores de UF e de território,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-02,Botão Selecionar (consulta),controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-02,Botão Selecionar (consulta),controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-03,Indicadores gerais do território,conteudo,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-03,Indicadores gerais do território,conteudo,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-04,Zoom do mapa de abrangência,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-04,Zoom do mapa de abrangência,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-05,Botão Municípios em Dados,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-05,Botão Municípios em Dados,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-06,Botão Baixar Mapa,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-06,Botão Baixar Mapa,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-07,Abas do Colegiado Territorial,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-07,Abas do Colegiado Territorial,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-08,Abas de Políticas Públicas (8 programas),controle,1366,8,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-08,Abas de Políticas Públicas (8 programas),controle,360,8,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-09,Botão Analisar do programa,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-09,Botão Analisar do programa,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-10,Gráficos do programa,conteudo,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-10,Gráficos do programa,conteudo,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-11,Abas de Principais Produtos,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-11,Abas de Principais Produtos,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-12,Zoom do mapa de produtos,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,meu-territorio,MT-12,Zoom do mapa de produtos,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:18.739Z
+1,plataforma-geoespacial,GEO-01,Cartões de tema (5),controle,1366,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-01,Cartões de tema (5),controle,360,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-02,Grupos de camadas base (5),controle,1366,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-02,Grupos de camadas base (5),controle,360,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-03,Ativar e desativar camada do tema,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-03,Ativar e desativar camada do tema,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-04,"Nome e dados da camada (fonte, unidade)",conteudo,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-04,"Nome e dados da camada (fonte, unidade)",conteudo,360,1,1,não,coberto por outro elemento,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-05,Zoom do mapa,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-05,Zoom do mapa,controle,360,2,2,não,coberto por outro elemento,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-06,Legenda da camada ativa,conteudo,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,plataforma-geoespacial,GEO-06,Legenda da camada ativa,conteudo,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:28:49.636Z
+1,downloads,BIB-01,Abas de programa (3),controle,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-01,Abas de programa (3),controle,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-02,Botões Baixar das listas e shapefiles,controle,1366,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-02,Botões Baixar das listas e shapefiles,controle,360,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-03,Links de Legislação,controle,1366,13,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-03,Links de Legislação,controle,360,13,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-04,Links de Documentos de Apoio,controle,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-04,Links de Documentos de Apoio,controle,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.872Z
+1,downloads,BIB-05,Setas do carrossel da Mapoteca,controle,1366,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.873Z
+1,downloads,BIB-05,Setas do carrossel da Mapoteca,controle,360,4,4,não,fora da largura da tela,,Chrome 151.0.7922.108,2026-11-15T23:30:00.873Z
+1,downloads,BIB-06,"Buscador de Mapas (programa, UF, território e botão)",controle,1366,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.873Z
+1,downloads,BIB-06,"Buscador de Mapas (programa, UF, território e botão)",controle,360,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.873Z
+1,downloads,BIB-07,"Busca do PTDRS (programa, UF e botão)",controle,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.873Z
+1,downloads,BIB-07,"Busca do PTDRS (programa, UF e botão)",controle,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:30:00.873Z
+2,meu-territorio,MT-01,Seletores de UF e de território,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-01,Seletores de UF e de território,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-02,Botão Selecionar (consulta),controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-02,Botão Selecionar (consulta),controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-03,Indicadores gerais do território,conteudo,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-03,Indicadores gerais do território,conteudo,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-04,Zoom do mapa de abrangência,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-04,Zoom do mapa de abrangência,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-05,Botão Municípios em Dados,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-05,Botão Municípios em Dados,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-06,Botão Baixar Mapa,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-06,Botão Baixar Mapa,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-07,Abas do Colegiado Territorial,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-07,Abas do Colegiado Territorial,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-08,Abas de Políticas Públicas (8 programas),controle,1366,8,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-08,Abas de Políticas Públicas (8 programas),controle,360,8,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-09,Botão Analisar do programa,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-09,Botão Analisar do programa,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-10,Gráficos do programa,conteudo,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-10,Gráficos do programa,conteudo,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-11,Abas de Principais Produtos,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-11,Abas de Principais Produtos,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-12,Zoom do mapa de produtos,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,meu-territorio,MT-12,Zoom do mapa de produtos,controle,360,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:36:23.012Z
+2,plataforma-geoespacial,GEO-01,Cartões de tema (5),controle,1366,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-01,Cartões de tema (5),controle,360,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-02,Grupos de camadas base (5),controle,1366,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-02,Grupos de camadas base (5),controle,360,5,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-03,Ativar e desativar camada do tema,controle,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-03,Ativar e desativar camada do tema,controle,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-04,"Nome e dados da camada (fonte, unidade)",conteudo,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-04,"Nome e dados da camada (fonte, unidade)",conteudo,360,1,1,não,coberto por outro elemento,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-05,Zoom do mapa,controle,1366,2,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-05,Zoom do mapa,controle,360,2,2,não,coberto por outro elemento,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-06,Legenda da camada ativa,conteudo,1366,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,plataforma-geoespacial,GEO-06,Legenda da camada ativa,conteudo,360,1,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:37:34.188Z
+2,downloads,BIB-01,Abas de programa (3),controle,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-01,Abas de programa (3),controle,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-02,Botões Baixar das listas e shapefiles,controle,1366,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-02,Botões Baixar das listas e shapefiles,controle,360,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-03,Links de Legislação,controle,1366,13,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-03,Links de Legislação,controle,360,13,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-04,Links de Documentos de Apoio,controle,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-04,Links de Documentos de Apoio,controle,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-05,Setas do carrossel da Mapoteca,controle,1366,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-05,Setas do carrossel da Mapoteca,controle,360,4,4,não,fora da largura da tela,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-06,"Buscador de Mapas (programa, UF, território e botão)",controle,1366,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-06,"Buscador de Mapas (programa, UF, território e botão)",controle,360,4,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-07,"Busca do PTDRS (programa, UF e botão)",controle,1366,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z
+2,downloads,BIB-07,"Busca do PTDRS (programa, UF e botão)",controle,360,3,0,sim,,,Chrome 151.0.7922.108,2026-11-15T23:38:14.909Z

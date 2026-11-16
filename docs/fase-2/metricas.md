@@ -226,7 +226,7 @@ Valem para todas as métricas de G2 e serão detalhadas no plano de avaliação 
 | Definição | Proporção das combinações de página e largura de janela em que o conteúdo se ajusta à largura, sem exigir rolagem horizontal. Segue o critério de refluxo da WCAG 2.1 (critério 1.4.10), que exclui conteúdos que precisam de duas dimensões, como mapas (W3C, 2018). Por isso, a área do mapa do SITGeo não conta como rolagem horizontal |
 | Procedimento de cálculo | X = A / B, em que A = combinações sem rolagem horizontal e B = 3 páginas × 5 larguras = 15 |
 | Fonte dos dados | Planilha com o resultado de cada combinação e captura de tela |
-| Procedimento de coleta | No modo de dispositivo do Chrome DevTools, ajustar a largura e carregar a página. No console, verificar se `document.documentElement.scrollWidth > document.documentElement.clientWidth`; se sim, confirmar visualmente qual elemento transborda |
+| Procedimento de coleta | No modo de dispositivo do Chrome DevTools, ajustar a largura e carregar a página. No console, verificar se `document.documentElement.scrollWidth > document.documentElement.clientWidth`; se sim, confirmar visualmente qual elemento transborda. Na Fase 3, o mesmo teste passou a ser feito por script ([método de flexibilidade, Procedimento A](../fase-3/metodo-flexibilidade.md#3-procedimento-a-rolagem-horizontal-m221)) |
 | Unidade e escala | Proporção de 0 a 1; escala de razão |
 | Critério de interpretação | Quanto maior, melhor. 1 significa que nenhuma página exige rolagem horizontal em nenhuma largura |
 
@@ -238,7 +238,7 @@ Valem para todas as métricas de G2 e serão detalhadas no plano de avaliação 
 | Definição | Na ISO/IEC 25023, proporção de funções que podem ser concluídas em diferentes ambientes de hardware (ISO/IEC, 2011b). Nesta avaliação, é a proporção das funções que a página oferece no computador (1366 px) que continuam visíveis e operáveis no celular (360 px). Exemplos: filtros, abas de programas, controles do mapa, painel de camadas e legenda |
 | Procedimento de cálculo | Para cada página, X = A / B, em que A = funções operáveis em 360 px e B = funções levantadas em 1366 px |
 | Fonte dos dados | Lista de funções por página, com o resultado em cada largura e capturas de tela |
-| Procedimento de coleta | Levantar as funções de cada página em 1366 px (lista fixada na Fase 3) e tentar usar cada uma em 360 px, no celular de referência |
+| Procedimento de coleta | Levantar as funções de cada página em 1366 px (lista fixada na Fase 3) e tentar usar cada uma em 360 px, no celular de referência. Na Fase 3, a verificação passou a ser feita por script em emulação, com as perdas confirmadas no celular ([método de flexibilidade, Procedimento B](../fase-3/metodo-flexibilidade.md#4-procedimento-b-funcoes-disponiveis-no-celular-m222)) |
 | Unidade e escala | Proporção de 0 a 1; escala de razão |
 | Critério de interpretação | Quanto maior, melhor. 1 significa que o celular oferece tudo o que o computador oferece |
 
