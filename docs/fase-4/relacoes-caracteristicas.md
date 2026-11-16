@@ -7,13 +7,6 @@ O objetivo é apoiar as três decisões do requisitante na
 [Fase 1](../fase-1/index.md#12-requisitante-e-objetivo): redesenho de interface, otimização
 de desempenho e cobertura de ambientes de teste.
 
-!!! note "Alcance da discussão em 15/11/2026"
-    G3 tem resultados consolidados; G2 tem resultados de larguras de tela, mas a matriz de
-    navegadores e sistemas e a confirmação das perdas no celular real estão pendentes.
-    Ainda não há resultados de G1 publicados no repositório. Assim, é possível discutir os
-    achados disponíveis e suas implicações, mas as relações com os resultados de G1 permanecem
-    hipóteses. A ausência desses dados não significa ausência de problemas de interação.
-
 ## 1. Critério de cruzamento e evidências
 
 O cruzamento usa a mesma página ou tarefa como unidade de comparação, mantendo os objetos de
