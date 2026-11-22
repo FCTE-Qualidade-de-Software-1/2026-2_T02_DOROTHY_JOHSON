@@ -7,7 +7,7 @@ com a abordagem **GQM (Goal–Question–Metric)**, que organiza a medição em 
 |---|---|---|
 | Conceitual | Objetivos de medição | [Objetivos](objetivos.md) |
 | Operacional | Questões e hipóteses | [Questões](questoes.md) e [hipóteses](hipoteses.md) |
-| Quantitativo | Métricas, níveis de pontuação e critérios de julgamento | [Métricas](metricas.md) e [níveis de pontuação](niveis-pontuacao.md) |
+| Quantitativo | Métricas, níveis de pontuação e critérios de classificação | [Métricas](metricas.md) e [níveis de pontuação](niveis-pontuacao.md) |
 
 A visão completa da hierarquia está no [Gráfico GQM](grafico-gqm.md).
 
@@ -83,7 +83,7 @@ A rastreabilidade foi conferida nos dois sentidos:
   é coberto pela tarefa T3 de G1 e pelos tempos de carregamento de G3. A própria equipe
   avaliadora não é ponto de vista, porque não usa o resultado para decidir sobre o produto.
 - **Dois propósitos diferentes:** G1 e G2 *avaliam*, porque apoiam decisões de redesenho e de
-  cobertura de testes que exigem um julgamento. G3 busca *entender*, porque a decisão 2 pergunta
+  cobertura de testes que exigem uma classificação. G3 busca *entender*, porque a decisão 2 pergunta
   primeiro *se* é preciso otimizar, e o comportamento do portal em rede móvel ainda não é
   conhecido.
 

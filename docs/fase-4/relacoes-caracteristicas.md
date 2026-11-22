@@ -143,7 +143,7 @@ usuários de primeira vez e o efeito das correções sobre sua percepção depen
 Melhorar o desempenho e adaptar a interface são frentes complementares; nenhuma das duas
 dispensa a verificação da outra.
 
-Os julgamentos continuam separados, como definido nos
+As classificações continuam separadas, como definido nos
 [critérios da Fase 2](../fase-2/niveis-pontuacao.md#53-da-pontuacao-a-decisao-de-qualidade).
 O cruzamento não cria uma nota global do SIT. Quando G1 e a matriz de G2 forem publicados,
 esta discussão deve ser atualizada com as evidências correspondentes, registrando quais

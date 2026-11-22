@@ -1,15 +1,15 @@
-# Níveis de Pontuação e Critérios de Julgamento
+# Níveis de Pontuação e Critérios de Classificação
 
 Esta seção define como os resultados das **19 métricas** dos objetivos GQM serão convertidos em níveis de pontuação e em classificações de qualidade para as três características selecionadas na [Fase 1](../fase-1/index.md): **capacidade de interação (G1)**, **flexibilidade (G2)** e **eficiência de desempenho (G3)**.
 
-As regras complementam as fichas de [métricas](metricas.md), as [questões](questoes.md) e as [hipóteses](hipoteses.md). Os resultados observados somente serão julgados na Fase 4, após a coleta estabelecida na Fase 3.
+As regras complementam as fichas de [métricas](metricas.md), as [questões](questoes.md) e as [hipóteses](hipoteses.md). Os resultados observados somente serão classificados na Fase 4, após a coleta estabelecida na Fase 3.
 
 !!! important "Natureza dos limiares"
     As normas ISO/IEC 25010:2023 e ISO/IEC 25023 fundamentam a escolha das características e das medidas, **mas não estabelecem os quatro níveis de pontuação abaixo**. Os cortes derivados de referências externas são identificados no texto; os demais são **critérios operacionais propostos pela equipe**, para uso no contexto desta avaliação, e precisam ser validados na revisão da Fase 2. Não devem ser apresentados como limites normativos nem como conclusões já verificadas sobre o SIT.
 
 ## 1. Escala comum e regras de aplicação
 
-| Nível | Pontos | Significado para o julgamento |
+| Nível | Pontos | Significado para a classificação |
 |---|:---:|---|
 | **Insatisfatório** | **0** | Desempenho aquém do patamar mínimo adotado; requer investigação e ação corretiva prioritária. |
 | **Aceitável** | **1** | Atende apenas parcialmente à expectativa; merece melhoria e acompanhamento. |
@@ -46,9 +46,9 @@ A pontuação cobre reconhecibilidade de adequação (Q1.1), apreensibilidade (Q
 ### Justificativas e particularidades de G1
 
 - **M1.1.1:** os limites usam os nove pontos de entrada descritos na ficha. Seis de nove (66,7%) corresponde ao patamar de dois terços da hipótese H1.1; cobertura total representa o nível Excelente.
-- **M1.1.2 e M1.2.1:** com **cinco participantes**, os resultados por tarefa variam de 20 em 20 pontos percentuais: 3/5 = Aceitável, 4/5 = Bom e 5/5 = Excelente. O corte de 80% é a aproximação realizável acima da referência de cerca de 78% de conclusão mencionada em M1.2.1; os demais limites são internos. A média das três tarefas também é informada, mas **não substitui o julgamento por tarefa**.
+- **M1.1.2 e M1.2.1:** com **cinco participantes**, os resultados por tarefa variam de 20 em 20 pontos percentuais: 3/5 = Aceitável, 4/5 = Bom e 5/5 = Excelente. O corte de 80% é a aproximação realizável acima da referência de cerca de 78% de conclusão mencionada em M1.2.1; os demais limites são internos. A média das três tarefas também é informada, mas **não substitui a classificação por tarefa**.
 - **M1.3.1:** uma razão de 0,50 significa o dobro do caminho mínimo; o limiar explicita a hipótese H1.3. **Somente tentativas concluídas** compõem a média. Um caminho curto não compensa uma tarefa fracassada: interpretar M1.3.1 sempre junto de M1.2.1.
-- **M1.4.1 e M1.4.2:** são julgadas separadamente. Em M1.4.2, o denominador inclui **somente** os casos de M1.4.1 nos quais alguma mensagem apareceu. Casos bloqueados silenciosamente não contam como mensagem boa nem ruim; devem ser discutidos como ressalva. Se nenhuma mensagem aparecer (denominador zero), M1.4.2 é **NC**, exigindo inspeção complementar antes da classificação de G1.
+- **M1.4.1 e M1.4.2:** são classificadas separadamente. Em M1.4.2, o denominador inclui **somente** os casos de M1.4.1 nos quais alguma mensagem apareceu. Casos bloqueados silenciosamente não contam como mensagem boa nem ruim; devem ser discutidos como ressalva. Se nenhuma mensagem aparecer (denominador zero), M1.4.2 é **NC**, exigindo inspeção complementar antes da classificação de G1.
 - **M1.5.1:** 51, 71 e 85 são aproximações dos adjetivos *OK*, *bom* e *excelente* citados por Bangor, Kortum e Miller (2009), conforme a ficha. A média de referência de **68 pontos** continua como comparação descritiva, não como limite adicional de classe. **M1.5.2:** o ponto 3,0 é neutro, portanto uma nota apenas neutra não significa percepção positiva.
 - **M1.6.1 e M1.6.2:** a faixa de 80% vem da hipótese H1.6, **não** de uma exigência da WCAG. Em M1.6.2, contar **elementos distintos afetados** pelas violações `critical` e `serious` do axe-core, e não apenas a quantidade de regras violadas. Se um elemento aparecer em várias violações, contá-lo uma só vez e classificá-lo pela **maior gravidade**. Registrar as duas gravidades separadamente, mesmo quando a pontuação é apresentada como um único nível. **Uma única violação crítica força Insatisfatório nesse recorte.** Aprovação de todas as regras automáticas não equivale à conformidade completa com WCAG/eMAG; verificações manuais continuam necessárias.
 
@@ -67,7 +67,7 @@ A adaptabilidade é examinada por navegador/sistema operacional, larguras de tel
 
 ### Justificativas e particularidades de G2
 
-- **M2.1.1:** as três tarefas T1–T3 devem ser executadas em cada um dos **seis ambientes de software** inicialmente propostos em [G2](objetivos.md#g2-flexibilidade). O julgamento é apresentado por ambiente (0/3, 1/3, 2/3 ou 3/3) **e** no geral (18 execuções, se a matriz não mudar). Na classificação por ambiente, a faixa Bom não é alcançável com apenas três tarefas; permanece útil para o agregado geral. Os cortes são operacionais, não limiares de norma.
+- **M2.1.1:** as três tarefas T1–T3 devem ser executadas em cada um dos **seis ambientes de software** inicialmente propostos em [G2](objetivos.md#g2-flexibilidade). A classificação é apresentada por ambiente (0/3, 1/3, 2/3 ou 3/3) **e** no geral (18 execuções, se a matriz não mudar). Na classificação por ambiente, a faixa Bom não é alcançável com apenas três tarefas; permanece útil para o agregado geral. Os cortes são operacionais, não limiares de norma.
 - **M2.2.1:** 15 combinações resultam de **3 páginas × 5 larguras**. Usar as exceções de conteúdo bidimensional previstas na ficha (por exemplo, área do mapa), evitando classificar como falha uma rolagem necessária para operar esse conteúdo.
 - **M2.2.2:** examinar cada página em 360 px contra a lista de suas funções em 1366 px. Uma função invisível ou não operável no celular **não** pode ser considerada preservada. Reportar também quais funções se perderam, independentemente da porcentagem.
 - **M2.3.1:** a classificação segue a **maior gravidade** e, quando pertinente, a quantidade de falhas graves **reproduzidas duas vezes**. Se há falha grave ou bloqueante, a presença de falhas cosméticas não reduz sua severidade. A mesma falha pode aparecer em vários ambientes, conforme a ficha, mas não deve ser duplicada dentro do mesmo ambiente.
@@ -110,7 +110,7 @@ As faixas de FCP, LCP, tempo de resposta à ação e CPU usam referências discu
 
 Esses exemplos demonstram o procedimento de conversão, **não** constituem a classificação final: o próprio piloto tem limitações metodológicas descritas em [Hipóteses](hipoteses.md#medicao-piloto).
 
-## 5. Critérios de julgamento por característica
+## 5. Critérios de classificação por característica
 
 A classificação de cada característica deve indicar **onde a qualidade ficou comprometida**; uma nota média isolada não basta para orientar as três decisões do requisitante descritas na Fase 1.
 
@@ -129,7 +129,7 @@ A classificação de cada característica deve indicar **onde a qualidade ficou 
 | 2,00 ≤ média < 2,75 | **Bom** |
 | 2,75 ≤ média ≤ 3,00 | **Excelente** |
 
-O limite **2,75** para Excelência é deliberadamente exigente e **interno**: requer que quase todos os aspectos avaliados recebam pontuação alta. A consolidação produz um **índice de julgamento construído para esta avaliação**, não uma pontuação de qualidade padronizada pela ISO.
+O limite **2,75** para Excelência é deliberadamente exigente e **interno**: requer que quase todos os aspectos avaliados recebam pontuação alta. A consolidação produz um **índice de classificação construído para esta avaliação**, não uma pontuação de qualidade padronizada pela ISO.
 
 ### 5.2 Regras de gravidade e exceções
 
@@ -148,7 +148,7 @@ Quando mais de uma regra se aplicar, prevalece a **mais restritiva**. Registrar 
 
 ### 5.3 Da pontuação à decisão de qualidade
 
-| Característica | Questões que sustentam o julgamento | Interpretação e ação derivada |
+| Característica | Questões que sustentam a classificação | Interpretação e ação derivada |
 |---|---|---|
 | **G1 — Capacidade de interação** | Q1.1–Q1.6 | Identificar tarefas com pouca conclusão ou primeiro clique incorreto, caminhos longos, falhas de validação, baixa percepção SUS e barreiras de acessibilidade. **Insatisfatório:** priorizar correção de barreiras críticas e redesenho de fluxos fracassados. **Aceitável:** melhorar telas/mensagens com pior nota. **Bom/Excelente:** manter e monitorar, sem ignorar defeitos localizados. |
 | **G2 — Flexibilidade** | Q2.1–Q2.3 | Identificar quais combinações de navegador/SO/largura impedem tarefas, criam rolagem indevida ou removem funções. **Insatisfatório:** corrigir falhas bloqueantes e cobrir o ambiente na matriz de regressão. **Aceitável:** priorizar falhas graves e funções ausentes. **Bom/Excelente:** manter cobertura e registrar falhas cosméticas. Priorizar ambientes também pela participação do público-alvo, sem dispensar a gravidade. |

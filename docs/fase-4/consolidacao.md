@@ -1,6 +1,6 @@
 # Consolidação e cálculo dos resultados
 
-Esta página documenta como os dados brutos viram medidas, pontos e julgamento: o comando que
+Esta página documenta como os dados brutos viram medidas, pontos e classificação: o comando que
 refaz tudo, as fórmulas e o tratamento de valores ausentes e atípicos
 ([issue #75](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/75)).
 Ela não define regras novas: as definições são das [fichas da Fase 2](../fase-2/metricas.md), dos
@@ -26,7 +26,7 @@ reproduzido a partir do dado bruto.
 | G2, pontos | `flexibilidade/rolagem.csv`, `funcoes.csv`, `execucoes.csv` e `falhas.csv` | `flexibilidade/pontuar.py` | `flexibilidade/pontuacao.csv` |
 | Melhoria, evidências | `eficiencia/lighthouse/plataforma-geoespacial-*.json` | `melhoria/diagnostico.py` | `melhoria/diagnostico.csv` e `imagens-pagina.csv` |
 | Melhoria, efeito | `melhoria/medicao.json` | `melhoria/medir.js` (acessa o portal; aqui só o cálculo é conferido) | `melhoria/resumo.csv` |
-| Reunião | As saídas acima | `consolidar.py` | `consolidado/medidas.csv` e `consolidado/julgamento.csv` |
+| Reunião | As saídas acima | `consolidar.py` | `consolidado/medidas.csv` e `consolidado/classificacao.csv` |
 
 *Tabela 1: Do dado bruto ao resultado. Os dados ficam em `data/fase-4/`, e os scripts, em
 `scripts/fase-4/`.*
@@ -34,7 +34,7 @@ reproduzido a partir do dado bruto.
 | Arquivo consolidado | Uma linha por | Conteúdo |
 |---|---|---|
 | [`medidas.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/medidas.csv) | Recorte de cada uma das 19 métricas | Valor, mínimo, máximo, execuções, pontos, nível, situação e caminho do dado bruto |
-| [`julgamento.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/julgamento.csv) | Métrica, questão e característica | Pontos, classificação pela média, limitador e classificação final |
+| [`classificacao.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/classificacao.csv) | Métrica, questão e característica | Pontos, classificação pela média, limitador e classificação final |
 
 *Tabela 2: Arquivos consolidados.*
 
@@ -55,7 +55,7 @@ reproduzido a partir do dado bruto.
 *Tabela 3: Fórmulas das métricas com coleta prevista em G2 e G3. As de G1 estão nas
 [fichas da Fase 2](../fase-2/metricas.md#g1-capacidade-de-interacao).*
 
-### 2.2 Do valor ao julgamento
+### 2.2 Do valor à classificação
 
 1. **Recorte:** o valor não arredondado recebe de 0 a 3 pontos pelas faixas da Fase 2.
 2. **Métrica:** média dos pontos dos seus recortes.
@@ -112,5 +112,5 @@ mudam de nível:
 *Tabela 5: Recortes de G3 cujo nível depende da execução.*
 
 Com os dois recortes no pior nível, o G3 cairia de 1,35 para 1,14; no melhor, subiria para 1,43.
-Nos dois casos **a classificação continua Aceitável**, então a dispersão não altera o julgamento. Ela
+Nos dois casos **a classificação continua Aceitável**, então a dispersão não a altera. Ela
 indica apenas que os níveis da Biblioteca Territorial devem ser lidos com cautela.

@@ -4,7 +4,7 @@ Esta página responde às questões Q2.1 a Q2.3 e ao objetivo G2 com os dados co
 [método de flexibilidade](../fase-3/metodo-flexibilidade.md). Cada recorte foi pontuado pelos
 [níveis de G2](../fase-2/niveis-pontuacao.md#3-g2-flexibilidade), de 0 (Insatisfatório) a 3
 (Excelente), e consolidado pelos
-[critérios de julgamento](../fase-2/niveis-pontuacao.md#5-criterios-de-julgamento-por-caracteristica).
+[critérios de classificação](../fase-2/niveis-pontuacao.md#5-criterios-de-classificacao-por-caracteristica).
 
 !!! warning "Resultado parcial"
     Os Procedimentos A e B (larguras de tela, M2.2.1 e M2.2.2) foram executados em 15/11/2026.
@@ -118,7 +118,7 @@ deve incluir pelo menos uma largura de celular (360 px) para o SITGeo e a Biblio
 Territorial. A comparação entre navegadores (Safari/iOS, Samsung Internet, Firefox e Edge)
 depende da matriz manual.
 
-## 3. Julgamento do G2
+## 3. Classificação do G2
 
 | Questão | Métricas | Pontos |
 |---|---|---:|

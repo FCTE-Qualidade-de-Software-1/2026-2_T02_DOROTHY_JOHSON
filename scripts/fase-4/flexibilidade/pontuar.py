@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pontua o GQM G2 (flexibilidade) a partir dos dados de data/fase-4/flexibilidade/.
 
-Aplica os níveis e os critérios de julgamento de docs/fase-2/niveis-pontuacao.md (seções 1,
+Aplica os níveis e os critérios de classificação de docs/fase-2/niveis-pontuacao.md (seções 1,
 3 e 5): cada recorte recebe de 0 (Insatisfatório) a 3 (Excelente); a métrica é a média dos
 recortes, a questão é a média das métricas e o G2 é a média das questões. Depois aplica o
 limitador de gravidade do G2 (falha bloqueante reproduzida).

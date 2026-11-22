@@ -7,7 +7,7 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 
 | Item | Valor |
 |---|---|
-| Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de julgamento da [Fase 2](../fase-2/index.md) |
+| Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de classificação da [Fase 2](../fase-2/index.md) |
 | Saída | Plano de avaliação executado na [Fase 4](../fase-4/index.md) |
 | Versão do plano | 1.2 |
 | Atualizado em | 15/11/2026 |
@@ -42,7 +42,7 @@ anterior:
 | Contexto de uso simulado (celular de entrada, rede móvel lenta) | [Fase 2, objetivo G3](../fase-2/objetivos.md#g3-eficiencia-de-desempenho) |
 | Matriz de navegadores, sistemas e larguras | [Fase 2, objetivo G2](../fase-2/objetivos.md#g2-flexibilidade) |
 | Definição, cálculo e fonte de cada medida | [Fase 2, métricas](../fase-2/metricas.md) |
-| Conversão das medidas em níveis e em julgamento | [Fase 2, níveis de pontuação](../fase-2/niveis-pontuacao.md) |
+| Conversão das medidas em níveis e em classificação | [Fase 2, níveis de pontuação](../fase-2/niveis-pontuacao.md) |
 
 *Tabela 2: Origem de cada elemento do plano.*
 
@@ -53,7 +53,7 @@ Os objetos de referência (território, camada e documento) foram deixados para 
 ## 3. Rastreabilidade da Fase 2 para a Fase 3
 
 A Tabela 3 mostra, para cada métrica, o método previsto, os recursos e onde o dado bruto é
-guardado. As faixas de cada nível e as regras de julgamento não mudam nesta fase: são as da
+guardado. As faixas de cada nível e as regras de classificação não mudam nesta fase: são as da
 [Fase 2](../fase-2/niveis-pontuacao.md).
 
 | Métrica | Questão | Método | Recursos e ambiente | Dado bruto |
@@ -106,7 +106,7 @@ no celular de referência, e o ambiente de referência fica fora da contagem de 
 | 15/11 | Sessão piloto do roteiro de G1 com uma pessoa da equipe | — | Prevista |
 | 16 a 18/11 | Sessões com os 5 participantes | M1.1.2, M1.2.1, M1.3.1, M1.5.1 e M1.5.2 | Prevista |
 | 18 a 19/11 | Consolidação e respostas às questões de G1 e G2 | M1.x e M2.x | Prevista |
-| 19 a 20/11 | Julgamento final, relações entre as características e oportunidades de melhoria | — | Prevista |
+| 19 a 20/11 | Classificação final, relações entre as características e oportunidades de melhoria | — | Prevista |
 | 14 a 20/11 | [Ação de melhoria](../fase-4/acao-melhoria.md): entrega técnica e medição do efeito | M3.1.2 | Em andamento |
 | 20 a 21/11 | Artigo, GitPage e revisão final | — | Prevista |
 | 22/11 | Release da Entrega 2 | — | Prevista |

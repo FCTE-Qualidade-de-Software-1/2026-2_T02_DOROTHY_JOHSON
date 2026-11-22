@@ -8,11 +8,11 @@ qual métrica e qual questão do GQM ele responde e como chegar de um resultado 
 
 | Pasta | Conteúdo | Tipo | Detalhes da coleta |
 |---|---|---|---|
-| `fase-2/piloto/` | Piloto de G3 de 20/10/2026, usado para formular as hipóteses; não entra no julgamento | Bruto e resumo | [README](fase-2/piloto/README.md) |
+| `fase-2/piloto/` | Piloto de G3 de 20/10/2026, usado para formular as hipóteses; não entra na classificação | Bruto e resumo | [README](fase-2/piloto/README.md) |
 | `fase-4/eficiencia/` | Coleta de G3 de 08/11/2026 | Bruto e derivado | [README](fase-4/eficiencia/README.md) |
 | `fase-4/flexibilidade/` | Coleta de G2 de 15/11/2026 (parcial: falta a matriz manual de ambientes) | Bruto e derivado | [README](fase-4/flexibilidade/README.md) |
 | `fase-4/melhoria/` | Evidências e medição da ação de melhoria, de 14/11/2026 | Bruto e derivado | [README](fase-4/melhoria/README.md) |
-| `fase-4/consolidado/` | Todas as medidas e o julgamento, reunidos por `scripts/fase-4/consolidar.py` | Derivado | [Consolidação e cálculo](../docs/fase-4/consolidacao.md) |
+| `fase-4/consolidado/` | Todas as medidas e as classificações, reunidos por `scripts/fase-4/consolidar.py` | Derivado | [Consolidação e cálculo](../docs/fase-4/consolidacao.md) |
 | `psm/` | Indicadores de gestão do projeto (PSM/CID); não são dados da avaliação do produto | Bruto | [Plano de medição](../docs/gestao/plano-medicao.md) |
 
 As issues da Fase 4 citam `dados/brutos/` e `dados/consolidados/`. O repositório usa `data/`

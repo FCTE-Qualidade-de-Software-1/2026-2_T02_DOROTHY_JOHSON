@@ -63,7 +63,7 @@ stakeholders da Seção 2 e o caráter externo/caixa-preta da avaliação (Seç�
 #### 1.3.1 Método de priorização
 
 Cada característica recebe notas inteiras de **1 (menor) a 5 (maior)** em três critérios.
-As notas são **julgamentos prévios de priorização**, baseados no contexto documentado, e
+As notas são **análises prévias de priorização**, baseadas no contexto documentado, e
 **não resultados de medições ou evidência de falhas** no SIT.
 
 | Critério | Peso | O que representa | Âncoras para atribuir a nota |
@@ -91,14 +91,14 @@ O filtro não significa que uma característica inelegível seja pouco important
 | **Capacidade de interação** | 5 | 5 | 4 | **4,75** | **Selecionada — 1ª** | Encontrar dados sem ajuda é essencial para cidadãos e agentes territoriais (Seção 2) e orienta a decisão 1; testes com usuários e acessibilidade são possíveis, mas dependem de recrutamento. |
 | **Eficiência de desempenho** | 5 | 4 | 5 | **4,70** | **Selecionada — 2ª** | Lentidão em conexão móvel pode dificultar consultas por agricultores familiares; atende à decisão 2 e permite medições instrumentadas e repetíveis no navegador. |
 | **Flexibilidade** | 4 | 4 | 4 | **4,00** | **Selecionada — 3ª** | A adaptação a navegadores e telas atende à decisão 3 e à necessidade de uso em celulares; os testes são observáveis, mas exigem uma matriz viável de ambientes. |
-| Adequação funcional | 4 | 3 | 2 | 3,20 | Não elegível | A correção dos dados seria relevante para gestores e usuários, porém não há requisitos públicos suficientes para julgar completude ou correção funcional de modo abrangente. |
+| Adequação funcional | 4 | 3 | 2 | 3,20 | Não elegível | A correção dos dados seria relevante para gestores e usuários, porém não há requisitos públicos suficientes para avaliar completude ou correção funcional de modo abrangente. |
 | Segurança | 3 | 5 | 1 | 3,10 | Não elegível | Falhas de segurança poderiam ter consequências graves; a área restrita não é acessível e testes intrusivos no sistema público exigiriam autorização. **A nota de risco não afirma vulnerabilidade existente.** |
 | Confiabilidade | 3 | 4 | 1 | 2,80 | Não elegível | Indisponibilidade prejudicaria o acesso, mas disponibilidade e recuperação exigem observação temporal incompatível com a coleta prevista. |
 | Compatibilidade | 2 | 3 | 1 | 2,05 | Não elegível | Interoperabilidade com bases e sistemas de governo importa ao funcionamento institucional, porém não é verificável adequadamente pela interface pública. |
 | Manutenibilidade | 2 | 2 | 1 | 1,75 | Não elegível | A facilidade de evolução interessa à equipe técnica, mas depende de código e informações internas indisponíveis. |
 | Segurança operacional (*safety*) | 1 | 1 | 1 | 1,00 | Não elegível | Não há controle de processos ou equipamentos físicos; o atributo tem baixa pertinência ao propósito desta avaliação. |
 
-A classificação resulta de **julgamento contextual explícito**, não de análise estatística:
+A classificação resulta de **avaliação contextual explícita**, não de análise estatística:
 a diferença entre 4,75 e 4,70, por exemplo, não demonstra superioridade objetiva de uma
 característica. O resultado determina **prioridade de avaliação**, não um diagnóstico de
 qualidade do produto nem a ordem definitiva de correção de defeitos. O MDA decidirá sobre o

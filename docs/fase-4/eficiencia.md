@@ -4,7 +4,7 @@ Esta página responde às questões Q3.1 a Q3.4 e ao objetivo G3 com os dados co
 [método de eficiência](../fase-3/metodo-eficiencia.md). Cada recorte foi pontuado pelos
 [níveis de G3](../fase-2/niveis-pontuacao.md#4-g3-eficiencia-de-desempenho), de 0
 (Insatisfatório) a 3 (Excelente), e consolidado pelos
-[critérios de julgamento](../fase-2/niveis-pontuacao.md#5-criterios-de-julgamento-por-caracteristica).
+[critérios de classificação](../fase-2/niveis-pontuacao.md#5-criterios-de-classificacao-por-caracteristica).
 
 ## 1. Coleta
 
@@ -87,7 +87,7 @@ valor: a T1 acrescenta 9,28 MB (de 5,73 para 15,01 MB) e a T2 acrescenta 3,67 MB
 faixas de 8, 12 e 20 MB são internas e servem para triagem; não indicam o limite de um
 aparelho. **Pontos de Q3.4: 2,40.**
 
-## 3. Julgamento do G3
+## 3. Classificação do G3
 
 | Questão | Métricas | Pontos |
 |---|---|---:|
