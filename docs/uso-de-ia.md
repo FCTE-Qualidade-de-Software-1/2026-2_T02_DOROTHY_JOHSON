@@ -31,7 +31,7 @@ resumida, está no artigo.
 
 ## Limites do uso
 
-- As medições, os dados brutos e os julgamentos de qualidade vêm das coletas feitas pela
+- As medições, os dados brutos e as classificações de qualidade vêm das coletas feitas pela
   equipe e dos critérios definidos na Fase 2. A ferramenta não gerou nem estimou medidas.
 - Todo texto produzido com apoio da ferramenta foi lido por ao menos um integrante antes de
   ser incorporado. As decisões sobre características, métricas, níveis e ação de melhoria

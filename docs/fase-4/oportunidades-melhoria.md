@@ -57,7 +57,7 @@ e deve ser revista pelo MDA:
 
 *Tabela 3: Ondas de priorização.*
 
-A lista ordena ações e não cria uma nota global: os julgamentos de G2 e G3 continuam separados.
+A lista ordena ações e não cria uma nota global: as classificações de G2 e G3 continuam separadas.
 
 ## 2. Lista priorizada
 
@@ -85,7 +85,7 @@ A lista ordena ações e não cria uma nota global: os julgamentos de G2 e G3 co
 *Tabela 5: Matriz impacto × esforço.*
 
 OM1, OM3 e OM4 são os três recortes que acionam o
-[limitador do G3](eficiencia.md#3-julgamento-do-g3). O limitador só deixa de valer quando **os
+[limitador do G3](eficiencia.md#3-classificacao-do-g3). O limitador só deixa de valer quando **os
 três** forem resolvidos; tratar apenas um melhora a página ou a tarefa, mas não o retira.
 
 ## 3. Ações propostas e meta de verificação

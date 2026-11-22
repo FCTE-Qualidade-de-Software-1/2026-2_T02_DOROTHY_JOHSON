@@ -31,7 +31,7 @@ flowchart LR
         direction TB
         B1["Objetivos de<br/>medição"] --> B2["Questões e<br/>hipóteses"]
         B2 --> B3["Métricas e<br/>fichas"]
-        B3 --> B4["Níveis de pontuação e<br/>critérios de julgamento"]
+        B3 --> B4["Níveis de pontuação e<br/>critérios de classificação"]
         B4 --> B5["Gráfico GQM e<br/>rastreabilidade"]
     end
     F1 --> F2 --> E1(["Entrega 1"])
@@ -73,7 +73,7 @@ flowchart LR
    a medida da norma se aplica a um portal web. Quando não se aplica, a ficha da métrica registra
    a adaptação. Cada ficha documenta definição, procedimento de cálculo, fonte dos dados,
    procedimento de coleta e critério de interpretação.
-4. **Níveis de pontuação e critérios de julgamento:** uma escala comum de quatro níveis foi
+4. **Níveis de pontuação e critérios de classificação:** uma escala comum de quatro níveis foi
    definida para todas as métricas, com limites tirados da literatura sempre que possível (por
    exemplo, as faixas do SUS e os limites de tempo de resposta), e com regras para consolidar as
    pontuações por característica.

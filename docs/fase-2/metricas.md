@@ -73,7 +73,7 @@ detalhadas no plano de avaliação da Fase 3:
 | Fonte dos dados | Gravação da sessão e planilha de observação |
 | Procedimento de coleta | O observador registra o destino do primeiro clique de cada participante em cada tarefa, conferindo depois na gravação |
 | Unidade e escala | Proporção de 0 a 1; escala de razão |
-| Critério de interpretação | Quanto maior, melhor. Não foi encontrada referência externa de limite. As faixas são da equipe e usam os mesmos cortes de M1.2.1, julgados por tarefa: abaixo de 60% é insatisfatório, e 100% é excelente ([níveis de G1](niveis-pontuacao.md#2-g1-capacidade-de-interacao)) |
+| Critério de interpretação | Quanto maior, melhor. Não foi encontrada referência externa de limite. As faixas são da equipe e usam os mesmos cortes de M1.2.1, classificados por tarefa: abaixo de 60% é insatisfatório, e 100% é excelente ([níveis de G1](niveis-pontuacao.md#2-g1-capacidade-de-interacao)) |
 
 ### M1.2.1: Conclusão de tarefas sem ajuda
 

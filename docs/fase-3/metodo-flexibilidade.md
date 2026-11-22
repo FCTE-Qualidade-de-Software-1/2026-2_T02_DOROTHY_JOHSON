@@ -233,7 +233,7 @@ scripts/fase-4/flexibilidade/pontuar.py
 
 Lê os quatro arquivos, aplica os [níveis de G2](../fase-2/niveis-pontuacao.md#3-g2-flexibilidade)
 e as regras de consolidação e grava `pontuacao.csv`. Métricas sem dados ficam **NC** e, nesse
-caso, o juízo do G2 fica **pendente**, como manda a regra de cobertura insuficiente
+caso, a classificação do G2 fica **pendente**, como manda a regra de cobertura insuficiente
 ([seção 5.2](../fase-2/niveis-pontuacao.md#52-regras-de-gravidade-e-excecoes)). O script pode
 ser executado a qualquer momento: à medida que a matriz manual é preenchida, as métricas
 deixam de ser NC.

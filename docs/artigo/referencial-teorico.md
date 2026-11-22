@@ -88,9 +88,9 @@ flowchart LR
 | Fase | Resultado principal | Neste trabalho |
 |---|---|---|
 | 1. Estabelecer os requisitos | Propósito, stakeholders, tipo de produto e modelo de qualidade | [Fase 1](../fase-1/index.md) |
-| 2. Especificar a avaliação | Métricas, níveis de pontuação e critérios de julgamento | [Fase 2 (GQM)](../fase-2/index.md) |
+| 2. Especificar a avaliação | Métricas, níveis de pontuação e critérios de classificação | [Fase 2 (GQM)](../fase-2/index.md) |
 | 3. Projetar a avaliação | Plano de avaliação: métodos, recursos, ambiente e cronograma | Entrega 2 |
-| 4. Executar a avaliação | Medições, julgamento dos resultados e ações de melhoria | Entrega 2 |
+| 4. Executar a avaliação | Medições, classificação dos resultados e ações de melhoria | Entrega 2 |
 
 *Tabela 3: Fases do processo de avaliação e onde cada uma é tratada no trabalho.*
 

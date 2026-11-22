@@ -38,8 +38,8 @@ Os **objetivos específicos** são:
 2. especificar a avaliação das características priorizadas (capacidade de interação, flexibilidade e
    eficiência de desempenho) com a abordagem *Goal–Question–Metric* (GQM)
    ([BASILI; CALDIERA; ROMBACH, 1994](../referencias.md)), definindo questões, hipóteses,
-   métricas, níveis de pontuação e critérios de julgamento ([Fase 2](../fase-2/index.md));
-3. projetar e executar a avaliação, julgar os resultados e implementar ao menos uma ação de
+   métricas, níveis de pontuação e critérios de classificação ([Fase 2](../fase-2/index.md));
+3. projetar e executar a avaliação, classificar os resultados e implementar ao menos uma ação de
    melhoria (Fases 3 e 4).
 
 O trabalho segue o processo de avaliação de produto da série SQuaRE, organizado em quatro

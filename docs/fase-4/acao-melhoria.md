@@ -17,9 +17,9 @@ otimizar páginas e mapas para conexões móveis, e por onde começar.
 
 ## 1. Escolha da ação
 
-A [análise do G3](eficiencia.md#3-julgamento-do-g3) lista três recortes com nível
+A [análise do G3](eficiencia.md#3-classificacao-do-g3) lista três recortes com nível
 Insatisfatório, na ordem de prioridade dos
-[critérios de julgamento](../fase-2/niveis-pontuacao.md#53-da-pontuacao-a-decisao-de-qualidade).
+[critérios de classificação](../fase-2/niveis-pontuacao.md#53-da-pontuacao-a-decisao-de-qualidade).
 A equipe comparou os três por dois critérios: se a causa pode ser identificada em uma
 avaliação caixa-preta e se a correção pode ser produzida sem acesso ao código do portal.
 
@@ -238,8 +238,8 @@ que indica que a redução vem da troca dos arquivos, e não de outra mudança n
   medição pela rede (`medir.js` sem `OTIMIZADAS`) deve ser repetida depois que as imagens
   estiverem publicadas na GitPage.
 - **Não é uma nova medida de M3.1.2.** O valor de 1,87 s cairia na faixa Bom de M3.1.2 (de 1,5
-  a 2,5 s), mas foi obtido com outro instrumento e outra máquina. O julgamento do G3 continua
-  sendo o da [análise de eficiência](eficiencia.md#3-julgamento-do-g3). A previsão da seção 3
+  a 2,5 s), mas foi obtido com outro instrumento e outra máquina. A classificação do G3 continua
+  sendo a da [análise de eficiência](eficiencia.md#3-classificacao-do-g3). A previsão da seção 3
   de que restariam cerca de 4,4 s vinha das fases do LCP estimadas pelo Lighthouse, que simula
   a rede de outra forma; os dois números não são comparáveis diretamente.
 - **Ambiente diferente do da Fase 3.** A medição foi feita em outra máquina, com Windows, e

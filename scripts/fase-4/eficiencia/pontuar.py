@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pontua o GQM G3 a partir de data/fase-4/eficiencia/resumo.csv.
 
-Aplica os níveis e os critérios de julgamento de docs/fase-2/niveis-pontuacao.md (seções 1,
+Aplica os níveis e os critérios de classificação de docs/fase-2/niveis-pontuacao.md (seções 1,
 4 e 5): cada recorte recebe de 0 (Insatisfatório) a 3 (Excelente); a métrica é a média dos
 recortes, a questão é a média das métricas e o G3 é a média das questões. Depois aplica o
 limitador de gravidade do G3 e confere as hipóteses H3.1 a H3.4.
@@ -57,7 +57,7 @@ def nivel(valor, limites):
     return 0
 
 
-def juizo(media):
+def classificacao(media):
     if media < 1.0:
         return "Insatisfatório"
     if media < 2.0:
@@ -134,17 +134,17 @@ def main():
         return
 
     media = mean(pontos_questao.values())
-    preliminar = juizo(media)
+    preliminar = classificacao(media)
     lentos = [d for m, d, v, _, _ in recortes if (m == "M3.1.2" and v > 4.0) or (m == "M3.2.1" and v > 10.0)]
     final = preliminar
     if lentos and preliminar in ("Bom", "Excelente"):
         final = "Aceitável"
-    print(f"\n**G3:** média {numero(media)}, juízo preliminar **{preliminar}**.")
+    print(f"\n**G3:** média {numero(media)}, classificação pela média **{preliminar}**.")
     if lentos:
         print(f"Limitador da seção 5.2 acionado (LCP acima de 4 s ou tarefa acima de 10 s em: {', '.join(lentos)}): "
-              f"juízo final no máximo Aceitável, portanto **{final}**.")
+              f"classificação final no máximo Aceitável, portanto **{final}**.")
     else:
-        print(f"Nenhum limitador acionado: juízo final **{final}**.")
+        print(f"Nenhum limitador acionado: classificação final **{final}**.")
 
     v = {(m, d): valor for m, d, valor, _, _ in recortes}
     lcp = {nome: v[("M3.1.2", nome)] for nome in PAGINAS.values()}

@@ -9,7 +9,7 @@
      scripts/fase-4/melhoria/diagnostico.py     bruto -> melhoria/diagnostico.csv e imagens-pagina.csv
 3. Reúne os resultados em data/fase-4/consolidado/:
      medidas.csv      uma linha por recorte das 19 métricas, com o caminho do dado bruto
-     julgamento.csv   pontos por métrica, questão e característica, e o juízo
+     classificacao.csv   pontos por métrica, questão e característica, e a classificação
 
 Não acessa o portal. Métrica sem dado válido aparece como NC (não classificável), nunca como
 zero (docs/fase-2/niveis-pontuacao.md, seção 1, regra 5).
@@ -44,7 +44,7 @@ DERIVADOS = [
     "melhoria/diagnostico.csv",
     "melhoria/imagens-pagina.csv",
     "consolidado/medidas.csv",
-    "consolidado/julgamento.csv",
+    "consolidado/classificacao.csv",
 ]
 QUESTOES = {
     "Q1.1": ["M1.1.1", "M1.1.2"], "Q1.2": ["M1.2.1"], "Q1.3": ["M1.3.1"],
@@ -62,7 +62,7 @@ COLUNAS_MEDIDAS = [
     "caracteristica", "questao", "metrica", "recorte", "valor", "unidade", "minimo", "maximo",
     "execucoes", "pontos", "nivel", "pontos_no_minimo", "pontos_no_maximo", "situacao", "dado_bruto",
 ]
-COLUNAS_JULGAMENTO = ["tipo", "item", "pontos", "juizo_preliminar", "limitador", "juizo_final", "situacao"]
+COLUNAS_CLASSIFICACAO = ["tipo", "item", "pontos", "classificacao_media", "limitador", "classificacao_final", "situacao"]
 
 
 def modulo(caminho, nome):
@@ -227,7 +227,7 @@ def medidas_g3(dados):
 
 
 def limitador(g, medidas, dados):
-    """Limitadores de docs/fase-2/niveis-pontuacao.md, seção 5.2: (descrição, juízo máximo)."""
+    """Limitadores de docs/fase-2/niveis-pontuacao.md, seção 5.2: (descrição, classificação máxima)."""
     if g == "G3":
         lentos = [f"{l['metrica']} {l['recorte']}" for l in medidas if l["valor"] != "" and (
             (l["metrica"] == "M3.1.2" and float(l["valor"]) > 4.0)
@@ -243,14 +243,14 @@ def limitador(g, medidas, dados):
     return "", None
 
 
-def julgar(medidas, dados):
+def classificar(medidas, dados):
     ordem = list(G3.NIVEIS.values())
     linhas, pontos = [], {}
 
     def registrar(tipo, item, partes, **extra):
         valor = mean(partes) if partes and all(p is not None for p in partes) else None
         pontos[item] = valor
-        l = dict.fromkeys(COLUNAS_JULGAMENTO, "")
+        l = dict.fromkeys(COLUNAS_CLASSIFICACAO, "")
         l.update(tipo=tipo, item=item, pontos="NC" if valor is None else f"{valor:.4f}",
                  situacao="pendente" if valor is None else "concluída", **extra)
         linhas.append(l)
@@ -267,11 +267,11 @@ def julgar(medidas, dados):
         descricao, maximo = limitador(g, medidas, dados)
         l["limitador"] = descricao
         if pontos[g] is None:
-            l["juizo_final"] = "pendente"
+            l["classificacao_final"] = "pendente"
             continue
-        l["juizo_preliminar"] = l["juizo_final"] = G3.juizo(pontos[g])
-        if maximo and ordem.index(l["juizo_final"]) > ordem.index(maximo):
-            l["juizo_final"] = maximo
+        l["classificacao_media"] = l["classificacao_final"] = G3.classificacao(pontos[g])
+        if maximo and ordem.index(l["classificacao_final"]) > ordem.index(maximo):
+            l["classificacao_final"] = maximo
     return linhas
 
 
@@ -302,10 +302,10 @@ def processar(base):
     print("Dados brutos válidos." if not lacunas else "Dados brutos com lacunas (métrica NC):\n- " + "\n- ".join(lacunas))
     calcular(base)
     medidas = medidas_g1() + medidas_g2(dados) + medidas_g3(dados)
-    julgamento = julgar(medidas, dados)
+    classificacoes = classificar(medidas, dados)
     gravar(dados / "consolidado/medidas.csv", COLUNAS_MEDIDAS, medidas)
-    gravar(dados / "consolidado/julgamento.csv", COLUNAS_JULGAMENTO, julgamento)
-    return medidas, julgamento
+    gravar(dados / "consolidado/classificacao.csv", COLUNAS_CLASSIFICACAO, classificacoes)
+    return medidas, classificacoes
 
 
 def main():
@@ -318,7 +318,7 @@ def main():
     # conteúdo mudou, para não gerar diferenças apenas de quebra de linha.
     with tempfile.TemporaryDirectory() as tmp:
         shutil.copytree(RAIZ / DADOS, Path(tmp) / DADOS)
-        medidas, julgamento = processar(Path(tmp))
+        medidas, classificacoes = processar(Path(tmp))
         divergentes = []
         for nome in DERIVADOS:
             versionado, novo = RAIZ / DADOS / nome, Path(tmp) / DADOS / nome
@@ -335,9 +335,9 @@ def main():
 
     nc = sum(l["pontos"] == "NC" for l in medidas)
     print(f"{len(medidas)} recortes: {len(medidas) - nc} classificados e {nc} NC.")
-    for l in julgamento:
+    for l in classificacoes:
         if l["tipo"] == "característica":
-            print(f"{l['item']} {CARACTERISTICAS[l['item']]}: {l['pontos']} ({l['juizo_final']})")
+            print(f"{l['item']} {CARACTERISTICAS[l['item']]}: {l['pontos']} ({l['classificacao_final']})")
     print("\nRecortes cujo nível muda entre a mediana e o mínimo ou o máximo das execuções:")
     for l in medidas:
         if l["pontos_no_minimo"] != "" and {str(l["pontos_no_minimo"]), str(l["pontos_no_maximo"])} != {l["pontos"]}:
