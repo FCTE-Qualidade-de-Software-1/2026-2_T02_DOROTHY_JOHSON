@@ -9,8 +9,8 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 |---|---|
 | Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de classificação da [Fase 2](../fase-2/index.md) |
 | Saída | Plano de avaliação executado na [Fase 4](../fase-4/index.md) |
-| Versão do plano | 1.2 |
-| Atualizado em | 15/11/2026 |
+| Versão do plano | 1.3 |
+| Atualizado em | 22/11/2026 |
 
 ## 1. Partes do plano
 
@@ -18,16 +18,13 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 |---|---|---|---|
 | Recursos e ambiente | Objeto avaliado, páginas, objetos de referência, hardware, software, rede e conhecimento exigido | [Recursos e ambiente](ambiente.md) | Concluída |
 | Método de eficiência de desempenho (G3) | Passos para obter M3.1.1 a M3.4.1 e consolidar os dados | [Método de eficiência](metodo-eficiencia.md) | Concluída e executada em 08/11/2026 |
-| Método de capacidade de interação (G1) | Roteiro das sessões com usuários, casos de inspeção e execução do axe-core | [Fichas de G1](../fase-2/metricas.md#g1-capacidade-de-interacao) e [ambiente, seção 3.2](ambiente.md#32-capacidade-de-interacao-g1) | Em elaboração ([#63](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/63)) |
+| Método de capacidade de interação (G1) | Roteiro das sessões, inspeções e execução do axe-core | [Método de interação](metodo-interacao.md) e [formulários](formularios-interacao.md) | Documentado ([#63](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/63)) |
 | Método de flexibilidade (G2) | Larguras de tela, lista de funções, matriz de ambientes, roteiro das tarefas e registro de falhas | [Método de flexibilidade](metodo-flexibilidade.md) | Concluída; Procedimentos A e B executados em 15/11/2026 |
 | Protocolo de participantes | Recrutamento, termo de consentimento, gravação e anonimização | [Condições comuns de G1](../fase-2/metricas.md#condicoes-comuns-de-coleta) | Em elaboração ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)) |
 | Cronograma | Atividades da Fase 4 e datas | [Seção 4](#4-cronograma-da-avaliacao) desta página | Concluída |
 | Rastreabilidade F2 → F3 | Método, recursos e dado bruto de cada métrica | [Seção 3](#3-rastreabilidade-da-fase-2-para-a-fase-3) desta página | Concluída |
 
 *Tabela 1: Partes do plano de avaliação e situação de cada uma.*
-
-Enquanto o método de G1 não tem página própria, valem os procedimentos de coleta das fichas
-da Fase 2, que já descrevem os passos de cada métrica, e os recursos da página de ambiente.
 
 ## 2. Ligação com as Fases 1 e 2
 
@@ -58,7 +55,7 @@ guardado. As faixas de cada nível e as regras de classificação não mudam nes
 
 | Métrica | Questão | Método | Recursos e ambiente | Dado bruto |
 |---|---|---|---|---|
-| M1.1.1 | Q1.1 | Inspeção das 9 páginas de entrada por dois avaliadores | Navegador de computador da equipe | Planilha de inspeção e capturas de tela |
+| M1.1.1 | Q1.1 | Inspeção das 9 páginas de entrada por dois avaliadores | Mesmo celular dos testes com usuários | Planilha de inspeção e capturas de tela |
 | M1.1.2 | Q1.1 | Teste com 5 usuários: destino do primeiro clique em T1, T2 e T3 | Celular único, gravação de tela e áudio | Gravações e planilha de observação |
 | M1.2.1 | Q1.2 | Teste com 5 usuários: conclusão sem ajuda, limite de 5 min por tarefa | Os mesmos de M1.1.2 | Gravações e planilha de observação |
 | M1.3.1 | Q1.3 | Contagem de passos nas gravações, conferida por um segundo avaliador | Gravações das sessões | Planilha de passos por participante |
@@ -124,3 +121,4 @@ e hora, porque o portal está em produção e pode mudar durante o período
 | 1.0 | 08/11/2026 | Recursos e ambiente; método de eficiência de desempenho |
 | 1.1 | 14/11/2026 | Visão geral do plano, ligação com as Fases 1 e 2, rastreabilidade F2 → F3 e cronograma |
 | 1.2 | 15/11/2026 | Método de flexibilidade (G2) |
+| 1.3 | 22/11/2026 | Método e formulários de capacidade de interação (G1) |
