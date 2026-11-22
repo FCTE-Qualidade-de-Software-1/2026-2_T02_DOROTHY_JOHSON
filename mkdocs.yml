@@ -138,6 +138,8 @@ nav:
       - fase-4/index.md
       - Análise de Flexibilidade: fase-4/flexibilidade.md
       - Análise de Eficiência: fase-4/eficiencia.md
+      - Consolidação e Cálculo: fase-4/consolidacao.md
+      - Oportunidades de Melhoria: fase-4/oportunidades-melhoria.md
       - Ação de Melhoria: fase-4/acao-melhoria.md
   - Gestão:
       - Plano de Medição (PSM/CID): gestao/plano-medicao.md

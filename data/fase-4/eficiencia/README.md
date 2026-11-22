@@ -25,6 +25,7 @@ Coleta da Fase 4 (issue #73), feita conforme o
 | `lighthouse/<pagina>-<n>.json` | Relatório completo do Lighthouse, 5 execuções por página | M3.1.1, M3.1.2, M3.3.1 | `scripts/fase-4/eficiencia/lighthouse.sh` |
 | `tarefas.json` | Tempo de T1 e T2 e JS heap após o carregamento e após a tarefa, 5 execuções cada; JS heap após o carregamento da Biblioteca Territorial | M3.2.1, M3.4.1 | `scripts/fase-4/eficiencia/tarefas.js` |
 | `resumo.csv` | Mediana, mínimo e máximo de cada métrica | Todas | `scripts/fase-4/eficiencia/resumo.sh` |
+| `pontuacao.csv` | Pontos e nível de cada recorte | Todas | `scripts/fase-4/eficiencia/pontuar.py` |
 
 Páginas: `meu-territorio` (Meu Território), `plataforma-geoespacial` (SITGeo) e `downloads`
 (Biblioteca Territorial).
