@@ -1,4 +1,4 @@
-tipo,item,pontos,juizo_preliminar,limitador,juizo_final,situacao
+tipo,item,pontos,classificacao_media,limitador,classificacao_final,situacao
 métrica,M1.1.1,NC,,,,pendente
 métrica,M1.1.2,NC,,,,pendente
 métrica,M1.2.1,NC,,,,pendente

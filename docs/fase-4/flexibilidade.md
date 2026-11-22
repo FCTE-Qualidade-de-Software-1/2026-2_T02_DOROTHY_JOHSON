@@ -9,8 +9,8 @@ Esta página responde às questões Q2.1 a Q2.3 e ao objetivo G2 com os dados co
 !!! warning "Resultado parcial"
     Os Procedimentos A e B (larguras de tela, M2.2.1 e M2.2.2) foram executados em 15/11/2026.
     A matriz de navegadores e sistemas (Procedimento C, M2.1.1) ainda não foi executada, e
-    M2.3.1 depende dela. Por isso, **Q2.1 e Q2.3 ainda não têm resposta completa e o juízo do
-    G2 está pendente**, como manda a regra de cobertura insuficiente
+    M2.3.1 depende dela. Por isso, **Q2.1 e Q2.3 ainda não têm resposta completa e a
+    classificação do G2 está pendente**, como manda a regra de cobertura insuficiente
     ([seção 5.2](../fase-2/niveis-pontuacao.md#52-regras-de-gravidade-e-excecoes)). Esta
     página é atualizada quando `execucoes.csv` for preenchido; o cálculo é refeito com
     `scripts/fase-4/flexibilidade/pontuar.py`.
@@ -129,9 +129,9 @@ depende da matriz manual.
 
 *Tabela 4: Consolidação da pontuação do G2.*
 
-- **Juízo:** **pendente**, porque M2.1.1 e M2.3.1 ainda não têm resultado válido.
-- **Limitador (seção 5.2):** até agora não há falha bloqueante; se a matriz revelar uma, o
-  juízo final será Insatisfatório, qualquer que seja a média.
+- **Classificação:** **pendente**, porque M2.1.1 e M2.3.1 ainda não têm resultado válido.
+- **Limitador (seção 5.2):** até agora não há falha bloqueante; se a matriz revelar uma, a
+  classificação final será Insatisfatório, qualquer que seja a média.
 - **Onde a qualidade já está comprometida:** o layout do SITGeo no celular (F02 e F03) e o
   carrossel da Mapoteca (F01). As três falhas têm a mesma origem provável, um layout que não
   muda de estrutura nas telas estreitas, e podem ser tratadas juntas.

@@ -12,7 +12,7 @@ Entradas (método: docs/fase-3/metodo-flexibilidade.md):
   execucoes.csv   M2.1.1, preenchido na matriz manual de ambientes (Procedimento C)
   falhas.csv      M2.3.1, registro de falhas (Procedimento D)
 
-Uma métrica sem dados válidos fica NC (não classificável), e o juízo do G2 fica pendente
+Uma métrica sem dados válidos fica NC (não classificável), e a classificação do G2 fica pendente
 (seção 5.2, "cobertura insuficiente").
 
 Uso: scripts/fase-4/flexibilidade/pontuar.py [DIR]
@@ -91,7 +91,7 @@ def nivel_falhas(bloqueantes, graves, cosmeticas):
     return 3
 
 
-def juizo(media):
+def classificacao(media):
     if media < 1:
         return "Insatisfatório"
     if media < 2:
@@ -275,18 +275,18 @@ def main():
                      and f.get("tambem_na_referencia") != "sim" for f in falhas)
     if all(v is not None for v in pontos_q.values()):
         g2 = mean(pontos_q.values())
-        preliminar = juizo(g2)
+        preliminar = classificacao(g2)
         final = "Insatisfatório" if bloqueante else preliminar
         print(f"| **G2** | Média das três questões | **{fmt(g2)}** |")
-        print(f"\nJuízo preliminar: {preliminar}. Limitador (falha bloqueante): "
-              f"{'acionado' if bloqueante else 'não acionado'}. Juízo final: {final}.")
+        print(f"\nClassificação pela média: {preliminar}. Limitador (falha bloqueante): "
+              f"{'acionado' if bloqueante else 'não acionado'}. Classificação final: {final}.")
         saida.append(["G2", "", "", "", f"{g2:.4f}", final])
     else:
         print("| **G2** | | **pendente** |")
-        print("\nJuízo do G2 pendente: há métrica obrigatória sem resultado válido "
+        print("\nClassificação do G2 pendente: há métrica obrigatória sem resultado válido "
               "(seção 5.2, cobertura insuficiente).")
         if bloqueante:
-            print("Já há falha bloqueante reproduzida: o juízo final será Insatisfatório.")
+            print("Já há falha bloqueante reproduzida: a classificação final será Insatisfatório.")
         saida.append(["G2", "", "", "", "", "pendente"])
 
     with (pasta / "pontuacao.csv").open("w", encoding="utf-8", newline="") as f:

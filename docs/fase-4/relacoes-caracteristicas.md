@@ -115,15 +115,15 @@ O resultado **não demonstra melhora da capacidade de interação ou da flexibil
 houve novas sessões com usuários, verificação de funções ou teste de layout depois da troca.
 A demonstração altera duas imagens, e não os controles sobrepostos. Além disso, foi usado o
 modo local com transferência simulada, em outra máquina e com outro instrumento; o resultado
-não substitui o LCP de 23,45 s de G3 nem altera seu juízo final.
+não substitui o LCP de 23,45 s de G3 nem altera sua classificação final.
 
 ## 6. Limitações e implicações para a decisão
 
 As principais limitações do cruzamento são:
 
 - **Cobertura incompleta:** G1 ainda não tem resultados publicados; G2 permanece parcial,
-  sem a matriz manual e sem confirmação das perdas no celular real. Não se antecipam os
-  juízos dessas características nem se confirmam hipóteses apenas pela ausência de dados.
+  sem a matriz manual e sem confirmação das perdas no celular real. Não se antecipam as
+  classificações dessas características nem se confirmam hipóteses apenas pela ausência de dados.
 - **Coletas distintas:** G3 foi medido em 08/11 e G2 em 15/11, com versões de navegador e
   perfis diferentes. O portal não informa versão e pode ter mudado entre as coletas.
 - **Unidades e alcances diferentes:** tempo de resposta, disponibilidade de função,

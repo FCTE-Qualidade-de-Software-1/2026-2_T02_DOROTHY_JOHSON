@@ -99,10 +99,10 @@ aparelho. **Pontos de Q3.4: 2,40.**
 
 *Tabela 5: Consolidação da pontuação do G3.*
 
-- **Juízo preliminar:** média de 1,35, na faixa de 1,00 a 2,00: **Aceitável**.
+- **Classificação pela média:** 1,35, na faixa de 1,00 a 2,00: **Aceitável**.
 - **Limitador (seção 5.2):** acionado, porque o LCP passa de 4 s em Meu Território e no SITGeo
-  e a T1 passa de 10 s. O juízo fica limitado a Aceitável.
-- **Juízo final: Aceitável.** O portal atende parcialmente à expectativa de eficiência no
+  e a T1 passa de 10 s. A classificação fica limitada a Aceitável.
+- **Classificação final: Aceitável.** O portal atende parcialmente à expectativa de eficiência no
   contexto do G3, o acesso por celular de entrada com rede móvel lenta.
 
 **Onde a qualidade ficou comprometida** (recortes com nível 0, em ordem de prioridade da seção

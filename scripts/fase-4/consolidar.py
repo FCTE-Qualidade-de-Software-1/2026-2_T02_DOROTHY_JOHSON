@@ -9,7 +9,7 @@
      scripts/fase-4/melhoria/diagnostico.py     bruto -> melhoria/diagnostico.csv e imagens-pagina.csv
 3. Reúne os resultados em data/fase-4/consolidado/:
      medidas.csv      uma linha por recorte das 19 métricas, com o caminho do dado bruto
-     julgamento.csv   pontos por métrica, questão e característica, e o juízo
+     julgamento.csv   pontos por métrica, questão e característica, e a classificação
 
 Não acessa o portal. Métrica sem dado válido aparece como NC (não classificável), nunca como
 zero (docs/fase-2/niveis-pontuacao.md, seção 1, regra 5).
@@ -62,7 +62,7 @@ COLUNAS_MEDIDAS = [
     "caracteristica", "questao", "metrica", "recorte", "valor", "unidade", "minimo", "maximo",
     "execucoes", "pontos", "nivel", "pontos_no_minimo", "pontos_no_maximo", "situacao", "dado_bruto",
 ]
-COLUNAS_JULGAMENTO = ["tipo", "item", "pontos", "juizo_preliminar", "limitador", "juizo_final", "situacao"]
+COLUNAS_JULGAMENTO = ["tipo", "item", "pontos", "classificacao_media", "limitador", "classificacao_final", "situacao"]
 
 
 def modulo(caminho, nome):
@@ -227,7 +227,7 @@ def medidas_g3(dados):
 
 
 def limitador(g, medidas, dados):
-    """Limitadores de docs/fase-2/niveis-pontuacao.md, seção 5.2: (descrição, juízo máximo)."""
+    """Limitadores de docs/fase-2/niveis-pontuacao.md, seção 5.2: (descrição, classificação máxima)."""
     if g == "G3":
         lentos = [f"{l['metrica']} {l['recorte']}" for l in medidas if l["valor"] != "" and (
             (l["metrica"] == "M3.1.2" and float(l["valor"]) > 4.0)
@@ -267,11 +267,11 @@ def julgar(medidas, dados):
         descricao, maximo = limitador(g, medidas, dados)
         l["limitador"] = descricao
         if pontos[g] is None:
-            l["juizo_final"] = "pendente"
+            l["classificacao_final"] = "pendente"
             continue
-        l["juizo_preliminar"] = l["juizo_final"] = G3.juizo(pontos[g])
-        if maximo and ordem.index(l["juizo_final"]) > ordem.index(maximo):
-            l["juizo_final"] = maximo
+        l["classificacao_media"] = l["classificacao_final"] = G3.classificacao(pontos[g])
+        if maximo and ordem.index(l["classificacao_final"]) > ordem.index(maximo):
+            l["classificacao_final"] = maximo
     return linhas
 
 
@@ -337,7 +337,7 @@ def main():
     print(f"{len(medidas)} recortes: {len(medidas) - nc} classificados e {nc} NC.")
     for l in julgamento:
         if l["tipo"] == "característica":
-            print(f"{l['item']} {CARACTERISTICAS[l['item']]}: {l['pontos']} ({l['juizo_final']})")
+            print(f"{l['item']} {CARACTERISTICAS[l['item']]}: {l['pontos']} ({l['classificacao_final']})")
     print("\nRecortes cujo nível muda entre a mediana e o mínimo ou o máximo das execuções:")
     for l in medidas:
         if l["pontos_no_minimo"] != "" and {str(l["pontos_no_minimo"]), str(l["pontos_no_maximo"])} != {l["pontos"]}:

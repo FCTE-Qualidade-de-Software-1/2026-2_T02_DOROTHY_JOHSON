@@ -1,6 +1,6 @@
 # Níveis de Pontuação e Critérios de Julgamento
 
-Esta seção define como os resultados das **19 métricas** dos objetivos GQM serão convertidos em níveis de pontuação e em juízos de qualidade para as três características selecionadas na [Fase 1](../fase-1/index.md): **capacidade de interação (G1)**, **flexibilidade (G2)** e **eficiência de desempenho (G3)**.
+Esta seção define como os resultados das **19 métricas** dos objetivos GQM serão convertidos em níveis de pontuação e em classificações de qualidade para as três características selecionadas na [Fase 1](../fase-1/index.md): **capacidade de interação (G1)**, **flexibilidade (G2)** e **eficiência de desempenho (G3)**.
 
 As regras complementam as fichas de [métricas](metricas.md), as [questões](questoes.md) e as [hipóteses](hipoteses.md). Os resultados observados somente serão julgados na Fase 4, após a coleta estabelecida na Fase 3.
 
@@ -48,7 +48,7 @@ A pontuação cobre reconhecibilidade de adequação (Q1.1), apreensibilidade (Q
 - **M1.1.1:** os limites usam os nove pontos de entrada descritos na ficha. Seis de nove (66,7%) corresponde ao patamar de dois terços da hipótese H1.1; cobertura total representa o nível Excelente.
 - **M1.1.2 e M1.2.1:** com **cinco participantes**, os resultados por tarefa variam de 20 em 20 pontos percentuais: 3/5 = Aceitável, 4/5 = Bom e 5/5 = Excelente. O corte de 80% é a aproximação realizável acima da referência de cerca de 78% de conclusão mencionada em M1.2.1; os demais limites são internos. A média das três tarefas também é informada, mas **não substitui o julgamento por tarefa**.
 - **M1.3.1:** uma razão de 0,50 significa o dobro do caminho mínimo; o limiar explicita a hipótese H1.3. **Somente tentativas concluídas** compõem a média. Um caminho curto não compensa uma tarefa fracassada: interpretar M1.3.1 sempre junto de M1.2.1.
-- **M1.4.1 e M1.4.2:** são julgadas separadamente. Em M1.4.2, o denominador inclui **somente** os casos de M1.4.1 nos quais alguma mensagem apareceu. Casos bloqueados silenciosamente não contam como mensagem boa nem ruim; devem ser discutidos como ressalva. Se nenhuma mensagem aparecer (denominador zero), M1.4.2 é **NC**, exigindo inspeção complementar antes do juízo de G1.
+- **M1.4.1 e M1.4.2:** são julgadas separadamente. Em M1.4.2, o denominador inclui **somente** os casos de M1.4.1 nos quais alguma mensagem apareceu. Casos bloqueados silenciosamente não contam como mensagem boa nem ruim; devem ser discutidos como ressalva. Se nenhuma mensagem aparecer (denominador zero), M1.4.2 é **NC**, exigindo inspeção complementar antes da classificação de G1.
 - **M1.5.1:** 51, 71 e 85 são aproximações dos adjetivos *OK*, *bom* e *excelente* citados por Bangor, Kortum e Miller (2009), conforme a ficha. A média de referência de **68 pontos** continua como comparação descritiva, não como limite adicional de classe. **M1.5.2:** o ponto 3,0 é neutro, portanto uma nota apenas neutra não significa percepção positiva.
 - **M1.6.1 e M1.6.2:** a faixa de 80% vem da hipótese H1.6, **não** de uma exigência da WCAG. Em M1.6.2, contar **elementos distintos afetados** pelas violações `critical` e `serious` do axe-core, e não apenas a quantidade de regras violadas. Se um elemento aparecer em várias violações, contá-lo uma só vez e classificá-lo pela **maior gravidade**. Registrar as duas gravidades separadamente, mesmo quando a pontuação é apresentada como um único nível. **Uma única violação crítica força Insatisfatório nesse recorte.** Aprovação de todas as regras automáticas não equivale à conformidade completa com WCAG/eMAG; verificações manuais continuam necessárias.
 
@@ -108,11 +108,11 @@ As faixas de FCP, LCP, tempo de resposta à ação e CPU usam referências discu
 | M3.3.1 — CPU do SITGeo | 7,01 s | Insatisfatório (0) |
 | M3.4.1 — memória após T1 | 15,4 MB | Aceitável (1) |
 
-Esses exemplos demonstram o procedimento de conversão, **não** constituem o juízo final: o próprio piloto tem limitações metodológicas descritas em [Hipóteses](hipoteses.md#medicao-piloto).
+Esses exemplos demonstram o procedimento de conversão, **não** constituem a classificação final: o próprio piloto tem limitações metodológicas descritas em [Hipóteses](hipoteses.md#medicao-piloto).
 
 ## 5. Critérios de julgamento por característica
 
-O juízo de cada característica deve indicar **onde a qualidade ficou comprometida**; uma nota média isolada não basta para orientar as três decisões do requisitante descritas na Fase 1.
+A classificação de cada característica deve indicar **onde a qualidade ficou comprometida**; uma nota média isolada não basta para orientar as três decisões do requisitante descritas na Fase 1.
 
 ### 5.1 Consolidação das pontuações
 
@@ -120,9 +120,9 @@ O juízo de cada característica deve indicar **onde a qualidade ficou compromet
 2. **Métrica:** calcular a **média aritmética dos pontos dos seus recortes válidos**, sem arredondar para inteiro. Exemplos: três tarefas de M1.2.1, cinco páginas de M1.6.1, seis ambientes de M2.1.1 ou três páginas de M3.1.2. O valor global de M2.1.1 deve ser informado também, mas não entrar **novamente** na média (evita contagem dupla).
 3. **Questão GQM:** calcular a média aritmética das pontuações das métricas associadas à questão. Assim, por exemplo, Q1.1 combina M1.1.1 e M1.1.2; Q1.6 combina M1.6.1 e M1.6.2; Q3.1 combina M3.1.1 e M3.1.2.
 4. **Característica:** calcular a média aritmética das pontuações de suas questões: **G1 = média de Q1.1 a Q1.6 (6 questões)**; **G2 = média de Q2.1 a Q2.3 (3 questões)**; **G3 = média de Q3.1 a Q3.4 (4 questões)**. Este método dá o mesmo peso a cada questão, evitando que uma subcaracterística tenha mais influência apenas por possuir mais métricas ou páginas.
-5. **Juízo final:** converter a média da característica segundo a tabela abaixo e **aplicar as regras de gravidade** da seção 5.2. Exibir o valor com duas casas decimais, mas usar o valor completo para decidir a faixa.
+5. **Classificação final:** converter a média da característica segundo a tabela abaixo e **aplicar as regras de gravidade** da seção 5.2. Exibir o valor com duas casas decimais, mas usar o valor completo para decidir a faixa.
 
-| Média das questões (0–3) | Juízo preliminar |
+| Média das questões (0–3) | Classificação pela média |
 |---|---|
 | 0,00 ≤ média < 1,00 | **Insatisfatório** |
 | 1,00 ≤ média < 2,00 | **Aceitável** |
@@ -135,16 +135,16 @@ O limite **2,75** para Excelência é deliberadamente exigente e **interno**: re
 
 As médias não podem esconder falhas que impedem o acesso à informação ou a conclusão de tarefas. Aplicar os seguintes limitadores **depois** do cálculo da média:
 
-| Característica | Condição observada | Regra para o juízo final |
+| Característica | Condição observada | Regra para a classificação final |
 |---|---|---|
 | **G1 — Capacidade de interação** | Qualquer página contém pelo menos **uma violação crítica de acessibilidade** em M1.6.2 | **Insatisfatório**, independentemente da média; indicar página, elemento e evidência. |
-| **G1 — Capacidade de interação** | Qualquer tarefa tem **menos de 60% de conclusão sem ajuda** (M1.2.1) | Juízo **no máximo Aceitável**. Se nenhuma tentativa de determinada tarefa foi concluída, M1.3.1 dessa tarefa fica NC, mas G1 recebe juízo **Insatisfatório** por falha do fluxo essencial. |
+| **G1 — Capacidade de interação** | Qualquer tarefa tem **menos de 60% de conclusão sem ajuda** (M1.2.1) | Classificação **no máximo Aceitável**. Se nenhuma tentativa de determinada tarefa foi concluída, M1.3.1 dessa tarefa fica NC, mas G1 recebe a classificação **Insatisfatório** por falha do fluxo essencial. |
 | **G2 — Flexibilidade** | Pelo menos **uma falha bloqueante dependente de ambiente**, reproduzida conforme M2.3.1 | **Insatisfatório**, independentemente da média; identificar navegador/SO, largura, página e tarefa. |
-| **G3 — Eficiência de desempenho** | LCP **acima de 4 s** em qualquer página avaliada (M3.1.2) **ou** execução de T1/T2 **acima de 10 s** (M3.2.1) | Juízo **no máximo Aceitável**: há atraso significativo em pelo menos um fluxo ou página essencial. |
+| **G3 — Eficiência de desempenho** | LCP **acima de 4 s** em qualquer página avaliada (M3.1.2) **ou** execução de T1/T2 **acima de 10 s** (M3.2.1) | Classificação **no máximo Aceitável**: há atraso significativo em pelo menos um fluxo ou página essencial. |
 
-Quando mais de uma regra se aplicar, prevalece a **mais restritiva**. Registrar sempre o **juízo preliminar**, o **limitador acionado** e o **juízo final**, para que a decisão seja auditável.
+Quando mais de uma regra se aplicar, prevalece a **mais restritiva**. Registrar sempre a **classificação pela média**, o **limitador acionado** e a **classificação final**, para que a decisão seja auditável.
 
-**Cobertura insuficiente:** se faltar coleta obrigatória ou houver medida NC não resolvida (por exemplo, M1.4.2 sem mensagens para análise), **não atribuir juízo final à característica** até complementar a medição. A exceção é uma tarefa sem nenhuma conclusão: a ausência de caminho completo em M1.3.1 não impede registrar G1 como Insatisfatório, pois o fracasso integral da tarefa é evidência suficiente de não atendimento do fluxo avaliado. Toda exceção precisa ser explicada no relatório.
+**Cobertura insuficiente:** se faltar coleta obrigatória ou houver medida NC não resolvida (por exemplo, M1.4.2 sem mensagens para análise), **não atribuir classificação final à característica** até complementar a medição. A exceção é uma tarefa sem nenhuma conclusão: a ausência de caminho completo em M1.3.1 não impede registrar G1 como Insatisfatório, pois o fracasso integral da tarefa é evidência suficiente de não atendimento do fluxo avaliado. Toda exceção precisa ser explicada no relatório.
 
 ### 5.3 Da pontuação à decisão de qualidade
 

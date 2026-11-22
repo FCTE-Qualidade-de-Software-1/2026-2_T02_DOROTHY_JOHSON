@@ -34,7 +34,7 @@ reproduzido a partir do dado bruto.
 | Arquivo consolidado | Uma linha por | Conteúdo |
 |---|---|---|
 | [`medidas.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/medidas.csv) | Recorte de cada uma das 19 métricas | Valor, mínimo, máximo, execuções, pontos, nível, situação e caminho do dado bruto |
-| [`julgamento.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/julgamento.csv) | Métrica, questão e característica | Pontos, juízo preliminar, limitador e juízo final |
+| [`julgamento.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/julgamento.csv) | Métrica, questão e característica | Pontos, classificação pela média, limitador e classificação final |
 
 *Tabela 2: Arquivos consolidados.*
 
@@ -60,7 +60,7 @@ reproduzido a partir do dado bruto.
 1. **Recorte:** o valor não arredondado recebe de 0 a 3 pontos pelas faixas da Fase 2.
 2. **Métrica:** média dos pontos dos seus recortes.
 3. **Questão:** média das suas métricas.
-4. **Característica:** média das suas questões, convertida em juízo e submetida aos
+4. **Característica:** média das suas questões, convertida em classificação e submetida aos
    [limitadores](../fase-2/niveis-pontuacao.md#52-regras-de-gravidade-e-excecoes).
 
 O arredondamento ocorre só na apresentação. Exemplo, Q3.1: M3.1.1 = (2 + 2 + 2) / 3 = 2,00;
@@ -112,5 +112,5 @@ mudam de nível:
 *Tabela 5: Recortes de G3 cujo nível depende da execução.*
 
 Com os dois recortes no pior nível, o G3 cairia de 1,35 para 1,14; no melhor, subiria para 1,43.
-Nos dois casos **o juízo continua Aceitável**, então a dispersão não altera o julgamento. Ela
+Nos dois casos **a classificação continua Aceitável**, então a dispersão não altera o julgamento. Ela
 indica apenas que os níveis da Biblioteca Territorial devem ser lidos com cautela.
