@@ -20,7 +20,7 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 | Método de eficiência de desempenho (G3) | Passos para obter M3.1.1 a M3.4.1 e consolidar os dados | [Método de eficiência](metodo-eficiencia.md) | Concluída e executada em 08/11/2026 |
 | Método de capacidade de interação (G1) | Roteiro das sessões, inspeções e execução do axe-core | [Método de interação](metodo-interacao.md) e [formulários](formularios-interacao.md) | Documentado ([#63](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/63)) |
 | Método de flexibilidade (G2) | Larguras de tela, lista de funções, matriz de ambientes, roteiro das tarefas e registro de falhas | [Método de flexibilidade](metodo-flexibilidade.md) | Concluída; Procedimentos A e B executados em 15/11/2026 |
-| Protocolo de participantes | Recrutamento, termo de consentimento, gravação e anonimização | [Condições comuns de G1](../fase-2/metricas.md#condicoes-comuns-de-coleta) | Em elaboração ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)) |
+| Protocolo de participantes | Recrutamento, termo de consentimento, gravação e anonimização | [Protocolo](protocolo-participantes.md) e [termo](termo-consentimento.md) | Documentado, aguardando aprovação da equipe ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)) |
 | Cronograma | Atividades da Fase 4 e datas | [Seção 4](#4-cronograma-da-avaliacao) desta página | Concluída |
 | Rastreabilidade F2 → F3 | Método, recursos e dado bruto de cada métrica | [Seção 3](#3-rastreabilidade-da-fase-2-para-a-fase-3) desta página | Concluída |
 
@@ -61,7 +61,7 @@ guardado. As faixas de cada nível e as regras de classificação não mudam nes
 | M1.3.1 | Q1.3 | Contagem de passos nas gravações, conferida por um segundo avaliador | Gravações das sessões | Planilha de passos por participante |
 | M1.4.1 | Q1.4 | Inspeção com lista fixa de entradas inválidas, com a rede em modo offline | Chrome DevTools | Planilha de casos e capturas de tela |
 | M1.4.2 | Q1.4 | Classificação das mensagens de erro por dois avaliadores | As mesmas execuções de M1.4.1 | A mesma planilha, com o texto das mensagens |
-| M1.5.1 | Q1.5 | Questionário SUS ao fim da sessão | Formulário em português | Respostas por participante (P1 a P5) |
+| M1.5.1 | Q1.5 | Questionário SUS ao fim da sessão | Formulário em português | Respostas por participante (P01 a P05) |
 | M1.5.2 | Q1.5 | Nota de aparência, de 1 a 5, no mesmo formulário | O mesmo de M1.5.1 | As mesmas respostas |
 | M1.6.1 | Q1.6 | Verificação automática das regras WCAG 2.1 A e AA em 5 páginas | axe-core | Relatórios JSON do axe-core |
 | M1.6.2 | Q1.6 | Contagem das violações críticas e sérias | As mesmas execuções de M1.6.1 | Os mesmos relatórios |

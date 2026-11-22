@@ -86,7 +86,7 @@ pouco o resultado, desde que seja maior que a do perfil.
 | Inspeções de entradas inválidas (M1.4.1, M1.4.2) | Chrome de computador, em modo offline antes da ação sob teste |
 | Acessibilidade (M1.6.1, M1.6.2) | axe-core 4.10.3, regras WCAG 2.1 níveis A e AA |
 | Questionários (M1.5.1, M1.5.2) | Formulário com o SUS e a nota de aparência |
-| Gravação | Tela e áudio, só com termo de consentimento assinado (protocolo da #68) |
+| Gravação | Tela e áudio, com termo assinado e autorização específica ([protocolo de participantes](protocolo-participantes.md)) |
 
 ### 3.3 Flexibilidade (G2)
 
