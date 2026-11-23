@@ -88,14 +88,12 @@ Os procedimentos da Fase 3 foram desenhados para produzir saídas diretamente co
   * **G2 (M2.1.1 a M2.3.1):** Os arquivos `execucoes.csv`, `rolagem.csv`, `funcoes.csv` e `falhas.csv` fornecem os numeradores e denominadores exatos para o cálculo de cobertura de ambientes e densidade de falhas, aplicados aos critérios de julgamento na [Análise de Flexibilidade](../fase-4/flexibilidade/).
   * **G3 (M3.1.1 a M3.4.1):** As medianas extraídas dos JSONs do Lighthouse e de `tarefas.json` eliminam *outliers* de rede e são comparadas diretamente com os limiares temporais e de memória definidos para G3 na [Análise de Eficiência](../fase-4/eficiencia/).
 
-**Diferença registrada em relação à Fase 2.** As fichas de M3.2.1 e M3.4.1 previam a gravação
-manual no painel Performance do Chrome DevTools. O plano usa um script que lê as mesmas
-grandezas pelo protocolo do DevTools, o que torna a medição repetível. A justificativa está no
-[método de eficiência, seção 6](metodo-eficiencia.md#6-diferenca-em-relacao-a-fase-2), e as
-fichas da Fase 2 foram atualizadas. Pelo mesmo motivo, M2.2.1 e M2.2.2 passam a ser
-verificadas por script no modo de dispositivo do Chrome, com as perdas de função confirmadas
-no celular de referência, e o ambiente de referência fica fora da contagem de M2.3.1
-([método de flexibilidade, seção 8](metodo-flexibilidade.md#8-diferencas-em-relacao-a-fase-2)).
+### 3.2 Verificação de suporte do ambiente e adequação do GQM
+
+* **Cobertura do ambiente:** Todas as 19 métricas da Fase 2 possuem procedimento executável, recurso definido e ambiente validado na Fase 3 (detalhados em [Recursos e Ambiente](ambiente/)). Nenhum procedimento mede variáveis fora do escopo do GQM.
+* **Adequações metodológicas registradas (F2 → F3):** Durante o planejamento experimental, duas coletas inicialmente previstas de forma manual na Fase 2 mostraram-se suscetíveis a viés operacional e baixa repetibilidade, gerando ajustes documentados tanto nesta fase quanto nas respectivas fichas da Fase 2:
+  1. **Decisão GQM-01 (M3.2.1 e M3.4.1):** Substituição da gravação manual na aba *Performance* do Chrome DevTools por script automatizado em **Playwright** via *Chrome DevTools Protocol (CDP)*, garantindo precisão de milissegundos e repetibilidade nas 5 rodadas ([Método de eficiência, seção 6](metodo-eficiencia/#6-diferenca-em-relacao-a-fase-2)).
+  2. **Decisão GQM-02 (M2.2.1, M2.2.2 e M2.3.1):** Substituição da inspeção visual manual de *viewport* e funções por scripts automatizados no modo de dispositivo do Chrome (`Procedimentos A e B`), com validação das perdas no celular de referência físico e exclusão do ambiente de referência no cálculo de `M2.3.1` ([Método de flexibilidade, seção 8](metodo-flexibilidade/#8-diferencas-em-relacao-a-fase-2)).
 
 ## 4. Cronograma da avaliação
 
