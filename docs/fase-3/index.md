@@ -78,8 +78,15 @@ Para atender ao critério **F3-C8**, a Tabela 3 estabelece o mapeamento explíci
 
 *Tabela 3: Rastreabilidade entre as métricas da Fase 2 e os procedimentos, recursos e ambientes da Fase 3.*
 
-**Verificação da consistência.** As 19 métricas da Fase 2 têm método, recursos e destino do
-dado bruto. Nenhum método mede algo que não esteja em uma ficha da Fase 2.
+### 3.1 Coerência com níveis de pontuação e critérios de julgamento
+
+Os procedimentos da Fase 3 foram desenhados para produzir saídas diretamente compatíveis com as escalas e regras de agregação definidas nos [Níveis de Pontuação da Fase 2](../fase-2/niveis-pontuacao/):
+
+* **Preservação de unidades e fórmulas:** Nenhuma instrução da Tabela 3 altera as unidades de medida (segundos, milissegundos, megabytes, percentuais, contagens absolutas ou escala SUS 0–100) nem os limites das faixas de classificação (*Inaceitável*, *Minimamente Aceitável*, *Satisfatório* e *Excelente*) fixados na Fase 2.
+* **Rastreabilidade da consolidação (Fase 3 → Fase 4):**
+  * **G1 (M1.1.1 a M1.6.2):** Os registros individuais de inspeção, gravações (P1–P5), formulários SUS e relatórios JSON do `axe-core` alimentam diretamente o cálculo das taxas de sucesso, tempos médios, escores SUS e contagens de violações, convertidos nos níveis de G1 na [Análise de Capacidade de Interação](../fase-4/).
+  * **G2 (M2.1.1 a M2.3.1):** Os arquivos `execucoes.csv`, `rolagem.csv`, `funcoes.csv` e `falhas.csv` fornecem os numeradores e denominadores exatos para o cálculo de cobertura de ambientes e densidade de falhas, aplicados aos critérios de julgamento na [Análise de Flexibilidade](../fase-4/flexibilidade/).
+  * **G3 (M3.1.1 a M3.4.1):** As medianas extraídas dos JSONs do Lighthouse e de `tarefas.json` eliminam *outliers* de rede e são comparadas diretamente com os limiares temporais e de memória definidos para G3 na [Análise de Eficiência](../fase-4/eficiencia/).
 
 **Diferença registrada em relação à Fase 2.** As fichas de M3.2.1 e M3.4.1 previam a gravação
 manual no painel Performance do Chrome DevTools. O plano usa um script que lê as mesmas
