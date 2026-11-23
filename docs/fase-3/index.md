@@ -52,33 +52,31 @@ Os objetos de referência (território, camada e documento) foram deixados para 
 
 ## 3. Rastreabilidade da Fase 2 para a Fase 3
 
-A Tabela 3 mostra, para cada métrica, o método previsto, os recursos e onde o dado bruto é
-guardado. As faixas de cada nível e as regras de classificação não mudam nesta fase: são as da
-[Fase 2](../fase-2/niveis-pontuacao.md).
+Para atender ao critério **F3-C8**, a Tabela 3 estabelece o mapeamento explícito entre cada métrica definida na [Fase 2](../fase-2/metricas/) e sua operacionalização na Fase 3, detalhando o **método**, a **instrução de execução**, os **recursos/instrumentos**, o **ambiente** e o **destino do dado bruto**.
 
-| Métrica | Questão | Método | Recursos e ambiente | Dado bruto |
-|---|---|---|---|---|
-| M1.1.1 | Q1.1 | Inspeção das 9 páginas de entrada por dois avaliadores | Navegador de computador da equipe | Planilha de inspeção e capturas de tela |
-| M1.1.2 | Q1.1 | Teste com 5 usuários: destino do primeiro clique em T1, T2 e T3 | Celular único, gravação de tela e áudio | Gravações e planilha de observação |
-| M1.2.1 | Q1.2 | Teste com 5 usuários: conclusão sem ajuda, limite de 5 min por tarefa | Os mesmos de M1.1.2 | Gravações e planilha de observação |
-| M1.3.1 | Q1.3 | Contagem de passos nas gravações, conferida por um segundo avaliador | Gravações das sessões | Planilha de passos por participante |
-| M1.4.1 | Q1.4 | Inspeção com lista fixa de entradas inválidas, com a rede em modo offline | Chrome DevTools | Planilha de casos e capturas de tela |
-| M1.4.2 | Q1.4 | Classificação das mensagens de erro por dois avaliadores | As mesmas execuções de M1.4.1 | A mesma planilha, com o texto das mensagens |
-| M1.5.1 | Q1.5 | Questionário SUS ao fim da sessão | Formulário em português | Respostas por participante (P1 a P5) |
-| M1.5.2 | Q1.5 | Nota de aparência, de 1 a 5, no mesmo formulário | O mesmo de M1.5.1 | As mesmas respostas |
-| M1.6.1 | Q1.6 | Verificação automática das regras WCAG 2.1 A e AA em 5 páginas | axe-core | Relatórios JSON do axe-core |
-| M1.6.2 | Q1.6 | Contagem das violações críticas e sérias | As mesmas execuções de M1.6.1 | Os mesmos relatórios |
-| M2.1.1 | Q2.1 | Execução manual de T1, T2 e T3 em 6 combinações de navegador e sistema ([Procedimento C](metodo-flexibilidade.md#5-procedimento-c-tarefas-na-matriz-de-ambientes-m211)) | Matriz de ambientes; aparelhos reais nos celulares | `data/fase-4/flexibilidade/execucoes.csv` e capturas |
-| M2.2.1 | Q2.2 | Script de rolagem horizontal em 3 páginas × 5 larguras, 2 execuções ([Procedimento A](metodo-flexibilidade.md#3-procedimento-a-rolagem-horizontal-m221)) | Modo de dispositivo do Chrome, pelo protocolo do DevTools | `data/fase-4/flexibilidade/rolagem.csv` e capturas |
-| M2.2.2 | Q2.2 | Script com a lista fixa de 25 funções, em 1366 e 360 px, e confirmação das perdas no celular ([Procedimento B](metodo-flexibilidade.md#4-procedimento-b-funcoes-disponiveis-no-celular-m222)) | O mesmo de M2.2.1; celular de referência | `data/fase-4/flexibilidade/funcoes.csv` e capturas |
-| M2.3.1 | Q2.3 | Registro das falhas das três métricas anteriores, confirmadas em segunda execução ([Procedimento D](metodo-flexibilidade.md#6-procedimento-d-registro-de-falhas-m231)) | Os mesmos de M2.1.1 a M2.2.2 | `data/fase-4/flexibilidade/falhas.csv` |
-| M3.1.1 | Q3.1 | Lighthouse, 5 execuções por página, mediana do FCP | [Ambiente, seção 3.1](ambiente.md#31-eficiencia-de-desempenho-g3) | `data/fase-4/eficiencia/lighthouse/` |
-| M3.1.2 | Q3.1 | As mesmas execuções, mediana do LCP | O mesmo de M3.1.1 | O mesmo de M3.1.1 |
-| M3.2.1 | Q3.2 | Script com Playwright, 5 execuções de T1 e de T2 | O mesmo de M3.1.1 | `data/fase-4/eficiencia/tarefas.json` |
-| M3.3.1 | Q3.3 | As mesmas execuções do Lighthouse, tempo de CPU na thread principal | O mesmo de M3.1.1 | O mesmo de M3.1.1 |
-| M3.4.1 | Q3.4 | O mesmo script de M3.2.1, *JS heap* após o carregamento e após a tarefa | O mesmo de M3.1.1 | O mesmo de M3.2.1 |
+| Métrica | Questão | Método | Instrução operacional | Recursos e instrumentos | Ambiente de execução | Dado bruto |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **M1.1.1** | Q1.1 | Inspeção heurística por pares | Dois avaliadores inspecionam independentemente as 9 páginas de entrada verificando clareza de propósito e consolidam divergências. | Roteiro de inspeção, planilha de registro e ferramenta de captura de tela. | Desktop da equipe, navegador padrão em tela cheia (1366×768). | Planilha de inspeção e capturas de tela |
+| **M1.1.2** | Q1.1 | Teste moderado com usuários | 5 participantes executam T1, T2 e T3; registra-se o alvo do 1º clique/toque antes de qualquer navegação secundária. | Roteiro de tarefas, gravador de tela/áudio e planilha de observação. | Celular único de referência, rede estável, ambiente silencioso. | Gravações e planilha de observação |
+| **M1.2.1** | Q1.2 | Teste moderado com usuários | Nas mesmas sessões de M1.1.2, cronometra-se a conclusão de T1, T2 e T3 sem ajuda externa, respeitando o limite máximo de 5 min por tarefa. | Cronômetro, roteiro de tarefas e planilha de observação. | Mesmo ambiente de M1.1.2 (celular único, primeiro uso sem ajuda). | Gravações e planilha de observação |
+| **M1.3.1** | Q1.3 | Análise de vídeo e contagem | Contagem do número de ações/passos executados por participante em cada tarefa a partir das gravações, auditada por um 2º avaliador. | Player de vídeo das gravações e planilha de contagem. | Estação de trabalho da equipe (análise *post-mortem*). | Planilha de passos por participante (P1 a P5) |
+| **M1.4.1** | Q1.4 | Inspeção de resiliência (*fault injection*) | Submeter lista fixa de entradas inválidas nos formulários/buscas e simular perda de conexão durante requisições ativas. | Lista fixa de entradas inválidas e Chrome DevTools (aba *Network* em modo *Offline*). | Desktop da equipe, Google Chrome, portal em produção. | Planilha de casos e capturas de tela |
+| **M1.4.2** | Q1.4 | Análise de conteúdo por pares | Extrair todas as mensagens exibidas nos testes de M1.4.1 e classificá-las por dois avaliadores quanto à clareza e orientação de correção. | Planilha contendo o texto literal das mensagens capturadas em M1.4.1. | Estação de trabalho da equipe. | A mesma planilha de M1.4.1, com classificação |
+| **M1.5.1** | Q1.5 | Survey padronizado (SUS) | Aplicar o questionário *System Usability Scale* (10 itens, escala Likert 1–5) imediatamente após o término de T1, T2 e T3. | Formulário digital/impresso com a versão validada do SUS em português. | Mesmo local da sessão com os participantes P1 a P5. | Respostas brutas por participante (P1 a P5) |
+| **M1.5.2** | Q1.5 | Survey de percepção visual | Coletar nota subjetiva de aparência visual (escala de 1 a 5) na seção final do mesmo formulário do SUS. | Mesmo formulário utilizado em M1.5.1. | Mesmo ambiente de M1.5.1. | As mesmas respostas (P1 a P5) |
+| **M1.6.1** | Q1.6 | Análise estática automatizada | Executar varredura automatizada das regras WCAG 2.1 níveis A e AA sobre 5 páginas representativas do portal. | Biblioteca/extensão `axe-core`. | Desktop da equipe, navegador Chromium/Chrome. | Relatórios JSON do `axe-core` |
+| **M1.6.2** | Q1.6 | Triagem e contagem de severidade | Filtrar nos relatórios JSON gerados em M1.6.1 exclusivamente as violações classificadas com impacto *Critical* e *Serious*. | Parser/inspeção estruturada dos relatórios JSON do `axe-core`. | Estação de trabalho da equipe. | Os mesmos relatórios JSON de M1.6.1 |
+| **M2.1.1** | Q2.1 | Teste de compatibilidade cruzada | Executar manualmente T1, T2 e T3 nas 6 combinações de navegador e sistema operacional definidas na matriz ([Procedimento C](metodo-flexibilidade/#5-procedimento-c-tarefas-na-matriz-de-ambientes-m211)). | Matriz de ambientes, roteiro de T1–T3 e ferramenta de captura. | Aparelhos reais nos celulares (Android/iOS) e desktops Windows da matriz. | `data/fase-4/flexibilidade/execucoes.csv` e capturas |
+| **M2.2.1** | Q2.2 | Teste automatizado de *viewport* | Executar script via DevTools Protocol verificando existência de *overflow* horizontal em 3 páginas × 5 larguras de tela, em 2 rodadas ([Procedimento A](metodo-flexibilidade/#3-procedimento-a-rolagem-horizontal-m221)). | Script automatizado e Chrome DevTools Protocol (*Device Mode*). | Desktop da equipe, Google Chrome em modo de dispositivo. | `data/fase-4/flexibilidade/rolagem.csv` e capturas |
+| **M2.2.2** | Q2.2 | Auditoria automatizada + validação | Executar script verificando presença/visibilidade da lista fixa de 25 funções em 1366 px vs. 360 px e confirmar perdas no aparelho real ([Procedimento B](metodo-flexibilidade/#4-procedimento-b-funcoes-disponiveis-no-celular-m222)). | Script de DOM, lista de 25 funções e celular de referência. | Chrome Device Mode (desktop) e celular de referência físico. | `data/fase-4/flexibilidade/funcoes.csv` e capturas |
+| **M2.3.1** | Q2.3 | Consolidação e reprodução | Consolidar as falhas detectadas em M2.1.1, M2.2.1 e M2.2.2, exigindo confirmação em 2ª execução e excluindo o ambiente de referência ([Procedimento D](metodo-flexibilidade/#6-procedimento-d-registro-de-falhas-m231)). | Logs e arquivos CSV gerados em M2.1.1 a M2.2.2. | Mesmos ambientes onde as falhas originais foram observadas. | `data/fase-4/flexibilidade/falhas.csv` |
+| **M3.1.1** | Q3.1 | *Benchmark* sintético | Executar Google Lighthouse 5 vezes por página alvo e extrair a mediana do *First Contentful Paint* (FCP). | Google Lighthouse CLI / DevTools ([Ambiente, seção 3.1](ambiente/#31-eficiencia-de-desempenho-g3)). | Hardware controlado da equipe, emulação de celular de entrada e rede móvel lenta. | `data/fase-4/eficiencia/lighthouse/` |
+| **M3.1.2** | Q3.1 | *Benchmark* sintético | Extrair a mediana do *Largest Contentful Paint* (LCP) a partir das mesmas 5 execuções do Lighthouse de M3.1.1. | Mesmos recursos de M3.1.1. | Mesmo ambiente simulado de M3.1.1. | O mesmo de M3.1.1 |
+| **M3.2.1** | Q3.2 | Automação E2E cronometrada | Executar script Playwright realizando T1 e T2 (5 rodadas cada) e medir o tempo de conclusão/resposta via CDP. | Script Playwright e Chrome DevTools Protocol. | Mesmo ambiente simulado de celular de entrada e rede lenta (seção 3.1). | `data/fase-4/eficiencia/tarefas.json` |
+| **M3.3.1** | Q3.3 | *Profiling* sintético de CPU | Extrair o tempo de execução de CPU na *main thread* a partir dos relatórios das 5 execuções do Lighthouse de M3.1.1. | Mesmos relatórios do Lighthouse de M3.1.1. | Mesmo ambiente de M3.1.1. | O mesmo de M3.1.1 |
+| **M3.4.1** | Q3.4 | *Profiling* automatizado de memória | Coletar métricas de *JS Heap Size* após o carregamento e após a execução de T1 e T2 nas 5 rodadas do script Playwright. | Mesmo script Playwright + CDP de M3.2.1. | Mesmo ambiente de M3.2.1. | O mesmo de M3.2.1 |
 
-*Tabela 3: Rastreabilidade entre as métricas da Fase 2 e o plano da Fase 3.*
+*Tabela 3: Rastreabilidade entre as métricas da Fase 2 e os procedimentos, recursos e ambientes da Fase 3.*
 
 **Verificação da consistência.** As 19 métricas da Fase 2 têm método, recursos e destino do
 dado bruto. Nenhum método mede algo que não esteja em uma ficha da Fase 2.
