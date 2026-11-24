@@ -9,7 +9,7 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 |---|---|
 | Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de classificação da [Fase 2](../fase-2/index.md) |
 | Saída | Plano de avaliação executado na [Fase 4](../fase-4/index.md) |
-| Versão do plano | 1.3 |
+| Versão do plano | 1.4 |
 | Atualizado em | 23/11/2026 |
 
 ## 1. Partes do plano
@@ -125,6 +125,36 @@ As coletas de uma mesma métrica são feitas em uma única sessão, e cada execu
 e hora, porque o portal está em produção e pode mudar durante o período
 ([riscos do ambiente](ambiente.md#5-riscos-do-ambiente)).
 
+### 4.1 Teste piloto do plano
+
+Antes das sessões com P1 a P5, execute o roteiro uma vez com um avaliador ou participante
+piloto que não entre na amostra de G1. A sessão piloto verifica a clareza das instruções, a
+operação dos formulários, o limite de cinco minutos por tarefa e a contagem dos passos.
+
+| Tarefa | Objetivo do piloto | Caminho mínimo de referência |
+|---|---|---:|
+| T1 | Confirmar seleção de UF e território e a identificação do resultado | 4 passos |
+| T2 | Confirmar seleção do tema, ativação da camada e apresentação no mapa | 3 passos |
+| T3 | Confirmar a seleção de UF, a busca do PTDRS e o download ou a abertura | 4 passos |
+
+Os caminhos mínimos estão definidos na ficha da
+[M1.3.1](../fase-2/metricas.md#m131-eficiencia-do-caminho). O piloto não altera esses valores
+automaticamente: qualquer alteração exige registro na tabela abaixo e atualização da ficha.
+
+| Item verificado | Resultado observado | Ajuste realizado |
+|---|---|---|
+| Entendimento das instruções | — | — |
+| Tempo de até 5 minutos por tarefa | — | — |
+| Contagem de passos de T1, T2 e T3 | — | — |
+| Formulário SUS e nota de aparência | — | — |
+| Casos de erro e mensagens de correção | — | — |
+| Gravação de tela e áudio | — | — |
+| Execução do axe-core | — | — |
+
+Ao concluir o piloto, registre a data, o tempo total da sessão, o tempo de cada tarefa, o
+equipamento usado, os problemas encontrados e as versões antes/depois das instruções ou
+formulários. O participante piloto não entra em P1–P5 e não é usado no cálculo de G1.
+
 ## 5. Histórico de versões
 
 | Versão | Data | Alteração |
@@ -133,3 +163,4 @@ e hora, porque o portal está em produção e pode mudar durante o período
 | 1.1 | 14/11/2026 | Visão geral do plano, ligação com as Fases 1 e 2, rastreabilidade F2 → F3 e cronograma |
 | 1.2 | 15/11/2026 | Método de flexibilidade (G2) |
 | 1.3 | 23/11/2026 | Cronograma da Fase 4 distribuído por data, responsável, issue e folga para retestes |
+| 1.4 | 23/11/2026 | Teste piloto do plano e definição dos caminhos mínimos das tarefas de G1 |
