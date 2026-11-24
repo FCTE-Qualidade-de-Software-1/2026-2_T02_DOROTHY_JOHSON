@@ -62,6 +62,7 @@ e a modelagem GQM (Goal–Question–Metric) desenvolvidas ao longo da disciplin
   <div class="dj-member"><div class="dj-avatar">CA</div><strong>Cayo</strong></div>
   <div class="dj-member"><div class="dj-avatar">FE</div><strong>Felipe</strong></div>
   <div class="dj-member"><div class="dj-avatar">GA</div><strong>Gabriel</strong></div>
+  <div class="dj-member"><div class="dj-avatar">TA</div><strong>Tales</strong></div>
 </div>
 
 [Veja a tabela de contribuição :octicons-arrow-right-24:](contribuicao.md)
