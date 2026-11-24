@@ -10,9 +10,10 @@ MDA na priorização do backlog de evolução do portal.
     A lista parte dos resultados de **eficiência de desempenho (G3)**, completos, e de
     **flexibilidade (G2)**, parciais: falta a matriz manual de ambientes
     ([#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72)).
-    **Capacidade de interação (G1) não tem coleta**
-    ([#71](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/71)),
-    e por isso nenhuma oportunidade de G1 é proposta. A ausência de itens de G1 não significa
+    **Capacidade de interação (G1) tem resultados parciais**: a análise da
+    [rodada 01](interacao.md) encontrou barreiras críticas de acessibilidade, mas a amostra e
+    alguns recortes ainda precisam ser completados ([#76](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/76)).
+    Esta lista ainda precisa incorporar as oportunidades de G1; a ausência de itens não significa
     ausência de problemas.
 
 ## 1. Como a lista foi montada
