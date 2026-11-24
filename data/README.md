@@ -9,7 +9,7 @@ qual métrica e qual questão do GQM ele responde e como chegar de um resultado 
 | Pasta | Conteúdo | Tipo | Detalhes da coleta |
 |---|---|---|---|
 | `fase-2/piloto/` | Piloto de G3 de 20/10/2026, usado para formular as hipóteses; não entra na classificação | Bruto e resumo | [README](fase-2/piloto/README.md) |
-| `fase-4/interacao/` | Destino dos dados de G1 revisados para publicação | Bruto anonimizado e derivado | [README](fase-4/interacao/README.md) |
+| `fase-4/capacidade-de-interacao/` | Dados anonimizados da rodada 01 de G1 | Bruto e resumo | [README](fase-4/capacidade-de-interacao/README.md) |
 | `fase-4/eficiencia/` | Coleta de G3 de 08/11/2026 | Bruto e derivado | [README](fase-4/eficiencia/README.md) |
 | `fase-4/flexibilidade/` | Coleta de G2 de 15/11/2026 (parcial: falta a matriz manual de ambientes) | Bruto e derivado | [README](fase-4/flexibilidade/README.md) |
 | `fase-4/melhoria/` | Evidências e medição da ação de melhoria, de 14/11/2026 | Bruto e derivado | [README](fase-4/melhoria/README.md) |
@@ -40,7 +40,11 @@ o valor é a mediana de `audits["largest-contentful-paint"].numericValue` nas 5 
 
 | Questão | Métrica | Dado bruto | Campo | Derivado | Resultado publicado |
 |---|---|---|---|---|---|
-| Q1.1 a Q1.6 | M1.1.1 a M1.6.2 | **Sem coleta** (#71) | — | NC em `consolidado/` | — |
+| Q1.1 | M1.1.1 e M1.1.2 | `fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv` e `coleta_G1_rodada01.csv` | Autodescrição e tentativas iniciadas em Início | `consolidado/medidas.csv` | [Interação, Q1.1](../docs/fase-4/interacao.md) |
+| Q1.2 e Q1.3 | M1.2.1 e M1.3.1 | `fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv` | Conclusão, status, razão e ponto de partida | `consolidado/medidas.csv` | [Interação, Q1.2–Q1.3](../docs/fase-4/interacao.md) |
+| Q1.4 | M1.4.1 e M1.4.2 | `fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv` | Casos executados, proteção e mensagens | `consolidado/medidas.csv` | [Interação, Q1.4](../docs/fase-4/interacao.md) |
+| Q1.5 | M1.5.1 e M1.5.2 | `fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv` | Respostas SUS e aparência | `consolidado/medidas.csv` | [Interação, Q1.5](../docs/fase-4/interacao.md) |
+| Q1.6 | M1.6.1 e M1.6.2 | `fase-4/capacidade-de-interacao/axe/` e `inspecoes_G1_rodada01.csv` | `passes`, `violations` e elementos por gravidade | `consolidado/medidas.csv` | [Interação, Q1.6](../docs/fase-4/interacao.md) |
 | Q2.1 | M2.1.1 | `fase-4/flexibilidade/execucoes.csv` (**a preencher**, #72) | `resultado` | `flexibilidade/pontuacao.csv` | [Flexibilidade, Q2.1](../docs/fase-4/flexibilidade.md) |
 | Q2.2 | M2.2.1 | `fase-4/flexibilidade/rolagem.csv` e `capturas/rolagem-*.jpg` | `rolagem_horizontal` | `flexibilidade/pontuacao.csv` | [Flexibilidade, Tabela 1](../docs/fase-4/flexibilidade.md) |
 | Q2.2 | M2.2.2 | `fase-4/flexibilidade/funcoes.csv` e `capturas/funcoes-*.jpg` | `disponivel` | `flexibilidade/pontuacao.csv` | [Flexibilidade, Tabela 2](../docs/fase-4/flexibilidade.md) |
@@ -78,14 +82,15 @@ no lugar do recorte (`m1.5.1_p01_...`).
 
 ## Privacidade e condições de acesso
 
-- **Situação atual:** não há dados de participantes no repositório. As coletas de G2 e G3 são
-  técnicas, feitas por integrantes da equipe em páginas públicas, sem login. Em 22/11/2026, os
-  arquivos JSON e CSV foram verificados por busca automática e não contêm e-mails, CPFs nem
-  caminhos de pastas pessoais, e as capturas não têm metadados EXIF.
+- **Situação atual:** G1 contém registros identificados por códigos P01–P04; a amostra prevista
+  era de cinco. As coletas de G2 e G3 são técnicas, feitas por integrantes da equipe em páginas
+  públicas, sem login. A busca automática de 22/11/2026 verificou os arquivos existentes naquela
+  data; ela não cobre os arquivos da rodada G1, coletados até 24/11.
 - **Pessoas citadas:** os READMEs trazem o nome do integrante que fez cada coleta, e `psm/` traz
   os usuários do GitHub da equipe, que já são públicos no repositório.
-- **Participantes de G1:** usar códigos como P01 a P05. O [protocolo de participantes](../docs/fase-3/protocolo-participantes.md)
-  define a guarda privada das gravações e formulários originais e a revisão das evidências para publicação.
+- **Participantes de G1:** o conjunto público usa códigos P01 a P04. Gravações, transcrições,
+  fichas originais, termos e a relação código–nome permanecem em acesso restrito, conforme o
+  [protocolo de participantes](../docs/fase-3/protocolo-participantes.md).
 - **Acesso:** todos os arquivos deste diretório são públicos, no repositório. A única exceção são
   as imagens originais do portal (`fase-4/melhoria/originais/`), que pertencem ao MDA e não são
   versionadas; `fase-4/melhoria/imagens.csv` traz o endereço, o tamanho e o SHA-256 de cada uma.

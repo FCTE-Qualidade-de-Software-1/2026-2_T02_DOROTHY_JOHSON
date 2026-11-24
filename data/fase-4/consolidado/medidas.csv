@@ -1,14 +1,28 @@
 caracteristica,questao,metrica,recorte,valor,unidade,minimo,maximo,execucoes,pontos,nivel,pontos_no_minimo,pontos_no_maximo,situacao,dado_bruto
-G1,Q1.1,M1.1.1,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.1,M1.1.2,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.2,M1.2.1,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.3,M1.3.1,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.4,M1.4.1,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.4,M1.4.2,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.5,M1.5.1,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.5,M1.5.2,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.6,M1.6.1,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
-G1,Q1.6,M1.6.2,Todos os recortes,,,,,,NC,NC,,,NC: sem coleta registrada (#71),
+G1,Q1.1,M1.1.1,9 seções,0.7778,proporção,,,9,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.1,M1.1.2,T1,0.75,proporção,,,4,1,1,,,classificada,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.1,M1.1.2,T2,0.0,proporção,,,1,0,0,,,classificada com observações iniciadas em Início,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.1,M1.1.2,T3,,proporção,,,0,NC,NC,,,NC: tarefa não iniciada em Início,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.2,M1.2.1,T1,1.0,proporção,,,4,3,3,,,classificada,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.2,M1.2.1,T2,0.0,proporção,,,1,0,0,,,classificada com observações iniciadas em Início,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.2,M1.2.1,T3,,proporção,,,0,NC,NC,,,NC: tarefa não iniciada em Início,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.3,M1.3.1,T1,0.5148,razão,,,4,1,1,,,classificada,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.3,M1.3.1,T2,,razão,,,0,NC,NC,,,NC: sem tarefa concluída iniciada em Início,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.3,M1.3.1,T3,,razão,,,0,NC,NC,,,NC: sem tarefa concluída iniciada em Início,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.4,M1.4.1,casos executados,0.8571,proporção,,,7,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.4,M1.4.2,casos com mensagem,0.8,proporção,,,5,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.5,M1.5.1,SUS,50.0,escore 0–100,,,4,0,0,,,classificada,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.5,M1.5.2,aparência,4.25,escala 1–5,,,4,2,2,,,classificada,data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv
+G1,Q1.6,M1.6.1,Início,0.875,proporção,,,1,1,1,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.1,Meu Território,0.9167,proporção,,,1,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.1,SITGeo,0.9259,proporção,,,1,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.1,Biblioteca Territorial,0.9286,proporção,,,1,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.1,Fale Conosco,0.9286,proporção,,,1,2,2,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.2,Início,7,elementos distintos,,,1,0,0,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.2,Meu Território,7,elementos distintos,,,1,0,0,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.2,SITGeo,5,elementos distintos,,,1,0,0,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.2,Biblioteca Territorial,39,elementos distintos,,,1,0,0,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
+G1,Q1.6,M1.6.2,Fale Conosco,5,elementos distintos,,,1,0,0,,,classificada,data/fase-4/capacidade-de-interacao/inspecoes_G1_rodada01.csv
 G2,Q2.1,M2.1.1,Chrome/Android,,tarefas concluídas,,,,NC,NC,,,NC: matriz de ambientes não executada (#72),data/fase-4/flexibilidade/execucoes.csv
 G2,Q2.1,M2.1.1,Samsung Internet/Android,,tarefas concluídas,,,,NC,NC,,,NC: matriz de ambientes não executada (#72),data/fase-4/flexibilidade/execucoes.csv
 G2,Q2.1,M2.1.1,Safari/iOS,,tarefas concluídas,,,,NC,NC,,,NC: matriz de ambientes não executada (#72),data/fase-4/flexibilidade/execucoes.csv
