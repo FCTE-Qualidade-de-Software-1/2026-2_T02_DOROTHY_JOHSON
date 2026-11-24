@@ -25,6 +25,7 @@ Requisitos: Python 3 (biblioteca padrão), bash e jq.
 
 import csv
 import importlib.util
+import io
 import json
 import math
 import shutil
@@ -83,6 +84,26 @@ def ler(arquivo):
         return list(csv.DictReader(f))
 
 
+def ler_bloco_csv(arquivo, cabecalho):
+    linhas = arquivo.read_text(encoding="utf-8").splitlines()
+    inicio = next((i for i, linha in enumerate(linhas) if linha == cabecalho), None)
+    if inicio is None:
+        raise ValueError(f"{arquivo}: cabeçalho não encontrado: {cabecalho}")
+    fim = next((i for i in range(inicio + 1, len(linhas)) if not linhas[i].strip()), len(linhas))
+    return list(csv.DictReader(io.StringIO("\n".join(linhas[inicio:fim]))))
+
+
+def participantes_g1(dados):
+    return ler_bloco_csv(
+        dados / "capacidade-de-interacao/coleta_G1_rodada01.csv",
+        "codigo,publico_representado,familiaridade_digital,primeiro_acesso,consentimento_confirmado,rodada,observacoes",
+    )
+
+
+def quantidade_participantes_g1(dados):
+    return len({linha["codigo"] for linha in participantes_g1(dados)})
+
+
 def gravar(arquivo, colunas, linhas):
     arquivo.parent.mkdir(parents=True, exist_ok=True)
     with open(arquivo, "w", encoding="utf-8", newline="") as f:
@@ -92,8 +113,7 @@ def gravar(arquivo, colunas, linhas):
 
 
 def validar(dados):
-    """Devolve (erros, lacunas). Erro impede o cálculo; lacuna é execução que falta e deixa a
-    métrica NC, sem interromper as demais."""
+    """Devolve (erros, lacunas). Erro impede o cálculo; lacuna indica cobertura insuficiente."""
     erros, lacunas = [], []
 
     versoes = set()
@@ -111,6 +131,10 @@ def validar(dados):
                     erros.append(f"{arquivo.name}: sem valor de {auditoria}")
     if len(versoes) > 1:
         erros.append(f"mais de uma versão do Lighthouse na coleta: {sorted(versoes)}")
+
+    amostra_g1 = quantidade_participantes_g1(dados)
+    if amostra_g1 != 5:
+        lacunas.append(f"G1: {amostra_g1}/5 participantes previstos (#71)")
 
     tarefas = json.loads((dados / "eficiencia/tarefas.json").read_text(encoding="utf-8"))
     for tarefa, nome in (("T1", "T1"), ("T2", "T2"), (None, "downloads")):
@@ -171,10 +195,130 @@ def linha_medida(metrica, recorte, **campos):
     return l
 
 
-def medidas_g1():
-    # Ainda sem coleta: as 10 métricas aparecem como NC para que a lacuna fique visível.
-    metricas = [m for q, ms in QUESTOES.items() if q.startswith("Q1") for m in ms]
-    return [linha_medida(m, "Todos os recortes", situacao="NC: sem coleta registrada (#71)") for m in metricas]
+def pontos_g1(metrica, valor, recorte, inspecoes, numerador=None):
+    if metrica == "M1.1.1":
+        quantidade = int(numerador)
+        return 0 if quantidade <= 5 else 1 if quantidade == 6 else 2 if quantidade <= 8 else 3
+    if metrica in ("M1.1.2", "M1.2.1", "M1.4.1", "M1.4.2"):
+        return 0 if valor < 0.6 else 1 if valor < 0.8 else 2 if valor < 1 else 3
+    if metrica == "M1.3.1":
+        return 0 if valor < 0.5 else 1 if valor < 0.7 else 2 if valor < 0.9 else 3
+    if metrica == "M1.5.1":
+        return 0 if valor < 51 else 1 if valor < 71 else 2 if valor < 85 else 3
+    if metrica == "M1.5.2":
+        return 0 if valor < 3 else 1 if valor < 3.5 else 2 if valor < 4.5 else 3
+    if metrica == "M1.6.1":
+        return 0 if valor < 0.8 else 1 if valor < 0.9 else 2 if valor < 1 else 3
+    if metrica == "M1.6.2":
+        pagina = inspecoes[recorte]
+        criticos, serios = int(pagina["criticos_distintos"]), int(pagina["serios_distintos"])
+        return 0 if criticos or serios >= 6 else 1 if serios >= 3 else 2 if serios else 3
+    raise ValueError(f"Métrica G1 sem regra de pontuação: {metrica}")
+
+
+def medidas_g1(dados):
+    pasta = dados / "capacidade-de-interacao"
+    coleta = pasta / "coleta_G1_rodada01.csv"
+    tentativas = ler_bloco_csv(
+        coleta,
+        "rodada,codigo,tarefa,tentativa,inicio_fuso,duracao_s,primeira_acao,primeiro_destino,acerto_primeiro_destino,status,evidencia_resultado,ajuda_ou_incidente,sequencia_passos,passos_avaliador_1,passos_avaliador_2,passos_consenso,passos_minimos,razao,evidencia_gravacao",
+    )
+    consolidados = ler_bloco_csv(
+        coleta,
+        "rodada,metrica,recorte,numerador,denominador,observacoes_validas,valor,unidade,nivel,evidencia,observacoes",
+    )
+    inspecoes = {
+        linha["pagina"]: linha
+        for linha in ler_bloco_csv(
+            pasta / "inspecoes_G1_rodada01.csv",
+            "rodada,pagina,url,data_hora_fuso,axe_versao,json,passes,violations,incomplete,inapplicable,proporcao_aprovada,criticos_distintos,serios_distintos,total_afetado,ocorrencias",
+        )
+    }
+
+    por_metrica = {}
+    for linha in consolidados:
+        metrica, recorte = linha["metrica"], linha["recorte"]
+        if recorte == "média T1–T3":
+            continue
+        por_metrica.setdefault(metrica, {})[recorte] = linha
+
+    def iniciou_em_inicio(tentativa):
+        acao = tentativa["primeira_acao"].casefold()
+        return "início" in acao or "inicio" in acao
+
+    for metrica in ("M1.1.2", "M1.2.1", "M1.3.1"):
+        for tarefa in ("T2", "T3"):
+            linhas_validas = [t for t in tentativas if t["tarefa"] == tarefa and iniciou_em_inicio(t)]
+            original = por_metrica.get(metrica, {}).get(tarefa)
+            if metrica == "M1.1.2" and linhas_validas:
+                acertos = sum(t["acerto_primeiro_destino"] == "1" for t in linhas_validas)
+                por_metrica[metrica][tarefa] = {
+                    "metrica": metrica, "recorte": tarefa, "valor": str(acertos / len(linhas_validas)),
+                    "unidade": "proporção", "observacoes_validas": str(len(linhas_validas)),
+                    "situacao": "classificada com observações iniciadas em Início",
+                    "evidencia": "tentativas deste arquivo",
+                }
+            elif metrica == "M1.2.1" and linhas_validas:
+                concluidas = sum(t["status"] == "sucesso" for t in linhas_validas)
+                por_metrica[metrica][tarefa] = {
+                    "metrica": metrica, "recorte": tarefa, "valor": str(concluidas / len(linhas_validas)),
+                    "unidade": "proporção", "observacoes_validas": str(len(linhas_validas)),
+                    "situacao": "classificada com observações iniciadas em Início",
+                    "evidencia": "tentativas deste arquivo",
+                }
+            elif metrica == "M1.3.1":
+                concluidas = [t for t in linhas_validas if t["status"] == "sucesso" and t["razao"] not in ("", "NC")]
+                if concluidas:
+                    valor = mean(float(t["razao"]) for t in concluidas)
+                    por_metrica[metrica][tarefa] = {
+                        "metrica": metrica, "recorte": tarefa, "valor": str(valor),
+                        "unidade": "razão", "observacoes_validas": str(len(concluidas)),
+                        "situacao": "classificada com tarefas concluídas iniciadas em Início",
+                        "evidencia": "tentativas deste arquivo",
+                    }
+                else:
+                    por_metrica[metrica][tarefa] = {
+                        "metrica": metrica, "recorte": tarefa, "valor": "",
+                        "unidade": "razão", "observacoes_validas": "0",
+                        "situacao": "NC: sem tarefa concluída iniciada em Início",
+                        "evidencia": "tentativas deste arquivo",
+                    }
+            else:
+                por_metrica.setdefault(metrica, {})[tarefa] = {
+                    "metrica": metrica, "recorte": tarefa, "valor": "",
+                    "unidade": (original or {}).get("unidade", ""),
+                    "observacoes_validas": "0",
+                    "situacao": "NC: tarefa não iniciada em Início",
+                    "evidencia": "tentativas deste arquivo",
+                }
+
+    linhas = []
+    for questao, metricas in QUESTOES.items():
+        if not questao.startswith("Q1"):
+            continue
+        for metrica in metricas:
+            recortes = por_metrica.get(metrica, {})
+            for recorte, bruto in recortes.items():
+                valor = bruto.get("valor", "")
+                unidade = bruto.get("unidade", "")
+                arquivo_bruto = (
+                    f"{DADOS}/capacidade-de-interacao/inspecoes_G1_rodada01.csv"
+                    if metrica in ("M1.1.1", "M1.4.1", "M1.4.2", "M1.6.1", "M1.6.2")
+                    else f"{DADOS}/capacidade-de-interacao/coleta_G1_rodada01.csv"
+                )
+                if not valor or valor == "NC":
+                    linhas.append(linha_medida(
+                        metrica, recorte, unidade=unidade, execucoes=bruto.get("observacoes_validas", ""),
+                        situacao=bruto.get("situacao", "NC: sem resultado válido"), dado_bruto=arquivo_bruto,
+                    ))
+                    continue
+                pontos = pontos_g1(metrica, float(valor), recorte, inspecoes, bruto.get("numerador"))
+                linhas.append(linha_medida(
+                    metrica, recorte, valor=valor, unidade=unidade, execucoes=bruto.get("observacoes_validas", ""),
+                    pontos=pontos, nivel=pontos, situacao=bruto.get("situacao", "classificada"),
+                    dado_bruto=arquivo_bruto,
+                ))
+    return linhas
 
 
 def medidas_g2(dados):
@@ -228,6 +372,20 @@ def medidas_g3(dados):
 
 def limitador(g, medidas, dados):
     """Limitadores de docs/fase-2/niveis-pontuacao.md, seção 5.2: (descrição, classificação máxima)."""
+    if g == "G1":
+        acessibilidade = ler_bloco_csv(
+            dados / "capacidade-de-interacao/inspecoes_G1_rodada01.csv",
+            "rodada,pagina,url,data_hora_fuso,axe_versao,json,passes,violations,incomplete,inapplicable,proporcao_aprovada,criticos_distintos,serios_distintos,total_afetado,ocorrencias",
+        )
+        criticas = [l["pagina"] for l in acessibilidade if int(l["criticos_distintos"]) > 0]
+        if criticas:
+            return "violação crítica de acessibilidade em " + ", ".join(criticas), "Insatisfatório"
+        tarefas_baixas = [
+            f"M1.2.1 {l['recorte']}" for l in medidas
+            if l["metrica"] == "M1.2.1" and l["valor"] != "" and float(l["valor"]) < 0.6
+        ]
+        if tarefas_baixas:
+            return "; ".join(tarefas_baixas), "Aceitável"
     if g == "G3":
         lentos = [f"{l['metrica']} {l['recorte']}" for l in medidas if l["valor"] != "" and (
             (l["metrica"] == "M3.1.2" and float(l["valor"]) > 4.0)
@@ -270,6 +428,10 @@ def classificar(medidas, dados):
             l["classificacao_final"] = "pendente"
             continue
         l["classificacao_media"] = l["classificacao_final"] = G3.classificacao(pontos[g])
+        if g == "G1" and quantidade_participantes_g1(dados) != 5:
+            l["classificacao_final"] = "pendente"
+            l["situacao"] = "pendente: amostra inferior aos 5 participantes previstos"
+            continue
         if maximo and ordem.index(l["classificacao_final"]) > ordem.index(maximo):
             l["classificacao_final"] = maximo
     return linhas
@@ -301,7 +463,7 @@ def processar(base):
         sys.exit("Dados brutos inválidos:\n- " + "\n- ".join(erros))
     print("Dados brutos válidos." if not lacunas else "Dados brutos com lacunas (métrica NC):\n- " + "\n- ".join(lacunas))
     calcular(base)
-    medidas = medidas_g1() + medidas_g2(dados) + medidas_g3(dados)
+    medidas = medidas_g1(dados) + medidas_g2(dados) + medidas_g3(dados)
     classificacoes = classificar(medidas, dados)
     gravar(dados / "consolidado/medidas.csv", COLUNAS_MEDIDAS, medidas)
     gravar(dados / "consolidado/classificacao.csv", COLUNAS_CLASSIFICACAO, classificacoes)
