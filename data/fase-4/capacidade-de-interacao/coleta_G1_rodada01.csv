@@ -1,0 +1,63 @@
+# ambiente
+rodada,data_hora_fuso,atividade,avaliadores,dispositivo,so_versao,navegador_versao,viewport,zoom,rede,local,gravador,axe_versao,observacoes
+01,2026-11-22T21:49-03:00,teste com usuários G1 (P01),Ana Luiza (moderadora); Tales (2º avaliador),celular Android (modelo não registrado),não registrada,Brave (versão não registrada),retrato,padrão,rede do participante,remoto por videochamada,gravação da reunião,,"Desvios D1 e D2: sessão remota; Brave em vez de Chrome, sem aba anônima, 16 abas abertas"
+01,2026-11-23T10:36-03:00,teste com usuários G1 (P02),Ana Luiza (moderadora); Tales (2º avaliador),iPhone 16 Pro Max,não registrada,Safari (versão não registrada),retrato,padrão,rede da participante,remoto por videochamada (participante fora do Brasil),gravação da reunião,,"Desvios D1 e D2: sessão remota; aparelho e navegador diferentes de P01"
+01,2026-11-23T14:47-03:00,teste com usuários G1 (P03),Ana Luiza (moderadora); Tales (2º avaliador),celular Android (modelo não registrado),não registrada,Chrome (versão não registrada),retrato,padrão,rede do participante,remoto por videochamada,gravação da reunião,,"Desvios D1 e D2: sessão remota; Chrome sem aba anônima, 7 abas abertas"
+01,2026-11-23T20:18-03:00,teste com usuários G1 (P04),Ana Luiza (moderadora); Tales (2º avaliador),celular Android (modelo não registrado),não registrada,Chrome (versão não registrada),retrato,padrão,rede do participante,remoto por videochamada,gravação da reunião,,"Desvios D1 e D2: sessão remota; Chrome sem aba anônima, 36 abas abertas"
+
+# participantes
+codigo,publico_representado,familiaridade_digital,primeiro_acesso,consentimento_confirmado,rodada,observacoes
+P01,cidadão,usa mapas/filtros/formulários no celular sem ajuda,sim,sim,01,consentimento dito em voz alta na gravação; termo em acesso restrito (#68)
+P02,cidadã,usa mapas/filtros/formulários no celular sem ajuda,sim,sim,01,consentimento pedido pelo 2º avaliador; termo em acesso restrito (#68)
+P03,cidadão,usa mapas/filtros/formulários no celular sem ajuda,sim,sim,01,consentimento pedido pelo 2º avaliador; termo em acesso restrito (#68)
+P04,cidadão,usa mapas/filtros/formulários no celular sem ajuda,sim,sim,01,consentimento pedido pelo 2º avaliador; termo em acesso restrito (#68)
+
+# tentativas
+rodada,codigo,tarefa,tentativa,inicio_fuso,duracao_s,primeira_acao,primeiro_destino,acerto_primeiro_destino,status,evidencia_resultado,ajuda_ou_incidente,sequencia_passos,passos_avaliador_1,passos_avaliador_2,passos_consenso,passos_minimos,razao,evidencia_gravacao
+01,P01,T1,1,2026-11-22T21:49:44-03:00,158,busca no mapa de Início,Meu Território,1,sucesso,Chapada dos Veadeiros com Indicadores Gerais e mapa (02:37–02:44),nenhuma; primeiros 13 s fora da gravação,,16,16,16,7,0.4375,P01 00:06–02:44
+01,P01,T2,1,2026-11-22T21:52:40-03:00,81,abre o menu em Meu Território,Início,0,interrompida,aba Crédito Rural (PRONAF) em Meu Território; SITGeo não acessado (04:23),encerrada pela moderação sem evidência de conclusão (D5),,,,,,NC,P01 03:02–04:23
+01,P01,T3,1,2026-11-22T21:54:18-03:00,300,troca o seletor de território em Meu Território,nenhum (permaneceu em Meu Território),0,tempo,PDF não baixado; Biblioteca Territorial não acessada,nenhuma,,16,,,,NC,P01 04:40–10:30 (limite às 09:40)
+01,P02,T1,1,2026-11-23T10:36:43-03:00,163,abre o menu e toca em Início (sem mudar de página),Meu Território,1,sucesso,Chapada dos Veadeiros com Indicadores Gerais (03:03) e mapa (03:24),nenhuma,,14,14,14,7,0.5,P02 00:28–03:11
+01,P02,T2,1,2026-11-23T10:39:57-03:00,108,busca “pron” no mapa de Início,Meu Território (pelo mapa de Início),0,ajuda,aba Crédito Rural (PRONAF) em Meu Território de Bacia do Rio Corrente - BA; SITGeo não acessado (05:26),dicas da moderação aos 04:00 e 04:14; encerrada aos 05:30 sem evidência de conclusão,,,,,,NC,P02 03:42–05:30
+01,P02,T3,1,2026-11-23T10:42:37-03:00,263,troca o seletor de território em Meu Território,nenhum (começou em Meu Território),0,ajuda,PDF do PTDRS de Estrada de Ferro aberto (10:45); salvamento após o fim da gravação,dicas da moderação aos 07:01 (sigla) e 10:30 (busca pela UF),,,,,,NC,P02 06:22–10:45
+01,P03,T1,1,2026-11-23T14:48:13-03:00,105,busca no mapa de Início,Meu Território,1,sucesso,Chapada dos Veadeiros com Indicadores Gerais (01:56) e mapa (02:00),nenhuma; seletor de UF não carregou e exigiu recarregar a página (comportamento do produto),,13,13,13,7,0.5385,P03 00:15–02:00
+01,P03,T2,1,2026-11-23T14:50:27-03:00,45,abre a aba Crédito Rural (PRONAF) em Meu Território,nenhum (permaneceu em Meu Território),0,interrompida,aba Crédito Rural (PRONAF) em Meu Território; SITGeo não acessado (03:14),moderação confirmou a aba PRONAF como resultado (03:04–03:14),,,,,,NC,P03 02:29–03:14
+01,P03,T3,1,2026-11-23T14:51:42-03:00,172,abre o menu em Meu Território,Homologações de Territórios,0,sucesso,PTDRS de Estrada de Ferro - GO baixado (06:36) e aberto (07:35),nenhuma; seletor de UF exigiu recarregar a página (comportamento do produto),,22,22,22,6,0.2727,P03 03:44–06:36
+01,P04,T1,1,2026-11-23T20:19:32-03:00,77,abre o menu e expande Meu Território,Território em Foco,0,sucesso,Chapada dos Veadeiros com Indicadores Gerais e mapa (01:55),nenhuma; enunciado repetido a pedido (00:48),,12,12,12,7,0.5833,P04 00:38–01:55
+01,P04,T2,1,2026-11-23T20:21:13-03:00,228,abre o menu em Meu Território,Homologações de Territórios,0,sucesso,camada PRONAF - Valor Total de Crédito Acessado ativada no SITGeo e painel de classes visível (06:07); painel cobre o mapa,esclarecimento do enunciado pela moderação (03:40) não considerado ajuda por consenso,,22,22,22,5,0.2273,P04 02:19–06:07
+01,P04,T3,1,2026-11-23T20:25:25-03:00,300,abre o menu,Território Personalizado,0,tempo,PTDRS não baixado; baixou a imagem do mapa do território (11:05),moderação respondeu “Não” à pergunta do participante (11:14),,,,,,NC,P04 06:31–11:31
+
+# questionario
+rodada,codigo,sus_1,sus_2,sus_3,sus_4,sus_5,sus_6,sus_7,sus_8,sus_9,sus_10,sus_0_a_100,aparencia_1_a_5
+01,P01,3,2,3,2,2,3,3,4,2,4,45,4
+01,P02,3,3,2,5,4,3,2,4,3,3,40,4
+01,P03,4,2,3,1,3,1,5,2,5,1,82.5,5
+01,P04,2,4,1,4,2,2,2,3,3,4,32.5,4
+
+# consolidacao (testes com usuários; nível a preencher pelas regras de julgamento de G1)
+rodada,metrica,recorte,numerador,denominador,observacoes_validas,valor,unidade,nivel,evidencia,observacoes
+01,M1.1.2,T1,3,4,4,0.75,proporção,,fichas P01–P04 e tentativas deste arquivo,"acertos: P01, P02, P03; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.1.2,T2,0,4,4,0.0,proporção,,fichas P01–P04 e tentativas deste arquivo,"nenhum participante foi primeiro ao SITGeo; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.1.2,T3,0,4,4,0.0,proporção,,fichas P01–P04 e tentativas deste arquivo,"nenhum participante foi primeiro à Biblioteca Territorial; T3 começou fora de Início em todos (D3); amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.2.1,T1,4,4,4,1.0,proporção,,fichas P01–P04 e tentativas deste arquivo,"todos concluíram sem ajuda; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.2.1,T2,1,4,4,0.25,proporção,,fichas P01–P04 e tentativas deste arquivo,"só P04 (esclarecimento aos 03:40 não considerado ajuda); P01 e P03 encerradas pela moderação sem a camada; P02 com ajuda; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.2.1,T3,1,4,4,0.25,proporção,,fichas P01–P04 e tentativas deste arquivo,"só P03; P01 e P04 no limite de tempo; P02 com ajuda; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.2.1,média T1–T3,,,4,0.5,proporção,,fichas P01–P04 e tentativas deste arquivo,"média das três proporções; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.3.1,T1,,,4,0.5148,razão,,fichas P01–P04 e tentativas deste arquivo,"média de 7/16, 7/14, 7/13 e 7/12; passos mínimos do piloto (#70/#115); amostra de 4 (P05 indisponível)"
+01,M1.3.1,T2,,,1,0.2273,razão,,fichas P01–P04 e tentativas deste arquivo,"5/22, só P04 concluiu; passos mínimos do piloto (#70/#115); amostra de 4 (P05 indisponível)"
+01,M1.3.1,T3,,,1,0.2727,razão,,fichas P01–P04 e tentativas deste arquivo,"6/22, só P03 concluiu; passos mínimos do piloto (#70/#115); amostra de 4 (P05 indisponível)"
+01,M1.5.1,SUS,,,4,50.0,escore 0–100,,fichas P01–P04 e tentativas deste arquivo,"escores: 45; 40; 82,5; 32,5; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.5.2,aparência,,,4,4.25,escala 1–5,,fichas P01–P04 e tentativas deste arquivo,"respostas: 4; 4; 5; 4; amostra de 4 (P05 indisponível); denominador = observações válidas"
+01,M1.1.1,9 seções,7,9,9,0.7778,proporção,,inspecoes_G1_rodada01.csv,"sim: Início, Meu Território, Biblioteca, Homologações, Fale Conosco, Sobre, Espaço do Colegiado; não: SITGeo, Território em Foco; Galaxy S24+, Android 17, Chrome 158"
+01,M1.6.1,Início,28,32,1,0.875,proporção,,inspecoes_G1_rodada01.csv,"axe-core 4.10.3, WCAG 2.1 A/AA, 1366 × 768 em quadro de mesma origem (desvio)"
+01,M1.6.2,Início,,,1,7,elementos distintos,,inspecoes_G1_rodada01.csv,"3 críticos e 4 sérios"
+01,M1.6.1,Meu Território,22,24,1,0.9167,proporção,,inspecoes_G1_rodada01.csv,"axe-core 4.10.3, WCAG 2.1 A/AA, 1366 × 768 em quadro de mesma origem (desvio)"
+01,M1.6.2,Meu Território,,,1,7,elementos distintos,,inspecoes_G1_rodada01.csv,"3 críticos e 4 sérios"
+01,M1.6.1,SITGeo,25,27,1,0.9259,proporção,,inspecoes_G1_rodada01.csv,"axe-core 4.10.3, WCAG 2.1 A/AA, 1366 × 768 em quadro de mesma origem (desvio)"
+01,M1.6.2,SITGeo,,,1,5,elementos distintos,,inspecoes_G1_rodada01.csv,"1 críticos e 4 sérios"
+01,M1.6.1,Biblioteca Territorial,26,28,1,0.9286,proporção,,inspecoes_G1_rodada01.csv,"axe-core 4.10.3, WCAG 2.1 A/AA, 1366 × 768 em quadro de mesma origem (desvio)"
+01,M1.6.2,Biblioteca Territorial,,,1,39,elementos distintos,,inspecoes_G1_rodada01.csv,"6 críticos e 33 sérios"
+01,M1.6.1,Fale Conosco,26,28,1,0.9286,proporção,,inspecoes_G1_rodada01.csv,"axe-core 4.10.3, WCAG 2.1 A/AA, 1366 × 768 em quadro de mesma origem (desvio)"
+01,M1.6.2,Fale Conosco,,,1,5,elementos distintos,,inspecoes_G1_rodada01.csv,"1 críticos e 4 sérios"
+01,M1.4.1,casos executados,6,7,7,0.8571,proporção,,inspecoes_G1_rodada01.csv,"protegidos: MT-01, MT-02, BT-01, FC-01, FC-02, FC-04; não protegido: FC-03 (telefone aceita letras e o envio começa)"
+01,M1.4.2,casos com mensagem,4,5,5,0.8,proporção,,inspecoes_G1_rodada01.csv,"sim: MT-02, FC-01, FC-02, FC-04; não: MT-01 (aviso não cita a UF, que também estava vazia); BT-01 e FC-03 sem mensagem, fora do denominador; votos de Tales e Ana Luiza iguais em todos os casos"

@@ -40,10 +40,11 @@ detalhadas no plano de avaliação da Fase 3:
 - **Participantes:** 5 pessoas que nunca usaram o portal, número suficiente para encontrar a maior
   parte dos problemas de usabilidade em um teste qualitativo (NIELSEN, 2000). O recrutamento mistura
   níveis de familiaridade digital, e o perfil de cada participante é registrado sem identificá-lo.
-- **Consentimento e gravação:** cada participante assina um termo de consentimento, e a sessão é
-  gravada (tela e áudio), conforme a premissa 6 do enunciado.
-- **Anonimização:** os participantes são identificados como P1 a P5 nos dados e nas gravações
-  versionadas; o vínculo entre código e nome não é publicado (premissa 5).
+- **Consentimento e gravação:** obter o termo assinado e a autorização específica antes de
+  gravar tela e áudio. Registrar sessões sem gravação como desvio do procedimento previsto.
+- **Identificação:** usar códigos como P01 a P05 nas fichas. O termo assinado, o vínculo entre
+  código e nome e os originais ficam em acesso restrito, conforme o
+  [protocolo da Fase 3](../fase-3/protocolo-participantes.md).
 - **Roteiro:** cada tarefa começa na página Início. O moderador lê a tarefa, não dá dicas e não
   responde perguntas sobre a interface. O participante fala em voz alta o que está pensando.
 - **Limite de tempo:** 5 minutos por tarefa. Desistência, estouro do limite ou qualquer ajuda do
@@ -102,6 +103,25 @@ detalhadas no plano de avaliação da Fase 3:
 !!! note "Tentativas não concluídas"
     A eficiência do caminho só é calculada para as tentativas concluídas, porque sem conclusão não
     há caminho completo para comparar. As tentativas não concluídas já são captadas por M1.2.1.
+
+**Definição do caminho mínimo.** O cálculo começa na página Início, com o menu recolhido.
+A contagem segue a regra da [Fase 3](../fase-3/metodo-interacao.md#m131-eficiencia-do-caminho):
+abrir o menu conta 1 passo; selecionar o destino conta outro; abrir uma lista e escolher uma
+opção são 2 passos; cada clique em controle, seleção ou preenchimento necessário conta 1 passo.
+Rolagem, espera e zoom por gesto não contam. O caminho mínimo usa os objetos de referência
+definidos na [Fase 3, seção 2](../fase-3/ambiente.md#2-paginas-tarefas-e-objetos-de-referencia).
+
+| Tarefa | Caminho mínimo | Passos mínimos |
+|---|---|---:|
+| T1: Consultar um território | Abrir o menu (1) → Meu Território (1) → abrir UF e escolher GO (2) → abrir território e escolher Chapada dos Veadeiros - GO (2) → Selecionar (1) | **7** |
+| T2: Ativar uma camada | Abrir o menu (1) → SITGeo (1) → Políticas Públicas (1) → abrir o painel de camadas se recolhido (1) → ativar PRONAF - Valor Total de Crédito Acessado (1) | **5** |
+| T3: Baixar um documento | Abrir o menu (1) → Biblioteca Territorial (1) → abrir UF e escolher GO (2) → Buscar PTDRS (1) → clicar no documento Estrada de Ferro - GO (1) | **6** |
+
+Na T3, o programa `Territórios da Cidadania` já começa selecionado, conforme o objeto de
+referência da Fase 3, e não gera um passo adicional.
+
+Exemplo: se o participante conclui T1 em 10 passos, a eficiência dessa tentativa é
+`7 / 10 = 0,70`. A eficiência da tarefa é a média das razões dos participantes que concluíram T1.
 
 ### M1.4.1: Prevenção de erros de operação
 
@@ -356,6 +376,15 @@ Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação 
     A ISO/IEC 25023 define a utilização de memória como razão entre a memória usada e a memória
     total (ISO/IEC, 2011b). No navegador, a memória total disponível para a página não é um valor
     fixo, por isso esta métrica usa a memória ocupada em valor absoluto.
+
+## Registro de ajustes de instrumentação (Fase 2 → Fase 3)
+
+Durante o detalhamento operacional do plano de avaliação na [Fase 3](../fase-3/index.md#32-verificacao-de-suporte-do-ambiente-e-adequacao-do-gqm), duas formas de coleta inicialmente previstas de modo manual mostraram-se inviáveis para garantir repetibilidade entre execuções. As definições conceituais, fórmulas, unidades e faixas de pontuação das métricas foram mantidas, atualizando-se apenas o instrumento de coleta conforme registrado abaixo:
+
+| ID | Métricas afetadas | Instrumento original (F2) | Instrumento ajustado (F3) | Justificativa técnica |
+| :--- | :--- | :--- | :--- | :--- |
+| **GQM-01** | **M3.2.1** e **M3.4.1** | Gravação manual no painel *Performance* do Chrome DevTools. | Script automatizado em **Playwright** via *Chrome DevTools Protocol (CDP)*. | Eliminar erro humano no acionamento manual do cronômetro e garantir repetibilidade exata nas 5 execuções por tarefa. |
+| **GQM-02** | **M2.2.1**, **M2.2.2** e **M2.3.1** | Inspeção visual manual de rolagem horizontal e presença de 25 funções nas larguras de tela. | Scripts automatizados no *Device Mode* do Chrome (`Procedimentos A e B`), com confirmação das perdas no celular de referência e exclusão do ambiente de referência em **M2.3.1**. | Evitar omissões visuais na verificação de múltiplos elementos DOM e impedir que o ambiente base distorça o índice de concentração de falhas. |
 
 ---
 
