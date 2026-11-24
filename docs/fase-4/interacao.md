@@ -162,3 +162,7 @@ sem constituir uma condição para encerrar este relatório com os dados dispon�
 
 Os dados e as condições de acesso estão no [mapa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/README.md) e no
 [README da coleta G1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/capacidade-de-interacao/README.md).
+
+**Veja também:** [relações entre as características](relacoes-caracteristicas.md) ·
+[classificação final](classificacao-final.md) · [oportunidades de melhoria](oportunidades-melhoria.md) ·
+[visão geral da Fase 4](index.md)

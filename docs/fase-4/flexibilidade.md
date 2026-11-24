@@ -268,3 +268,7 @@ sem atribuição a um ambiente da matriz. Não foi revalidada por esta análise.
 
 *Análise atualizada em 24/11/2026 com os dados versionados; nenhuma nova coleta foi
 realizada para produzir esta página.*
+
+**Veja também:** [relações entre as características](relacoes-caracteristicas.md) ·
+[classificação final](classificacao-final.md) · [oportunidades de melhoria](oportunidades-melhoria.md) ·
+[visão geral da Fase 4](index.md)
