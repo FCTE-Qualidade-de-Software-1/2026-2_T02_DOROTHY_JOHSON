@@ -124,3 +124,7 @@ mudam de nível:
 Com os dois recortes no pior nível, o G3 cairia de 1,35 para 1,14; no melhor, subiria para 1,43.
 Nos dois casos **a classificação continua Aceitável**, então a dispersão não a altera. Ela
 indica apenas que os níveis da Biblioteca Territorial devem ser lidos com cautela.
+
+**Veja também:** [relações entre as características](relacoes-caracteristicas.md) ·
+[classificação final](classificacao-final.md) · [oportunidades de melhoria](oportunidades-melhoria.md) ·
+[visão geral da Fase 4](index.md)

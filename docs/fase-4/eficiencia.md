@@ -164,6 +164,10 @@ não de uma sessão de coleta.
 - **Fim da tarefa:** o tempo vai até a rede ficar 1 s ociosa, o que pode incluir requisições
   que não alteram o que o usuário vê.
 
+**Veja também:** [relações entre as características](relacoes-caracteristicas.md) ·
+[classificação final](classificacao-final.md) · [oportunidades de melhoria](oportunidades-melhoria.md) ·
+[visão geral da Fase 4](index.md)
+
 ## Referências
 
 GOOGLE. **Minimize main-thread work**. [S.l.]: Google, 2019. Disponível em: <https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown>. Acesso em: 08 nov. 2026.
