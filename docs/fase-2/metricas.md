@@ -357,6 +357,15 @@ Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação 
     total (ISO/IEC, 2011b). No navegador, a memória total disponível para a página não é um valor
     fixo, por isso esta métrica usa a memória ocupada em valor absoluto.
 
+## Registro de ajustes de instrumentação (Fase 2 → Fase 3)
+
+Durante o detalhamento operacional do plano de avaliação na [Fase 3](../fase-3/index.md#32-verificacao-de-suporte-do-ambiente-e-adequacao-do-gqm), duas formas de coleta inicialmente previstas de modo manual mostraram-se inviáveis para garantir repetibilidade entre execuções. As definições conceituais, fórmulas, unidades e faixas de pontuação das métricas foram mantidas, atualizando-se apenas o instrumento de coleta conforme registrado abaixo:
+
+| ID | Métricas afetadas | Instrumento original (F2) | Instrumento ajustado (F3) | Justificativa técnica |
+| :--- | :--- | :--- | :--- | :--- |
+| **GQM-01** | **M3.2.1** e **M3.4.1** | Gravação manual no painel *Performance* do Chrome DevTools. | Script automatizado em **Playwright** via *Chrome DevTools Protocol (CDP)*. | Eliminar erro humano no acionamento manual do cronômetro e garantir repetibilidade exata nas 5 execuções por tarefa. |
+| **GQM-02** | **M2.2.1**, **M2.2.2** e **M2.3.1** | Inspeção visual manual de rolagem horizontal e presença de 25 funções nas larguras de tela. | Scripts automatizados no *Device Mode* do Chrome (`Procedimentos A e B`), com confirmação das perdas no celular de referência e exclusão do ambiente de referência em **M2.3.1**. | Evitar omissões visuais na verificação de múltiplos elementos DOM e impedir que o ambiente base distorça o índice de concentração de falhas. |
+
 ---
 
 ## Referências
