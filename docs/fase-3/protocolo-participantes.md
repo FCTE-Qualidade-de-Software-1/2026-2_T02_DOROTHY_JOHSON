@@ -1,6 +1,6 @@
 # Protocolo de participantes e consentimento
 
-Este protocolo se aplica às entrevistas e aos testes com participantes na avaliação da área pública da Plataforma Territórios da Cidadania (SIT). Para as sessões de interação, use o [método de G1](metodo-interacao.md) e os [formulários de coleta](formularios-interacao.md). O [termo de consentimento](termo-consentimento.md) está para aprovação da equipe na [atividade #68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68).
+Este protocolo se aplica às entrevistas e aos testes com participantes na avaliação da área pública da Plataforma Territórios da Cidadania (SIT). Para as sessões de interação, use o [método de G1](metodo-interacao.md) e os [formulários de coleta](formularios-interacao.md). O [termo de consentimento](termo-consentimento.md) foi aprovado pela equipe em 24/11/2026, na versão do commit `f9f354b`, no contexto da [atividade #68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68).
 
 ## Antes da sessão
 

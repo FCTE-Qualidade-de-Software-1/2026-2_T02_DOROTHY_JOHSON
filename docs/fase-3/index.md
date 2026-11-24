@@ -20,7 +20,7 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 | Método de eficiência de desempenho (G3) | Passos para obter M3.1.1 a M3.4.1 e consolidar os dados | [Método de eficiência](metodo-eficiencia.md) | Concluída e executada em 08/11/2026 |
 | Método de capacidade de interação (G1) | Roteiro das sessões, inspeções e execução do axe-core | [Método de interação](metodo-interacao.md) e [formulários](formularios-interacao.md) | Documentado ([#63](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/63)) |
 | Método de flexibilidade (G2) | Larguras de tela, lista de funções, matriz de ambientes, roteiro das tarefas e registro de falhas | [Método de flexibilidade](metodo-flexibilidade.md) | Concluída; Procedimentos A e B executados em 15/11/2026 |
-| Protocolo de participantes | Recrutamento, termo de consentimento, gravação e anonimização | [Protocolo](protocolo-participantes.md) e [termo](termo-consentimento.md) | Documentado, aguardando aprovação da equipe ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)) |
+| Protocolo de participantes | Recrutamento, termo de consentimento, gravação e anonimização | [Protocolo](protocolo-participantes.md) e [termo](termo-consentimento.md) | Documentado e aprovado pela equipe em 24/11/2026 ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)) |
 | Cronograma | Atividades da Fase 4 e datas | [Seção 4](#4-cronograma-da-avaliacao) desta página | Concluída |
 | Rastreabilidade F2 → F3 | Método, recursos e dado bruto de cada métrica | [Seção 3](#3-rastreabilidade-da-fase-2-para-a-fase-3) desta página | Concluída |
 
