@@ -1,16 +1,17 @@
 # Registro Semanal das Medições (PSM/CID)
 
-Este registro aplica o [Plano de Medição](plano-medicao.md) a cada semana da Entrega 1: compara
+Este registro aplica o [Plano de Medição](plano-medicao.md) a cada semana das Entregas 1 e 2: compara
 os indicadores M1 a M4 com os critérios de decisão do plano, interpreta o resultado e anota as
 decisões de gestão que ele motivou. Atende à Premissa 3 do enunciado (medições, interpretação e
-decisões registradas) e à [issue #20](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/20).
+decisões registradas) e às issues [#20](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/20) (E1) e
+[#61](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/61) (E2).
 
 | Item | Valor |
 |---|---|
 | Fonte dos dados | Snapshots diários em [`data/psm/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data/psm) |
 | Cálculo | `scripts/psm/indicadores.py INICIO FIM PRAZO`, que lê os CSVs e imprime M1 a M4 da semana |
 | Visualização | [Painel PSM](painel.md), com os mesmos cálculos em gráficos |
-| Escopo de M1 | Issues das milestones **Fase 1** e **Fase 2**, que formam a Entrega 1 (prazo das milestones: 26/10/2026) |
+| Escopo de M1 | E1: issues das milestones **Fase 1** e **Fase 2** (prazo: 26/10/2026). E2: issues das milestones **Fase 3** e **Fase 4** (início: 05/11; prazo: 24/11/2026) |
 | Escopo de M2 a M4 | Issues fechadas e PRs mergeados dentro da semana, pelo fuso de Brasília |
 | Ligação com as atas | Cada registro é levado à reunião da semana e citado na seção 5 da ata (issue #18) |
 
@@ -19,7 +20,14 @@ Para reproduzir os números de cada semana:
 ```bash
 scripts/psm/indicadores.py 2026-10-20 2026-10-26 2026-10-26   # semana 1
 scripts/psm/indicadores.py 2026-10-27 2026-11-02 2026-10-26   # semana 2
+scripts/psm/indicadores.py 2026-11-05 2026-11-09 2026-11-24 "Fase 3" "Fase 4"   # semana 3
+scripts/psm/indicadores.py 2026-11-10 2026-11-16 2026-11-24 "Fase 3" "Fase 4"   # semana 4 (M2 a M4)
+scripts/psm/indicadores.py 2026-11-17 2026-11-24 2026-11-24 "Fase 3" "Fase 4"   # semana 5 (M2 a M4)
+scripts/psm/indicadores.py --json e2.json 2026-11-05 2026-11-24 2026-11-24 "Fase 3" "Fase 4"   # M1 diário da E2
 ```
+
+O modo de semana usa o primeiro dia informado como início da linha ideal. Por isso, o M1 das
+semanas 4 e 5 vem do modo `--json` da entrega inteira, o mesmo usado pelo painel.
 
 ## Resumo por semana
 
@@ -28,6 +36,8 @@ scripts/psm/indicadores.py 2026-10-27 2026-11-02 2026-10-26   # semana 2
 | [1 (20/10 a 26/10)](#semana-1-2010-a-26102026) | 100% (34 de 34)¹ | 100% (28 de 28)¹ | 42,15 h² | 0,40 h/ponto² | 8,3 dias¹ | 13,2 h¹ | D1 a D4 |
 | [2 (27/10 a 02/11)](#semana-2-2710-a-02112026) | 100% (34 de 34) | 100% (28 de 28) | 0 h | Sem dado | Sem dado | Sem dado | D5 a D7 |
 | [3 (03/11 a 09/11)](#semana-3-0311-a-09112026) | E2: 3% (1 de 37) em 09/11 | E2: 0% (0 de 19) em 09/11 | 1 h (E1) | 0,12 h/ponto (E1) | 0,0 dia | 0,4 h | D8 a D10 |
+| [4 (10/11 a 16/11)](#semana-4-1011-a-16112026) | E2: 38% (14 de 37) em 16/11 | E2: 83% (25 de 30) em 16/11 | 13,2 h | 0,37 h/ponto | 9,6 dias | 28,8 h | D11 e D12 |
+| [5 (17/11 a 24/11)](#semana-5-1711-a-24112026) | E2: 57% (21 de 37) em 23/11 | E2: 73% (60 de 82) em 23/11 | 14,4 h | 0,36 h/ponto | 18,2 dias | 6,0 h | D13 e D14 |
 
 ¹ Valores recalculados em 04/11/2026 com o estado ao fim de 26/10 (ver a
 [correção da semana 1](#correcao-de-04112026)). No registro original: 61% (27 de 44), 89% (25 de 28),
@@ -347,15 +357,183 @@ entregas, e o `mkdocs.yml` foi atualizado com o período e as milestones da E2 (
 
 ---
 
-## Próximo registro
+## Semana 4: 10/11 a 16/11/2026
 
-O registro da semana 4 (10/11 a 16/11), que termina na apresentação do Ponto de Controle 2,
-deve:
+Semana que termina na apresentação do Ponto de Controle 2 (16/11). Foi a primeira semana da E2
+com issues concluídas: 13, quase todas entre 12/11 e 16/11.
 
-- verificar se D8 e D9 reduziram as issues sem responsável e sem `Estimate` (em 09/11: 24
-  abertas sem responsável e 6 de 37 com `Estimate`);
-- comparar o maior desvio da E2 com o da E1 (+33 p.p.);
-- registrar o estado da entrega no Ponto de Controle 2.
+### M1: progresso da Entrega 2
 
-O registro da semana 5 (17/11 a 24/11) fecha a Entrega 2 e consolida a série E1 + E2 para o
-artigo e para a GitPage (#94).
+| Fim do dia | Concluídas | % concluído | Aberto (real) | Aberto (ideal) | Desvio |
+|---|---|---|---|---|---|
+| 10/11 | 1 | 3% | 97% | 74% | +24 p.p. |
+| 11/11 | 1 | 3% | 97% | 68% | +29 p.p. |
+| 12/11 | 3 | 8% | 92% | 63% | +29 p.p. |
+| 13/11 | 4 | 11% | 89% | 58% | **+31 p.p.** |
+| 14/11 | 7 | 19% | 81% | 53% | +28 p.p. |
+| 15/11 | 11 | 30% | 70% | 47% | +23 p.p. |
+| 16/11 | 14 | 38% | 62% | 42% | +20 p.p. |
+
+*Tabela 5: Burndown da Entrega 2 na semana 4 (37 issues; prazo em 24/11).*
+
+- **Resultado:** no Ponto de Controle 2, 14 de 37 issues estavam concluídas (38%), contra 58%
+  esperados pela linha ideal: desvio de **20 p.p.** O pior momento foi 13/11, com **+31 p.p.**
+  Em pontos, 25 de 30 estavam concluídos (83%), 25 p.p. à frente da linha ideal, mas só 12 das
+  37 issues tinham `Estimate`.
+- **Critério do plano:** o desvio ficou acima de 10 p.p. a semana inteira. Pela primeira vez na
+  E2, ele caiu: de +31 p.p. em 13/11 para +20 p.p. em 16/11.
+- **Interpretação:** a queda veio do esforço concentrado antes do Ponto de Controle 2, e não de
+  um ritmo constante: 10 das 13 issues da semana fecharam de 14/11 a 16/11. Fecharam as issues
+  de G3, o método de G2, a ação de melhoria, a Fase 3 no artigo e na GitPage e a apresentação,
+  que eram o que o Ponto de Controle 2 precisava. As issues de G1, a consolidação e as seções
+  finais do artigo continuaram abertas. O M1 em pontos parece adiantado
+  só porque as issues estimadas eram justamente as concluídas.
+
+### M2 e M3: esforço e horas por ponto
+
+| Membro | Horas |
+|---|---:|
+| H0lzz | 5,4 |
+| feliperodri0 | 3,8 |
+| TalesRG | 1,1 |
+| analufernanndess | 1,1 |
+| Sem responsável (#64) | 1,8 |
+| **Total** | **13,2** |
+
+*Tabela 6: Horas das issues concluídas na semana 4, por responsável.*
+
+- **Resultado:** 13,2 h em 36 pontos, ou **0,37 h/ponto**, com as 13 issues da semana com `Horas`.
+- **Critério do plano:** variação acima de 10% em relação à semana anterior. A semana 3 teve
+  uma única issue, então a comparação útil é com a base da E1 (0,40 h/ponto): queda de 8%,
+  dentro do critério.
+- **Interpretação:** a taxa se manteve próxima da E1. A #64 (método de flexibilidade) foi
+  fechada pelo PR #108, do Cayo, mas não tinha responsável no Project; por isso as horas dela
+  aparecem sem dono.
+
+### M4: lead time e tempo até o merge
+
+- **Resultado:** lead time médio de **9,6 dias** (limite de investigação: 10,6 dias). As #80,
+  #83 e #97 ficaram acima do limite, com 11,0 dias. Os 9 PRs da semana levaram em média
+  **28,8 h** até o merge (limite: 31,7 h). O #98 ficou acima, com 96,5 h. Em 7 dos 9 PRs, o
+  merge foi feito por outro membro.
+- **Critério do plano:** as #80, #83 e #97 e o PR #98 foram investigados.
+- **Interpretação:** as três issues acima do limite foram criadas em 05/11 e fechadas em 16/11,
+  dia do Ponto de Controle 2, o que confirma a concentração no fim da semana. O PR #98 ficou
+  aberto de 08/11 a 13/11 sem revisão e foi mergeado pelo próprio autor. Dois dos 9 PRs (#98 e
+  #108) não seguiram o padrão de merge por outro membro.
+
+### Situação das decisões da semana 3
+
+| ID | Situação em 16/11 | Evidência |
+|---|---|---|
+| D8 | Cumprida em parte | Issues abertas sem responsável: 24 em 09/11 e 12 no snapshot de 17/11. As de G1 (#63, #71, #76) e da consolidação (#74, #75) continuavam sem dono |
+| D9 | Não cumprida no prazo | Em 16/11, 12 de 37 issues tinham `Estimate`; o prazo era 10/11 |
+| D10 | Não cumprida na semana | Nenhuma data intermediária foi publicada até 16/11; o cronograma da Fase 4 (#67) só foi publicado em 24/11 |
+
+### Decisões e encaminhamentos
+
+| ID | Medida | Decisão ou encaminhamento | Responsável | Situação |
+|---|---|---|---|---|
+| D11 | M4 | Revisar e mergear cada PR em até 24 h depois de aberto, para evitar casos como o #98 (96,5 h) e o merge pelo próprio autor | Equipe | Proposta: complementa o encaminhamento E04 da [ata de 09/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/atas-de-reuniao/ATA-2026-11-09.md), que pede revisão por outro membro |
+| D12 | M1 | Priorizar G1, a consolidação e o artigo, que ficaram abertos depois do Ponto de Controle 2 | Responsáveis das issues | Registrada na [ata de 16/11](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/atas-de-reuniao/ATA-2026-11-16.md) (D04, D05 e E02) |
+
+---
+
+## Semana 5: 17/11 a 24/11/2026
+
+Última semana da E2, que teve o prazo adiado de 22/11 para 24/11. O M1 vai até o fim de 23/11:
+o estado ao fim de 24/11 sai da coleta de 25/11 e entra numa atualização deste registro.
+
+### M1: progresso da Entrega 2
+
+| Fim do dia | Concluídas | % concluído | Aberto (real) | Aberto (ideal) | Desvio |
+|---|---|---|---|---|---|
+| 17/11 | 14 | 38% | 62% | 37% | +25 p.p. |
+| 18/11 | 14 | 38% | 62% | 32% | +31 p.p. |
+| 19/11 | 14 | 38% | 62% | 26% | +36 p.p. |
+| 20/11 | 14 | 38% | 62% | 21% | +41 p.p. |
+| 21/11 | 14 | 38% | 62% | 16% | **+46 p.p.** |
+| 22/11 | 17 | 46% | 54% | 11% | +44 p.p. |
+| 23/11 | 21 | 57% | 43% | 5% | +38 p.p. |
+
+*Tabela 7: Burndown da Entrega 2 na semana 5 (37 issues; prazo em 24/11).*
+
+- **Resultado:** ao fim de 23/11, 21 de 37 issues estavam concluídas (57%), contra 95%
+  esperados: desvio de **38 p.p.** De 17/11 a 21/11, nenhuma issue foi fechada, e o desvio
+  chegou a **+46 p.p.** em 21/11, o maior das duas entregas. Em pontos, 60 de 82 (73%), com
+  27 das 37 issues estimadas: desvio de 22 p.p.
+- **Critério do plano:** o desvio passou de 10 p.p. todos os dias. O replanejamento possível
+  nesta semana foi o adiamento do prazo para 24/11.
+- **Interpretação:** a semana repete a E1. Os cinco dias sem nenhum fechamento coincidem com os
+  snapshots de 18/11 a 22/11, que a coleta descartou por serem iguais ao de 17/11. O trabalho
+  voltou a aparecer no fim: 3 issues em 22/11, 4 em 23/11 e outras 4 na madrugada de 24/11. No
+  snapshot de 24/11, 25 de 37 issues estavam concluídas (68%) e as 12 abertas tinham
+  responsável.
+
+### M2 e M3: esforço e horas por ponto
+
+| Membro | Horas |
+|---|---:|
+| analufernanndess | 4,7 |
+| Cayoalencar | 4,0 |
+| gabrielaugusto23 | 3,2 |
+| TalesRG | 2,5 |
+| **Total** | **14,4** |
+
+*Tabela 8: Horas das issues concluídas na semana 5, por responsável.*
+
+- **Resultado:** 14,4 h em 40 pontos, ou **0,36 h/ponto**, com as 11 issues da semana com `Horas`.
+- **Critério do plano:** variação de 3% em relação à semana 4, dentro do critério de 10%.
+- **Interpretação:** a taxa ficou estável nas duas últimas semanas, perto de 0,36 h/ponto, e
+  abaixo da E1 (0,40 h/ponto).
+
+### M4: lead time e tempo até o merge
+
+- **Resultado:** lead time médio de **18,2 dias** (limite: 20,0 dias), sem issue acima do
+  limite. Os 9 PRs levaram em média **6,0 h** até o merge (limite: 6,6 h). O #111 (26,3 h) e o
+  #112 (9,6 h) ficaram acima. Em 8 dos 9 PRs, o merge foi feito por outro membro, e 3 tiveram
+  revisão formal no GitHub.
+- **Critério do plano:** o #111 e o #112 foram investigados.
+- **Interpretação:** o lead time alto e uniforme (17 a 19 dias) vem de issues criadas em 05/11 e
+  fechadas no fim da entrega. A revisão ficou mais rápida que na semana 4 (D11). O #111 e o #112
+  foram revisados em 23/11 junto com o #113 e o #114 e mergeados depois das correções dessa
+  revisão.
+
+### Situação das decisões da semana 4
+
+| ID | Situação em 24/11 | Evidência |
+|---|---|---|
+| D11 | Cumprida em parte | Revisão média de 6,0 h, contra 28,8 h na semana 4; o #111 levou 26,3 h |
+| D12 | Cumprida em parte | Coleta de G1 (#71, PR #116) e consolidação (#74 e #75, PR #109) concluídas; análise de G1 (#76) e seções finais do artigo (#86, #87) abertas em 24/11 |
+
+### Decisões e encaminhamentos
+
+| ID | Medida | Decisão ou encaminhamento | Responsável | Situação |
+|---|---|---|---|---|
+| D13 | M1 | Atualizar este registro com o estado ao fim de 24/11, a partir da coleta de 25/11 | feliperodri0 | A executar em 25/11 |
+| D14 | M1 a M4 | Registrar as lições das duas entregas na [página de gestão](index.md): atribuir responsável e `Estimate` na criação da issue e definir datas intermediárias desde o início da entrega | feliperodri0 | Executada nesta atualização |
+
+---
+
+## Consolidação das Entregas 1 e 2
+
+| Indicador | Entrega 1 | Entrega 2 |
+|---|---|---|
+| Issues planejadas | 34 | 37 |
+| Concluídas no prazo | 34 (100%) | 21 (57%) ao fim de 23/11; 25 (68%) no snapshot de 24/11 |
+| Maior desvio do M1 | +33 p.p. em 25/10 | +46 p.p. em 21/11 |
+| Horas registradas | 42,15 h | 28,0 h |
+| Horas por ponto | 0,40 h/ponto | 0,36 h/ponto |
+| Lead time médio | 8,3 dias | 13,0 dias |
+| PRs mergeados por outro membro | 8 de 12 (semana 1) | 15 de 18 |
+
+*Tabela 9: Indicadores das duas entregas. Valores da E2 até o snapshot de 24/11.*
+
+- **Padrão comum:** nas duas entregas, o trabalho foi concluído perto do prazo. A E1 fechou 17
+  issues na última noite; a E2 passou cinco dias sem fechar nenhuma issue e fechou 11 nos três
+  últimos dias.
+- **O que melhorou:** o merge por outro membro passou de 8 em 12 PRs na E1 para 15 em 18 na E2, a revisão
+  ficou mais rápida na última semana e todas as issues abertas tinham responsável no fim da E2.
+- **O que não melhorou:** as datas intermediárias propostas em D10 só foram publicadas no fim
+  da entrega, e o `Estimate` continuou sendo preenchido depois do trabalho, o que limita o M1
+  em pontos.
