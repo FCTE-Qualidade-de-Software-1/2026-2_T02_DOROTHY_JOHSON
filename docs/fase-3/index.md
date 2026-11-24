@@ -117,7 +117,7 @@ Os procedimentos da Fase 3 foram desenhados para produzir saídas diretamente co
 | 20 a 21/11 | Folga para ajustes da melhoria e medições complementares | G3 e ações de melhoria | Artur: [#83](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/83) | Usada para corrigir a entrega técnica ou repetir a medição antes × depois |
 | 20 a 24/11 | Artigo, GitPage e PSM/CID | Evidências de G1, G2 e G3 | Ana Luíza e Felipe: [#86](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/86), [#93](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/93), [#94](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/94) | Pendente; folga para revisão cruzada |
 | 20 a 21/11 | Revisão de navegação e estilo | Todas as páginas revisadas | Tales: [#91](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/91), [#95](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/95) | Pendente; último reteste |
-| 23/11 | Release E2 e submissão | Release entregue | Ana Luíza: [#96](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/96) | Pendente |
+| 24/11 | Release E2 e submissão | Release entregue | Ana Luíza: [#96](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/96) | Pendente |
 
 *Tabela 4: Cronograma da avaliação (2026). Os períodos refletem as atividades da Fase 4, os responsáveis das issues e a folga necessária para retestes, correções e a ação de melhoria.*
 
