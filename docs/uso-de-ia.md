@@ -30,6 +30,7 @@ resumida, está no artigo.
 | Roteiro dos slides da apresentação final | Conteúdo e divisão das falas revistos pela equipe no ensaio |
 | Incorporação do pacote de coleta Windows (#72), análise de flexibilidade (#77), reconciliação da conferência no aparelho em `pontuar.py` e atualização dos CSVs derivados, com Codex | Cálculos confrontados com os CSVs e regras F2/F3 por verificações automatizadas; revisão humana desta alteração pendente. Nenhuma nova medição foi produzida pela ferramenta |
 | Síntese da classificação por característica e rastreabilidade com o propósito da F1 (#79), com Codex | Texto comparado às análises G1/G2/G3, aos CSVs consolidados e aos critérios da F2; reprodução dos cálculos e build da documentação verificados. G1 mantido pendente; revisão humana desta síntese pendente |
+| Encerramento documental de G1 com quatro participantes e observações descritivas de T2/T3, com Codex | Texto confrontado com as tentativas registradas; dados brutos e recortes NC preservados. Encerramento autorizado pela equipe, sem nova coleta ou classificação global estimada |
 
 ## Limites do uso
 

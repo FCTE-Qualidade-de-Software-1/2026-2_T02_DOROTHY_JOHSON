@@ -7,6 +7,13 @@ o [método da Fase 3](../fase-3/metodo-interacao.md) e os
 Formulários originais, termos e qualquer vínculo com nomes devem permanecer em acesso restrito;
 confira a revisão das fichas individuais antes de compartilhar a coleta.
 
+!!! note "Relatório encerrado com ressalvas"
+    A equipe encerrou a rodada com os quatro participantes disponíveis (P01–P04), sem
+    recrutamento adicional ou repetição das sessões. As observações de T2/T3 são
+    preservadas e analisadas abaixo. **G1 permanece sem classificação global calculável
+    (NC)** pelos recortes que não atendem ao roteiro. Nos CSVs, a classificação aparece
+    como `pendente`: esse é o estado do cálculo pela F2, não uma sessão futura agendada.
+
 ## 1. Coleta e validade
 
 | Item | Resultado |
@@ -33,6 +40,31 @@ M1.4 foram simulados por bloqueio de requisições em vez de DevTools Offline; e
 afetado pelo reCAPTCHA não carregado offline. Para M1.6, o viewport foi obtido em um quadro de
 mesma origem, sem janela anônima ou modo responsivo. Esses desvios estão detalhados no
 [README da coleta](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/capacidade-de-interacao/README.md).
+
+### 1.1 Observações de T2 e T3 preservadas no encerramento
+
+Os quatro participantes executaram tentativas das duas tarefas. A divergência em relação
+ao ponto de partida não apaga a conclusão observada, as dificuldades ou a intervenção
+da moderação. A tabela descreve as sessões realizadas; não substitui as métricas que
+exigem início em Início nem permite comparar os passos ao caminho mínimo desse roteiro.
+
+| Participante | T2 — ativar a camada PRONAF no SITGeo | T3 — obter o PTDRS de Estrada de Ferro |
+|---|---|---|
+| P01 | Interrompida pela moderação; permaneceu na aba Crédito Rural de Meu Território, sem ativar a camada no SITGeo | Atingiu o limite de tempo sem baixar o PDF; não acessou a Biblioteca |
+| P02 | Recebeu dicas; permaneceu em Meu Território, sem evidência de conclusão da tarefa | Abriu o PDF com dicas da moderação; o salvamento foi informado após o fim da gravação |
+| P03 | Interrompida; a moderação aceitou a aba Crédito Rural de Meu Território como resultado, sem conclusão do objetivo previsto | Baixou e abriu o PTDRS, sem ajuda registrada; precisou recarregar a página para usar o seletor de UF |
+| P04 | Ativou a camada e exibiu o painel de classes; recebeu esclarecimento do enunciado, registrado por consenso como não sendo ajuda | Atingiu o limite de tempo sem o PTDRS; baixou a imagem do mapa, e não o documento solicitado |
+
+*Tabela: Observações das tentativas em
+[`coleta_G1_rodada01.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/capacidade-de-interacao/coleta_G1_rodada01.csv),
+seção `tentativas`, e trechos de gravação referenciados nas linhas.*
+
+Há evidência de conclusão do objetivo de T2 por P04 e do objetivo de T3 por P03 e P02,
+com ajuda no caso de P02. Isso difere de afirmar que os quatro concluíram ou que essas
+conclusões seguiram integralmente o protocolo. O uso da aba Crédito Rural em vez do
+SITGeo e a obtenção da imagem do mapa em vez do PTDRS justificam investigar a distinção
+entre seções e os enunciados. A causa não pode ser atribuída apenas à interface: a
+moderação e o ponto de partida também influenciaram as sessões.
 
 ## 2. Resultados das métricas
 
@@ -87,7 +119,8 @@ Q1.3 permanecem pendentes pelos recortes NC; portanto, não se calcula a média 
 
 ## 4. Classificação de G1
 
-**Classificação final: pendente por cobertura insuficiente.** Há recortes NC em M1.1.2, M1.2.1 e
+**Conclusão do relatório: encerrado com ressalvas, sem classificação global calculável (NC).**
+O consolidado mantém o estado técnico `pendente por cobertura insuficiente`, conforme a F2. Há recortes NC em M1.1.2, M1.2.1 e
 M1.3.1, além de uma amostra de quatro participantes em vez dos cinco planejados. Pela regra da
 Fase 2, não se atribui uma média global enquanto houver métrica obrigatória sem resultado válido.
 
@@ -95,28 +128,37 @@ Fase 2, não se atribui uma média global enquanto houver métrica obrigatória 
 independentemente da média; T2 também ficou abaixo de 60% de conclusão sem ajuda na observação
 válida disponível, o que limita a classificação a no máximo Aceitável. O primeiro limitador é o
 mais restritivo. Assim, a evidência atual já exige tratar G1 como **Insatisfatório se os achados
-críticos forem confirmados**, mas isso não substitui a conclusão formal após completar a coleta.
+críticos forem confirmados**, mas isso não produz uma nota global válida com as lacunas atuais. O encerramento aceita
+essas limitações e não altera os limiares da F2.
 
 ## 5. Hipóteses
 
 | Hipótese | Resultado | Evidência |
 |---|---|---|
-| H1.1 | Parcial; conclusão pendente | M1.1.1 confirma 7/9. T1 confirma maioria (3/4); T2 tem apenas 0/1 observação válida e T3 é NC. |
-| H1.2 | Parcial; conclusão pendente | T1 confirma a expectativa (100%); T2 fica abaixo (0/1), como previsto; T3 é NC. |
+| H1.1 | Parcial; sem conclusão integral nesta rodada | M1.1.1 confirma 7/9. T1 confirma maioria (3/4); T2 tem apenas 0/1 observação válida e T3 é NC. |
+| H1.2 | Parcial; sem conclusão integral nesta rodada | T1 confirma a expectativa (100%); T2 fica abaixo (0/1), como previsto; T3 é NC. |
 | H1.3 | Inconclusiva | Só T1 tem eficiência válida. Os valores brutos de T2/T3 não são comparáveis porque o ponto de partida divergiu do método. |
 | H1.4 | Parcial | M1.4.1 fica entre 50% e 100%, como previsto; M1.4.2 = 80%, contrariando a previsão de menos de 50%. |
 | H1.5 | Parcial | SUS = 50, abaixo da faixa prevista; aparência = 4,25, acima do ponto neutro, como previsto. |
 | H1.6 | Parcial | Todas as páginas superam 80% em M1.6.1 e todas têm violações críticas/sérias; a maior contagem está na Biblioteca, não no SITGeo. |
 
-## 6. Pendências para fechar a análise
+## 6. Encerramento e limites da conclusão
 
-1. Completar a amostra planejada, se possível, e repetir T2/T3 a partir de Início, em sessões com o
-   mesmo ponto de partida, limite de tempo e regra de moderação.
-2. Revisar a classificação do esclarecimento dado em T2 e preservar a decisão na ficha.
-3. Reexecutar M1.4 conforme o procedimento offline previsto, incluindo FC-03 em condições que
-   permitam distinguir validação do formulário de falha do reCAPTCHA.
-4. Repetir ou confirmar M1.6 no viewport e nas condições estabelecidas no método; manter as
-   violações críticas como prioridade de correção.
+A rodada é encerrada com **quatro participantes**, por disponibilidade da equipe e
+impossibilidade de repetir as sessões. Não há coleta adicional prevista nesta entrega.
+Os dados brutos, os consensos de moderação e os recortes NC permanecem preservados.
+
+A ausência do quinto participante reduz a cobertura em relação ao plano. Separadamente,
+os pontos de partida divergentes de T2/T3 impedem classificar os recortes afetados; aceitar
+a amostra disponível não elimina esse problema de comparabilidade. Os desvios da
+simulação de erros e da inspeção de acessibilidade também são mantidos como ressalvas.
+
+**Resultado útil para o requisitante:** SUS baixo, caminhos longos em T1, dificuldades
+para distinguir os fluxos de mapas e documentos e barreiras críticas de acessibilidade
+justificam investigação e melhoria. Não se generalizam as proporções para o público nem
+se declara que os fluxos foram aprovados. Uma futura avaliação poderá repetir o roteiro,
+revisar a moderação e confirmar as inspeções; isso é uma recomendação para o fornecedor,
+sem constituir uma condição para encerrar este relatório com os dados disponíveis.
 
 Os dados e as condições de acesso estão no [mapa de dados](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/README.md) e no
 [README da coleta G1](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/capacidade-de-interacao/README.md).

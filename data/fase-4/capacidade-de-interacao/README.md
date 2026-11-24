@@ -55,3 +55,15 @@ Os níveis de pontuação e as respostas GQM estão na
 - Piloto (#70) realizado depois das sessões; passos mínimos aplicados às contagens já feitas.
 - M1.6: viewport de 1366 × 768 obtido com quadro de mesma origem na aba, sem janela anônima.
 - M1.4: casos MT e BT com bloqueio de requisições por script; casos FC com DevTools Offline e emulação de celular.
+
+## Encerramento da rodada
+
+A equipe encerrou a coleta com P01–P04, sem possibilidade de acrescentar participantes
+ou refazer as sessões nesta entrega. T2/T3 permanecem no arquivo bruto e são descritas
+na [análise de interação](../../../docs/fase-4/interacao.md#11-observacoes-de-t2-e-t3-preservadas-no-encerramento),
+incluindo resultados atingidos, dificuldades e ajuda da moderação. Isso não converte
+as tentativas fora de Início em execuções conformes ao protocolo original.
+
+O relatório está encerrado com ressalvas. Os recortes NC e o estado `pendente` da
+classificação global nos CSVs indicam insuficiência para o cálculo pela F2, sem nova
+coleta agendada. Não foram alterados os dados originais nem estimadas observações ausentes.

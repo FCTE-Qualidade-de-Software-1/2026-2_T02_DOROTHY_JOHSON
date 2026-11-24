@@ -8,7 +8,7 @@ A base é a avaliação versionada até 24/11/2026: análises de
 [eficiência de desempenho](eficiencia.md). Não houve nova coleta para esta síntese.
 
 **Resultado:** flexibilidade **Bom (2,21)**; eficiência de desempenho **Aceitável (1,35)**;
-capacidade de interação **pendente por cobertura insuficiente**, com barreiras críticas
+capacidade de interação **sem classificação global calculável (NC), com relatório encerrado com ressalvas**, com barreiras críticas
 já registradas que exigem tratamento prioritário. Não se atribui uma nota única ao SIT.
 
 ## 1. Aplicação dos critérios da F2
@@ -26,7 +26,7 @@ Os pesos de seleção das características usados na F1 não são pesos para agr
 
 | Característica | Média das questões | Classe pela média | Limitador e cobertura | Classificação final |
 |---|---|---|---|---|
-| **G1 — Capacidade de interação** | NC: Q1.1–Q1.3 incompletas; Q1.4 = 2,00, Q1.5 = 1,00, Q1.6 = 0,90 | Não calculável | Violações críticas em cinco páginas; T2 com 0/1 conclusão válida. Há quatro recortes NC e amostra de 4/5 | **Pendente por cobertura insuficiente** |
+| **G1 — Capacidade de interação** | NC: Q1.1–Q1.3 incompletas; Q1.4 = 2,00, Q1.5 = 1,00, Q1.6 = 0,90 | Não calculável | Violações críticas em cinco páginas; T2 com 0/1 conclusão válida. Há quatro recortes NC e amostra de 4/5 | **NC — relatório encerrado com ressalvas** |
 | **G2 — Flexibilidade** | (3 + 11/6 + 9/5) / 3 = 199/90 ≈ **2,21** | **Bom** | Matriz completa; nenhuma bloqueante dependente de ambiente reproduzida; limitador não acionado | **Bom** |
 | **G3 — Eficiência de desempenho** | (7/6 + 1/2 + 4/3 + 12/5) / 4 = **1,35** | **Aceitável** | LCP > 4 s em Meu Território e SITGeo; T1 > 10 s; teto Aceitável acionado | **Aceitável** |
 
@@ -34,7 +34,7 @@ Os pesos de seleção das características usados na F1 não são pesos para agr
 [`classificacao.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/classificacao.csv)
 e [`medidas.csv`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/consolidado/medidas.csv).*
 
-### 1.1 G1: conclusão formal pendente e ação já justificada
+### 1.1 G1: relatório encerrado com ressalvas e ação já justificada
 
 O SUS médio de **50/100** está no nível Insatisfatório; a aparência média de **4,25/5**
 está no nível Bom. Assim, a avaliação visual positiva não permite concluir que o portal
@@ -65,10 +65,13 @@ nas condições da inspeção e lacunas em outras métricas obrigatórias. A exc
 para tarefa sem nenhuma conclusão não resolve a falta de observações válidas de T3.
 Isso não justifica adiar a investigação e a correção das barreiras registradas.
 
-Para concluir G1, é necessário complementar a amostra e as tarefas a partir de Início,
-revisar a moderação e os casos de validação com desvio, e confirmar a inspeção de
-acessibilidade nas condições previstas no método. Esses pontos estão detalhados nas
-[pendências de G1](interacao.md#6-pendencias-para-fechar-a-analise).
+A equipe encerrou a rodada com os quatro participantes disponíveis, sem possibilidade
+de repetir as sessões. As conclusões observadas de T2/T3 e as intervenções da moderação
+são descritas na [análise de G1](interacao.md#11-observacoes-de-t2-e-t3-preservadas-no-encerramento).
+O relatório está concluído com ressalvas, mas a nota global não é calculável. O CSV
+mantém o estado técnico `pendente` pela regra de cobertura da F2; isso não indica
+recrutamento ou repetição agendados. As medidas parciais e as decisões justificadas
+permanecem utilizáveis dentro dos limites registrados.
 
 ### 1.2 G2: Bom, com problemas localizados em celulares
 
@@ -124,9 +127,9 @@ Essas ligações correspondem às necessidades da [F1, seção 2](../fase-1/inde
 Não foi medido o efeito das correções sobre esses públicos.
 
 **O propósito de indicar melhorias é atendido pela evidência disponível:** existem
-problemas localizados e ações justificadas para as três decisões. **A avaliação completa
-das três características ainda não está encerrada**, pois a classificação final de G1
-depende da complementação indicada. Apoiar decisões de backlog não equivale a demonstrar
+problemas localizados e ações justificadas para as três decisões. **O relatório é encerrado com ressalvas em G1**,
+aceitando a amostra de quatro participantes e os desvios documentados, sem atribuir
+nota global aos recortes que não permitem esse cálculo. Apoiar decisões de backlog não equivale a demonstrar
 que as melhorias foram implantadas ou que todos os critérios de sucesso do público foram atingidos.
 
 ## 3. Decisões apoiadas para o requisitante
@@ -142,7 +145,7 @@ cuja priorização histórica ainda precisa incorporar os achados de G1 e F04.
 | **Avaliar a implantação da otimização de imagens já demonstrada localmente** | A [ação de melhoria](acao-melhoria.md#52-efeito-medido) reduziu o LCP de 26,45 s para 1,87 s na demonstração local | Revisar e implantar pelo fornecedor, depois medir em produção com o método de G3; o ensaio local não altera o LCP oficial de 23,45 s |
 | **Corrigir a tabela de PTDRS e as setas da Mapoteca em celulares** | F04 em três ambientes móveis e F01 no Chrome/Android; problemas de leitura e controle mesmo com T3 concluída | Repetir os passos das falhas em 384/440 px e a inspeção de 360/412 px; tabela legível, setas operáveis e recálculo de M2.2.1/M2.2.2/M2.3.1 |
 | **Manter os seis ambientes e acrescentar os casos de falha à regressão** | G2 Bom não elimina recortes Aceitáveis; falhas concentradas em telas de celular | T1–T3 em cada ambiente, rolagem nas cinco larguras e funções móveis comparadas à referência, com versões e capturas; repetir F05 antes de pontuá-la |
-| **Complementar G1 antes de aprovar um redesenho dos fluxos de primeira utilização** | 4/5 participantes; T2/T3 com pontos de partida divergentes; SUS baixo sem isolamento da causa | Sessões conforme o protocolo, com início em Início, moderação e caminho mínimo válidos; recalcular G1 e avaliar novamente o uso sem ajuda |
+| **Usar as observações de G1 para investigar os fluxos de primeira utilização** | 4/5 participantes; T2/T3 com pontos de partida divergentes; SUS baixo sem isolamento da causa | Em futura avaliação do fornecedor, observar o uso após as alterações com ponto de partida e moderação padronizados; não há repetição prevista nesta entrega |
 
 *Tabela 4: Decisões práticas apoiadas nos dados, com condições de verificação.*
 
@@ -156,7 +159,7 @@ ficaram fora da avaliação.
 
 | Critério da #79 | Evidência nesta entrega | Situação |
 |---|---|---|
-| F4-C4: classificação por característica segundo a F2 | Seção 1: classe pela média, limitadores, classe final e recortes comprometidos; CSV consolidado | G2 e G3 classificados; G1 explicitamente pendente, sem substituir dados ausentes |
+| F4-C4: classificação por característica segundo a F2 | Seção 1: classe pela média, limitadores, classe final e recortes comprometidos; CSV consolidado | G2 e G3 classificados; G1 encerrado com ressalvas e NC global; não há classe de qualidade atribuída a G1, portanto o requisito de classificar todas as características tem essa limitação |
 | F4-C5: coerência com o propósito da F1 | Seções 2 e 3: propósito, necessidades, três decisões e condições de verificação | Relação explícita e fundamentada nos dados |
 
 Para refazer os números, executar `python3 scripts/fase-4/consolidar.py --verificar` na
@@ -164,7 +167,9 @@ raiz do repositório, conforme a [consolidação](consolidacao.md). A versão an
 55 recortes: 51 classificados e quatro NC de G1. Não se calcula uma média global de
 qualidade entre G1, G2 e G3.
 
-**Pendência para encerramento integral da #79:** concluir a coleta válida de G1 e então
-atualizar o CSV e esta síntese com sua classificação final. A documentação já registra
-as decisões sustentadas, mas a exigência de emitir classificação final para todas as
-características permanece parcialmente atendida até resolver essa dependência.
+**Encerramento da síntese:** a equipe aceita o relatório com a amostra e as condições
+registradas. G2 e G3 têm classificação final; G1 tem conclusão descritiva e nota global
+NC. Essa aceitação encerra o trabalho documental com ressalvas, sem equivaler ao
+atendimento integral da exigência de atribuir uma classe a todas as características.
+Uma classificação numérica de G1 exigiria dados adicionais; eles não serão coletados
+nesta entrega. As limitações ficam disponíveis para a revisão acadêmica e para o requisitante.
