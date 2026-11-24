@@ -1,19 +1,19 @@
 ambiente,tarefa,execucao,resultado,falha_id,navegador_versao,sistema_versao,dispositivo,tipo_dispositivo,largura,avaliador,coletado_em,captura,observacao
-AND-CHROME,T1,1,,,,,,,,,,,
-AND-CHROME,T2,1,,,,,,,,,,,
-AND-CHROME,T3,1,,,,,,,,,,,
-AND-SAMSUNG,T1,1,,,,,,,,,,,
-AND-SAMSUNG,T2,1,,,,,,,,,,,
-AND-SAMSUNG,T3,1,,,,,,,,,,,
-IOS-SAFARI,T1,1,,,,,,,,,,,
-IOS-SAFARI,T2,1,,,,,,,,,,,
-IOS-SAFARI,T3,1,,,,,,,,,,,
-WIN-CHROME,T1,1,,,,,,,,,,,
-WIN-CHROME,T2,1,,,,,,,,,,,
-WIN-CHROME,T3,1,,,,,,,,,,,
-WIN-EDGE,T1,1,,,,,,,,,,,
-WIN-EDGE,T2,1,,,,,,,,,,,
-WIN-EDGE,T3,1,,,,,,,,,,,
-WIN-FIREFOX,T1,1,,,,,,,,,,,
-WIN-FIREFOX,T2,1,,,,,,,,,,,
-WIN-FIREFOX,T3,1,,,,,,,,,,,
+AND-CHROME,T1,1,concluida,,Chrome 158.0.8127.42,Android 17,Samsung Galaxy S24+,real,384,Tales,2026-11-24T01:02-03:00,capturas/tarefa-and-chrome-t1-e1.jpg,
+AND-CHROME,T2,1,concluida,,Chrome 158.0.8127.42,Android 17,Samsung Galaxy S24+,real,384,Tales,2026-11-24T01:03-03:00,capturas/tarefa-and-chrome-t2-e1.jpg,
+AND-CHROME,T3,1,concluida,,Chrome 158.0.8127.42,Android 17,Samsung Galaxy S24+,real,384,Tales,2026-11-24T01:04-03:00,capturas/tarefa-and-chrome-t3-e1.jpg,Tabela de PTDRS cortada na lateral (F04); tarefa concluída
+AND-SAMSUNG,T1,1,concluida,,Samsung Internet 31.0.0.81,Android 17,Samsung Galaxy S24+,real,384,Tales,2026-11-24T01:21-03:00,capturas/tarefa-and-samsung-t1-e1.jpg,Modo escuro forçado pelo navegador (F05); tarefa concluída
+AND-SAMSUNG,T2,1,concluida,,Samsung Internet 31.0.0.81,Android 17,Samsung Galaxy S24+,real,384,Tales,2026-11-24T01:21-03:00,capturas/tarefa-and-samsung-t2-e1.jpg,
+AND-SAMSUNG,T3,1,concluida,,Samsung Internet 31.0.0.81,Android 17,Samsung Galaxy S24+,real,384,Tales,2026-11-24T01:21-03:00,capturas/tarefa-and-samsung-t3-e1.jpg,Tabela de PTDRS cortada na lateral (F04); tarefa concluída
+IOS-SAFARI,T1,1,concluida,,Safari (iOS 27.0.1),iOS 27.0.1,iPhone 17 Pro Max,real,440,Tales,2026-11-24T01:17-03:00,capturas/tarefa-ios-safari-t1-e1.jpg,Refeita: a primeira tentativa abriu outro território por erro de seleção do avaliador
+IOS-SAFARI,T2,1,concluida,,Safari (iOS 27.0.1),iOS 27.0.1,iPhone 17 Pro Max,real,440,Tales,2026-11-24T00:59-03:00,capturas/tarefa-ios-safari-t2-e1.jpg,
+IOS-SAFARI,T3,1,concluida,,Safari (iOS 27.0.1),iOS 27.0.1,iPhone 17 Pro Max,real,440,Tales,2026-11-24T01:00-03:00,capturas/tarefa-ios-safari-t3-e1.jpg,Tabela de PTDRS cortada na lateral (F04); tarefa concluída
+WIN-CHROME,T1,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-CHROME,T2,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-CHROME,T3,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-EDGE,T1,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-EDGE,T2,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-EDGE,T3,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-FIREFOX,T1,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-FIREFOX,T2,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-FIREFOX,T3,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
