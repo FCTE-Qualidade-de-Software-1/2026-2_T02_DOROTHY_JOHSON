@@ -100,9 +100,15 @@ pouco o resultado, desde que seja maior que a do perfil.
 | Ferramentas | Google Chrome 151.0.7922.108, Playwright 1.48.2 e Node.js 24.21.0 |
 | Registro | Data e hora, versões do navegador e do sistema, largura, dispositivo real ou emulado e captura de tela |
 
-O aparelho, as versões e as condições da rodada de G1 devem ser registrados antes do piloto,
-conforme o [método de interação](metodo-interacao.md#2-preparacao-e-participantes). O modelo
-exato dos aparelhos da matriz de G2 é registrado em `execucoes.csv` a cada execução.
+!!! note "Registro dos aparelhos de G1 e G2"
+    Em G1, registre o modelo exato do celular, as versões do sistema e do navegador,
+    a ferramenta de gravação e o local das sessões conforme o
+    [método de interação (#63)](metodo-interacao.md#2-preparacao-e-participantes)
+    e o [protocolo de participantes (#68)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68).
+    Atualize a seção 3.2 desta página quando essas informações forem confirmadas.
+    A versão do axe-core já está indicada na tabela de G1.
+
+    Em G2, registre o modelo exato dos aparelhos da matriz em `execucoes.csv` a cada execução.
 
 ## 4. Conhecimento exigido
 
