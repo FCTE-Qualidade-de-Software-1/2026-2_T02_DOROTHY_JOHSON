@@ -9,8 +9,7 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 |---|---|
 | Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de classificação da [Fase 2](../fase-2/index.md) |
 | Saída | Plano de avaliação executado na [Fase 4](../fase-4/index.md) |
-| Versão do plano | 1.4 |
-| Versão do plano | 1.4 |
+| Versão do plano | 1.5 |
 | Atualizado em | 23/11/2026 |
 
 ## 1. Partes do plano
@@ -162,4 +161,4 @@ formulários. O participante piloto não entra em P1–P5 e não é usado no cá
 | 1.2 | 15/11/2026 | Método de flexibilidade (G2) |
 | 1.3 | 23/11/2026 | Cronograma da Fase 4 distribuído por data, responsável, issue e folga para retestes |
 | 1.4 | 23/11/2026 | Método e formulários de capacidade de interação (G1) |
-| 1.4 | 23/11/2026 | Teste piloto do plano e definição dos caminhos mínimos das tarefas de G1 |
+| 1.5 | 23/11/2026 | Teste piloto do plano e definição dos caminhos mínimos das tarefas de G1 |
