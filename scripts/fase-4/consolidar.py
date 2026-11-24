@@ -326,7 +326,7 @@ def medidas_g2(dados):
     ambientes = list(G2.AMBIENTES.values())
     sem_referencia = [n for a, n in G2.AMBIENTES.items() if a != G2.REFERENCIA]
     plano = [
-        ("M2.1.1", ambientes, "tarefas concluídas", "execucoes.csv", "NC: matriz de ambientes não executada (#72)"),
+        ("M2.1.1", ambientes, "tarefas concluídas", "execucoes.csv", "NC: ambiente sem execução válida (#72)"),
         ("M2.2.1", ["3 páginas × 5 larguras"], "combinações sem rolagem", "rolagem.csv", "NC: sem dados"),
         ("M2.2.2", list(G2.PAGINAS.values()), "funções preservadas", "funcoes.csv", "NC: sem dados"),
         ("M2.3.1", sem_referencia, "falhas bloqueantes/graves/cosméticas", "falhas.csv",
@@ -335,6 +335,8 @@ def medidas_g2(dados):
     linhas = []
     for metrica, recortes, unidade, arquivo, motivo in plano:
         bruto = f"{DADOS}/flexibilidade/{arquivo}"
+        if metrica == "M2.2.2":
+            bruto += f"; {DADOS}/flexibilidade/falhas.csv"
         for recorte in recortes:
             l = obtidas.get((metrica, recorte))
             if l is None:

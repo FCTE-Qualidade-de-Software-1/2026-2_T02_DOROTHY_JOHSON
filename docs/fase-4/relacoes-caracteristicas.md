@@ -9,6 +9,16 @@ de desempenho e cobertura de ambientes de teste.
 
 ## 1. Critério de cruzamento e evidências
 
+!!! warning "Recorte histórico de G2 nesta discussão"
+    O cruzamento abaixo usa a emulação de 15/11. A
+    [análise de flexibilidade atualizada em 24/11](flexibilidade.md) incorpora a matriz
+    móvel: 9/9 tarefas concluídas, F01 confirmada, F02/F03 não confirmadas no aparelho e
+    F04 reproduzida nos três ambientes móveis. O SITGeo passa de 4/6 para 6/6 funções no
+    resultado adotado; as falhas reais contadas concentram-se na Biblioteca. Assim, as
+    afirmações abaixo sobre perdas do SITGeo descrevem a emulação, não o resultado
+    reconciliado. A matriz completa inclui os três navegadores Windows: 18/18 tarefas concluídas,
+    G2 = 2,21 — Bom, sem falha bloqueante reproduzida.
+
 O cruzamento usa a mesma página ou tarefa como unidade de comparação, mantendo os objetos de
 referência da [Fase 3](../fase-3/ambiente.md#2-paginas-tarefas-e-objetos-de-referencia).
 São distinguidos três tipos de afirmação:

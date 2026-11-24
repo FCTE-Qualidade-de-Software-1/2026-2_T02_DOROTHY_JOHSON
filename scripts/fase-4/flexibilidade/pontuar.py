@@ -114,9 +114,15 @@ def m221(linhas):
     return (sem, len(por_combinacao)), com_rolagem, nao_reproduzida
 
 
-def m222(linhas):
+def m222(linhas, falhas=()):
     """Por página: B = funções disponíveis em 1366 px em todas as execuções; A = dessas, as
-    que não ficam indisponíveis em 360 px em todas as execuções."""
+    que não ficam indisponíveis em 360 px em todas as execuções. Pela seção 4.4 do método,
+    perdas não confirmadas no aparelho voltam a contar como preservadas. Confirmação vazia
+    ou conflitante não autoriza a reversão; os dados originais da emulação são preservados."""
+    confirmacoes = defaultdict(set)
+    for f in falhas:
+        if f.get("ambiente") not in AMBIENTES and "M2.2.2" in f.get("origem", ""):
+            confirmacoes[(f["pagina"], f["funcao"])].add(f.get("confirmada_no_aparelho", ""))
     estado = defaultdict(lambda: defaultdict(list))
     nomes = {}
     for l in linhas:
@@ -129,6 +135,8 @@ def m222(linhas):
         if not ref or not all(ref):
             continue  # fora de B: não foi possível usar a função nem no computador
         perdida = bool(cel) and not any(cel)
+        if confirmacoes.get((pagina, funcao)) == {"não"}:
+            perdida = False
         p = paginas.setdefault(pagina, {"b": 0, "a": 0, "perdidas": []})
         p["b"] += 1
         if perdida:
@@ -174,6 +182,7 @@ def main():
     pasta = Path(sys.argv[1] if len(sys.argv) > 1 else "data/fase-4/flexibilidade")
     saida = []  # linhas de pontuacao.csv
     pontos_metrica = {}
+    falhas = ler(pasta / "falhas.csv")
 
     # Q2.1 / M2.1.1
     execs = m211(ler(pasta / "execucoes.csv"))
@@ -191,8 +200,9 @@ def main():
             saida.append(["M2.1.1", AMBIENTES[amb], f"{execs[amb]}/3", f"{x:.4f}", n, NIVEIS[n]])
             print(f"| {AMBIENTES[amb]} | {execs[amb]}/3 | {pct(x)} | {NIVEIS[n]} ({n}) |")
         geral = sum(execs.values()) / (3 * len(execs))
-        print(f"\nGeral: {sum(execs.values())}/{3 * len(execs)} = {pct(geral)} "
-              f"({NIVEIS[nivel_proporcao(geral)]}; informado, não entra na média)")
+        print(f"\nAgregado dos ambientes executados: {sum(execs.values())}/{3 * len(execs)} = {pct(geral)} "
+              f"({NIVEIS[nivel_proporcao(geral)]}; informado, não entra na média). "
+              f"Cobertura: {len(execs)}/{len(AMBIENTES)} ambientes previstos.")
         pontos_metrica["M2.1.1"] = mean(niveis) if len(execs) == len(AMBIENTES) else None
     else:
         print("Sem execuções registradas em execucoes.csv: NC.")
@@ -216,8 +226,8 @@ def main():
         print("Sem dados: NC.")
 
     # Q2.2 / M2.2.2
-    paginas = m222(ler(pasta / "funcoes.csv"))
-    print("\n## M2.2.2 — funções preservadas em 360 px\n")
+    paginas = m222(ler(pasta / "funcoes.csv"), falhas)
+    print("\n## M2.2.2 — funções preservadas (360 px, com conferência no aparelho)\n")
     if paginas:
         print("| Página | Preservadas | X | Nível | Funções perdidas |\n|---|---:|---:|---|---|")
         niveis = []
@@ -237,13 +247,18 @@ def main():
         print("Sem dados: NC.")
 
     # Q2.3 / M2.3.1
-    falhas = ler(pasta / "falhas.csv")
     print("\n## M2.3.1 — falhas dependentes de ambiente\n")
     if execs:
         contagem = m231(falhas, execs.keys())
         print("| Ambiente | Bloqueantes | Graves | Cosméticas | Nível |\n|---|---:|---:|---:|---|")
         niveis = []
-        for amb, c in contagem.items():
+        for amb in AMBIENTES:
+            if amb == REFERENCIA:
+                continue
+            c = contagem.get(amb)
+            if c is None:
+                print(f"| {AMBIENTES[amb]} | — | — | — | NC |")
+                continue
             n = nivel_falhas(c["bloqueante"], c["grave"], c["cosmetica"])
             niveis.append(n)
             saida.append(["M2.3.1", AMBIENTES[amb], f"{c['bloqueante']}/{c['grave']}/{c['cosmetica']}", "", n, NIVEIS[n]])
@@ -255,10 +270,10 @@ def main():
         print("Sem execuções da matriz de ambientes: NC.")
     pre = [f for f in falhas if f["ambiente"] not in AMBIENTES]
     if pre:
-        print("\nFalhas pré-registradas em emulação (a atribuir aos ambientes após confirmação):\n")
-        print("| ID | Ambiente | Página | Gravidade | Reproduzida | Descrição |\n|---|---|---|---|---|---|")
+        print("\nRegistros da emulação (histórico; apenas confirmações por ambiente entram em M2.3.1):\n")
+        print("| ID | Ambiente | Página | Gravidade | Reproduzida | Confirmada no aparelho | Descrição |\n|---|---|---|---|---|---|---|")
         for f in pre:
-            print(f"| {f['id']} | {f['ambiente']} | {PAGINAS.get(f['pagina'], f['pagina'])} | {f['gravidade']} | {f['reproduzida']} | {f['descricao']} |")
+            print(f"| {f['id']} | {f['ambiente']} | {PAGINAS.get(f['pagina'], f['pagina'])} | {f['gravidade']} | {f['reproduzida']} | {f.get('confirmada_no_aparelho') or 'pendente'} | {f['descricao']} |")
 
     # Consolidação
     questoes = {"Q2.1": ["M2.1.1"], "Q2.2": ["M2.2.1", "M2.2.2"], "Q2.3": ["M2.3.1"]}
@@ -290,7 +305,7 @@ def main():
         saida.append(["G2", "", "", "", "", "pendente"])
 
     with (pasta / "pontuacao.csv").open("w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
+        w = csv.writer(f, lineterminator="\n")
         w.writerow(["item", "recorte", "valor", "x", "pontos", "nivel"])
         w.writerows(saida)
 

@@ -46,7 +46,7 @@ reproduzido a partir do dado bruto.
 |---|---|---|
 | M2.1.1 | Por ambiente: tarefas concluídas / 3. Uma falha só conta se a reexecução também falhar | Proporção |
 | M2.2.1 | Combinações página × largura sem rolagem / 15. Só conta como rolagem a que aparece nas 2 execuções | Proporção |
-| M2.2.2 | Por página: (B − perdidas) / B, com B = funções disponíveis em 1366 px nas 2 execuções e perdidas = indisponíveis em 360 px nas 2 execuções | Proporção |
+| M2.2.2 | Por página: (B − perdidas) / B, com B = funções disponíveis em 1366 px nas 2 execuções e perdidas = indisponíveis em 360 px nas 2 execuções; perdas explicitamente não confirmadas no aparelho voltam a contar como preservadas (F3, seção 4.4) | Proporção |
 | M2.3.1 | Por ambiente, sem a referência: contagem de falhas reproduzidas, por gravidade | Falhas |
 | M3.1.1, M3.1.2 e M3.3.1 | Por página: mediana de 5 execuções do `numericValue` do Lighthouse / 1000 (FCP, LCP e tempo na thread principal) | s |
 | M3.2.1 | Por tarefa: mediana de 5 execuções de `tempo_s` | s |
@@ -81,14 +81,20 @@ M3.1.2 = (0 + 0 + 1) / 3 = 0,33; Q3.1 = (2,00 + 0,33) / 2 = 1,17.
 Nenhum valor ausente é estimado, e NC nunca vira 0 nem 3
 ([regra 5 da Fase 2](../fase-2/niveis-pontuacao.md#1-escala-comum-e-regras-de-aplicacao)).
 
-**Situação atual:** dos 55 recortes listados em `medidas.csv`, 40 estão classificados (20 de G1,
-4 de G2 e todos os 16 de G3) e 15 são NC:
+**Situação atual:** dos 55 recortes listados em `medidas.csv`, 51 estão classificados (20 de G1,
+15 de G2 e todos os 16 de G3) e 4 são NC:
 
 - 4 de G1: M1.1.2/T3, M1.2.1/T3 e M1.3.1/T2–T3. A rodada tem 4 dos 5 participantes previstos;
   os recortes NC também refletem tarefas iniciadas fora de Início
   ([coleta](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/capacidade-de-interacao/README.md) e [análise](interacao.md));
-- 11 de G2 (M2.1.1 e M2.3.1), que dependem da matriz manual de ambientes
-  ([#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72)).
+
+G2 tem a matriz completa: 18/18 tarefas concluídas nos seis ambientes, sem recortes NC.
+A [análise de flexibilidade](flexibilidade.md) apresenta Q2.1 = 3,00, Q2.2 = 11/6,
+Q2.3 = 1,80 e G2 = 199/90 ≈ 2,21, classificação final Bom, sem limitador acionado.
+
+Em G2, `falhas.csv` também é fonte de M2.2.2: F02/F03 não foram confirmadas no aparelho,
+reintegrando GEO-04/GEO-05. O SITGeo recebe 3 pontos (6/6), M2.2.2 = 8/3 e Q2.2 = 11/6
+(1,83 na apresentação). A emulação original permanece em `funcoes.csv`.
 
 ## 4. Valores atípicos
 

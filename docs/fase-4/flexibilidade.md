@@ -1,167 +1,270 @@
 # Análise e respostas GQM: flexibilidade
 
-Esta página responde às questões Q2.1 a Q2.3 e ao objetivo G2 com os dados coletados conforme o
-[método de flexibilidade](../fase-3/metodo-flexibilidade.md). Cada recorte foi pontuado pelos
-[níveis de G2](../fase-2/niveis-pontuacao.md#3-g2-flexibilidade), de 0 (Insatisfatório) a 3
-(Excelente), e consolidado pelos
-[critérios de classificação](../fase-2/niveis-pontuacao.md#5-criterios-de-classificacao-por-caracteristica).
+Esta análise responde a Q2.1, Q2.2, Q2.3 e ao objetivo G2 e confronta H2.1–H2.3, conforme a
+[issue #77](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/77).
+Os cálculos usam os dados disponíveis da #72, o
+[método de flexibilidade](../fase-3/metodo-flexibilidade.md) e os
+[níveis da F2](../fase-2/niveis-pontuacao.md#3-g2-flexibilidade).
 
-!!! warning "Resultado parcial"
-    Os Procedimentos A e B (larguras de tela, M2.2.1 e M2.2.2) foram executados em 15/11/2026.
-    A matriz de navegadores e sistemas (Procedimento C, M2.1.1) ainda não foi executada, e
-    M2.3.1 depende dela. Por isso, **Q2.1 e Q2.3 ainda não têm resposta completa e a
-    classificação do G2 está pendente**, como manda a regra de cobertura insuficiente
-    ([seção 5.2](../fase-2/niveis-pontuacao.md#52-regras-de-gravidade-e-excecoes)). Esta
-    página é atualizada quando `execucoes.csv` for preenchido; o cálculo é refeito com
-    `scripts/fase-4/flexibilidade/pontuar.py`.
+!!! success "Matriz completa: G2 = 2,21 — Bom"
+    As 18 tarefas dos seis ambientes foram concluídas. A coleta móvel e a coleta Windows
+    estão documentadas no [registro da #72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/flexibilidade/README.md).
+    A pontuação aplica a conferência de funções no aparelho prevista na F3. Nenhuma falha
+    bloqueante dependente de ambiente foi reproduzida; o limitador da F2 não foi acionado.
 
-## 1. Coleta
+## 1. Coleta e critérios de cálculo
 
-| Item | Valor |
-|---|---|
-| Data e horário | 15/11/2026, das 20:24 às 20:38 (horário de Brasília) |
-| Ambiente | Chrome 151 em modo de dispositivo, larguras de 360 a 1920 px ([ambiente, seção 3.3](../fase-3/ambiente.md#33-flexibilidade-g2)) |
-| Execuções | 2 de cada combinação e de cada função; as duas deram o mesmo resultado |
-| Dados brutos | [`data/fase-4/flexibilidade/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data/fase-4/flexibilidade) (`rolagem.csv`, `funcoes.csv`, `falhas.csv` e 42 capturas de tela) |
-| Pontuação | `data/fase-4/flexibilidade/pontuacao.csv`, gerado por `scripts/fase-4/flexibilidade/pontuar.py` |
-| Desvios do plano | Matriz de ambientes (M2.1.1) pendente; falhas F01 a F03 vistas em emulação, ainda sem confirmação no celular de referência |
+| Etapa | Condições e cobertura | Evidência |
+|---|---|---|
+| A: rolagem horizontal | 15/11/2026, 20:24–20:38, horário de Brasília; Chrome 151.0.7922.108 em Linux, Playwright 1.48.2; 3 páginas × 5 larguras × 2 execuções = 30 registros | `rolagem.csv` e capturas |
+| B: funções preservadas | Mesma sessão; 25 funções, em 1366 e 360 px, 2 execuções = 100 registros | `funcoes.csv` e capturas |
+| C: tarefas na matriz | 24/11/2026, 00:56–01:21, horário de Brasília; 9 combinações móveis; sessão complementar Windows, cerca de 16:40–16:55, com mais 9 combinações | `execucoes.csv` e capturas |
+| D: conferência e falhas | Chrome/Android real, 384 px: F01 confirmada; F02 e F03 não confirmadas. F04 reproduzida nos três ambientes móveis; F05 observada uma vez | `falhas.csv` e capturas |
+| Referência da coleta manual | Chrome/Windows a 1366 px; capturas macOS mantidas como histórico | `referencia-downloads-1366-win-chrome.jpg` (F04) e `tarefa-win-chrome-t1-e1.jpg` (comparação visual de F05) |
+
+*Tabela 1: Sessões e cobertura. Os arquivos estão em
+[`data/fase-4/flexibilidade/`](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data/fase-4/flexibilidade).*
+
+Os resultados são classificados **por recorte**, antes da média dos pontos. A escala é
+Insatisfatório (0), Aceitável (1), Bom (2) e Excelente (3); os limites são critérios da
+equipe definidos na F2, não limites normativos da ISO. Valores ausentes não recebem zero
+nem são tratados como sucesso. O arredondamento ocorre somente na apresentação.
+
+Para reproduzir, na raiz do repositório:
+
+```bash
+python3 scripts/fase-4/flexibilidade/pontuar.py
+python3 scripts/fase-4/consolidar.py --verificar
+```
+
+O primeiro comando gera `data/fase-4/flexibilidade/pontuacao.csv`; o segundo confere os
+derivados consolidados. Após mudar os dados, executar `consolidar.py` sem `--verificar`
+para atualizá-los. A conferência no aparelho é aplicada pelo cálculo, sem reescrever os
+registros originais da emulação.
 
 ## 2. Resultados por questão
 
 ### Q2.1 As tarefas T1, T2 e T3 podem ser concluídas nos navegadores e sistemas operacionais mais usados pelo público?
 
-**Pendente.** M2.1.1 depende da execução manual das três tarefas nos seis ambientes da
-[matriz](../fase-3/metodo-flexibilidade.md#51-matriz-de-ambientes), que ainda não foi feita.
+**Resposta:** sim. T1, T2 e T3 foram concluídas nos seis ambientes previstos, com
+**18/18 = 100%**. Isso não elimina dificuldades de uso: T3 foi concluída nos celulares
+mesmo com a tabela de PTDRS cortada (F04).
 
-**Indício (não pontuado):** no Procedimento B, o script executou T1 e T2 no Chrome em emulação
-de celular (360 px) e de computador (1366 px), nas 2 execuções, sem precisar de clique
-forçado. As duas tarefas, portanto, funcionam no motor do Chrome nas duas larguras. Isso não
-substitui a matriz, que testa outros navegadores e aparelhos reais.
+| Ambiente | T1 | T2 | T3 | M2.1.1: concluídas/previstas no ambiente | Nível F2 |
+|---|---|---|---|---|---|
+| Chrome/Android | Concluída | Concluída | Concluída | 3/3 = 100% | Excelente (3) |
+| Samsung Internet/Android | Concluída | Concluída | Concluída | 3/3 = 100% | Excelente (3) |
+| Safari/iOS | Concluída | Concluída | Concluída | 3/3 = 100% | Excelente (3) |
+| Chrome/Windows (referência prevista) | Concluída | Concluída | Concluída | 3/3 = 100% | Excelente (3) |
+| Edge/Windows | Concluída | Concluída | Concluída | 3/3 = 100% | Excelente (3) |
+| Firefox/Windows | Concluída | Concluída | Concluída | 3/3 = 100% | Excelente (3) |
+
+*Tabela 2: M2.1.1, a partir de `execucoes.csv`. T1 consulta Chapada dos Veadeiros - GO;
+T2 ativa PRONAF - Valor Total de Crédito Acessado; T3 abre/baixa o PTDRS de Estrada De Ferro - GO.*
+
+O Android foi testado em um Galaxy S24+ (Android 17, 384 px), com Chrome 158.0.8127.42
+e Samsung Internet 31.0.0.81; o Safari, em um iPhone 17 Pro Max (iOS 27.0.1, 440 px).
+T1 no Safari foi refeita após erro de seleção do avaliador; o registro válido corresponde
+ao território correto e não constitui falha do navegador.
+
+**Cálculo e comparação:** M2.1.1 = tarefas concluídas / 3 por ambiente. A F2 atribui 3
+pontos a 100%, 2 a ≥ 85% e < 100%, 1 a ≥ 2/3 e < 85%, e 0 a < 2/3.
+O agregado é **18/18 = 100% (Excelente)**, com cobertura de **6/6 ambientes**.
+M2.1.1 = (3 + 3 + 3 + 3 + 3 + 3) / 6 = **3,00 pontos**; Q2.1 = **3,00**.
+O agregado geral é informativo e não entra novamente na média dos recortes.
+
+Gabriel Augusto executou os testes Windows em 24/11, aproximadamente entre 16:40 e 16:55,
+em Windows 10 22H2, com Chrome 157.0.8103.80, Edge 158.0.4370.33 e Firefox 161.0.
+A largura de 1366 px foi definida pelo modo Responsive (1366 × 1221) de cada navegador.
+As nove capturas estão associadas às linhas de `execucoes.csv`; versões e horários são
+os declarados no pacote fornecido, e não medições realizadas por esta análise.
 
 ### Q2.2 As páginas se adaptam às telas de celular, tablet e computador sem perder conteúdo nem funções?
 
-**M2.2.1, rolagem horizontal:**
+**Resposta:** a adaptação é **parcial**. Nas larguras de 768, 1366 e 1920 px não houve
+rolagem horizontal nas três páginas. No celular, a Biblioteca Territorial apresenta
+rolagem em 360 e 412 px e perde o acesso às setas da Mapoteca (BIB-05). Meu Território
+mantém 12/12 funções; o SITGeo fica com 6/6 após a conferência no aparelho prevista no
+método. Isso não comprova a preservação de todas as funções em todas as larguras: a
+inspeção funcional comparou 360 com 1366 px, com conferência das perdas em 384 px.
+
+**M2.2.1 — rolagem horizontal**
 
 | Página | 360 px | 412 px | 768 px | 1366 px | 1920 px |
 |---|:---:|:---:|:---:|:---:|:---:|
-| Meu Território | Sem rolagem | Sem rolagem | Sem rolagem | Sem rolagem | Sem rolagem |
-| SITGeo | Sem rolagem | Sem rolagem | Sem rolagem | Sem rolagem | Sem rolagem |
-| Biblioteca Territorial | **Com rolagem** | **Com rolagem** | Sem rolagem | Sem rolagem | Sem rolagem |
+| Meu Território | Sem | Sem | Sem | Sem | Sem |
+| SITGeo | Sem | Sem | Sem | Sem | Sem |
+| Biblioteca Territorial | **Com** | **Com** | Sem | Sem | Sem |
 
-*Tabela 1: Rolagem horizontal por página e largura (igual nas 2 execuções).*
+*Tabela 3: Rolagem horizontal em `rolagem.csv`; resultados iguais nas duas execuções.*
 
-São **13 de 15 combinações sem rolagem (86,7%): Aceitável (1)**. A rolagem da Biblioteca
-Territorial nas duas larguras de celular vem das setas do carrossel da Mapoteca, que ficam
-fora da tela (a borda direita chega a 377 px em uma tela de 360 px). Nenhuma combinação
-precisou da exceção do mapa.
+São **13/15 = 86,7% sem rolagem**, nível **Aceitável (1)**: a F2 define 15 combinações
+como Excelente, 14 como Bom, 12–13 como Aceitável e até 11 como Insatisfatório. Cada
+combinação conta uma vez; a segunda execução confirma o resultado. Nenhuma precisou
+da exceção para conteúdo bidimensional. As setas do carrossel da Biblioteca ultrapassam
+a largura disponível: a borda direita chega a 377 px na tela de 360 px.
 
-**M2.2.2, funções preservadas em 360 px:**
+**M2.2.2 — funções preservadas, com conferência no aparelho**
 
-| Página | Preservadas | X | Nível | Funções perdidas |
-|---|---:|---:|---|---|
-| Meu Território | 12/12 | 100,0% | Excelente (3) | — |
-| SITGeo | 4/6 | 66,7% | Aceitável (1) | Nome e dados das camadas (GEO-04); zoom do mapa (GEO-05) |
-| Biblioteca Territorial | 6/7 | 85,7% | Bom (2) | Setas do carrossel da Mapoteca (BIB-05) |
+| Página | Emulação em 360 px | Conferência no aparelho de referência | Resultado adotado | Nível F2 | Funções perdidas |
+|---|---|---|---|---|---|
+| Meu Território | 12/12 | Nenhuma perda para conferir | 12/12 = 100% | Excelente (3) | Nenhuma registrada |
+| SITGeo | 4/6 | F02/GEO-05 e F03/GEO-04 não se repetiram em 384 px; funções reintegradas | 6/6 = 100% | Excelente (3) | Nenhuma após a conferência |
+| Biblioteca Territorial | 6/7 | F01/BIB-05 confirmada em 384 px | 6/7 = 85,7% | Bom (2) | Setas do carrossel da Mapoteca (BIB-05) |
 
-*Tabela 2: Funções disponíveis em 1366 px que continuam operáveis em 360 px. M2.2.2 = 2,00
-(média das três páginas).*
+*Tabela 4: `funcoes.csv`, reconciliado com `confirmada_no_aparelho` em `falhas.csv` pela
+[seção 4.4 do método](../fase-3/metodo-flexibilidade.md#44-confirmacao-no-celular-de-referencia).*
+
+A F2 atribui 3 pontos a 100% das funções, 2 a ≥ 80% e < 100%, 1 a ≥ 60% e < 80%,
+e 0 a < 60%. Portanto:
+
+- **M2.2.2 = (3 + 3 + 2) / 3 = 8/3 ≈ 2,67 pontos**, média dos níveis das páginas.
+- **Q2.2 = (1 + 8/3) / 2 = 11/6 ≈ 1,83 pontos**. A pontuação anterior de 1,50
+  desconsiderava a conferência de F02 e F03.
+
+A reintegração não apaga a observação de 15/11 em 360 px nem prova correção nessa largura:
+a verificação real ocorreu em outra data, versão e largura. No aparelho, o painel de
+camadas abriu como gaveta larga e os botões de zoom ficaram livres. Aplica-se a regra já
+prevista na F3, com essa ressalva.
 
 <div class="grid" markdown>
 
-![SITGeo em 360 px: painel de camadas estreito, com os cartões cobertos, e a caixa da legenda sobre o zoom do mapa](flexibilidade/sitgeo-360.jpg)
+![SITGeo na emulação de 15/11, em 360 px, com painel estreito e controles sobrepostos](flexibilidade/sitgeo-360.jpg)
 
-![Biblioteca Territorial em 360 px: as setas do carrossel da Mapoteca ficam além da borda direita da tela](flexibilidade/mapoteca-360.jpg)
+![Biblioteca Territorial na emulação de 15/11, com setas além da largura de 360 px](flexibilidade/mapoteca-360.jpg)
 
 </div>
 
-*Figura 1: SITGeo (esquerda) e Mapoteca da Biblioteca Territorial (direita) em 360 px. Na
-Biblioteca, a captura da página inteira tem 392 px de largura: as setas ficam na faixa além
-dos 360 px da tela.*
+*Figura 1: Evidências históricas da emulação. A perda da Biblioteca foi confirmada; as duas
+do SITGeo não foram confirmadas no aparelho. A captura de página inteira da Biblioteca
+tem 392 px porque inclui o conteúdo que transborda os 360 px.*
 
-No SITGeo, a página mantém no celular a mesma grade de 5 colunas do computador: o painel de
-camadas fica com cerca de 1/5 da tela (cerca de 65 px), e o mapa, com os outros 4/5. Com isso:
-
-- o cabeçalho do tema, mais largo que a coluna, cobre os cartões das camadas, e o nome, a
-  fonte e a unidade de cada camada ficam cortados ou cobertos (GEO-04);
-- a caixa com o nome e a legenda da camada ativa ocupa quase toda a largura do mapa e cobre os
-  botões + e – (GEO-05).
-
-O botão de ativar a camada continua acessível, por isso T2 ainda pode ser concluída, mas é
-difícil saber qual camada está sendo ativada.
-
-**Resposta:** as páginas se adaptam bem a tablet e computador, sem rolagem e sem perda de
-funções. No celular, Meu Território se adapta por completo, mas o SITGeo perde duas de suas
-seis funções e a Biblioteca Territorial exige rolagem horizontal para usar o carrossel da
-Mapoteca. **Pontos de Q2.2: 1,50** (M2.2.1 = 1,00; M2.2.2 = 2,00).
+A conferência está nas capturas de
+[GEO-04 no aparelho](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/flexibilidade/capturas/f03-and-chrome-384.jpg),
+[T2 e zoom](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/flexibilidade/capturas/tarefa-and-chrome-t2-e1.jpg) e
+[F01 na Mapoteca](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/flexibilidade/capturas/f01-and-chrome-384.jpg).
 
 ### Q2.3 Quais ambientes concentram as falhas e, por isso, devem ter prioridade na matriz de testes do fornecedor?
 
-**Parcial.** M2.3.1 é calculada por ambiente da matriz e depende do Procedimento C. Até agora,
-as três falhas registradas foram vistas em emulação de celular e foram reproduzidas na
-segunda execução:
+**Resposta:** entre os ambientes executados, **Chrome/Android tem mais falhas graves
+registradas (duas)**; Samsung Internet/Android e Safari/iOS têm uma cada. Todas as quatro
+ocorrências reproduzidas estão na **Biblioteca Territorial**, em larguras de celular.
+Não há evidência de concentração no Safari ou no SITGeo após a conferência no aparelho.
+Edge e Firefox no Windows não tiveram falhas dependentes de ambiente reproduzidas na coleta.
+Chrome/Windows é a referência para a comparação.
 
-| ID | Página | Largura | Gravidade | Falha |
-|---|---|---|---|---|
-| F01 | Biblioteca Territorial | 360 e 412 px | Grave | Setas do carrossel da Mapoteca fora da tela, com rolagem horizontal |
-| F02 | SITGeo | 360 px | Grave | Botões de zoom cobertos pela caixa da legenda; contorno: gesto de pinça |
-| F03 | SITGeo | 360 px | Grave | Nome, fonte e unidade das camadas cobertos; dificulta T2 |
+| Ambiente | Bloqueantes | Graves reproduzidas | Cosméticas reproduzidas | IDs contados | Nível F2 |
+|---|---:|---:|---:|---|---|
+| Chrome/Android, 384 px | 0 | 2 | 0 | F01, F04 | Aceitável (1) |
+| Samsung Internet/Android, 384 px | 0 | 1 | 0 | F04 | Aceitável (1) |
+| Safari/iOS, 440 px | 0 | 1 | 0 | F04 | Aceitável (1) |
+| Edge/Windows, 1366 px | 0 | 0 | 0 | Nenhum | Excelente (3) |
+| Firefox/Windows, 1366 px | 0 | 0 | 0 | Nenhum | Excelente (3) |
 
-*Tabela 3: Falhas dependentes de largura, pré-registradas para M2.3.1.*
+*Tabela 5: M2.3.1 a partir de `falhas.csv`. Chrome/Windows é a referência prevista e fica
+fora dessa contagem, conforme o método da F3.*
 
-Nenhuma ocorre em 1366 px, nenhuma é bloqueante e todas estão nas larguras de celular. Se as
-três forem confirmadas no celular de referência, cada ambiente móvel em que se repetirem terá
-3 falhas graves e ficará **Insatisfatório (0)** em M2.3.1 (regra "≥ 3 graves").
+Pela F2, ao menos uma bloqueante ou três graves implica 0; uma ou duas graves sem
+bloqueantes implica 1; apenas cosméticas reproduzidas implica 2; nenhuma falha reproduzida
+implica 3. Os três ambientes móveis recebem 1 ponto cada e Edge/Windows e Firefox/Windows recebem
+3 pontos cada. **M2.3.1 = (1 + 1 + 1 + 3 + 3) / 5 = 1,80 pontos; Q2.3 = 1,80**.
+A referência Windows mostra a tabela de PTDRS sem o corte observado nos celulares.
+F05 permanece fora da contagem por falta de reprodução.
 
-**Resposta parcial:** as falhas encontradas até agora se concentram nas **telas de celular**
-e, entre as páginas, no **SITGeo**. Para o fornecedor, isso já indica que a matriz de testes
-deve incluir pelo menos uma largura de celular (360 px) para o SITGeo e a Biblioteca
-Territorial. A comparação entre navegadores (Safari/iOS, Samsung Internet, Firefox e Edge)
-depende da matriz manual.
+| Falha | Tratamento na análise | Justificativa e rastreabilidade |
+|---|---|---|
+| F01: setas da Mapoteca fora da tela | Grave, contada uma vez no AND-CHROME | Confirmada e reproduzida; os dois registros emulados (360/412 px) não criam falhas adicionais no ambiente |
+| F02: zoom coberto no SITGeo | Excluída dos ambientes reais; GEO-05 reintegrada em M2.2.2 | `confirmada_no_aparelho = não`; conservada como observação da emulação |
+| F03: dados da camada cobertos no SITGeo | Excluída dos ambientes reais; GEO-04 reintegrada em M2.2.2 | `confirmada_no_aparelho = não`; conservada como observação da emulação |
+| F04: tabela de PTDRS cortada | Grave, contada uma vez em cada ambiente móvel | Reproduzida duas vezes nos três ambientes; T3 ainda foi concluída; duas capturas por ambiente |
+| F05: aparência no modo escuro do Samsung Internet | Observação cosmética, fora da pontuação | Campo `reproduzida` vazio e apenas uma captura; exige repetição para contar em M2.3.1 |
+
+*Tabela 6: Inclusões, exclusões e deduplicação. São dois IDs distintos contados (F01 e F04)
+e quatro ocorrências ambiente × falha, não quatro defeitos distintos.*
+
+**Prioridade para o fornecedor:** corrigir a tabela de PTDRS nos três ambientes móveis e
+as setas da Mapoteca no Chrome/Android; incluir esses fluxos na regressão, mantendo as
+larguras de 360 e 412 px e as larguras reais de 384 e 440 px. Verificar F01 também no
+Samsung Internet e no Safari: não haver registro não prova ausência. Repetir F05 e
+investigar a divergência de F02/F03 em 360 px são verificações adicionais. Manter Chrome, Edge e Firefox no Windows na regressão preserva a cobertura da matriz completa.
 
 ## 3. Classificação do G2
 
-| Questão | Métricas | Pontos |
-|---|---|---:|
-| Q2.1 | M2.1.1 = NC | NC |
-| Q2.2 | M2.2.1 = 1,00; M2.2.2 = 2,00 | 1,50 |
-| Q2.3 | M2.3.1 = NC | NC |
-| **G2** | Média das três questões | **pendente** |
+**Objetivo G2:** avaliar a flexibilidade do SIT quanto à adaptação a navegadores, sistemas
+operacionais e telas, do ponto de vista da equipe de desenvolvimento e TI do fornecedor,
+conforme a [definição da F2](../fase-2/objetivos.md#g2-flexibilidade).
 
-*Tabela 4: Consolidação da pontuação do G2.*
+| Questão | Métricas e cálculo | Pontos para consolidação | Resposta que sustenta G2 |
+|---|---|---:|---|
+| Q2.1 | M2.1.1 = média de seis níveis Excelente | 3,00 | T1–T3 concluídas nos seis ambientes |
+| Q2.2 | M2.2.1 = 1; M2.2.2 = 8/3; média = 11/6 | 1,83 | Adaptação parcial, com rolagem e perda das setas na Biblioteca |
+| Q2.3 | M2.3.1 = (1 + 1 + 1 + 3 + 3) / 5 | 1,80 | Falhas reproduzidas na Biblioteca em celulares; nenhuma registrada no Windows |
+| **G2** | (3 + 11/6 + 9/5) / 3 = 199/90 | **2,21** | **Bom** |
 
-- **Classificação:** **pendente**, porque M2.1.1 e M2.3.1 ainda não têm resultado válido.
-- **Limitador (seção 5.2):** até agora não há falha bloqueante; se a matriz revelar uma, a
-  classificação final será Insatisfatório, qualquer que seja a média.
-- **Onde a qualidade já está comprometida:** o layout do SITGeo no celular (F02 e F03) e o
-  carrossel da Mapoteca (F01). As três falhas têm a mesma origem provável, um layout que não
-  muda de estrutura nas telas estreitas, e podem ser tratadas juntas.
+*Tabela 7: Consolidação com pesos iguais por questão, sem arredondamento intermediário.*
+
+- **Classificação pela média:** **Bom**, pois 2,00 ≤ 199/90 < 2,75.
+- **Limitador de gravidade:** não acionado; nenhuma falha bloqueante dependente de ambiente
+  foi reproduzida.
+- **Classificação final:** **Bom**. O valor 2,10 do pacote original não incluía a conferência
+  de F02/F03; após a correção, o valor é 2,21 e a classe continua Bom.
+
+**Resposta ao G2:** o SIT apresenta **flexibilidade Boa no recorte avaliado**, permitindo
+concluir os três fluxos nos seis ambientes. A adaptação visual da Biblioteca Territorial
+em celulares permanece incompleta. O fornecedor deve corrigir a tabela de PTDRS e as setas
+da Mapoteca, mantendo a matriz móvel e Windows na regressão. A classe não significa
+compatibilidade comprovada com todos os aparelhos, versões ou estados do portal.
 
 ## 4. Hipóteses
 
-| Hipótese | Resultado | Evidência |
-|---|---|---|
-| H2.1: tarefas concluídas em todos os navegadores Chromium; falha em pelo menos uma execução no Safari/iOS e no Firefox, mais provável em T2 | **Pendente** | Depende de M2.1.1. Indício: T1 e T2 funcionam no Chrome em 360 e 1366 px |
-| H2.2: sem rolagem a partir de 768 px e com rolagem em 360 px em pelo menos uma página; perda de funções no celular só no SITGeo | **Parcialmente confirmada** | Rolagem só na Biblioteca, em 360 e 412 px, e nenhuma a partir de 768 px (confirmada). O SITGeo perde funções (confirmada), mas a Biblioteca também perde uma (refutado o "só no SITGeo") |
-| H2.3: falhas concentradas no SITGeo, nas larguras de celular e no Safari/iOS; sem falha bloqueante no Chrome/Android | **Parcialmente confirmada** | As 3 falhas estão em larguras de celular e 2 delas no SITGeo; nenhuma é bloqueante. A parte sobre Safari/iOS e Chrome/Android depende da matriz |
+As hipóteses compostas são confrontadas por afirmação. Uma afirmação contradita impede
+confirmar a hipótese inteira, mesmo que outras partes tenham apoio ou permaneçam sem dados.
 
-*Tabela 5: Situação das hipóteses de G2.*
+| Hipótese da F2 | Afirmação confrontada | Resultado | Evidência |
+|---|---|---|---|
+| H2.1 | Todas as execuções em Chromium são concluídas | Confirmada nos ambientes Chromium avaliados | 12/12 tarefas em Chrome/Android, Samsung Internet/Android, Chrome/Windows e Edge/Windows |
+| H2.1 | Safari/iOS e Firefox têm pelo menos uma falha, sobretudo em T2 | Refutada nos dois navegadores | Safari e Firefox concluíram 3/3 cada, inclusive T2 |
+| H2.2 | Nenhuma página tem rolagem a partir de 768 px; ao menos uma tem em 360 px | Confirmada no recorte medido | 9/9 combinações sem rolagem em 768/1366/1920 px; Biblioteca com rolagem em 360 px |
+| H2.2 | Meu Território e Biblioteca preservam todas as funções; só SITGeo perde funções | Refutada pelo resultado adotado | Meu Território 12/12, Biblioteca 6/7 e SITGeo 6/6 após conferência |
+| H2.3 | Falhas se concentram no SITGeo e no Safari/iOS | Refutada no recorte executado | As quatro ocorrências graves estão na Biblioteca; Chrome/Android tem duas e Safari uma |
+| H2.3 | Falhas se concentram nas larguras de celular | Confirmada no recorte avaliado | Ocorrências contadas em 384/440 px; nenhuma em Edge/Firefox a 1366 px; referência Chrome/Windows sem o corte da tabela |
+| H2.3 | Chrome/Android não tem falhas bloqueantes | Confirmada no recorte executado | Zero bloqueantes; duas graves, com contorno |
+
+*Tabela 8: Confronto com [H2.1–H2.3 da F2](../fase-2/hipoteses.md#g2-flexibilidade).*
+
+**Vereditos:** **H2.1 refutada como formulada**, pela conclusão de todas as tarefas no
+Safari e no Firefox, embora a parte sobre Chromium tenha sido confirmada; **H2.2 refutada
+como formulada**, embora a previsão de rolagem tenha sido confirmada; **H2.3 refutada
+quanto à concentração prevista no recorte executado**, com apoio parcial à ocorrência
+em celulares e confirmação da ausência de bloqueantes no Chrome/Android testado.
+Os vereditos se limitam às versões, aparelhos e tarefas registrados.
 
 ## 5. Outros achados e limitações
 
-**Defeito geral, fora de M2.3.1.** A imagem da legenda da camada ativa no SITGeo não carrega
-(o servidor de mapas devolve uma imagem vazia, e aparece só o texto alternativo "Legenda"), em
-360 e em 1366 px. Como também ocorre no ambiente de referência, é um defeito do produto, e não
-uma falha de ambiente, e fica registrado separadamente, como manda a
-[seção 3 dos níveis](../fase-2/niveis-pontuacao.md#justificativas-e-particularidades-de-g2).
+**Defeito geral observado em 15/11, fora de M2.3.1.** A imagem da legenda da camada ativa
+do SITGeo foi registrada como vazia em 360 e 1366 px, com o texto alternativo "Legenda".
+Como ocorreu nas duas larguras, foi tratada separadamente como achado geral da sessão,
+sem atribuição a um ambiente da matriz. Não foi revalidada por esta análise.
 
-**Limitações:**
+- **Cobertura:** os seis ambientes previstos foram executados, com 18/18 conclusões.
+  Um computador Windows e dois aparelhos móveis não representam todos os equipamentos
+  ou versões do público. Não há resultado de Safari/macOS ou de navegadores Linux na
+  matriz manual.
+- **Sessões e avaliadores:** Tales executou a sessão móvel e Gabriel Augusto a sessão
+  Windows. Os horários Windows são aproximados; o modelo específico do computador não
+  foi informado. A largura foi definida em modo Responsive, em navegadores reais no Windows.
+- **Referência:** Chrome/Windows complementa a comparação anterior em macOS. F04 tem
+  captura própria da tabela; a comparação visual de F05 usa os Indicadores Gerais em T1.
+- **Datas, versões e larguras diferentes:** a emulação ocorreu em 15/11, com Chrome 151
+  e 360 px; a conferência em 24/11, com Chrome 158 e 384 px. Não se pode isolar se a
+  divergência de F02/F03 decorre da largura, do navegador ou de alterações no portal.
+- **Escopo funcional:** M2.2.2 verifica visibilidade, posição, sobreposição e possibilidade
+  de clique, não toda a legibilidade ou todos os estados dinâmicos. A tabela cortada de
+  F04 entra em M2.3.1, sem alterar retroativamente o inventário medido em 15/11.
+- **Registros de falhas:** F01 foi confirmada apenas no Chrome/Android; não se presume
+  seu comportamento nos demais navegadores. F05 ainda precisa de repetição.
+- **Interpretação:** nove conclusões técnicas não representam taxa de sucesso de usuários
+  de primeira vez nem evidência estatística de compatibilidade com toda a população.
 
-- **Emulação:** M2.2.1 e M2.2.2 foram medidas no modo de dispositivo do Chrome, que simula a
-  largura, o toque e o *viewport* de celular, mas não um aparelho específico. As perdas de
-  função ainda precisam ser confirmadas no celular de referência
-  ([método, seção 4.4](../fase-3/metodo-flexibilidade.md#44-confirmacao-no-celular-de-referencia)).
-- **Critério automático de função:** o script considera perdida uma função coberta, fora da
-  largura ou desabilitada. Ele não avalia se o texto fica legível; por isso uma função
-  "preservada" pode ainda ser difícil de usar.
-- **Produto em produção:** a coleta reflete o portal em 15/11/2026; mudanças no layout até a
-  execução da matriz manual podem alterar o resultado.
+*Análise atualizada em 24/11/2026 com os dados versionados; nenhuma nova coleta foi
+realizada para produzir esta página.*

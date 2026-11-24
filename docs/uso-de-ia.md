@@ -6,9 +6,9 @@ resumida, está no artigo.
 
 | Item | Valor |
 |---|---|
-| Ferramenta | Claude (Anthropic), em conversa por texto |
+| Ferramentas | Claude (Anthropic), em conversa por texto; Codex (OpenAI), na análise de flexibilidade da #77 |
 | Imagens, ícones ou figuras geradas por IA | Nenhum |
-| Atualizado em | 14/11/2026 |
+| Atualizado em | 24/11/2026 |
 
 ## Entrega 1 (Fases 1 e 2)
 
@@ -28,11 +28,12 @@ resumida, está no artigo.
 | Leitura dos relatórios do Lighthouse para localizar a causa do LCP do SITGeo e proposta da [ação de melhoria](fase-4/acao-melhoria.md) a partir dessa evidência | Os valores foram recalculados pela equipe com `scripts/fase-4/melhoria/diagnostico.py` e comparados com `data/fase-4/eficiencia/resumo.csv`; a equipe avaliou a proposta e registrou a decisão em ata |
 | Escrita dos scripts da ação de melhoria (`scripts/fase-4/melhoria/`) e da página que a documenta | Scripts lidos e executados pela equipe no ambiente da Fase 3; os resultados publicados são os gerados nessa execução, não valores sugeridos pela ferramenta |
 | Roteiro dos slides da apresentação final | Conteúdo e divisão das falas revistos pela equipe no ensaio |
+| Incorporação do pacote de coleta Windows (#72), análise de flexibilidade (#77), reconciliação da conferência no aparelho em `pontuar.py` e atualização dos CSVs derivados, com Codex | Cálculos confrontados com os CSVs e regras F2/F3 por verificações automatizadas; revisão humana desta alteração pendente. Nenhuma nova medição foi produzida pela ferramenta |
 
 ## Limites do uso
 
 - As medições, os dados brutos e as classificações de qualidade vêm das coletas feitas pela
   equipe e dos critérios definidos na Fase 2. A ferramenta não gerou nem estimou medidas.
-- Todo texto produzido com apoio da ferramenta foi lido por ao menos um integrante antes de
-  ser incorporado. As decisões sobre características, métricas, níveis e ação de melhoria
+- A revisão por ao menos um integrante é necessária antes de incorporar o texto produzido
+  com apoio da ferramenta; a situação da #77 está declarada na tabela. As decisões sobre características, métricas, níveis e ação de melhoria
   foram tomadas pela equipe, inclusive quando partiram de uma proposta da ferramenta.
