@@ -9,6 +9,8 @@ copyright: Equipe Dorothy Johnson &middot; Qualidade de Software 2026/2 &middot;
 
 theme:
   name: material
+  # overrides/partials/copyright.html: rodapé com versão, data e links (critério AG-C4).
+  custom_dir: overrides
   language: pt-BR
   icon:
     logo: material/rocket-launch-outline
@@ -52,11 +54,14 @@ extra_css:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js
   - javascripts/painel-psm.js
+  - javascripts/acessibilidade.js
 
-# psm_painel.py gera os dados do Painel PSM em assets/psm/; versao_assets.py versiona o CSS e o JS próprios.
+# psm_painel.py gera os dados do Painel PSM em assets/psm/; versao_assets.py versiona o CSS e o JS próprios;
+# versao_site.py calcula a versão e a data de publicação mostradas no rodapé.
 hooks:
   - hooks/psm_painel.py
   - hooks/versao_assets.py
+  - hooks/versao_site.py
 
 extra:
   social:
@@ -157,3 +162,9 @@ nav:
   - Equipe:
       - Contribuição: contribuicao.md
   - Referências: referencias.md
+  - Repositório:
+      - Código no GitHub: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON
+      - Release mais recente: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/releases/latest
+      - Dados brutos: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/data
+      - Mapa dos dados: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/README.md
+      - Atas de reunião: https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/tree/main/atas-de-reuniao

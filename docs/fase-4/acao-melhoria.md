@@ -111,7 +111,7 @@ medição, não entre o "depois" e os 23,45 s da coleta do G3.
 
 ### 4.1 Problema original e solução proposta
 
-| | Problema original | Solução proposta |
+| Aspecto | Problema original | Solução proposta |
 |---|---|---|
 | Arquivos | `capa_inicio.jpg` (JPEG, 2 554 kB) e `indicadores.png` (PNG, 1 929 kB), servidos no tamanho original para qualquer tela | Versões WebP de 480 e 960 px de largura para cada imagem |
 | Marcação | `<img src="/img/capa_inicio.jpg">`, sem `srcset` | `srcset` e `sizes`, para o navegador escolher a menor versão suficiente |

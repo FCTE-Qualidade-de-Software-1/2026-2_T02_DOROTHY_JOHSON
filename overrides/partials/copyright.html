@@ -1,0 +1,34 @@
+{#-
+  Rodapé com versão, data de publicação e links do projeto (critério AG-C4).
+  Substitui partials/copyright.html do Material; a versão vem de hooks/versao_site.py.
+-#}
+{% set versao = config.extra.versao or {} %}
+{% set repo = config.repo_url | trim("/") %}
+<div class="md-copyright">
+  {% if config.copyright %}
+    <div class="md-copyright__highlight">
+      {{ config.copyright }}
+    </div>
+  {% endif %}
+  <p class="dj-versao">
+    {% if versao.texto %}
+      Versão
+      <a href="{{ versao.url }}">{{ versao.texto }}</a>
+      &middot;
+    {% endif %}
+    Publicado em <time datetime="{{ versao.data_iso }}">{{ versao.data }}</time>
+  </p>
+  <nav class="dj-links-rodape" aria-label="Links do projeto">
+    <a href="{{ repo }}">Repositório</a>
+    &middot;
+    <a href="{{ repo }}/releases/latest">Release mais recente</a>
+    &middot;
+    <a href="{{ repo }}/tree/main/data">Dados brutos</a>
+  </nav>
+  {% if not config.extra.generator == false %}
+    Feito com
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  {% endif %}
+</div>

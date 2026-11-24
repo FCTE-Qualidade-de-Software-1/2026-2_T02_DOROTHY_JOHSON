@@ -83,7 +83,7 @@ A lista ordena ações e não cria uma nota global: as classificações de G2 e 
 
 *Tabela 4: Oportunidades de melhoria em ordem de prioridade.*
 
-|  | Esforço 1 | Esforço 2 | Esforço 3 |
+| Impacto × esforço | Esforço 1 | Esforço 2 | Esforço 3 |
 |---|---|---|---|
 | **Impacto 3** | OM1 | OM4 | OM3, OM5 |
 | **Impacto 2** | OM2 | OM6, OM8 | OM7, OM9 |
