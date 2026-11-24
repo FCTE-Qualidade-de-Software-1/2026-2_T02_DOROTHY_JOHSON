@@ -6,6 +6,9 @@ refaz tudo, as fórmulas e o tratamento de valores ausentes e atípicos
 Ela não define regras novas: as definições são das [fichas da Fase 2](../fase-2/metricas.md), dos
 [níveis de pontuação](../fase-2/niveis-pontuacao.md) e dos métodos da Fase 3.
 
+A interpretação das classes, dos limitadores e das decisões para o requisitante está em
+[Classificação final e coerência com o propósito da F1](classificacao-final.md).
+
 ## 1. Como reproduzir
 
 Na raiz do repositório, com Python 3, bash e `jq` (nenhum script acessa o portal):

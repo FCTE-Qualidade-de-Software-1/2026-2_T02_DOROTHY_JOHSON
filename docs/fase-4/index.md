@@ -9,6 +9,7 @@ característica.
 - [Análise e respostas GQM: capacidade de interação](interacao.md)
 - [Relações entre as características](relacoes-caracteristicas.md) (evidências disponíveis e hipóteses que dependem de G1 e da conclusão de G2)
 - [Consolidação e cálculo dos resultados](consolidacao.md): (como refazer os números a partir dos dados brutos)
+- [Classificação final e coerência com o propósito da F1](classificacao-final.md): G2 Bom, G3 Aceitável e G1 pendente; justificativas e decisões apoiadas para o MDA
 - [Oportunidades de melhoria](oportunidades-melhoria.md): (lista priorizada de G2 e G3)
 - [Ação de melhoria: imagens do SITGeo](acao-melhoria.md)
 
