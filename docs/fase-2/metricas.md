@@ -104,6 +104,25 @@ detalhadas no plano de avaliação da Fase 3:
     A eficiência do caminho só é calculada para as tentativas concluídas, porque sem conclusão não
     há caminho completo para comparar. As tentativas não concluídas já são captadas por M1.2.1.
 
+**Definição do caminho mínimo.** O cálculo começa na página Início, com o menu recolhido.
+A contagem segue a regra da [Fase 3](../fase-3/metodo-interacao.md#m131-eficiencia-do-caminho):
+abrir o menu conta 1 passo; selecionar o destino conta outro; abrir uma lista e escolher uma
+opção são 2 passos; cada clique em controle, seleção ou preenchimento necessário conta 1 passo.
+Rolagem, espera e zoom por gesto não contam. O caminho mínimo usa os objetos de referência
+definidos na [Fase 3, seção 2](../fase-3/ambiente.md#2-paginas-tarefas-e-objetos-de-referencia).
+
+| Tarefa | Caminho mínimo | Passos mínimos |
+|---|---|---:|
+| T1: Consultar um território | Abrir o menu (1) → Meu Território (1) → abrir UF e escolher GO (2) → abrir território e escolher Chapada dos Veadeiros - GO (2) → Selecionar (1) | **7** |
+| T2: Ativar uma camada | Abrir o menu (1) → SITGeo (1) → Políticas Públicas (1) → abrir o painel de camadas se recolhido (1) → ativar PRONAF - Valor Total de Crédito Acessado (1) | **5** |
+| T3: Baixar um documento | Abrir o menu (1) → Biblioteca Territorial (1) → abrir UF e escolher GO (2) → Buscar PTDRS (1) → clicar no documento Estrada de Ferro - GO (1) | **6** |
+
+Na T3, o programa `Territórios da Cidadania` já começa selecionado, conforme o objeto de
+referência da Fase 3, e não gera um passo adicional.
+
+Exemplo: se o participante conclui T1 em 10 passos, a eficiência dessa tentativa é
+`7 / 10 = 0,70`. A eficiência da tarefa é a média das razões dos participantes que concluíram T1.
+
 ### M1.4.1: Prevenção de erros de operação
 
 | Campo | Especificação |

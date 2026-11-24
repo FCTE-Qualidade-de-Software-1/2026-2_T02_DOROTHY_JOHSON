@@ -43,6 +43,17 @@ Confronte o estado final gravado com a última coluna do roteiro. Marque sucesso
 
 Reveja a gravação do início até a evidência de sucesso. Conte cada toque em um controle, seleção ou preenchimento de campo. Abrir uma lista e escolher uma opção são dois passos quando exigem dois toques. Conte abertura do menu, voltas e toques em controles errados. Cada preenchimento de campo conta uma vez por edição contínua. Rolagem, espera e zoom por gesto ficam fora da contagem. Um segundo avaliador revê a sequência. Registre as duas contagens e a decisão por consenso. Se surgir um caminho válido mais curto que o do piloto, confirme-o no mesmo aparelho, documente a revisão e recalcule toda a tarefa com o novo mínimo. Para cada conclusão sem ajuda, divida os passos mínimos pelos observados. Calcule a média das razões por tarefa. Use NC se a tarefa tiver zero conclusões.
 
+Fixe no piloto os seguintes caminhos mínimos no mesmo aparelho e com o menu recolhido:
+
+| Tarefa | Caminho mínimo fixado | Passos mínimos |
+|---|---|---:|
+| T1 | Abrir o menu → Meu Território → abrir UF e escolher GO → abrir território e escolher Chapada dos Veadeiros - GO → Selecionar | **7** |
+| T2 | Abrir o menu → SITGeo → Políticas Públicas → abrir o painel de camadas se recolhido → ativar PRONAF - Valor Total de Crédito Acessado | **5** |
+| T3 | Abrir o menu → Biblioteca Territorial → abrir UF e escolher GO → Buscar PTDRS → clicar no documento Estrada de Ferro - GO | **6** |
+
+Os números contam explicitamente a abertura do menu e contam como dois passos abrir uma lista
+e escolher uma opção. A definição é usada tanto no piloto quanto em P1–P5.
+
 ### M1.5.1 e M1.5.2 — Questionário após as tarefas
 
 Entregue o [questionário em português](formularios-interacao.md#questionario) depois de T3, inclusive se alguma tarefa falhar. Peça que a pessoa responda individualmente pensando no portal que acabou de usar. Para cada SUS completo, calcule a soma de (resposta − 1) nos itens ímpares e (5 − resposta) nos pares, multiplicada por 2,5. Calcule a média dos escores completos. Para aparência, tire a média das respostas válidas ao item 11. Registre itens em branco como ausentes, sem imputar valores, e informe o número de respostas válidas de cada média. Sem respostas válidas, registre NC.
