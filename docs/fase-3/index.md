@@ -9,8 +9,8 @@ permitir que outra pessoa repita a avaliação e chegue a medidas comparáveis.
 |---|---|
 | Entrada | Requisitos da [Fase 1](../fase-1/index.md) e as 19 métricas, os níveis de pontuação e os critérios de classificação da [Fase 2](../fase-2/index.md) |
 | Saída | Plano de avaliação executado na [Fase 4](../fase-4/index.md) |
-| Versão do plano | 1.2 |
-| Atualizado em | 15/11/2026 |
+| Versão do plano | 1.3 |
+| Atualizado em | 23/11/2026 |
 
 ## 1. Partes do plano
 
@@ -97,24 +97,29 @@ Os procedimentos da Fase 3 foram desenhados para produzir saídas diretamente co
 
 ## 4. Cronograma da avaliação
 
-| Período | Atividade | Métricas | Situação |
-|---|---|---|---|
-| 20/10 | Medição piloto de eficiência de desempenho | M3.x | Concluída |
-| 08/11 | Ambiente, objetos de referência e método de eficiência | — | Concluída |
-| 08/11 | Coleta de eficiência de desempenho | M3.1.1 a M3.4.1 | Concluída |
-| 14 a 15/11 | Métodos de G1 e G2, protocolo de participantes e termo de consentimento | — | Em andamento |
-| 15 a 17/11 | Inspeções e verificação automática de G1 | M1.1.1, M1.4.1, M1.4.2, M1.6.1 e M1.6.2 | Prevista |
-| 15/11 | Larguras de tela de G2 (Procedimentos A e B) | M2.2.1 e M2.2.2 | Concluída |
-| 16 a 17/11 | Matriz de ambientes de G2 (Procedimento C) e confirmação das falhas no celular | M2.1.1 e M2.3.1 | Prevista |
-| 15/11 | Sessão piloto do roteiro de G1 com uma pessoa da equipe | — | Prevista |
-| 16 a 18/11 | Sessões com os 5 participantes | M1.1.2, M1.2.1, M1.3.1, M1.5.1 e M1.5.2 | Prevista |
-| 18 a 19/11 | Consolidação e respostas às questões de G1 e G2 | M1.x e M2.x | Prevista |
-| 19 a 20/11 | Classificação final, relações entre as características e oportunidades de melhoria | — | Prevista |
-| 14 a 20/11 | [Ação de melhoria](../fase-4/acao-melhoria.md): entrega técnica e medição do efeito | M3.1.2 | Em andamento |
-| 20 a 21/11 | Artigo, GitPage e revisão final | — | Prevista |
-| 22/11 | Release da Entrega 2 | — | Prevista |
+| Período | Atividade |  Métrica ou resultado | Responsável e issue | Situação e contingência |
+|---|---|---|---|---|
+| 20/10 | Medição piloto de G3 | G3 | Felipe: [#26](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/26) | Concluída; referência da coleta |
+| 08/11 | Ambiente e método de G3 | G3 | Felipe: [#66](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/66) | Concluída |
+| 08/11 | Coleta de G3 | G3 | Felipe: [#73](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/73) | Concluída; cinco execuções por medida |
+| 14/11 | Análise de G3 e escolha da melhoria | G3 | Felipe e Artur: [#78](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/78), [#82](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/82) | Concluída |
+| 14 a 15/11 | Métodos de G1 e G2 e protocolo de participantes | G1 e G2 | Ana Luíza e Tales: [#63](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/63), [#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68) | Em andamento |
+| 14 a 16/11 | Entrega técnica da ação de melhoria | G3 — M3.1.2 | Artur: [#83](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/83) | Concluída; reteste antes × depois |
+| 15/11 | Coleta de largura de tela e funções | G2 | Tales: [#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72) | Concluída com duas execuções |
+| 16/11 | Ponto de Controle 2 | Todas | Artur: [#97](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/97) | Concluído |
+| 15 a 17/11 | Inspeções e acessibilidade de G1 | G1 | Ana Luíza: [#71](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/71) | Pendente; repetir inspeções ou o axe, se necessário |
+| 16 a 17/11 | Matriz de ambientes e confirmação de falhas | G2 | Tales: [#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72) | Pendente; folga para reteste de ambientes |
+| 16 a 18/11 | Sessões com os participantes | G1 | Ana Luíza: [#71](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/71) | Pendente; folga para reagendamento |
+| 17 a 18/11 | Folga para retestes de G1 e G2 | G1 e G2 | Ana Luíza: [#71](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/71)<br> e Tales: [#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72) | Usada somente se houver dados incompletos, falhas inconsistentes ou necessidade de nova sessão |
+| 18 a 20/11 | Consolidação e cálculo | G1, G2 e G3 | Cayo: [#74](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/74), [#75](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/75) | Concluída; revisar dados inconsistentes |
+| 18 a 20/11 | Análise GQM e hipóteses | G1, G2 e G3 | Gabriel, Tales e Felipe: [#76](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/76), [#77](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/77), [#78](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/78) | G1 pendente; G2 parcial; G3 concluída |
+| 19 a 20/11 | Classificação, relações e melhorias | G1, G2 e G3 | Tales e Cayo: [#79](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/79), [#80](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/80), [#81](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/81) | #80 e #81 concluídas; #79 em andamento, considerando a cobertura insuficiente de G1 e G2 |
+| 20 a 21/11 | Folga para ajustes da melhoria e medições complementares | G3 e ações de melhoria | Artur: [#83](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/83) | Usada para corrigir a entrega técnica ou repetir a medição antes × depois |
+| 20 a 24/11 | Artigo, GitPage e PSM/CID | Evidências de G1, G2 e G3 | Ana Luíza e Felipe: [#86](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/86), [#93](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/93), [#94](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/94) | Pendente; folga para revisão cruzada |
+| 20 a 21/11 | Revisão de navegação e estilo | Todas as páginas revisadas | Tales: [#91](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/91), [#95](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/95) | Pendente; último reteste |
+| 24/11 | Release E2 e submissão | Release entregue | Ana Luíza: [#96](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/96) | Pendente |
 
-*Tabela 4: Cronograma da avaliação (2026).*
+*Tabela 4: Cronograma da avaliação (2026). Os períodos refletem as atividades da Fase 4, os responsáveis das issues e a folga necessária para retestes, correções e a ação de melhoria.*
 
 As coletas de uma mesma métrica são feitas em uma única sessão, e cada execução registra data
 e hora, porque o portal está em produção e pode mudar durante o período
@@ -127,3 +132,4 @@ e hora, porque o portal está em produção e pode mudar durante o período
 | 1.0 | 08/11/2026 | Recursos e ambiente; método de eficiência de desempenho |
 | 1.1 | 14/11/2026 | Visão geral do plano, ligação com as Fases 1 e 2, rastreabilidade F2 → F3 e cronograma |
 | 1.2 | 15/11/2026 | Método de flexibilidade (G2) |
+| 1.3 | 23/11/2026 | Cronograma da Fase 4 distribuído por data, responsável, issue e folga para retestes |
