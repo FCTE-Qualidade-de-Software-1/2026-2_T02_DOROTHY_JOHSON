@@ -146,6 +146,7 @@ nav:
       - Oportunidades de Melhoria: fase-4/oportunidades-melhoria.md
       - Ação de Melhoria: fase-4/acao-melhoria.md
   - Gestão:
+      - gestao/index.md
       - Plano de Medição (PSM/CID): gestao/plano-medicao.md
       - Registro Semanal das Medições: gestao/registro-medicoes.md
       - Painel PSM: gestao/painel.md
