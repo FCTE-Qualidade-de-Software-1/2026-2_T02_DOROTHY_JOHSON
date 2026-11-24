@@ -62,8 +62,7 @@ e #56) entram no registro da semana 2.
     A coleta agendada para 23:00 roda, na prática, na madrugada seguinte (entre 04:00 e 06:30
     de Brasília). Assim, cada snapshot representa o **fim do dia anterior**, e o arquivo
     `2026-10-26.csv` não continha o que aconteceu durante 26/10. Na noite de 26/10, entre 21:40
-    e 23:39, fecharam 17 issues (#5, #9, #11, #15, #17, #18, #20, #27, #28, #31, #33, #34, #37,
-    #45, #46, #47 e #49) e foram mergeados os PRs #55, #56 e #57. Pela data, eles pertencem à
+    e 23:39, fecharam 17 issues (#5, #9, #11, #15, #17, #18, #20, #27, #28, #31, #33, #34, #37, #45, #46, #47 e #49) e foram mergeados os PRs #55, #56 e #57. Pela data, eles pertencem à
     semana 1; pelo método antigo, não entravam em semana nenhuma.
 
     O `indicadores.py` passou a usar, para cada dia, o primeiro snapshot coletado depois das
@@ -210,8 +209,7 @@ issues no repositório depende de permissão do dono da organização.
    completo (#19, #26). O tamanho do entregável no repositório (linhas alteradas) e a
    quantidade de critérios da rubrica serviram de apoio.
 3. **Horas:** `Estimate` × 0,40 h/ponto, a base do M3 na semana 1, que é a única taxa medida na
-   equipe. Quando os commits mostram um tempo de trabalho maior, vale o valor observado: só a
-   #33, com commits das 22:49 às 23:43 de 26/10 (0,9 h).
+   equipe. Quando os commits mostram um tempo de trabalho maior, vale o valor observado: só a #33, com commits das 22:49 às 23:43 de 26/10 (0,9 h).
 
 | Issue | Responsável | Estimate | Horas | Evidência no repositório |
 |---|---|---|---|---|
@@ -412,15 +410,13 @@ com issues concluídas: 13, quase todas entre 12/11 e 16/11.
 
 ### M4: lead time e tempo até o merge
 
-- **Resultado:** lead time médio de **9,6 dias** (limite de investigação: 10,6 dias). As #80,
-  #83 e #97 ficaram acima do limite, com 11,0 dias. Os 9 PRs da semana levaram em média
+- **Resultado:** lead time médio de **9,6 dias** (limite de investigação: 10,6 dias). As #80, #83 e #97 ficaram acima do limite, com 11,0 dias. Os 9 PRs da semana levaram em média
   **28,8 h** até o merge (limite: 31,7 h). O #98 ficou acima, com 96,5 h. Em 7 dos 9 PRs, o
   merge foi feito por outro membro.
 - **Critério do plano:** as #80, #83 e #97 e o PR #98 foram investigados.
 - **Interpretação:** as três issues acima do limite foram criadas em 05/11 e fechadas em 16/11,
   dia do Ponto de Controle 2, o que confirma a concentração no fim da semana. O PR #98 ficou
-  aberto de 08/11 a 13/11 sem revisão e foi mergeado pelo próprio autor. Dois dos 9 PRs (#98 e
-  #108) não seguiram o padrão de merge por outro membro.
+  aberto de 08/11 a 13/11 sem revisão e foi mergeado pelo próprio autor. Dois dos 9 PRs (#98 e #108) não seguiram o padrão de merge por outro membro.
 
 ### Situação das decisões da semana 3
 
@@ -490,8 +486,7 @@ o estado ao fim de 24/11 sai da coleta de 25/11 e entra numa atualização deste
 ### M4: lead time e tempo até o merge
 
 - **Resultado:** lead time médio de **18,2 dias** (limite: 20,0 dias), sem issue acima do
-  limite. Os 9 PRs levaram em média **6,0 h** até o merge (limite: 6,6 h). O #111 (26,3 h) e o
-  #112 (9,6 h) ficaram acima. Em 8 dos 9 PRs, o merge foi feito por outro membro, e 3 tiveram
+  limite. Os 9 PRs levaram em média **6,0 h** até o merge (limite: 6,6 h). O #111 (26,3 h) e o #112 (9,6 h) ficaram acima. Em 8 dos 9 PRs, o merge foi feito por outro membro, e 3 tiveram
   revisão formal no GitHub.
 - **Critério do plano:** o #111 e o #112 foram investigados.
 - **Interpretação:** o lead time alto e uniforme (17 a 19 dias) vem de issues criadas em 05/11 e
