@@ -10,7 +10,7 @@ Uma linha por ambiente usado na rodada. Campos de local e rede devem descrever a
 rodada,data_hora_fuso,atividade,avaliadores,dispositivo,so_versao,navegador_versao,viewport,zoom,rede,local,gravador,axe_versao,observacoes
 ```
 
-Uma linha por pessoa. Registre o consentimento no controle de acesso restrito.
+Uma linha por pessoa, com códigos como P01 e P02. Use esta ficha no controle restrito e registre as escolhas no [termo de consentimento](termo-consentimento.md).
 
 ```csv
 codigo,publico_representado,familiaridade_digital,primeiro_acesso,consentimento_confirmado,rodada,observacoes

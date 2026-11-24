@@ -9,6 +9,7 @@ qual métrica e qual questão do GQM ele responde e como chegar de um resultado 
 | Pasta | Conteúdo | Tipo | Detalhes da coleta |
 |---|---|---|---|
 | `fase-2/piloto/` | Piloto de G3 de 20/10/2026, usado para formular as hipóteses; não entra na classificação | Bruto e resumo | [README](fase-2/piloto/README.md) |
+| `fase-4/interacao/` | Destino dos dados de G1 revisados para publicação | Bruto anonimizado e derivado | [README](fase-4/interacao/README.md) |
 | `fase-4/eficiencia/` | Coleta de G3 de 08/11/2026 | Bruto e derivado | [README](fase-4/eficiencia/README.md) |
 | `fase-4/flexibilidade/` | Coleta de G2 de 15/11/2026 (parcial: falta a matriz manual de ambientes) | Bruto e derivado | [README](fase-4/flexibilidade/README.md) |
 | `fase-4/melhoria/` | Evidências e medição da ação de melhoria, de 14/11/2026 | Bruto e derivado | [README](fase-4/melhoria/README.md) |
@@ -73,7 +74,7 @@ Brasília, aparece como 09/11 às 00:24 nos arquivos.
 **Para arquivos novos**, usar `<metrica>_<recorte>_<AAAA-MM-DD>_<execucao>.<ext>` na pasta da
 característica, em minúsculas e sem espaços (por exemplo,
 `m1.6.1_meu-territorio_2026-11-22_e1.json`). Arquivos com dados de participantes usam o código
-no lugar do recorte (`m1.5.1_p1_...`).
+no lugar do recorte (`m1.5.1_p01_...`).
 
 ## Privacidade e condições de acesso
 
@@ -83,10 +84,8 @@ no lugar do recorte (`m1.5.1_p1_...`).
   caminhos de pastas pessoais, e as capturas não têm metadados EXIF.
 - **Pessoas citadas:** os READMEs trazem o nome do integrante que fez cada coleta, e `psm/` traz
   os usuários do GitHub da equipe, que já são públicos no repositório.
-- **Participantes de G1:** quando houver sessões, valem as
-  [condições comuns da Fase 2](../docs/fase-2/metricas.md#condicoes-comuns-de-coleta):
-  identificação apenas por código (P1 a P5), sem publicar o vínculo entre código e nome. O termo
-  de consentimento e o acesso às gravações são definidos no protocolo de participantes (#68).
+- **Participantes de G1:** usar códigos como P01 a P05. O [protocolo de participantes](../docs/fase-3/protocolo-participantes.md)
+  define a guarda privada das gravações e formulários originais e a revisão das evidências para publicação.
 - **Acesso:** todos os arquivos deste diretório são públicos, no repositório. A única exceção são
   as imagens originais do portal (`fase-4/melhoria/originais/`), que pertencem ao MDA e não são
   versionadas; `fase-4/melhoria/imagens.csv` traz o endereço, o tamanho e o SHA-256 de cada uma.

@@ -40,10 +40,11 @@ detalhadas no plano de avaliação da Fase 3:
 - **Participantes:** 5 pessoas que nunca usaram o portal, número suficiente para encontrar a maior
   parte dos problemas de usabilidade em um teste qualitativo (NIELSEN, 2000). O recrutamento mistura
   níveis de familiaridade digital, e o perfil de cada participante é registrado sem identificá-lo.
-- **Consentimento e gravação:** cada participante assina um termo de consentimento, e a sessão é
-  gravada (tela e áudio), conforme a premissa 6 do enunciado.
-- **Anonimização:** os participantes são identificados como P1 a P5 nos dados e nas gravações
-  versionadas; o vínculo entre código e nome não é publicado (premissa 5).
+- **Consentimento e gravação:** obter o termo assinado e a autorização específica antes de
+  gravar tela e áudio. Registrar sessões sem gravação como desvio do procedimento previsto.
+- **Identificação:** usar códigos como P01 a P05 nas fichas. O termo assinado, o vínculo entre
+  código e nome e os originais ficam em acesso restrito, conforme o
+  [protocolo da Fase 3](../fase-3/protocolo-participantes.md).
 - **Roteiro:** cada tarefa começa na página Início. O moderador lê a tarefa, não dá dicas e não
   responde perguntas sobre a interface. O participante fala em voz alta o que está pensando.
 - **Limite de tempo:** 5 minutos por tarefa. Desistência, estouro do limite ou qualquer ajuda do
