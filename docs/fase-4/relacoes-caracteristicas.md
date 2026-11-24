@@ -9,15 +9,12 @@ de desempenho e cobertura de ambientes de teste.
 
 ## 1. Critério de cruzamento e evidências
 
-!!! warning "Recorte histórico de G2 nesta discussão"
-    O cruzamento abaixo usa a emulação de 15/11. A
-    [análise de flexibilidade atualizada em 24/11](flexibilidade.md) incorpora a matriz
-    móvel: 9/9 tarefas concluídas, F01 confirmada, F02/F03 não confirmadas no aparelho e
-    F04 reproduzida nos três ambientes móveis. O SITGeo passa de 4/6 para 6/6 funções no
-    resultado adotado; as falhas reais contadas concentram-se na Biblioteca. Assim, as
-    afirmações abaixo sobre perdas do SITGeo descrevem a emulação, não o resultado
-    reconciliado. A matriz completa inclui os três navegadores Windows: 18/18 tarefas concluídas,
-    G2 = 2,21 — Bom, sem falha bloqueante reproduzida.
+!!! note "Base adotada"
+    O cruzamento usa os resultados versionados até 24/11/2026: G1 com o relatório encerrado
+    com ressalvas (P01–P04), G2 com a matriz completa e a conferência no aparelho, e G3 com a
+    coleta de 08/11. As classificações são as da [classificação final](classificacao-final.md).
+    As falhas F02 e F03 do SITGeo, observadas na emulação de 15/11 e não confirmadas no
+    aparelho, são citadas apenas como observações da emulação.
 
 O cruzamento usa a mesma página ou tarefa como unidade de comparação, mantendo os objetos de
 referência da [Fase 3](../fase-3/ambiente.md#2-paginas-tarefas-e-objetos-de-referencia).
@@ -26,37 +23,37 @@ São distinguidos três tipos de afirmação:
 - **Achado observado:** resultado medido ou falha reproduzida no ambiente declarado.
 - **Coocorrência:** problemas de características diferentes encontrados na mesma página,
   em coletas distintas. Não demonstra que um problema causou o outro.
-- **Hipótese de efeito na interação:** consequência possível para o uso, ainda sem
-  confirmação pelos resultados de G1.
+- **Hipótese de efeito na interação:** consequência possível para o uso, examinada contra as
+  observações de G1, que podem apoiá-la, contrariá-la ou não ter dados suficientes.
 
 | Base | Evidência disponível | Limite para o cruzamento |
 |---|---|---|
 | [Eficiência de desempenho](eficiencia.md), coleta de 08/11 | Medianas de 5 execuções de FCP, LCP, CPU, tempos de T1/T2 e memória; dados em `data/fase-4/eficiencia/` | Perfil móvel simulado; não mede a percepção, o caminho ou a conclusão sem ajuda de usuários |
-| [Flexibilidade](flexibilidade.md), coleta de 15/11 | 2 execuções por combinação e função; `rolagem.csv`, `funcoes.csv`, `falhas.csv` e capturas em `data/fase-4/flexibilidade/` | Resultados em emulação; `execucoes.csv` ainda não contém resultados da matriz manual |
-| [Análise de G1](interacao.md) | Resultados parciais de primeiro clique, conclusão, passos, percepção e acessibilidade | Amostra de 4/5 e recortes NC em T2/T3; ainda não permitem confirmar relações com G1 |
+| [Flexibilidade](flexibilidade.md), emulação de 15/11 e matriz manual até 24/11 | Rolagem e funções em 5 larguras; 18/18 tarefas em seis ambientes; falhas F01 e F04 reproduzidas; `execucoes.csv`, `rolagem.csv`, `funcoes.csv`, `falhas.csv` e capturas em `data/fase-4/flexibilidade/` | Conferência das funções do SITGeo em 384 px, com data e versão de navegador diferentes da emulação de 360 px |
+| [Análise de G1](interacao.md), sessões de 22 a 24/11 | Primeiro clique, conclusão, passos, SUS, aparência e acessibilidade automática; observações de T2/T3 preservadas | Amostra de 4/5; recortes NC em T2/T3 por ponto de partida divergente; sessões em celulares e navegadores diferentes, sem versões registradas em parte delas |
 | [Ação de melhoria](acao-melhoria.md#52-efeito-medido), medição de 14/11 | Comparação antes/depois da troca de duas imagens do SITGeo | Demonstração local; não houve implantação no portal nem reavaliação de G1 ou G2 |
 
 *Tabela 1: Fontes e limites da análise conjunta.*
 
 ## 2. Flexibilidade × eficiência de desempenho
 
-| Página | Flexibilidade observada em 15/11 | Desempenho medido em 08/11 | O que o cruzamento permite afirmar |
+| Página | Flexibilidade (resultado adotado em 24/11) | Desempenho medido em 08/11 | O que o cruzamento permite afirmar |
 |---|---|---|---|
 | Meu Território | 12/12 funções preservadas em 360 px; sem rolagem horizontal nas 5 larguras | LCP de 8,27 s e resposta de T1 de 20,39 s | A preservação das funções na tela estreita pode coexistir com lentidão; o resultado de G2 não assegura bom desempenho |
-| SITGeo | 4/6 funções preservadas em 360 px; nome e dados das camadas e botões de zoom cobertos (F02/F03); sem rolagem horizontal | LCP de 23,45 s, CPU de 8,26 s e resposta de T2 de 6,45 s | Há coocorrência de perdas de funções e lentidão na mesma página; a ausência de rolagem não garante acesso aos controles |
-| Biblioteca Territorial | 6/7 funções preservadas em 360 px; setas da Mapoteca fora da tela; rolagem horizontal em 360 e 412 px (F01) | LCP de 3,91 s, o menor das 3 páginas | Uma página pode carregar mais rapidamente que as demais e ainda apresentar barreira de adaptação à tela |
+| SITGeo | 6/6 funções após a conferência no aparelho; sem rolagem horizontal; F02/F03 observadas só na emulação | LCP de 23,45 s, CPU de 8,26 s e resposta de T2 de 6,45 s | A página com o pior desempenho não tem perda de função confirmada; o resultado de G2 não assegura bom desempenho |
+| Biblioteca Territorial | 6/7 funções; setas da Mapoteca fora da tela (F01); rolagem horizontal em 360 e 412 px; tabela de PTDRS cortada em celulares (F04) | LCP de 3,91 s, o menor das 3 páginas | Uma página pode carregar mais rapidamente que as demais e ainda concentrar as barreiras de adaptação à tela |
 
 *Tabela 2: Cruzamento por página de M2.2.1/M2.2.2 com M3.1.2, M3.2.1 e M3.3.1.*
 
-O SITGeo concentra os piores valores de LCP e CPU de G3 e duas das três falhas distintas
-registradas em G2. Essa convergência sustenta a recomendação de tratar tanto o carregamento
-quanto o layout móvel da página. Entretanto, **não demonstra que a perda de funções seja
-causada pela lentidão**, nem que corrigir o layout reduza o tempo de carregamento. A análise
-de G2 localiza sobreposições na grade mantida em telas estreitas, enquanto o diagnóstico da
-[ação de melhoria](acao-melhoria.md#2-justificativa-o-que-as-medidas-mostram) identifica a
-transferência de imagens como a maior parcela do LCP do SITGeo.
+As duas características se distribuem de forma oposta entre as páginas. O SITGeo concentra
+os piores valores de LCP e CPU de G3, mas não tem perda de função confirmada em G2. A
+Biblioteca tem o menor LCP e concentra as duas falhas contadas em G2 (F01 e F04) e a
+rolagem horizontal. Não há, portanto, coocorrência confirmada de perda de funções e
+lentidão na mesma página. O diagnóstico da
+[ação de melhoria](acao-melhoria.md#2-justificativa-o-que-as-medidas-mostram) atribui a
+maior parcela do LCP do SITGeo à transferência de imagens, causa que não envolve o layout.
 
-Os resultados de Meu Território e da Biblioteca reforçam a necessidade de avaliar as duas
+Os resultados das três páginas reforçam a necessidade de avaliar as duas
 características separadamente. Os dados disponíveis **não estabelecem uma relação geral ou
 estatística entre adaptabilidade e desempenho**: há apenas três páginas, medidas em datas,
 larguras e versões de navegador diferentes. A comparação é descritiva, por página; não é um
@@ -64,29 +61,32 @@ experimento que isola o efeito do tamanho da tela sobre o desempenho.
 
 ## 3. Flexibilidade × capacidade de interação
 
-As falhas F01 a F03 documentam barreiras concretas de acesso a conteúdo e controles na
-emulação móvel. Sua possível repercussão na capacidade de interação deve ser examinada nas
-sessões de G1:
+As falhas F01 e F04 documentam barreiras de acesso a controles e conteúdo da Biblioteca em
+celulares. F02 e F03, observadas no SITGeo apenas na emulação, ficam como hipóteses
+secundárias. A tabela compara cada achado com as observações das sessões de G1
+([seção 1.1 da análise de G1](interacao.md#11-observacoes-de-t2-e-t3-preservadas-no-encerramento)):
 
-| Achado de G2 | Hipótese de efeito na interação | Evidência necessária em G1 |
-|---|---|---|
-| F03: nome, fonte e unidade das camadas cobertos no SITGeo (GEO-04) | A dificuldade de identificar a camada pode prejudicar a conclusão de T2 ou exigir mais passos | Conclusão sem ajuda (M1.2.1), eficiência do caminho nas tentativas concluídas (M1.3.1) e gravação que mostre a dificuldade de localizar a camada |
-| F02: botões de zoom cobertos no SITGeo (GEO-05) | O usuário pode ter dificuldade para explorar o mapa ou precisar recorrer ao gesto de pinça | Observação de tentativas de usar o zoom, quando ocorrerem; ativar a camada em T2 não exige necessariamente usar esses botões |
-| F01: setas da Mapoteca fora da tela (BIB-05) | O acesso ao carrossel pode exigir ações adicionais ou passar despercebido | Observação específica do carrossel; T3 busca um PTDRS por outro fluxo e, sozinha, não testa essa hipótese |
+| Achado de G2 | Hipótese de efeito na interação | O que G1 mostrou | Situação da hipótese |
+|---|---|---|---|
+| F04: tabela de PTDRS cortada em três ambientes móveis (Biblioteca) | A leitura da tabela pode dificultar a obtenção do documento em T3 | P03 obteve o PTDRS sem ajuda registrada e P02 com dicas; P01 não acessou a Biblioteca e P04 baixou a imagem do mapa em vez do documento | Sem dados suficientes: as dificuldades observadas ocorreram antes da tabela ou em outro fluxo, e T3 é NC em M1.2.1 |
+| F01: setas da Mapoteca fora da tela (BIB-05) | O acesso ao carrossel pode exigir ações adicionais ou passar despercebido | T3 busca o PTDRS por outro fluxo; as sessões não registram uso do carrossel | Sem dados: a tarefa não testa essa hipótese |
+| F02/F03: zoom e dados da camada cobertos no SITGeo (só na emulação) | A dificuldade de identificar a camada pode prejudicar a conclusão de T2 | P01, P02 e P03 permaneceram em Meu Território, na aba Crédito Rural, sem chegar ao SITGeo; P04 ativou a camada | Não apoiada: as dificuldades de T2 ocorreram na escolha da seção, antes do SITGeo |
 
-*Tabela 3: Barreiras observadas de adaptação e efeitos sobre a interação ainda não medidos.*
+*Tabela 3: Barreiras de adaptação e o que as sessões de G1 permitem verificar.*
 
-No Procedimento B, T2 pôde ser executada pelo script sem clique forçado, embora o SITGeo
-tenha perdido duas funções em 360 px. Isso mostra o limite de considerar apenas a conclusão
-técnica: o controle para ativar a camada pode continuar acessível enquanto o texto necessário
-para escolhê-la fica coberto. **O sucesso da automação não permite concluir que um usuário
-de primeira vez consiga identificar e ativar a camada sem ajuda.**
+O principal obstáculo observado em T2 é de **navegação entre seções**, não de adaptação à
+tela: três participantes buscaram a camada em Meu Território. Isso é coerente com o primeiro
+clique de T2 (0/1 na observação válida) e com o SUS de 50, mas não se relaciona com as falhas
+de G2. No Procedimento B, T2 foi executada pelo script sem clique forçado. **O sucesso da
+automação não permite concluir que um usuário de primeira vez encontre e ative a camada sem
+ajuda**, como as sessões de G1 confirmam.
 
-Também não se deve atribuir automaticamente a F03 um efeito sobre M1.1.2: essa métrica conta
-o primeiro clique a partir da página Início, anterior à escolha da camada. O vínculo mais
-direto a verificar está na conclusão e no caminho de T2. Da mesma forma, sobreposição e
-rolagem não substituem as medições de acessibilidade M1.6.1 e M1.6.2, nem permitem antecipar
-seus níveis ou afirmar conformidade completa com WCAG/eMAG.
+Também não se deve atribuir a F03 um efeito sobre M1.1.2: essa métrica conta o primeiro
+clique a partir da página Início, anterior à escolha da camada. Da mesma forma, sobreposição
+e rolagem não substituem as medições de acessibilidade M1.6.1 e M1.6.2. A Biblioteca, porém,
+concentra tanto as falhas de G2 quanto o maior número de elementos críticos e sérios de
+M1.6.2 (6 críticos e 33 sérios), o que é uma **coocorrência** relevante para priorizar a
+página, sem relação causal demonstrada.
 
 ## 4. Eficiência de desempenho × capacidade de interação
 
@@ -98,9 +98,11 @@ disponibilidade rápida de seu conteúdo principal.
 **Hipótese a verificar:** a espera pode levar participantes a repetir ações, procurar outro
 caminho, pedir ajuda ou desistir, com possível repercussão em M1.2.1 e M1.5.1. Essa hipótese
 exige gravações e registros que situem a dificuldade no período de espera; a lentidão, por
-si só, não confirma que qualquer desses comportamentos ocorreu. Mesmo após a coleta de G1,
-uma associação descritiva não isolará a lentidão de fatores como clareza dos rótulos,
-familiaridade digital e adaptação do layout.
+si só, não confirma que qualquer desses comportamentos ocorreu. As sessões de G1 não isolam
+o período de espera: em T1, a tarefa mais lenta de G3, os quatro participantes concluíram sem
+ajuda (M1.2.1 = 4/4), com eficiência média do caminho de 0,5148. **A hipótese permanece sem
+dados suficientes**; a associação descritiva não separa a lentidão de fatores como clareza dos
+rótulos, familiaridade digital e adaptação do layout.
 
 Há três cuidados para interpretar o cruzamento:
 
@@ -131,12 +133,11 @@ não substitui o LCP de 23,45 s de G3 nem altera sua classificação final.
 
 As principais limitações do cruzamento são:
 
-- **Cobertura incompleta:** G1 tem resultados parciais, com recortes NC e classificação final
-  pendente; G2 permanece parcial, sem a matriz manual e sem confirmação das perdas no celular
-  real. Não se antecipam as classificações dessas características nem se confirmam hipóteses
-  apenas pela ausência de dados.
-- **Coletas distintas:** G3 foi medido em 08/11 e G2 em 15/11, com versões de navegador e
-  perfis diferentes. O portal não informa versão e pode ter mudado entre as coletas.
+- **Cobertura de G1:** o relatório foi encerrado com ressalvas, com 4/5 participantes,
+  recortes NC em T2/T3 e classificação global NC. As hipóteses que dependem de T2/T3 ficam
+  sem dados suficientes; não são confirmadas nem descartadas pela ausência de observação.
+- **Coletas distintas:** G3 foi medido em 08/11, G2 entre 15/11 e 24/11 e G1 entre 22 e
+  24/11, com versões de navegador e perfis diferentes. O portal não informa versão e pode ter mudado entre as coletas.
 - **Unidades e alcances diferentes:** tempo de resposta, disponibilidade de função,
   conclusão por usuário e percepção de uso não são medidas intercambiáveis. As repetições
   técnicas não são participantes independentes e não demonstram causalidade entre atributos.
@@ -148,15 +149,15 @@ As principais limitações do cruzamento são:
   para relações com características excluídas, como segurança ou confiabilidade.
 
 Para as decisões da Fase 1, os dados sustentam **investigar a resposta de T1 e otimizar o
-carregamento do SITGeo**, além de **corrigir e confirmar as perdas de funções no layout
-móvel do SITGeo e da Biblioteca**. A necessidade de redesenhar os fluxos por dificuldade de
-usuários de primeira vez e o efeito das correções sobre sua percepção ainda dependem da
-complementação da coleta de G1.
+carregamento do SITGeo**, além de **corrigir a tabela de PTDRS e as setas da Mapoteca na
+Biblioteca em celulares**. As sessões de G1 sustentam investigar a distinção entre Meu
+Território e o SITGeo no fluxo de T2. O efeito das correções sobre a percepção de usuários
+de primeira vez não foi medido e depende de uma futura avaliação.
 Melhorar o desempenho e adaptar a interface são frentes complementares; nenhuma das duas
 dispensa a verificação da outra.
 
 As classificações continuam separadas, como definido nos
 [critérios da Fase 2](../fase-2/niveis-pontuacao.md#53-da-pontuacao-a-decisao-de-qualidade).
-O cruzamento não cria uma nota global do SIT. Quando G1 e a matriz de G2 forem completados,
-esta discussão deve ser atualizada com as evidências correspondentes, registrando quais
-hipóteses receberam apoio, quais foram contrariadas e quais continuam sem dados suficientes.
+O cruzamento não cria uma nota global do SIT. As classificações por característica estão na
+[classificação final](classificacao-final.md), e as ações priorizadas, nas
+[oportunidades de melhoria](oportunidades-melhoria.md).
