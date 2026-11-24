@@ -8,12 +8,12 @@ AND-SAMSUNG,T3,1,concluida,,Samsung Internet 31.0.0.81,Android 17,Samsung Galaxy
 IOS-SAFARI,T1,1,concluida,,Safari (iOS 27.0.1),iOS 27.0.1,iPhone 17 Pro Max,real,440,Tales,2026-11-24T01:17-03:00,capturas/tarefa-ios-safari-t1-e1.jpg,Refeita: a primeira tentativa abriu outro território por erro de seleção do avaliador
 IOS-SAFARI,T2,1,concluida,,Safari (iOS 27.0.1),iOS 27.0.1,iPhone 17 Pro Max,real,440,Tales,2026-11-24T00:59-03:00,capturas/tarefa-ios-safari-t2-e1.jpg,
 IOS-SAFARI,T3,1,concluida,,Safari (iOS 27.0.1),iOS 27.0.1,iPhone 17 Pro Max,real,440,Tales,2026-11-24T01:00-03:00,capturas/tarefa-ios-safari-t3-e1.jpg,Tabela de PTDRS cortada na lateral (F04); tarefa concluída
-WIN-CHROME,T1,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-CHROME,T2,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-CHROME,T3,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-EDGE,T1,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-EDGE,T2,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-EDGE,T3,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-FIREFOX,T1,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-FIREFOX,T2,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
-WIN-FIREFOX,T3,1,,,,,,,,,,,Não executado: a equipe não tem acesso a computador com Windows
+WIN-CHROME,T1,1,concluida,,Chrome 157.0.8103.80,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:40-03:00,capturas/tarefa-win-chrome-t1-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-CHROME,T2,1,concluida,,Chrome 157.0.8103.80,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:41-03:00,capturas/tarefa-win-chrome-t2-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-CHROME,T3,1,concluida,,Chrome 157.0.8103.80,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:43-03:00,capturas/tarefa-win-chrome-t3-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-EDGE,T1,1,concluida,,Edge 158.0.4370.33,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:52-03:00,capturas/tarefa-win-edge-t1-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-EDGE,T2,1,concluida,,Edge 158.0.4370.33,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:53-03:00,capturas/tarefa-win-edge-t2-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-EDGE,T3,1,concluida,,Edge 158.0.4370.33,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:54-03:00,capturas/tarefa-win-edge-t3-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-FIREFOX,T1,1,concluida,,Firefox 161.0,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:48-03:00,capturas/tarefa-win-firefox-t1-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-FIREFOX,T2,1,concluida,,Firefox 161.0,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:49-03:00,capturas/tarefa-win-firefox-t2-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado
+WIN-FIREFOX,T3,1,concluida,,Firefox 161.0,Windows 10 22H2,Computador com Windows 10,real,1366,Gabriel Augusto,2026-11-24T16:50-03:00,capturas/tarefa-win-firefox-t3-e1.jpg,Largura de 1366 px pelo modo Responsive das ferramentas de desenvolvedor (1366 × 1221); horário aproximado

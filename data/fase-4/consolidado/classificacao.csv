@@ -16,14 +16,14 @@ questão,Q1.4,2.0000,,,,concluída
 questão,Q1.5,1.0000,,,,concluída
 questão,Q1.6,0.9000,,,,concluída
 característica,G1,NC,,"violação crítica de acessibilidade em Início, Meu Território, SITGeo, Biblioteca Territorial, Fale Conosco",pendente,pendente
-métrica,M2.1.1,NC,,,,pendente
+métrica,M2.1.1,3.0000,,,,concluída
 métrica,M2.2.1,1.0000,,,,concluída
-métrica,M2.2.2,2.0000,,,,concluída
-métrica,M2.3.1,NC,,,,pendente
-questão,Q2.1,NC,,,,pendente
-questão,Q2.2,1.5000,,,,concluída
-questão,Q2.3,NC,,,,pendente
-característica,G2,NC,,,pendente,pendente
+métrica,M2.2.2,2.6667,,,,concluída
+métrica,M2.3.1,1.8000,,,,concluída
+questão,Q2.1,3.0000,,,,concluída
+questão,Q2.2,1.8333,,,,concluída
+questão,Q2.3,1.8000,,,,concluída
+característica,G2,2.2111,Bom,,Bom,concluída
 métrica,M3.1.1,2.0000,,,,concluída
 métrica,M3.1.2,0.3333,,,,concluída
 métrica,M3.2.1,0.5000,,,,concluída

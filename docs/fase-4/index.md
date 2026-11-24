@@ -4,7 +4,7 @@ Nesta fase a equipe coleta as medidas conforme o plano da [Fase 3](../fase-3/ind
 calcula as métricas, responde às questões e aos objetivos do GQM e atribui a classificação de cada
 característica.
 
-- [Análise e respostas GQM: flexibilidade](flexibilidade.md) (parcial: matriz de ambientes pendente)
+- [Análise e respostas GQM: flexibilidade](flexibilidade.md) (matriz completa; Q2.1–Q2.3 e hipóteses respondidas; G2 = 2,21 — Bom)
 - [Análise e respostas GQM: eficiência de desempenho](eficiencia.md)
 - [Análise e respostas GQM: capacidade de interação](interacao.md)
 - [Relações entre as características](relacoes-caracteristicas.md) (evidências disponíveis e hipóteses que dependem de G1 e da conclusão de G2)

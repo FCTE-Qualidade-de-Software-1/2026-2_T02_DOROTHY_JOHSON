@@ -8,8 +8,14 @@ MDA na priorização do backlog de evolução do portal.
 
 !!! warning "Cobertura da lista"
     A lista parte dos resultados de **eficiência de desempenho (G3)**, completos, e de
-    **flexibilidade (G2)**, parciais: falta a matriz manual de ambientes
-    ([#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72)).
+    **flexibilidade (G2)** na emulação de 15/11. A
+    [análise atualizada da #77](flexibilidade.md) inclui a coleta móvel de 24/11:
+    F01 foi confirmada, F02/F03 não foram confirmadas e F04 foi reproduzida nos três
+    ambientes móveis. **OM6 passa a requerer investigação da divergência em 360 px,
+    sem perda confirmada no aparelho**, e a tabela de PTDRS (F04) deve ser incorporada
+    à próxima revisão da priorização. Os níveis de OM6 abaixo são históricos; o resultado
+    adotado do SITGeo é 6/6 funções, Excelente (3). A coleta Windows foi incorporada:
+    18/18 tarefas concluídas e G2 = 2,21 — Bom, sem falha bloqueante reproduzida.
     **Capacidade de interação (G1) tem resultados parciais**: a análise da
     [rodada 01](interacao.md) encontrou barreiras críticas de acessibilidade, mas a amostra e
     alguns recortes ainda precisam ser completados ([#76](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/76)).
