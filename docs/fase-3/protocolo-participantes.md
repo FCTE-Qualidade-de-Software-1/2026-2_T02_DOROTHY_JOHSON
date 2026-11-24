@@ -24,7 +24,7 @@ Este protocolo se aplica às entrevistas e aos testes com participantes na avali
 | Termo em branco e fichas de coleta | `docs/fase-3/termo-consentimento.md` e `docs/fase-3/formularios-interacao.md` | Público |
 | Termos assinados e relação código–nome | Pastas separadas `consentimentos/` e `identificacao/` no armazenamento privado da equipe, fora do Git | Responsável pela guarda |
 | Gravações originais e fichas preenchidas | Pastas privadas `gravacoes/` e `formularios/`, fora do Git | Moderador e avaliadores designados. Professor responsável apenas para conferência, por acesso restrito quando necessário. |
-| Dados revisados e consolidados | `data/fase-4/interacao/formularios/` e `data/fase-4/interacao/` | Público após revisão |
-| Evidências derivadas das gravações | `data/fase-4/interacao/gravacoes/`, somente para recortes anonimizados cuja publicação específica tenha sido autorizada | Público após revisão |
+| Dados revisados e consolidados | `data/fase-4/capacidade-de-interacao/`, somente tabelas anonimizadas e resultados agregados | Público após revisão |
+| Evidências derivadas das gravações | `data/fase-4/capacidade-de-interacao/capturas/`, somente recortes anonimizados cuja publicação específica tenha sido autorizada | Público após revisão |
 
 Configure a pasta privada com acesso por contas indicadas e compartilhamento público desativado. Antes de subir arquivos para o GitHub, dois integrantes conferem se a exportação removeu nomes, contatos, assinaturas, voz, rostos, notificações, metadados e outros detalhes que possam identificar alguém. Para formulários, publique apenas campos necessários às métricas. Quando uma combinação de perfil e respostas puder identificar alguém, publique o resultado agregado. Prefira tabelas de observação e capturas anonimizadas como evidência pública. Mantenha os originais fora de commits, PRs, issues e GitHub Pages.

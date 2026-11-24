@@ -52,7 +52,7 @@ reproduzido a partir do dado bruto.
 | M3.2.1 | Por tarefa: mediana de 5 execuções de `tempo_s` | s |
 | M3.4.1 | Por momento: mediana de 5 execuções de `heap_carga_mb` ou `heap_tarefa_mb` | MB |
 
-*Tabela 3: Fórmulas das métricas com coleta prevista em G2 e G3. As de G1 estão nas
+*Tabela 3: Fórmulas das métricas de G1, G2 e G3. As de G1 estão nas
 [fichas da Fase 2](../fase-2/metricas.md#g1-capacidade-de-interacao).*
 
 ### 2.2 Do valor à classificação
@@ -72,6 +72,7 @@ M3.1.2 = (0 + 0 + 1) / 3 = 0,33; Q3.1 = (2,00 + 0,33) / 2 = 1,17.
 |---|---|
 | Menos de 5 execuções válidas em um recorte de G3 | Recorte **NC** (não classificável); a mediana parcial é mostrada com o número real de execuções |
 | Ambiente da matriz de G2 sem as 3 tarefas, ou com falha sem reexecução | Ambiente **NC** |
+| Tarefa G1 iniciada fora de Início, quando a métrica exige esse ponto de partida | Observação não entra no recorte; se não restar observação válida, o recorte fica **NC** |
 | Métrica com algum recorte NC | Métrica, questão e característica ficam **pendentes** |
 | Linha ou captura que falta em G2, relatório com `runtimeError` ou valor nulo | O cálculo é **interrompido** com a lista dos problemas, para ser corrigido na origem |
 
@@ -80,12 +81,12 @@ M3.1.2 = (0 + 0 + 1) / 3 = 0,33; Q3.1 = (2,00 + 0,33) / 2 = 1,17.
 Nenhum valor ausente é estimado, e NC nunca vira 0 nem 3
 ([regra 5 da Fase 2](../fase-2/niveis-pontuacao.md#1-escala-comum-e-regras-de-aplicacao)).
 
-**Situação atual:** dos 41 recortes listados em `medidas.csv`, 20 estão classificados (todos os
-16 de G3 e 4 de G2) e 21 são NC:
+**Situação atual:** dos 55 recortes listados em `medidas.csv`, 40 estão classificados (20 de G1,
+4 de G2 e todos os 16 de G3) e 15 são NC:
 
-- 10 de G1, um por métrica, porque não há coleta registrada
-  ([#71](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/71)).
-  Cada linha representa a métrica inteira; o número de recortes cresce quando houver coleta;
+- 4 de G1: M1.1.2/T3, M1.2.1/T3 e M1.3.1/T2–T3. A rodada tem 4 dos 5 participantes previstos;
+  os recortes NC também refletem tarefas iniciadas fora de Início
+  ([coleta](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/blob/main/data/fase-4/capacidade-de-interacao/README.md) e [análise](interacao.md));
 - 11 de G2 (M2.1.1 e M2.3.1), que dependem da matriz manual de ambientes
   ([#72](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/72)).
 

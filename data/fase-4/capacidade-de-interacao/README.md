@@ -21,15 +21,18 @@ Coleta da [#71](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROT
 | `capturas/` | Capturas da autodescrição (`M111_*`) e dos casos de entradas inválidas (`MT-*`, `BT-*`, `FC-*`) |
 
 Gravações, transcrições e termos de consentimento ficam em acesso restrito e não são versionados ([#68](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68)).
+Antes de publicar as fichas individuais de `fichas/`, confirme que são cópias revisadas e
+anonimizadas, não os formulários originais preenchidos; originais e qualquer vínculo com nomes
+devem permanecer no armazenamento privado, conforme o [protocolo](../../../docs/fase-3/protocolo-participantes.md).
 
 ## Resultados
 
 | Métrica | Recorte | Valor |
 |---|---|---|
 | M1.1.1 Autodescrição | 9 seções | 7/9 = 0,78 |
-| M1.1.2 Primeiro clique | T1 / T2 / T3 | 0,75 / 0 / 0 |
-| M1.2.1 Conclusão sem ajuda | T1 / T2 / T3 / média | 1,00 / 0,25 / 0,25 / 0,50 |
-| M1.3.1 Eficiência do caminho | T1 / T2 / T3 | 0,51 / 0,23 / 0,27 |
+| M1.1.2 Primeiro clique | T1 / T2 / T3 | 0,75 / 0,00 (0/1 válido) / NC |
+| M1.2.1 Conclusão sem ajuda | T1 / T2 / T3 | 1,00 / 0,00 (0/1 válido) / NC |
+| M1.3.1 Eficiência do caminho | T1 / T2 / T3 | 0,5148 / NC / NC |
 | M1.4.1 Prevenção de erros | 7 casos | 6/7 = 0,86 |
 | M1.4.2 Correção de erros | 5 casos com mensagem | 4/5 = 0,80 |
 | M1.5.1 SUS | 4 respostas | 50,0 |
@@ -37,7 +40,11 @@ Gravações, transcrições e termos de consentimento ficam em acesso restrito e
 | M1.6.1 Regras aprovadas | por página | 0,88 a 0,93 |
 | M1.6.2 Críticos + sérios | por página | 5 a 39 (Biblioteca Territorial = 39) |
 
-Os níveis de pontuação são atribuídos na análise ([#76](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/76)).
+Os resultados T2/T3 na tabela acima seguem apenas registros cujo ponto de partida atende ao
+método. A planilha `coleta_G1_rodada01.csv`, na seção `consolidacao`, preserva também os cálculos
+brutos iniciais; eles não devem ser usados para classificar recortes iniciados fora de Início.
+Os níveis de pontuação e as respostas GQM estão na
+[análise de interação](../../../docs/fase-4/interacao.md) ([#76](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/76)).
 
 ## Desvios em relação ao método
 
