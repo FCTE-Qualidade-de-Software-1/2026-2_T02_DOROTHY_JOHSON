@@ -23,7 +23,7 @@ São distinguidos três tipos de afirmação:
 |---|---|---|
 | [Eficiência de desempenho](eficiencia.md), coleta de 08/11 | Medianas de 5 execuções de FCP, LCP, CPU, tempos de T1/T2 e memória; dados em `data/fase-4/eficiencia/` | Perfil móvel simulado; não mede a percepção, o caminho ou a conclusão sem ajuda de usuários |
 | [Flexibilidade](flexibilidade.md), coleta de 15/11 | 2 execuções por combinação e função; `rolagem.csv`, `funcoes.csv`, `falhas.csv` e capturas em `data/fase-4/flexibilidade/` | Resultados em emulação; `execucoes.csv` ainda não contém resultados da matriz manual |
-| [Plano de G1](../fase-3/index.md#3-rastreabilidade-da-fase-2-para-a-fase-3) | Métricas e procedimentos especificados para primeiro clique, conclusão, passos, percepção e acessibilidade | Especificação de coleta não constitui resultado; faltam dados para confirmar relações com G1 |
+| [Análise de G1](interacao.md) | Resultados parciais de primeiro clique, conclusão, passos, percepção e acessibilidade | Amostra de 4/5 e recortes NC em T2/T3; ainda não permitem confirmar relações com G1 |
 | [Ação de melhoria](acao-melhoria.md#52-efeito-medido), medição de 14/11 | Comparação antes/depois da troca de duas imagens do SITGeo | Demonstração local; não houve implantação no portal nem reavaliação de G1 ou G2 |
 
 *Tabela 1: Fontes e limites da análise conjunta.*
@@ -121,9 +121,10 @@ não substitui o LCP de 23,45 s de G3 nem altera sua classificação final.
 
 As principais limitações do cruzamento são:
 
-- **Cobertura incompleta:** G1 ainda não tem resultados publicados; G2 permanece parcial,
-  sem a matriz manual e sem confirmação das perdas no celular real. Não se antecipam as
-  classificações dessas características nem se confirmam hipóteses apenas pela ausência de dados.
+- **Cobertura incompleta:** G1 tem resultados parciais, com recortes NC e classificação final
+  pendente; G2 permanece parcial, sem a matriz manual e sem confirmação das perdas no celular
+  real. Não se antecipam as classificações dessas características nem se confirmam hipóteses
+  apenas pela ausência de dados.
 - **Coletas distintas:** G3 foi medido em 08/11 e G2 em 15/11, com versões de navegador e
   perfis diferentes. O portal não informa versão e pode ter mudado entre as coletas.
 - **Unidades e alcances diferentes:** tempo de resposta, disponibilidade de função,
@@ -139,12 +140,13 @@ As principais limitações do cruzamento são:
 Para as decisões da Fase 1, os dados sustentam **investigar a resposta de T1 e otimizar o
 carregamento do SITGeo**, além de **corrigir e confirmar as perdas de funções no layout
 móvel do SITGeo e da Biblioteca**. A necessidade de redesenhar os fluxos por dificuldade de
-usuários de primeira vez e o efeito das correções sobre sua percepção dependem de G1.
+usuários de primeira vez e o efeito das correções sobre sua percepção ainda dependem da
+complementação da coleta de G1.
 Melhorar o desempenho e adaptar a interface são frentes complementares; nenhuma das duas
 dispensa a verificação da outra.
 
 As classificações continuam separadas, como definido nos
 [critérios da Fase 2](../fase-2/niveis-pontuacao.md#53-da-pontuacao-a-decisao-de-qualidade).
-O cruzamento não cria uma nota global do SIT. Quando G1 e a matriz de G2 forem publicados,
+O cruzamento não cria uma nota global do SIT. Quando G1 e a matriz de G2 forem completados,
 esta discussão deve ser atualizada com as evidências correspondentes, registrando quais
 hipóteses receberam apoio, quais foram contrariadas e quais continuam sem dados suficientes.
