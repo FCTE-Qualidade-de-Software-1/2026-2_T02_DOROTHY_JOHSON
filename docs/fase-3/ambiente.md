@@ -82,8 +82,9 @@ pouco o resultado, desde que seja maior que a do perfil.
 | Recurso | Especificação |
 |---|---|
 | Dispositivo dos testes com usuários | Um celular, o mesmo para todos os participantes ([Fase 2, métricas de G1](../fase-2/metricas.md#condicoes-comuns-de-coleta)) |
-| Inspeções (M1.1.1, M1.4.1, M1.4.2) | Navegador de computador da equipe |
-| Acessibilidade (M1.6.1, M1.6.2) | axe-core, regras WCAG 2.1 níveis A e AA |
+| Inspeção de autodescrição (M1.1.1) | Mesmo celular dos testes com usuários |
+| Inspeções de entradas inválidas (M1.4.1, M1.4.2) | Chrome de computador, em modo offline antes da ação sob teste |
+| Acessibilidade (M1.6.1, M1.6.2) | axe-core 4.10.3, regras WCAG 2.1 níveis A e AA |
 | Questionários (M1.5.1, M1.5.2) | Formulário com o SUS e a nota de aparência |
 | Gravação | Tela e áudio, só com termo de consentimento assinado (protocolo da #68) |
 
@@ -99,11 +100,15 @@ pouco o resultado, desde que seja maior que a do perfil.
 | Ferramentas | Google Chrome 151.0.7922.108, Playwright 1.48.2 e Node.js 24.21.0 |
 | Registro | Data e hora, versões do navegador e do sistema, largura, dispositivo real ou emulado e captura de tela |
 
-!!! note "Itens que dependem dos métodos de G1 e G2"
-    O modelo do celular dos testes com usuários, a versão do axe-core, a ferramenta de
-    gravação e o local das sessões com participantes são definidos no método de capacidade de
-    interação (#63) e no protocolo de participantes (#68). O modelo exato dos aparelhos da
-    matriz de G2 é registrado em `execucoes.csv` a cada execução. Esta página é atualizada quando eles forem fixados.
+!!! note "Registro dos aparelhos de G1 e G2"
+    Em G1, registre o modelo exato do celular, as versões do sistema e do navegador,
+    a ferramenta de gravação e o local das sessões conforme o
+    [método de interação (#63)](metodo-interacao.md#2-preparacao-e-participantes)
+    e o [protocolo de participantes (#68)](https://github.com/FCTE-Qualidade-de-Software-1/2026-2_T02_DOROTHY_JOHSON/issues/68).
+    Atualize a seção 3.2 desta página quando essas informações forem confirmadas.
+    A versão do axe-core já está indicada na tabela de G1.
+
+    Em G2, registre o modelo exato dos aparelhos da matriz em `execucoes.csv` a cada execução.
 
 ## 4. Conhecimento exigido
 

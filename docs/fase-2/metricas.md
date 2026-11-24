@@ -377,7 +377,7 @@ Valem para todas as métricas de G3 e serão detalhadas no plano de avaliação 
 
 ## Registro de ajustes de instrumentação (Fase 2 → Fase 3)
 
-Durante o detalhamento operacional do plano de avaliação na [Fase 3](../fase-3/#32-verificacao-de-suporte-do-ambiente-e-adequacao-do-gqm), duas formas de coleta inicialmente previstas de modo manual mostraram-se inviáveis para garantir repetibilidade entre execuções. As definições conceituais, fórmulas, unidades e faixas de pontuação das métricas foram mantidas, atualizando-se apenas o instrumento de coleta conforme registrado abaixo:
+Durante o detalhamento operacional do plano de avaliação na [Fase 3](../fase-3/index.md#32-verificacao-de-suporte-do-ambiente-e-adequacao-do-gqm), duas formas de coleta inicialmente previstas de modo manual mostraram-se inviáveis para garantir repetibilidade entre execuções. As definições conceituais, fórmulas, unidades e faixas de pontuação das métricas foram mantidas, atualizando-se apenas o instrumento de coleta conforme registrado abaixo:
 
 | ID | Métricas afetadas | Instrumento original (F2) | Instrumento ajustado (F3) | Justificativa técnica |
 | :--- | :--- | :--- | :--- | :--- |
