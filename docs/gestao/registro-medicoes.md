@@ -37,7 +37,7 @@ semanas 4 e 5 vem do modo `--json` da entrega inteira, o mesmo usado pelo painel
 | [2 (27/10 a 02/11)](#semana-2-2710-a-02112026) | 100% (34 de 34) | 100% (28 de 28) | 0 h | Sem dado | Sem dado | Sem dado | D5 a D7 |
 | [3 (03/11 a 09/11)](#semana-3-0311-a-09112026) | E2: 3% (1 de 37) em 09/11 | E2: 0% (0 de 19) em 09/11 | 1 h (E1) | 0,12 h/ponto (E1) | 0,0 dia | 0,4 h | D8 a D10 |
 | [4 (10/11 a 16/11)](#semana-4-1011-a-16112026) | E2: 38% (14 de 37) em 16/11 | E2: 83% (25 de 30) em 16/11 | 13,2 h | 0,37 h/ponto | 9,6 dias | 28,8 h | D11 e D12 |
-| [5 (17/11 a 24/11)](#semana-5-1711-a-24112026) | E2: 57% (21 de 37) em 23/11 | E2: 73% (60 de 82) em 23/11 | 14,4 h | 0,36 h/ponto | 18,2 dias | 6,0 h | D13 e D14 |
+| [5 (17/11 a 24/11)](#semana-5-1711-a-24112026) | E2: 100% (37 de 37) em 24/11 | E2: 100% (122 de 122) em 24/11 | 30,2 h | 0,36 h/ponto | 18,7 dias | 3,9 h | D13 e D14 |
 
 ¹ Valores recalculados em 04/11/2026 com o estado ao fim de 26/10 (ver a
 [correção da semana 1](#correcao-de-04112026)). No registro original: 61% (27 de 44), 89% (25 de 28),
@@ -437,8 +437,7 @@ com issues concluídas: 13, quase todas entre 12/11 e 16/11.
 
 ## Semana 5: 17/11 a 24/11/2026
 
-Última semana da E2, que teve o prazo adiado de 22/11 para 24/11. O M1 vai até o fim de 23/11:
-o estado ao fim de 24/11 sai da coleta de 25/11 e entra numa atualização deste registro.
+Última semana da E2, que teve o prazo adiado de 22/11 para 24/11.
 
 ### M1: progresso da Entrega 2
 
@@ -451,61 +450,63 @@ o estado ao fim de 24/11 sai da coleta de 25/11 e entra numa atualização deste
 | 21/11 | 14 | 38% | 62% | 16% | **+46 p.p.** |
 | 22/11 | 17 | 46% | 54% | 11% | +44 p.p. |
 | 23/11 | 21 | 57% | 43% | 5% | +38 p.p. |
+| 24/11 | 37 | 100% | 0% | 0% | 0 p.p. |
 
 *Tabela 7: Burndown da Entrega 2 na semana 5 (37 issues; prazo em 24/11).*
 
-- **Resultado:** ao fim de 23/11, 21 de 37 issues estavam concluídas (57%), contra 95%
-  esperados: desvio de **38 p.p.** De 17/11 a 21/11, nenhuma issue foi fechada, e o desvio
-  chegou a **+46 p.p.** em 21/11, o maior das duas entregas. Em pontos, 60 de 82 (73%), com
-  27 das 37 issues estimadas: desvio de 22 p.p.
+- **Resultado:** a E2 terminou com as 37 issues concluídas no prazo (122 de 122 pontos). Antes
+  disso, de 17/11 a 21/11, nenhuma issue foi fechada, e o desvio chegou a **+46 p.p.** em
+  21/11, o maior das duas entregas. Ao fim de 23/11, véspera do prazo, ainda eram 21 de 37
+  (57%), com desvio de 38 p.p.
 - **Critério do plano:** o desvio passou de 10 p.p. todos os dias. O replanejamento possível
   nesta semana foi o adiamento do prazo para 24/11.
 - **Interpretação:** a semana repete a E1. Os cinco dias sem nenhum fechamento coincidem com os
   snapshots de 18/11 a 22/11, que a coleta descartou por serem iguais ao de 17/11. O trabalho
-  voltou a aparecer no fim: 3 issues em 22/11, 4 em 23/11 e outras 4 na madrugada de 24/11. No
-  snapshot de 24/11, 25 de 37 issues estavam concluídas (68%) e as 12 abertas tinham
-  responsável.
+  voltou a aparecer no fim: 3 issues em 22/11, 4 em 23/11 e 16 em 24/11, último dia da
+  entrega, entre elas a release (#96) e este registro (#61).
 
 ### M2 e M3: esforço e horas por ponto
 
 | Membro | Horas |
 |---|---:|
-| analufernanndess | 4,7 |
+| analufernanndess | 9,9 |
+| TalesRG | 9,5 |
+| gabrielaugusto23 | 5,0 |
 | Cayoalencar | 4,0 |
-| gabrielaugusto23 | 3,2 |
-| TalesRG | 2,5 |
-| **Total** | **14,4** |
+| feliperodri0 | 1,8 |
+| **Total** | **30,2** |
 
 *Tabela 8: Horas das issues concluídas na semana 5, por responsável.*
 
-- **Resultado:** 14,4 h em 40 pontos, ou **0,36 h/ponto**, com as 11 issues da semana com `Horas`.
+- **Resultado:** 30,2 h em 85 pontos, ou **0,36 h/ponto**, com as 23 issues da semana com `Horas`.
 - **Critério do plano:** variação de 3% em relação à semana 4, dentro do critério de 10%.
 - **Interpretação:** a taxa ficou estável nas duas últimas semanas, perto de 0,36 h/ponto, e
   abaixo da E1 (0,40 h/ponto).
 
 ### M4: lead time e tempo até o merge
 
-- **Resultado:** lead time médio de **18,2 dias** (limite: 20,0 dias), sem issue acima do
-  limite. Os 9 PRs levaram em média **6,0 h** até o merge (limite: 6,6 h). O #111 (26,3 h) e o #112 (9,6 h) ficaram acima. Em 8 dos 9 PRs, o merge foi feito por outro membro, e 3 tiveram
-  revisão formal no GitHub.
-- **Critério do plano:** o #111 e o #112 foram investigados.
+- **Resultado:** lead time médio de **18,7 dias** (limite: 20,6 dias), sem issue acima do
+  limite. Os 15 PRs levaram em média **3,9 h** até o merge (limite: 4,3 h). O #111 (26,3 h), o
+  #112 (9,6 h) e o #113 (5,4 h) ficaram acima. Em 14 dos 15 PRs, o merge foi feito por outro
+  membro, e 6 tiveram revisão formal no GitHub.
+- **Critério do plano:** o #111, o #112 e o #113 foram investigados.
 - **Interpretação:** o lead time alto e uniforme (17 a 19 dias) vem de issues criadas em 05/11 e
-  fechadas no fim da entrega. A revisão ficou mais rápida que na semana 4 (D11). O #111 e o #112
-  foram revisados em 23/11 junto com o #113 e o #114 e mergeados depois das correções dessa
+  fechadas no fim da entrega. A revisão ficou mais rápida que na semana 4 (D11). O #111, o #112 e
+  o #113 foram revisados em 23/11 junto com o #114 e mergeados depois das correções dessa
   revisão.
 
 ### Situação das decisões da semana 4
 
 | ID | Situação em 24/11 | Evidência |
 |---|---|---|
-| D11 | Cumprida em parte | Revisão média de 6,0 h, contra 28,8 h na semana 4; o #111 levou 26,3 h |
-| D12 | Cumprida em parte | Coleta de G1 (#71, PR #116) e consolidação (#74 e #75, PR #109) concluídas; análise de G1 (#76) e seções finais do artigo (#86, #87) abertas em 24/11 |
+| D11 | Cumprida em parte | Revisão média de 3,9 h, contra 28,8 h na semana 4; o #111 levou 26,3 h |
+| D12 | Cumprida no último dia | Coleta de G1 (#71) e consolidação (#74 e #75) concluídas até 24/11 de madrugada; análise de G1 (#76) e seções finais do artigo (#86 e #87) concluídas em 24/11 |
 
 ### Decisões e encaminhamentos
 
 | ID | Medida | Decisão ou encaminhamento | Responsável | Situação |
 |---|---|---|---|---|
-| D13 | M1 | Atualizar este registro com o estado ao fim de 24/11, a partir da coleta de 25/11 | feliperodri0 | A executar em 25/11 |
+| D13 | M1 | Atualizar este registro com o estado ao fim de 24/11 | feliperodri0 | Executada em 24/11 |
 | D14 | M1 a M4 | Registrar as lições das duas entregas na [página de gestão](index.md): atribuir responsável e `Estimate` na criação da issue e definir datas intermediárias desde o início da entrega | feliperodri0 | Executada nesta atualização |
 
 ---
@@ -515,20 +516,20 @@ o estado ao fim de 24/11 sai da coleta de 25/11 e entra numa atualização deste
 | Indicador | Entrega 1 | Entrega 2 |
 |---|---|---|
 | Issues planejadas | 34 | 37 |
-| Concluídas no prazo | 34 (100%) | 21 (57%) ao fim de 23/11; 25 (68%) no snapshot de 24/11 |
+| Concluídas no prazo | 34 (100%) | 37 (100%) |
 | Maior desvio do M1 | +33 p.p. em 25/10 | +46 p.p. em 21/11 |
-| Horas registradas | 42,15 h | 28,0 h |
+| Horas registradas | 42,15 h | 43,8 h |
 | Horas por ponto | 0,40 h/ponto | 0,36 h/ponto |
-| Lead time médio | 8,3 dias | 13,0 dias |
-| PRs mergeados por outro membro | 8 de 12 (semana 1) | 15 de 18 |
+| Lead time médio | 8,3 dias | 15,0 dias |
+| PRs mergeados por outro membro | 8 de 12 (semana 1) | 21 de 24 |
 
-*Tabela 9: Indicadores das duas entregas. Valores da E2 até o snapshot de 24/11.*
+*Tabela 9: Indicadores das duas entregas.*
 
 - **Padrão comum:** nas duas entregas, o trabalho foi concluído perto do prazo. A E1 fechou 17
-  issues na última noite; a E2 passou cinco dias sem fechar nenhuma issue e fechou 11 nos três
-  últimos dias.
-- **O que melhorou:** o merge por outro membro passou de 8 em 12 PRs na E1 para 15 em 18 na E2, a revisão
-  ficou mais rápida na última semana e todas as issues abertas tinham responsável no fim da E2.
+  issues na última noite; a E2 passou cinco dias sem fechar nenhuma issue e fechou 23 nos três
+  últimos dias, 16 delas no último.
+- **O que melhorou:** o merge por outro membro passou de 8 em 12 PRs na E1 para 21 em 24 na E2, a revisão
+  ficou mais rápida na última semana e todas as issues da E2 terminaram com responsável.
 - **O que não melhorou:** as datas intermediárias propostas em D10 só foram publicadas no fim
   da entrega, e o `Estimate` continuou sendo preenchido depois do trabalho, o que limita o M1
   em pontos.
