@@ -16,6 +16,7 @@ resultados da avaliação, feita pela equipe Dorothy Johnson na disciplina de Qu
 
 [Ver os resultados :material-arrow-right:](fase-4/index.md){ .md-button .md-button--primary }
 [Começar pela Fase 1](fase-1/index.md){ .md-button }
+[Rastrear um resultado](rastreabilidade.md){ .md-button }
 </div>
 
 ## O que avaliamos e por quê

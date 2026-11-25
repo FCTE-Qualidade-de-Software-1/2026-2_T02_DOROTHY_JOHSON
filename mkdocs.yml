@@ -62,6 +62,7 @@ hooks:
   - hooks/psm_painel.py
   - hooks/versao_assets.py
   - hooks/versao_site.py
+  - hooks/rastreabilidade.py
 
 extra:
   social:
@@ -153,6 +154,7 @@ nav:
       - Classificação Final e Propósito: fase-4/classificacao-final.md
       - Oportunidades de Melhoria: fase-4/oportunidades-melhoria.md
       - Ação de Melhoria: fase-4/acao-melhoria.md
+  - Rastreabilidade: rastreabilidade.md
   - Gestão:
       - gestao/index.md
       - Plano de Medição (PSM/CID): gestao/plano-medicao.md
