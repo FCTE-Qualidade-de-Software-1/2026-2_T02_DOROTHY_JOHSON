@@ -37,24 +37,24 @@ publicado depois de cada coleta, o que mantém o painel atualizado.
 |---|---|---|
 | Período | 20/10 a 26/10/2026 | 05/11 a 24/11/2026 |
 | Issues planejadas | 34 | 37 |
-| Concluídas no prazo | 34 (100%) | 21 (57%) ao fim de 23/11; 25 (68%) no snapshot de 24/11 |
+| Concluídas no prazo | 34 (100%) | 37 (100%) |
 | Maior desvio do M1 | +33 p.p. em 25/10 | +46 p.p. em 21/11 |
-| Horas registradas | 42,15 h | 28,0 h |
+| Horas registradas | 42,15 h | 43,8 h |
 | Horas por ponto | 0,40 h/ponto | 0,36 h/ponto |
-| Lead time médio | 8,3 dias | 13,0 dias |
-| PRs mergeados por outro membro | 8 de 12 (semana 1) | 15 de 18 |
+| Lead time médio | 8,3 dias | 15,0 dias |
+| PRs mergeados por outro membro | 8 de 12 (semana 1) | 21 de 24 |
 
 *Tabela 3: Indicadores consolidados. A série semana a semana está no
 [resumo do registro](registro-medicoes.md#resumo-por-semana).*
 
 - **Calendário e progresso:** nas duas entregas, o trabalho ficou concentrado perto do prazo.
   A E1 fechou 17 issues na última noite. A E2 ficou de 17/11 a 21/11 sem fechar nenhuma issue e
-  fechou 11 nos três últimos dias; o prazo foi adiado de 22/11 para 24/11.
+  fechou 23 nos três últimos dias, 16 delas no último; o prazo foi adiado de 22/11 para 24/11.
 - **Recursos e custos:** a taxa de horas por ponto ficou estável, entre 0,36 e 0,40 h/ponto.
   `Estimate` e `Horas` foram quase sempre preenchidos depois do trabalho, e não ao criar a
   issue.
 - **Desempenho dos processos:** o merge por outro membro se firmou como o padrão de revisão
-  da equipe, e o tempo médio até o merge caiu de 28,8 h na semana 4 para 6,0 h na semana 5.
+  da equipe, e o tempo médio até o merge caiu de 28,8 h na semana 4 para 3,9 h na semana 5.
 
 ## 3. Decisões de gestão
 
@@ -71,8 +71,8 @@ publicado depois de cada coleta, o que mantém o painel atualizado.
 | D9 | E2 | Preencher `Estimate` das issues da E2 até 10/11 | Não cumprida no prazo |
 | D10 | E2 | Combinar datas intermediárias | Não cumprida; o cronograma saiu no fim da entrega |
 | D11 | E2 | Revisar e mergear PRs em até 24 h | Cumprida em parte |
-| D12 | E2 | Priorizar G1, consolidação e artigo depois do Ponto de Controle 2 | Cumprida em parte |
-| D13 | E2 | Atualizar o registro com o estado ao fim de 24/11 | A executar em 25/11 |
+| D12 | E2 | Priorizar G1, consolidação e artigo depois do Ponto de Controle 2 | Cumprida no último dia |
+| D13 | E2 | Atualizar o registro com o estado ao fim de 24/11 | Executada |
 | D14 | E2 | Registrar as lições das duas entregas nesta página | Executada |
 
 *Tabela 4: Decisões tomadas a partir das medições. Evidências e situação semana a semana no
