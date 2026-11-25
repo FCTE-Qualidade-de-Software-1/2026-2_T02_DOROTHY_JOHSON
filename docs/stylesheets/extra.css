@@ -486,3 +486,40 @@
   color: #ffffff;
   text-decoration: underline;
 }
+
+/* Rastreabilidade */
+.md-typeset details.rastreio {
+  border: 1px solid var(--dj-card-border);
+  border-radius: var(--dj-radius);
+  background: var(--dj-card-bg);
+  box-shadow: none;
+  font-size: 0.75rem;
+}
+
+.md-typeset details.rastreio > summary {
+  font-size: 0.85rem;
+  color: var(--dj-heading);
+}
+
+.md-typeset .rastreio__links {
+  margin: 0.5em 0;
+}
+
+.md-typeset .rastreio__tabela {
+  overflow-x: auto;
+}
+
+.md-typeset .rastreio__tabela table {
+  display: table;
+  width: 100%;
+  font-size: 0.7rem;
+}
+
+.md-typeset .rastreio__tabela td {
+  vertical-align: top;
+}
+
+.md-typeset a.rastreio-id {
+  text-decoration: underline dotted;
+  text-underline-offset: 2px;
+}

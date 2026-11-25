@@ -157,6 +157,9 @@ ficaram fora da avaliação.
 
 ## 4. Rastreabilidade e encerramento
 
+A página de [rastreabilidade](../rastreabilidade.md) liga cada classificação desta página ao
+objetivo de medição, às questões, às métricas, aos recortes e aos dados brutos que a produziram.
+
 | Critério da #79 | Evidência nesta entrega | Situação |
 |---|---|---|
 | F4-C4: classificação por característica segundo a F2 | Seção 1: classe pela média, limitadores, classe final e recortes comprometidos; CSV consolidado | G2 e G3 classificados; G1 encerrado com ressalvas e NC global; não há classe de qualidade atribuída a G1, portanto o requisito de classificar todas as características tem essa limitação |
